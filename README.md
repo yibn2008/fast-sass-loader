@@ -2,10 +2,44 @@
 
 fast sass loader for webpack. 5~10 times faster than **sass-loader**, and support url resolve.
 
-## Notice
+## vs sass-loader
 
-fast-sass-loader do not support these features:
+| Features      | fast-sass-loader | sass-loader                             |
+|---------------|------------------|-----------------------------------------|
+| Performance   | Fast (5~10 times)| Slow                                    |
+| Sass Dedupe   | ✓                | ×                                       |
+| Url Resolve   | ✓                | × (need resolve-url-loader, it's buggy) |
+| Loader Config | ×                | ✓                                       |
+| Source Map    | ×                | ✓                                       |
+| Internal Cache| ✓                | ×                                       |
 
-- **sourceMap**, fast-ass-loader merge sass files by itself, so the source map will be incorrect.
-- **resolve-url-loader**, since fast-sass-loader already support url resolve, resolve-url-loader can be removed from you loader list.
 
+## install
+
+install by npm:
+
+```javascript
+npm install fast-sass-loader --save-dev
+```
+
+and you need install **node-sass** and **webpack** as peer dependencies.
+
+## configration
+
+```
+{
+  module: {
+    loaders: [
+      {
+        test: /\.(scss|sass)$/,
+        loader: 'css!fast-sass'
+      },
+      // other loaders ...
+    ]
+  }
+}
+```
+
+## License
+
+MIT

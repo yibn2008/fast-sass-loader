@@ -6,6 +6,7 @@ const loader = require.resolve('../..')
 const cssLoader = require.resolve('css-loader')
 
 module.exports = {
+  context: path.join(__dirname),
   entry: {
     index: './actual/index.scss'
   },
@@ -20,6 +21,9 @@ module.exports = {
         loader: ExtractTextPlugin.extract([cssLoader, loader])
       }
     ]
+  },
+  resolve: {
+    root: [ path.join(__dirname, 'node_modules') ]
   },
   plugins: [
     new ExtractTextPlugin('[name].css')
