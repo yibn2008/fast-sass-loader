@@ -95,11 +95,10 @@ function* mergeSources(opts, entry, resolve, dependencies, level) {
       let imports = getImportsToResolve(originalImport)
       let resolvedImport
 
-      // console.log('resolve ->', imports)
-
       for (let i = 0; i < imports.length; i++) {
         try {
           let reqFile = loaderUtils.urlToRequest(imports[i], opts.root)
+
           resolvedImport = yield resolve(entryDir, reqFile)
           break;
         } catch (err) {
@@ -158,17 +157,12 @@ module.exports = function(content) {
     if (cache.isValid()) {
       return cache.read()
     } else {
-      console.time('merge')
       let merged = yield mergeSources(options, {
         file: entry,
         content: content
       }, resolver(ctx), dependencies)
 
-      console.timeEnd('merge')
-
       try {
-        console.time('compile')
-
         let result = yield new Promise((resolve, reject) => {
           sass.render({
             file: entry,
@@ -189,8 +183,6 @@ module.exports = function(content) {
         let css = result.css.toString()
 
         cache.write(dependencies, css)
-
-        console.timeEnd('compile')
 
         return css
       } catch (err) {
