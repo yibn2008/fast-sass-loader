@@ -1,8 +1,16 @@
 header {
-  color: #111; }
+  color: #111;
+  background-image: url(actual/img/logo.png); }
+
+footer {
+  background-image: url(actual/img/logo.png); }
 
 section {
   color: #222; }
 
 body {
   color: #000; }
+
+/*
+  @import "~not-exists-module2/index.scss";  // this should be skiped
+*/

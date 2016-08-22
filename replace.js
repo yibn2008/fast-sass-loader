@@ -18,15 +18,18 @@ function replaceAsync (text, rule, replacer) {
 
   while (matches = rule.exec(text)) {
     ranges.push([
-      rule.lastIndex - matches[0].length - 1,
+      rule.lastIndex - matches[0].length,
       rule.lastIndex,
       matches.slice()
     ])
   }
 
   return new Promise((resolve, reject) => {
-    async.mapSeries(ranges, function (item, done) {
-      replacer.apply(null, item[2])
+    async.mapSeries(ranges, function (range, done) {
+      replacer.apply({
+        start: range[0],
+        end: range[1]
+      }, range[2])
         .then(ret => {
           done(null, ret)
         }, err => {
@@ -64,7 +67,7 @@ function replaceByRanges (text, ranges, replaces) {
     if (key in map) {
       pieces.push(map[key])
     } else {
-      pieces.push(text.substring(start, stop + 1))
+      pieces.push(text.substring(start, stop))
     }
   }
 

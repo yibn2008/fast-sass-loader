@@ -19,6 +19,10 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract([cssLoader, loader])
+      },
+      {
+        test: /\.png$/,
+        loader: 'file?name=[path][name].[ext]'
       }
     ]
   },

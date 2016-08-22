@@ -16,6 +16,33 @@ const MATCH_IMPORTS = /@import\s+(['"])([^,;'"]+)(\1)(\s*,\s*(['"])([^,;'"]+)(\1
 const MATCH_FILES = /(['"])([^,;'"]+)(\1)/g;
 const BAD_URL_FILE = /(^#)|(^(\w+:)?\/\/)|(^data:)/
 
+function findComments (text) {
+  let ranges = []
+  let index = 0
+  let ruleMap = {
+    '//': '\n',
+    '/*': '*/'
+  }
+  let startRule = /\/\/|\/\*/g
+  let matches
+
+  while (matches = startRule.exec(text)) {
+    let endChars = ruleMap[matches[0]]
+    let start = startRule.lastIndex - matches[0].length
+    let end = text.indexOf(endChars, startRule.lastIndex)
+
+    if (end < 0) {
+      end = Infinity
+    }
+
+    ranges.push([ start, end ])
+
+    startRule.lastIndex = end
+  }
+
+  return ranges
+}
+
 function getImportsToResolve(original) {
   let extname = path.extname(original)
   let basename = path.basename(original, extname)
@@ -65,6 +92,7 @@ function* mergeSources(opts, entry, resolve, dependencies, level) {
   }
 
   let entryDir = path.dirname(entry)
+  let commentRanges = findComments(content)
 
   // replace url(...)
   content = content.replace(MATCH_URL_ALL, (total, left, file, right) => {
@@ -72,7 +100,13 @@ function* mergeSources(opts, entry, resolve, dependencies, level) {
       let absoluteFile = path.resolve(entryDir, file)
       let relativeFile = path.relative(opts.baseDir, absoluteFile)
 
-      return `url(${relativeFile})`
+      // console.log()
+
+      if (relativeFile[0] !== '.') {
+        relativeFile = './' + relativeFile
+      }
+
+      return `url(${left}${relativeFile}${right})`
     } else {
       return total
     }
@@ -80,6 +114,19 @@ function* mergeSources(opts, entry, resolve, dependencies, level) {
 
   // replace @import "..."
   function* importReplacer(total) {
+    // if current import is in comments, then skip it
+    let range = this
+    let finded = commentRanges.find(commentRange => {
+      if (range.start >= commentRange[0] && range.end <= commentRange[1]) {
+        return true
+      }
+    })
+
+    if (finded) {
+      return total
+    }
+
+
     let contents = []
     let matched
 
