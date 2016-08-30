@@ -74,9 +74,19 @@ class Cache {
       let cache = CACHE_STORE[this.entry]
       cache.readTimes++
 
-        return cache.result
+      return cache.result
     } else {
       return false
+    }
+  }
+
+  getDependencies () {
+    if (this.entry in CACHE_STORE) {
+      let cache = CACHE_STORE[this.entry]
+
+      return Object.keys(cache.dependencies)
+    } else {
+      return []
     }
   }
 

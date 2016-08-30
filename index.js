@@ -14,7 +14,6 @@ const EXT_PRECEDENCE = ['.scss', '.sass', '.css'];
 const MATCH_URL_ALL = /url\(\s*(['"]?)([^ '"\(\)]+)(\1)\s*\)/g;
 const MATCH_IMPORTS = /@import\s+(['"])([^,;'"]+)(\1)(\s*,\s*(['"])([^,;'"]+)(\1))*\s*;/g;
 const MATCH_FILES = /(['"])([^,;'"]+)(\1)/g;
-const BAD_URL_FILE = /(^#)|(^(\w+:)?\/\/)|(^data:)/
 
 function findComments (text) {
   let ranges = []
@@ -96,11 +95,9 @@ function* mergeSources(opts, entry, resolve, dependencies, level) {
 
   // replace url(...)
   content = content.replace(MATCH_URL_ALL, (total, left, file, right) => {
-    if (!file.match(BAD_URL_FILE)) {
+    if (loaderUtils.isUrlRequest(file)) {
       let absoluteFile = path.resolve(entryDir, file)
       let relativeFile = path.relative(opts.baseDir, absoluteFile)
-
-      // console.log()
 
       if (relativeFile[0] !== '.') {
         relativeFile = './' + relativeFile
@@ -202,6 +199,10 @@ module.exports = function(content) {
     let dependencies = []
 
     if (cache.isValid()) {
+      cache.getDependencies().forEach(file => {
+        ctx.dependency(file)
+      })
+
       return cache.read()
     } else {
       let merged = yield mergeSources(options, {
