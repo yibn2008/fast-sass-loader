@@ -240,6 +240,9 @@ module.exports = function(content) {
         console.error(err.stack || err)
 
         err.file && ctx.dependency(err.file)
+
+        cache.markInvalid()
+
         throw err
       }
     }

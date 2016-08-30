@@ -90,6 +90,10 @@ class Cache {
     }
   }
 
+  markInvalid () {
+    delete CACHE_STORE[this.entry]
+  }
+
   write(dependencies, result) {
     let cache = CACHE_STORE[this.entry]
 
