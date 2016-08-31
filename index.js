@@ -123,7 +123,6 @@ function* mergeSources(opts, entry, resolve, dependencies, level) {
       return total
     }
 
-
     let contents = []
     let matched
 
@@ -133,7 +132,11 @@ function* mergeSources(opts, entry, resolve, dependencies, level) {
     while (matched = MATCH_FILES.exec(total)) {
       let originalImport = matched[2].trim()
       if (!originalImport) {
-        throw new Error(`import file cannot be empty: "${total}" @${entry}`)
+        let err = new Error(`import file cannot be empty: "${total}" @${entry}`)
+
+        err.file = entry
+
+        throw err
       }
 
       let imports = getImportsToResolve(originalImport)
@@ -146,13 +149,16 @@ function* mergeSources(opts, entry, resolve, dependencies, level) {
           resolvedImport = yield resolve(entryDir, reqFile)
           break;
         } catch (err) {
-          // console.log('resolve err: ', err.message)
           // skip
         }
       }
 
       if (!resolvedImport) {
-        throw new Error(`import file cannot be resolved: "${total}" @${entry}`)
+        let err = new Error(`import file cannot be resolved: "${total}" @${entry}`)
+
+        err.file = entry
+
+        throw err
       }
 
       resolvedImport = path.normalize(resolvedImport)
@@ -210,6 +216,10 @@ module.exports = function(content) {
         content: content
       }, resolver(ctx), dependencies)
 
+      dependencies.forEach(file => {
+        ctx.dependency(file)
+      })
+
       try {
         let result = yield new Promise((resolve, reject) => {
           sass.render({
@@ -224,10 +234,6 @@ module.exports = function(content) {
           })
         })
 
-        dependencies.forEach(file => {
-          ctx.dependency(file)
-        })
-
         let css = result.css.toString()
 
         cache.write(dependencies, css)
@@ -239,16 +245,18 @@ module.exports = function(content) {
         }))
         console.error(err.stack || err)
 
-        err.file && ctx.dependency(err.file)
-
-        cache.markInvalid()
-
         throw err
       }
     }
   }).then(css => {
     callback(null, css)
   }, err => {
+    // disabled cache
+    cache.markInvalid()
+
+    // add error file as deps, so if file changed next time sass-loader will be noticed
+    err.file && ctx.dependency(err.file)
+
     callback(err)
   })
 }
