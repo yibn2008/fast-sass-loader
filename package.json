@@ -4,7 +4,8 @@
   "version": "1.0.4",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests/*.test.js"
+    "test": "mocha tests/*.test.js",
+    "release": "git release $npm_package_version && npm publish"
   },
   "dependencies": {
     "async": "^2.0.1",
