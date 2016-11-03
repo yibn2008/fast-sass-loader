@@ -9,6 +9,32 @@ const utils = {
     } catch (err) {
       return false
     }
+  },
+  findComments (text) {
+    let ranges = []
+    let index = 0
+    let ruleMap = {
+      '//': '\n',
+      '/*': '*/'
+    }
+    let startRule = /\/\/|\/\*/g
+    let matches
+
+    while (matches = startRule.exec(text)) {
+      let endChars = ruleMap[matches[0]]
+      let start = startRule.lastIndex - matches[0].length
+      let end = text.indexOf(endChars, startRule.lastIndex)
+
+      if (end < 0) {
+        end = Infinity
+      }
+
+      ranges.push([ start, end ])
+
+      startRule.lastIndex = end
+    }
+
+    return ranges
   }
 }
 

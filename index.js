@@ -8,39 +8,13 @@ const co = require('co')
 const async = require('async')
 const sass = require('node-sass')
 const Cache = require('./cache')
+const utils = require('./utils')
 const loaderUtils = require('loader-utils')
 
 const EXT_PRECEDENCE = ['.scss', '.sass', '.css'];
 const MATCH_URL_ALL = /url\(\s*(['"]?)([^ '"\(\)]+)(\1)\s*\)/g;
 const MATCH_IMPORTS = /@import\s+(['"])([^,;'"]+)(\1)(\s*,\s*(['"])([^,;'"]+)(\1))*\s*;/g;
 const MATCH_FILES = /(['"])([^,;'"]+)(\1)/g;
-
-function findComments (text) {
-  let ranges = []
-  let index = 0
-  let ruleMap = {
-    '//': '\n',
-    '/*': '*/'
-  }
-  let startRule = /\/\/|\/\*/g
-  let matches
-
-  while (matches = startRule.exec(text)) {
-    let endChars = ruleMap[matches[0]]
-    let start = startRule.lastIndex - matches[0].length
-    let end = text.indexOf(endChars, startRule.lastIndex)
-
-    if (end < 0) {
-      end = Infinity
-    }
-
-    ranges.push([ start, end ])
-
-    startRule.lastIndex = end
-  }
-
-  return ranges
-}
 
 function getImportsToResolve(original) {
   let extname = path.extname(original)
@@ -91,7 +65,7 @@ function* mergeSources(opts, entry, resolve, dependencies, level) {
   }
 
   let entryDir = path.dirname(entry)
-  let commentRanges = findComments(content)
+  let commentRanges = utils.findComments(content)
 
   // replace url(...)
   content = content.replace(MATCH_URL_ALL, (total, left, file, right) => {
