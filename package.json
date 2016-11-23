@@ -1,7 +1,7 @@
 {
   "name": "fast-sass-loader",
   "description": "fast sass loader for webpack",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "index.js",
   "scripts": {
     "test": "mocha tests/*.test.js",
