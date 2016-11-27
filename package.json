@@ -1,7 +1,7 @@
 {
   "name": "fast-sass-loader",
   "description": "fast sass loader for webpack",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "index.js",
   "scripts": {
     "test": "mocha tests/*.test.js",
@@ -15,7 +15,7 @@
     "loader-utils": "^0.2.15"
   },
   "peerDependencies": {
-    "node-sass": "~3.10.0",
+    "node-sass": "^3.10.0",
     "webpack": "^1.13.2"
   },
   "devDependencies": {
