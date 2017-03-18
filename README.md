@@ -1,8 +1,11 @@
 # fast-sass-loader
 
+[![Build Status](https://travis-ci.org/yibn2008/fast-sass-loader.svg?branch=master)](https://travis-ci.org/yibn2008/fast-sass-loader)
+[![Coverage Status](https://coveralls.io/repos/github/yibn2008/fast-sass-loader/badge.svg)](https://coveralls.io/github/yibn2008/fast-sass-loader)
+
 High performance sass loader for webpack 1/2.
 
-features:
+Features:
 
 - 5~10 times faster than `sass-loader` in large sass project
 - support sass file dedupe, never worry about `@ import` same file in different place
