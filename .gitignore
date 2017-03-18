@@ -4,6 +4,7 @@
 !.editorconfig
 !.npmignore
 !.gitignore
+!.gitattributes
 !.build
 !.*.yml
 
