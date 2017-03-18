@@ -1,0 +1,250 @@
+@charset "UTF-8";
+
+////
+/// @module input: 输入框
+/// @tag input
+/// @category component
+/// @family input
+/// @varPrefix $input-
+/// @classPrefix {prefix}-input
+////
+
+$input-prefix: '.#{$css-prefix}input';
+
+// 公共
+// --------------------------------------------------
+
+/// width
+/// @namespace size/border
+$input-border-width: $line-1-width !default;
+
+/// background
+/// @namespace statement/normal
+$input-color-bg: $color-n1-1 !default;
+
+/// text
+/// @namespace statement/hint
+$input-color-hint: $color-n2-2 !default;
+
+/// text
+/// @namespace statement/disabled
+$input-color-disabled: $color-n2-1 !default;
+
+/// border
+/// @namespace statement/disabled
+$input-color-border-disabled: $color-n1-5 !default;
+
+/// background
+/// @namespace statement/disabled
+$input-color-bg-disabled: $color-n1-2 !default;
+
+
+// 单行
+// --------------------------------------------------
+
+/// text
+/// @namespace statement/normal
+$input-single-color: $color-n2-4 !default;
+
+
+/// border
+/// @namespace statement/normal
+$input-single-color-border: $color-n1-7 !default;
+
+/// border
+/// @namespace statement/hover
+$input-single-color-border-hover: $color-n1-8 !default;
+
+/// border
+/// @namespace statement/focus
+$input-single-color-border-focus: $color-b2-6 !default;
+
+
+// 多行
+// --------------------------------------------------
+
+/// text
+/// @namespace statement/normal
+$input-multiple-color: $color-n2-4 !default;
+
+/// border
+/// @namespace statement/border
+$input-multiple-color-border: $color-n1-7 !default;
+
+/// hover
+/// @namespace statement/hover
+$input-multiple-color-border-hover: $color-n1-8 !default;
+
+/// focus
+/// @namespace statement/focus
+$input-multiple-color-border-focus: $color-b2-6 !default;
+
+/// corner
+/// @namespace statement/normal
+$input-multiple-corner: $corner-radius-r0 !default;
+
+/// padding(l,r)
+/// @namespace size/bounding
+$input-multiple-size-padding-lr: $s2 !default;
+
+/// padding(t,b)
+/// @namespace size/bounding
+$input-multiple-size-padding-tb: $s1 !default;
+
+
+/// font-size
+/// @namespace size/bounding
+$input-multiple-font-size: $font-size-base-body1 !default;
+
+
+/// corner
+/// @namespace statement/normal
+$input-multiple-corner: $corner-radius-r0 !default;
+
+// addon
+// --------------------------------------------------
+
+/// text
+/// @namespace statement/addon
+$input-addon-color-bg: $color-n1-2 !default;
+
+/// border
+/// @namespace statement/addon
+$input-addon-color: $color-n2-2 !default;
+
+// large
+// --------------------------------------------------
+
+/// corner
+/// @namespace statement/normal
+$input-size-l-corner: $corner-radius-r0 !default;
+
+/// height
+/// @namespace size/bounding
+$input-size-l-height: $s10 !default;
+
+/// margin
+/// @namespace size/bounding
+$input-size-l-margin: $s0 !default;
+
+/// padding
+/// @namespace size/bounding
+$input-size-l-padding: $s2 !default;
+
+
+/// font-size
+/// @namespace size/bounding
+$input-size-l-font: $font-size-base-body1 !default;
+
+// medium
+// --------------------------------------------------
+
+/// corner
+/// @namespace statement/normal
+$input-size-m-corner: $corner-radius-r0 !default;
+
+/// height
+/// @namespace size/bounding
+$input-size-m-height: $s7 !default;
+
+/// margin
+/// @namespace size/bounding
+$input-size-m-margin: $s0 !default;
+
+/// padding
+/// @namespace size/bounding
+$input-size-m-padding: $s2 !default;
+
+/// font-size
+/// @namespace size/bounding
+$input-size-m-font: $font-size-base-body1 !default;
+
+// small
+// --------------------------------------------------
+
+/// corner
+/// @namespace statement/normal
+$input-size-s-corner: $corner-radius-r0 !default;
+
+/// height
+/// @namespace size/bounding
+$input-size-s-height: $s5 !default;
+
+/// margin
+/// @namespace size/bounding
+$input-size-s-margin: $s0 !default;
+
+/// padding
+/// @namespace size/bounding
+$input-size-s-padding: $s1 !default;
+
+
+/// font-size
+/// @namespace size/bounding
+$input-size-s-font: $font-size-base-body1 !default;
+
+// feedback
+// --------------------------------------------------
+
+/// bottom
+/// @namespace size/feedback
+$input-size-feedback-bottom: $s1 !default;
+
+/// icon-size
+/// @namespace size/feedback
+$input-feedback-icon-size-s: $icon-xs !default;
+
+/// icon-size
+/// @namespace size/feedback
+$input-feedback-icon-size-m: $icon-xs !default;
+
+/// icon-size
+/// @namespace size/feedback
+$input-feedback-icon-size-l: $icon-xs !default;
+
+
+/// success
+/// @namespace statement/feedback
+$input-success-feedback-color: $color-f3-1 !default;
+
+/// border
+/// @namespace statement/error
+$input-color-feedback-border-error: $color-f2-1 !default;
+
+// maxlen
+// --------------------------------------------------
+
+/// text（error）
+/// @namespace statement/maxlen
+$input-color-maxlen-error: $color-f2-1 !default;
+
+/// text
+/// @namespace statement/maxlen
+$input-color-maxlen: $color-n2-4 !default;
+
+/// font-size
+/// @namespace size/maxlen
+$input-font-size-maxlen: $font-size-base-caption !default;
+
+// clear
+// --------------------------------------------------
+
+/// inputing
+/// @namespace statement/clear
+$input-clear-color: $color-n2-1 !default;
+
+/// hover
+/// @namespace statement/clear
+$input-clear-hover-color: $color-n2-2 !default;
+
+/// icon-size
+/// @namespace size/clear
+$input-clear-s-icon-size: $icon-xs !default;
+
+/// icon-size
+/// @namespace size/clear
+$input-clear-m-icon-size: $icon-s !default;
+
+/// icon-size
+/// @namespace size/clear
+$input-clear-l-icon-size: $icon-m !default;

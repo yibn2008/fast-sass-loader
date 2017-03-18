@@ -1,0 +1,112 @@
+////
+/// @module date-picker: 日期选择
+/// @tag DatePicker
+/// @category component
+/// @family date-picker
+/// @varPrefix $date-picker
+/// @classPrefix {prefix}-date-picker
+////
+
+
+$date-picker-prefix: '.' + $css-prefix + 'date-picker';
+
+$range-picker-prefix: '.' + $css-prefix + 'range-picker';
+
+$month-picker-prefix: '.' + $css-prefix + 'month-picker';
+
+$date-picker-icon-prefix: '.' + $css-prefix + 'icon';
+
+$date-picker-input-prefix: '.' + $css-prefix  + 'input';
+
+$date-picker-time-prefix: '.' + $css-prefix  + 'time-picker';
+
+
+
+// 日期选择框
+// --------------------------------------------------
+
+/// color
+/// @namespace statement/normal
+$date-picker-input-color: $color-n2-3 !default;
+
+/// background
+/// @namespace statement/normal
+$date-picker-input-background: $color-n1-1 !default;
+
+/// border color
+/// @namespace statement/normal
+$date-picker-input-border-color: $color-n1-7 !default;
+
+/// separator color
+/// @namespace statement/normal
+$date-picker-input-separator-color: $color-n2-2 !default;
+
+/// height
+/// @namespace size/icon
+$date-picker-input-s-height: $s5 !default;
+
+/// height
+/// @namespace size/input
+$date-picker-input-m-height: $s7 !default;
+
+/// height
+/// @namespace size/input
+$date-picker-input-l-height: $s10 !default;
+
+/// text size
+/// @namespace size/input
+$date-picker-input-s-font: $font-size-base-caption !default;
+
+/// text size
+/// @namespace size/input
+$date-picker-input-m-font: $font-size-base-body1 !default;
+
+/// text size
+/// @namespace size/input
+$date-picker-input-l-font: $font-size-base-subhead !default;
+
+/// icon size
+/// @namespace size/icon
+$date-picker-icon-s-font: $icon-xs !default;
+
+/// icon size
+/// @namespace size/icon
+$date-picker-icon-m-font: $icon-s !default;
+
+/// icon size
+/// @namespace size/icon
+$date-picker-icon-l-font: $icon-m !default;
+
+/// margin(r)
+/// @namespace size/icon
+$date-picker-icon-right: $s3 !default;
+
+/// icon color
+/// @namespace statement/normal
+$date-picker-icon-color: $color-n2-1 !default;
+
+/// icon color
+/// @namespace statement/hover
+$date-picker-icon-color-hover: $color-n2-2 !default;
+
+
+
+// 日期选择面板
+// --------------------------------------------------
+
+/// border color
+/// @namespace statement/normal
+$date-picker-panel-border-color: $color-n1-7 !default;
+
+/// inner border color
+/// @namespace statement/normal
+$date-picker-panel-inner-border-color: $color-n1-5 !default;
+
+/// background
+/// @namespace statement/normal
+$date-picker-panel-background: $color-n1-1 !default;
+
+/// input color
+/// @namespace statement/normal
+$date-picker-panel-input-color: $color-n2-3 !default;
+

@@ -1,0 +1,33 @@
+@mixin icon-handler($size, $baseSize: $icon-s, $offset: 0) {
+
+    &:before {
+        width: $size;
+        font-size: $size;
+        line-height: inherit;
+    }
+
+    // Chrome不支持小于12px的字体，故采用缩放的方式缩小字体
+    @if ($size < 12) {
+        @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+            transform: scale($size / $baseSize) translateX($offset * 2);
+
+            &:before {
+                width: $baseSize;
+                font-size: $baseSize;
+            }
+        }
+    }
+}
+
+// 为兼容使用旧mixin的其他组件暂时保留以下代码，1.x会删除
+@mixin icon-size-handler($size, $baseSize: $icon-s){
+    @if ($size < 12) {
+        width: $baseSize;
+        font-size: #{$size} \9;
+        transform: scale($size / $baseSize);
+    } @else {
+        width: $size;
+        font-size: $size;
+    }
+    line-height: inherit;
+}

@@ -1,0 +1,113 @@
+////
+/// @module card: 卡片
+/// @tag Card
+/// @category component
+/// @family card
+/// @varPrefix $card-
+/// @classPrefix {prefix}-card
+////
+
+$card-prefix: '.' + $css-prefix + 'card';
+
+
+/// padding
+/// @namespace size/card
+$card-padding: $s5 !default;
+
+/// border width
+/// @namespace size/card
+$card-border-width: $line-1-width !default;
+
+/// border style
+/// @namespace size/card
+$card-border-style: $line-solid !default;
+
+/// shadow
+/// @namespace size/card
+$card-shadow: $shadow-sd1 !default;
+
+/// title
+/// @namespace size/text
+$card-title-font-size: $font-size-base-title !default;
+
+/// sub-title
+/// @namespace size/text
+$card-sub-title-font-size: $font-size-base-caption !default;
+
+/// more-btn
+/// @namespace size/text
+$card-more-btn-font-size: $font-size-base-body1 !default;
+
+/// extra
+/// @namespace size/text
+$card-title-extra-font-size: $font-size-base-caption !default;
+
+/// prefix border
+/// @namespace size/title
+$card-title-prefix-border-width: $line-3-width !default;
+
+/// bottom border
+/// @namespace size/title
+$card-title-bottom-border-width: $line-1-width !default;
+
+/// padding bottom
+/// @namespace size/title
+$card-title-padding-bottom: $s3 !default;
+
+/// padding left
+/// @namespace size/title
+$card-title-padding-left: $s2 !default;
+
+/// sub-title padding left
+/// @namespace size/title
+$card-sub-title-padding-left: $s2 !default;
+
+/// padding top
+/// @namespace size/body
+$card-body-padding-top: $s3 !default;
+
+/// more-btn height
+/// @namespace size/more-btn
+$card-more-btn-height: $s4 !default;
+
+/// padding-top
+/// @namespace size/more-btn
+$card-more-btn-padding-top: $s2 !default;
+
+
+
+/// card border color
+/// @namespace statement/color
+$card-border-color: $color-n1-6 !default;
+
+/// card background
+/// @namespace statement/background
+$card-background: $color-n1-1 !default;
+
+/// title
+/// @namespace statement/color
+$card-title-color: $color-n2-4 !default;
+
+/// sub-title
+/// @namespace statement/color
+$card-sub-title-color: $color-n2-3 !default;
+
+/// extra
+/// @namespace statement/color
+$card-title-extra-color: $color-f4-1 !default;
+
+/// title prefix border-color
+/// @namespace statement/color
+$card-title-prefix-border-color: $color-b1-6 !default;
+
+/// title bottom border-color
+/// @namespace statement/color
+$card-title-bottom-border-color: $color-n1-5 !default;
+
+/// more-btn color
+/// @namespace statement/color
+$card-more-btn-color: $color-f4-1 !default;
+
+/// more-btn background
+/// @namespace statement/background
+$card-more-btn-background: $color-n1-1 !default;

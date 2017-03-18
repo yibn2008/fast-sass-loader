@@ -1,0 +1,13 @@
+@mixin node-state(
+    $background,
+    $color
+) {
+    #{$timeline-prefix}-item-dot {
+        background: $background;
+    }
+
+    #{$timeline-prefix}-item-icon {
+        background: $background;
+        color: $color;
+    }
+}

@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+////
+/// @module table: 表格
+/// @tag Table
+/// @category component
+/// @family table
+/// @varPrefix $table-
+/// @classPrefix {prefix}-table
+////
+
+// table variables
+// --------------------------------------------------
+
+$table-prefix: '.#{$css-prefix}table' !default;
+
+/// border-width
+/// @namespace size/bounding
+$table-normal-border-width: $line-1-width !default;
+/// border-style
+/// @namespace statement/normal
+$table-normal-border-style: $line-solid !default;
+/// border-color
+/// @namespace statement/normal
+$table-normal-border-color: $color-n1-6 !default;
+
+/// thead-bg-color
+/// @namespace statement/normal
+$table-th-bg: $color-n1-4 !default;
+/// thead-text-color
+/// @namespace statement/normal
+$table-th-color: $color-n2-4 !default;
+/// text-size
+/// @namespace size/thead
+$table-th-font-size: $font-size-base-body1 !default;
+/// text-size
+/// @namespace size/body
+$table-body-font-size: $font-size-base-body1 !default;
+/// cell-padding-left-right
+/// @namespace size/cell
+$table-cell-padding-left: $s4 !default;
+/// cell-padding-top-bottom
+/// @namespace size/cell
+$table-cell-padding-top: $s3 !default;
+
+/// cell-empty-padding
+/// @namespace size/cell
+$table-empty-padding: $s8 !default;
+/// cell-empty-color
+/// @namespace statement/normal
+$table-empty-color: $color-n1-8 !default;
+
+/// zebra-deep-color
+/// @namespace statement/normal
+$table-td-gray: $color-n1-2 !default;
+/// zebra-thin-color
+/// @namespace statement/normal
+$table-td-normal: $color-n1-1 !default;
+
+/// list-group-split
+/// @namespace size/bounding
+$table-group-split: $s2 !default;
+/// list-group-header-bg
+/// @namespace statement/normal
+$table-group-header-bg: $color-n1-4 !default;
+
+/// sort-color
+/// @namespace state/normal
+$table-sort-color: $color-n2-4 !default;
+/// sort-color
+/// @namespace state/active
+$table-sort-color-current: $color-b1-6 !default;
+
+/// expanded-color
+/// @namespace state/disabled
+$table-expanded-ctrl-disabled-color: $color-n2-2 !default;
+
+/// sort-icon-size
+/// @namespace size/icon
+$table-sort-icon-size: $icon-xs !default;
+
+/// filter-icon-size
+/// @namespace size/icon
+$table-filter-icon-size: $icon-xs !default;
+
+/// expanded-icon-size
+/// @namespace size/icon
+$table-expanded-icon-size: $icon-xs !default;
+
+/// tree-expanded-icon-size
+/// @namespace size/icon
+$table-tree-expanded-icon-size: $icon-xs !default;
+

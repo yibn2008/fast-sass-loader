@@ -1,0 +1,105 @@
+////
+/// @module form: 表单
+/// @tag Form
+/// @category component
+/// @family form
+/// @varPrefix $form-
+/// @classPrefix {prefix}-form
+////
+
+@charset "UTF-8";
+
+// form variables
+// --------------------------------------------------
+
+$form-prefix: ".#{$css-prefix}form";
+
+/// margin(b)
+/// @namespace size/label
+$form-label-vertical-split-medium: $s1 !default;
+
+/// padding(r)
+/// @namespace size/label
+$form-label-horizontal-split: $s3 !default;
+
+/// item-margin(b)
+/// @namespace size/bounding
+$form-item-vertical-split-medium: $s4 !default;
+
+/// item-margin(b)
+/// @namespace size/bounding
+$form-item-hoz-split-medium: $s4 !default;
+
+/// item-margin(r)
+/// @namespace size/bounding
+$form-item-horizontal-split: $s3 !default;
+
+/// text-margin(t)
+/// @namespace size/help
+$form-explain-margin-top: $s1 !default;
+
+/// text
+/// @namespace size/help
+$form-explain-font-size: $font-size-base-caption !default;
+
+/// text
+/// @namespace statement/label
+$form-label-color: $color-n2-3 !default;
+
+/// inset-text
+/// @namespace statement/label
+$form-inset-label-color: $color-n2-3 !default;
+
+/// text(error)
+/// @namespace statement/help
+$form-error-color: $color-f2-1 !default;
+
+/// text
+/// @namespace statement/help
+$form-explain-color: $color-n2-3 !default;
+
+
+/// *:[required]
+/// @namespace statement/label
+$form-label-required-color: $color-f2-1 !default;
+
+/// corner
+/// @namespace statement/normal
+$form-inset-corner: $corner-radius-r0 !default;
+
+/// width
+/// @namespace size/border
+$form-inset-border-width: $line-1-width !default;
+
+/// border
+/// @namespace statement/border
+$form-inset-border-color: $color-n1-7 !default;
+
+/// padding(r)
+/// @namespace size/label
+$form-inset-padding-r: $s3 !default;
+
+
+/// line-height
+/// @namespace size/label
+$form-label-s-line-height: $s5 !default;
+
+/// font
+/// @namespace size/label
+$form-label-s-font-size: $font-size-base-body1 !default;
+
+/// line-height
+/// @namespace size/label
+$form-label-m-line-height: $s7 !default;
+
+/// font
+/// @namespace size/label
+$form-label-m-font-size: $font-size-base-body1 !default;
+
+/// line-height
+/// @namespace size/label
+$form-label-l-line-height: $s10 !default;
+
+/// font
+/// @namespace size/label
+$form-label-l-font-size: $font-size-base-body1 !default;

@@ -1,0 +1,131 @@
+////
+/// @module timeline: 时间轴
+/// @tag Timeline
+/// @category component
+/// @family timeline
+/// @varPrefix $timeline-
+/// @classPrefix {prefix}-timeline
+////
+
+$timeline-prefix: '.' + $css-prefix + 'timeline';
+
+$timeline-icon-prefix: '.' + $css-prefix + 'icon';
+
+/// divider width
+/// @namespace size/timeline
+$timeline-item-tail-size: $line-1-width !default;
+
+/// node size
+/// @namespace size/timeline
+$timeline-item-node-size: $s4 !default;
+
+/// node padding(t,b)
+/// @namespace size/timeline
+$timeline-item-node-padding: $s1 !default;
+
+/// dot size
+/// @namespace size/timeline
+$timeline-item-dot-size: $s2 !default;
+
+/// icon size
+/// @namespace size/timeline
+$timeline-item-icon-size: $icon-xs !default;
+
+/// margin(l)
+/// @namespace size/content
+$timeline-item-content-margin-left: $s3 !default;
+
+/// title text
+/// @namespace size/content
+$timeline-item-title-font-size: $font-size-base-caption !default;
+
+/// title margin(t)
+/// @namespace size/content
+$timeline-item-title-margin-top: $s1 !default;
+
+/// body text
+/// @namespace size/content
+$timeline-item-body-font-size: $font-size-base-caption !default;
+
+/// body margin(t)
+/// @namespace size/content
+$timeline-item-body-margin-top: $s2 !default;
+
+/// time text
+/// @namespace size/content
+$timeline-item-time-font-size: $font-size-base-caption !default;
+
+/// time margin(t)
+/// @namespace size/content
+$timeline-item-time-margin-top: $s2 !default;
+
+/// text button text
+/// @namespace size/content
+$timeline-item-folder-font-size: $font-size-base-caption !default;
+
+/// text button margin(t)
+/// @namespace size/content
+$timeline-item-folder-margin-top: $s1 !default;
+
+/// text button margin(b)
+/// @namespace size/content
+$timeline-item-folder-margin-bottom: $s1 !default;
+
+
+
+/// content title
+/// @namespace statement/normal
+$timeline-item-title-color: $color-n2-3 !default;
+
+/// content body
+/// @namespace statement/normal
+$timeline-item-body-color: $color-n2-2 !default;
+
+/// content time
+/// @namespace statement/normal
+$timeline-item-time-color: $color-n2-2 !default;
+
+/// divider
+/// @namespace statement/normal
+$timeline-item-tail-color: $color-n1-5 !default;
+
+/// text button
+/// @namespace statement/normal
+$timeline-item-folder-color: $color-b2-6 !default;
+
+/// text button
+/// @namespace statement/hover
+$timeline-item-folder-hover-color: $color-b1-6 !default;
+
+/// node background
+/// @namespace statement/done
+$timeline-item-done-background: $color-n1-7 !default;
+
+/// node color
+/// @namespace statement/done
+$timeline-item-done-color: $color-n1-1 !default;
+
+/// node background
+/// @namespace statement/process
+$timeline-item-process-background: $color-b2-6 !default;
+
+/// node color
+/// @namespace statement/process
+$timeline-item-process-color: $color-n1-1 !default;
+
+/// node background
+/// @namespace statement/success
+$timeline-item-success-background: $color-f3-1 !default;
+
+/// node color
+/// @namespace statement/success
+$timeline-item-success-color: $color-n1-1 !default;
+
+/// node background
+/// @namespace statement/error
+$timeline-item-error-background: $color-f2-1 !default;
+
+/// node color
+/// @namespace statement/error
+$timeline-item-error-color: $color-n1-1 !default;
+

@@ -1,0 +1,149 @@
+////
+/// @module dialog: 对话框
+/// @tag Dialog
+/// @category component
+/// @family dialog
+/// @varPrefix $dialog-
+/// @classPrefix {prefix}-dialog
+////
+
+// dialog variables
+// --------------------------------------------------
+
+$dialog-prefix: ".#{$css-prefix}dialog";
+
+
+
+
+
+
+/// shadow
+/// @namespace statements/normal
+$dialog-shadow: $shadow-sd1 !default;
+/// 废弃
+$dialog-padding: $s5 !default;
+
+/// border-width
+/// @namespace size/bounding
+$dialog-border-width: $line-1-width !default;
+/// border-color
+/// @namespace statements/normal
+$dialog-border-color: $color-n1-1 !default;
+/// corner-radius
+/// @namespace size/bounding
+$dialog-border-radius: $corner-radius-r0 !default;
+
+
+/// font-size
+/// @namespace size/text-title
+$dialog-title-font-size: $font-size-base-subhead !default;
+/// 废弃
+/// title-padding-tb
+/// @namespace size/text-title
+$dialog-title-padding-top-bottom: $s5 !default;
+/// title-padding-top
+/// @namespace size/text-title
+$dialog-title-padding-top: $s5 !default;
+/// title-padding-bottom
+/// @namespace size/text-title
+$dialog-title-padding-bottom: $s0 !default;
+/// title-padding-lr
+/// @namespace size/text-title
+$dialog-title-padding-left-right: $s5 !default;
+/// line-width
+/// @namespace statements/normal
+$dialog-title-border-width: 1px !default;
+/// line-color
+/// @namespace statements/normal
+$dialog-title-border-color: $color-transparent !default;
+/// title-bg-color
+/// @namespace statements/normal
+$dialog-title-bg-color: $color-transparent !default;
+
+
+/// 废弃
+$dialog-footer-padding-top-bottom: $s5 !default;
+/// footer-padding-top
+/// @namespace size/footer
+$dialog-footer-padding-top: $s0 !default;
+/// footer-padding-bottom
+/// @namespace size/footer
+$dialog-footer-padding-bottom: $s5 !default;
+/// footer-padding-lr
+/// @namespace size/footer
+$dialog-footer-padding-left-right: $s5 !default;
+/// bottom-border-width
+/// @namespace statements/normal
+$dialog-footer-border-width: 1px !default;
+/// bottom-border-color
+/// @namespace statements/normal
+$dialog-footer-border-color: $color-transparent !default;
+/// footer-bg-color
+/// @namespace statements/normal
+$dialog-footer-bg-color: $color-transparent !default;
+
+
+
+/// font-size
+/// @namespace size/text-content
+$dialog-content-font-size: $font-size-base-body1 !default;
+/// content-color
+/// @namespace statements/normal
+$dialog-content-color: $color-n2-4 !default;
+/// 废弃
+$dialog-content-padding: $s5 !default;
+/// padding top
+/// @namespace size/text-content
+$dialog-content-padding-top: $s5 !default;
+/// padding bottom
+/// @namespace size/text-content
+$dialog-content-padding-bottom: $s5 !default;
+/// padding lr
+/// @namespace size/text-content
+$dialog-content-padding-left-right: $s5 !default;
+
+/// close-color
+/// @namespace statements/normal
+$dialog-close-color: $color-n2-2 !default;
+/// close-color
+/// @namespace statements/hover
+$dialog-close-color-hovered: $color-n2-4 !default;
+/// close-bg
+/// @namespace statements/hover
+$dialog-close-bg-hovered: $color-transparent !default;
+/// right
+/// @namespace size/icon-close
+$dialog-close-right: $s5 !default;
+/// top
+/// @namespace size/icon-close
+$dialog-close-top: $s5 !default;
+/// icon-close-bg-width&height
+/// @namespace size/icon-close
+$dialog-close-width: $s5 !default;
+/// 废弃
+/// height
+/// @namespace size/icon-close
+$dialog-close-height: $s5 !default;
+/// size
+/// @namespace size/icon-close
+$dialog-close-size: $icon-s !default;
+
+$dialog-title-padding-right: $dialog-close-size + $dialog-padding + 10;
+
+/// alert-icon-color
+/// @namespace statements/normal
+$dialog-alert-icon-color: $color-f1-1 !default;
+/// confirm-icon-color
+/// @namespace statements/normal
+$dialog-confirm-icon-color: $color-f1-1 !default;
+
+/// background
+/// @namespace statements/normal
+$dialog-bg: $color-n1-1 !default;
+
+/// mask-background
+/// @namespace statements/normal
+$dialog-modal-bg: $color-n1-9 !default;
+/// mask-background-opacity
+/// @namespace statements/normal
+$dialog-modal-opacity: .2 !default;

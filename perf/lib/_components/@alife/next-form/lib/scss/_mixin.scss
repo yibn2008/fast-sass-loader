@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+// form mixins
+// --------------------------------------------------
+
+@mixin labelAlignLeft($labelColor:$form-label-color) {
+
+    #{$form-prefix}-item-control {
+        display: inline-block;
+    }
+
+    #{$form-prefix}-item-label {
+        text-align: right;
+        padding-right: $form-label-horizontal-split;
+        color: $labelColor;
+    }
+
+    &#{$form-prefix}-medium {
+        #{$form-prefix}-item-label, #{$form-prefix}-text-align, p {
+            line-height: $form-label-m-line-height;
+        }
+        .#{$css-prefix}radio-group {
+            line-height: 24px;
+        }
+        #{$form-prefix}-item-label {
+            font-size: $form-label-m-font-size;
+        }
+    }
+    &#{$form-prefix}-large {
+        #{$form-prefix}-item-label, #{$form-prefix}-text-align, p {
+            line-height: $form-label-l-line-height;
+        }
+        .#{$css-prefix}radio-group {
+            line-height: 36px;
+        }
+        #{$form-prefix}-item-label {
+            font-size: $form-label-l-font-size;
+        }
+    }
+    &#{$form-prefix}-small {
+        #{$form-prefix}-item-label, #{$form-prefix}-text-align, p {
+            line-height: $form-label-s-line-height;
+        }
+        #{$form-prefix}-item-label {
+            font-size: $form-label-s-font-size;
+        }
+    }
+}

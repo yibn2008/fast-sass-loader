@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+// feedback mixins
+// --------------------------------------------------
+
+@mixin feedbackBounding() {
+    @include clearfix();
+    position: relative;
+    display: block;
+    vertical-align: baseline;
+    border-style: $feedback-border-style;
+}
+
+@mixin feedbackState(
+    $titleColor,
+    $contentColor,
+    $iconColor,
+    $corner
+) {
+    border-radius: $corner;
+    .#{$css-prefix}feedback-title {
+        color: $titleColor;
+    }
+    .#{$css-prefix}feedback-content {
+        color: $contentColor;
+    }
+    .#{$css-prefix}feedback-symbol {
+        color: $iconColor;
+    }
+}
+
+@mixin feedbackSize(
+    $borderWidth,
+    $padding,
+    $titlePadding,
+    $titleFontSize,
+    $contentPadding,
+    $contentMarginTop,
+    $contentFontSize,
+    $iconSize
+) {
+    border-width: $borderWidth;
+    padding: $padding;
+
+    .#{$css-prefix}feedback-symbol {
+        float: left;
+        @include icon-handler($iconSize);
+        line-height: $iconSize;
+    }
+    .#{$css-prefix}feedback-title {
+        padding: $titlePadding;
+        font-size: $titleFontSize;
+        line-height: $titleFontSize;
+    }
+    .#{$css-prefix}feedback-content {
+        margin-top: $contentMarginTop;
+        padding: $contentPadding;
+        font-size: $contentFontSize;
+        line-height: $contentFontSize;
+    }
+
+    .#{$css-prefix}feedback-symbol + .#{$css-prefix}feedback-content {
+        margin-top: 0;
+    }
+}
+
+@mixin feedbackShape(
+    $shape,
+    $bgColor,
+    $borderColor,
+    $shadow
+) {
+    background-color: $bgColor;
+    border-color: $borderColor;
+    box-shadow: $shadow;
+
+    @if ($shape =='toast') {
+        position: fixed;
+    }
+}
+
+@mixin verticalAlignMiddle(
+    $fontSize,
+    $iconSize,
+    $className
+) {
+    @if ($fontSize > $iconSize) {
+        .#{$css-prefix}feedback-symbol {
+            line-height: $fontSize;
+        }
+    }
+
+    @if ($fontSize < $iconSize) {
+        .#{$css-prefix}feedback-#{$className} {
+            line-height: $iconSize;
+        }
+    }
+}

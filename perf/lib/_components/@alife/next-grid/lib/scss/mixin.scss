@@ -1,0 +1,252 @@
+@charset "UTF-8";
+
+// Grid system
+// --------------------------------------------------
+
+@mixin display-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@mixin flex($fg: 1, $fs: 1, $fb: auto) {
+    -webkit-box-flex: $fg;
+        -webkit-flex: $fg $fs $fb;
+       -moz-box-flex: $fg;
+           -moz-flex: $fg $fs $fb;
+            -ms-flex: $fg $fs $fb;
+                flex: $fg $fs $fb;
+}
+
+@mixin flex-wrap($value: nowrap) {
+    // No Webkit Box fallback.
+    -webkit-flex-wrap: $value;
+       -moz-flex-wrap: $value;
+    @if ($value == nowrap) {
+        -ms-flex-wrap: none;
+    } @else {
+        -ms-flex-wrap: $value;
+    }
+            flex-wrap: $value;
+}
+
+@mixin align-items($value: stretch) {
+    @if ($value == flex-start) {
+        -webkit-box-align: start;
+           -ms-flex-align: start;
+    } @else if ($value == flex-end) {
+        -webkit-box-align: end;
+           -ms-flex-align: end;
+    } @else {
+        -webkit-box-align: $value;
+           -ms-flex-align: $value;
+    }
+
+    -webkit-align-items: $value;
+       -moz-align-items: $value;
+            align-items: $value;
+}
+
+@mixin align-self($value: auto) {
+    -webkit-align-self: $value;
+       -moz-align-self: $value;
+
+    @if ($value == flex-start) {
+        -ms-flex-item-align: start;
+    } @else if ($value == flex-end) {
+        -ms-flex-item-align: end;
+    } @else {
+        -ms-flex-item-align: $value;
+    }
+
+    align-self: $value;
+}
+
+@mixin justify(){
+    &.#{$css-prefix}row-justify-start {
+        justify-content: flex-start;
+    }
+    &.#{$css-prefix}row-justify-end {
+        justify-content: flex-end;
+    }
+    &.#{$css-prefix}row-justify-center {
+        justify-content: center;
+    }
+    &.#{$css-prefix}row-justify-space-between {
+        justify-content: space-between;
+    }
+    &.#{$css-prefix}row-justify-space-around {
+        justify-content: space-around;
+    }
+}
+
+@mixin breakpoint($point, $type: "min") {
+    @each $breakpoint in $breakpoints {
+        $name: nth($breakpoint, 1);
+        $minQuery: nth($breakpoint, 2);
+        $maxQuery: nth($breakpoint, 3);
+
+        @if ($name == $point) {
+            @if ($type == "min") {
+                @media #{$minQuery} { @content; }
+            } @else if ($type == "max") {
+                @media #{$maxQuery} { @content; }
+            } @else if ($type == "min-max") {
+                $query: '';
+                @if ($name == 'xl') {
+                    $query: $minQuery;
+                } @else {
+                    $query: $minQuery + "and" + $maxQuery;
+                }
+                @media #{$query} { @content; }
+            }
+        }
+    }
+}
+
+// 响应式布局的行在不同断点下的左右两侧留白
+@mixin breakpoint-row-space() {
+    @include breakpoint(xxs) { padding: 0 $grid-space-xxs - ($grid-gutter / 2); }
+    @include breakpoint(xs) { padding: 0 $grid-space-xs - ($grid-gutter / 2); }
+    @include breakpoint(s) { padding: 0 $grid-space-s - ($grid-gutter / 2); }
+    @include breakpoint(m) { padding: 0 $grid-space-m - ($grid-gutter / 2); }
+    @include breakpoint(l) { padding: 0 $grid-space-l - ($grid-gutter / 2); }
+    @include breakpoint(xl) { padding: 0 $grid-space-xl - ($grid-gutter / 2); }
+}
+
+// 固定宽度布局的行在不同断点下的宽度值
+@mixin breakpoint-row-width() {
+    @include breakpoint(xxs) { width: $grid-xxs; }
+    @include breakpoint(xs) { width: $grid-xs; }
+    @include breakpoint(s) { width: $grid-s; }
+    @include breakpoint(m) { width: $grid-m; }
+    @include breakpoint(l) { width: $grid-l; }
+    @include breakpoint(xl) { width: $grid-xl; }
+}
+
+// 流式布局的行在不同断点下的最大宽度值
+@mixin breakpoint-row-max-width() {
+    @include breakpoint(xxs) { max-width: $grid-xxs; }
+    @include breakpoint(xs) { max-width: $grid-xs; }
+    @include breakpoint(s) { max-width: $grid-s; }
+    @include breakpoint(m) { max-width: $grid-m; }
+    @include breakpoint(l) { max-width: $grid-l; }
+    @include breakpoint(xl) { max-width: $grid-xl; }
+}
+
+// 响应式列宽
+@mixin make-columns() {
+    @for $i from 1 through $grid-columns {
+        .#{$css-prefix}row .#{$css-prefix}col-#{$i} {
+            $width: percentage($i / $grid-columns);
+            @include col-width-ie($width);
+            max-width: $width;
+            @include flex(0, 0, $width);
+        }
+    }
+
+    @each $breakpoint in $breakpoints {
+        $name: #{nth($breakpoint, 1)};
+        @include breakpoint($name) {
+            @for $j from 1 through $grid-columns {
+                .#{$css-prefix}row .#{$css-prefix}col-#{$name}-#{$j} {
+                    $width: percentage($j / $grid-columns);
+                    @include flex(0, 0, $width);
+                    max-width: $width;
+                    @include col-width-ie($width);
+                }
+            }
+        }
+    }
+}
+
+// 响应式列宽5分比
+@mixin make-5columns() {
+    @for $i from 1 through $grid-columns-5p {
+        .#{$css-prefix}row .#{$css-prefix}col-#{$i}p#{$grid-columns-5p} {
+            $width: percentage($i / $grid-columns-5p);
+            @include flex(0, 0, $width);
+            max-width: $width;
+            @include col-width-ie($width);
+        }
+    }
+    @each $breakpoint in $breakpoints {
+        $name: #{nth($breakpoint, 1)};
+        @include breakpoint($name) {
+            @for $j from 1 through $grid-columns-5p {
+                .#{$css-prefix}row .#{$css-prefix}col-#{$name}-#{$j}p#{$grid-columns-5p} {
+                    $width: percentage($j / $grid-columns-5p);
+                    @include flex(0, 0, $width);
+                    max-width: $width;
+                    @include col-width-ie($width);
+                }
+            }
+        }
+    }
+}
+
+// 固定列宽
+@mixin make-columns-fixed(){
+    @for $i from 1 through $grid-columns-fixed {
+        .#{$css-prefix}row .#{$css-prefix}col-fixed-#{$i} {
+            $width: $i * $grid-col-fixed-width;
+            @include flex(0, 0, $width);
+            min-width: $width;
+            @include col-width-ie($width);
+        }
+    }
+}
+
+// 响应列的水平位置偏移
+@mixin make-offset(){
+    @for $i from 1 through $grid-columns {
+        .#{$css-prefix}row .#{$css-prefix}col-offset-#{$i} {
+            margin-left: percentage($i / $grid-columns);
+        }
+    }
+    @each $breakpoint in $breakpoints {
+        $name: #{nth($breakpoint, 1)};
+        @include breakpoint($name) {
+            @for $j from 1 through $grid-columns {
+                .#{$css-prefix}row .#{$css-prefix}col-offset-#{$name}-#{$j} {
+                    margin-left: percentage($j / $grid-columns);
+                }
+            }
+        }
+    }
+}
+
+// 固定列的水平位置偏移
+@mixin make-offset-fixed() {
+    @for $i from 1 through $grid-columns-fixed {
+        .#{$css-prefix}row .#{$css-prefix}col-offset-fixed-#{$i} {
+            margin-left: $i * $grid-col-fixed-width;
+        }
+    }
+    @each $breakpoint in $breakpoints {
+        $name: #{nth($breakpoint, 1)};
+        @for $j from 1 through $grid-columns-fixed {
+            .#{$css-prefix}row .#{$css-prefix}col-offset-fixed-#{$name}-#{$j} {
+                margin-left: $j * $grid-col-fixed-width;
+            }
+        }
+    }
+}
+
+// 显示与隐藏
+@mixin visible-hidden-all-points() {
+    @each $breakpoint in $breakpoints {
+        $name: #{nth($breakpoint, 1)};
+        @include breakpoint($name, 'min-max') {
+            .#{$css-prefix}row .#{$css-prefix}col-#{$name}-hidden {
+                display: none;
+            }
+        }
+    }
+    .#{$css-prefix}row .#{$css-prefix}col-hidden {
+        display: none;
+    }
+}

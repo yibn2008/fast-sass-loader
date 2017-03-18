@@ -1,0 +1,62 @@
+@mixin switcher-icon() {
+    position: relative;
+
+    &:after {
+        content: $icon-content-arrow-down;
+        font-family: $icon-font-family;
+        font-size: $icon-xs;
+        position: absolute;
+        color: #666;
+        transition: transform .3s ease;
+        transform: scale(0.5);
+    }
+}
+
+@mixin tree-node-state (
+    $handle-color,
+    $handle-background
+) {
+    color: $handle-color;
+    background-color: $handle-background
+}
+
+@-webkit-keyframes loadingCircle {
+    0% {
+        transform-origin: 50% 50%;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform-origin: 50% 50%;
+        transform: rotate(360deg);
+    }
+}
+
+@mixin tree-icon-handler($size, $transform: false) {
+    @if ($transform) {
+        transform: $transform;
+    }
+
+    &:before {
+        width: $size;
+        font-size: $size;
+        line-height: inherit;
+    }
+
+    // Chrome不支持小于12px的字体，故采用缩放的方式缩小字体
+    @if ($size < 12) {
+        @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+            @if ($transform) {
+                transform: scale($size / $icon-s) translateX($size - $icon-s) $transform;
+            } @else {
+                transform: scale($size / $icon-s) translateX($size - $icon-s);
+            }
+
+
+            &:before {
+                width: $icon-s;
+                font-size: $icon-s;
+            }
+        }
+    }
+}

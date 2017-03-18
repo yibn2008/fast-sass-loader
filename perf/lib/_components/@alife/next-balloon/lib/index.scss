@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+@import "../../next-core/lib/next.scss";
+@import "../../next-overlay/lib/index.scss";
+@import "../../next-icon/lib/index.scss";
+
+@import "./scss/_function.scss";
+@import "./scss/_mixin.scss";
+@import "./scss/_placeholder.scss";
+@import "./scss/_variable.scss";
+
+.#{$css-prefix}balloon{
+    @include box-sizing;
+    @include global-font;
+    @include balloonBounding($balloon-border-style);
+
+    border-radius: $balloon-border-corner;
+    word-wrap: break-word;
+
+    &-primary{
+        @include balloonState(
+            $balloon-primary-color,
+            $balloon-primary-color-border,
+            $balloon-primary-color-bg,
+            $balloon-primary-shadow
+        );
+        @include balloonClose(
+            $balloon-size-close-margin-top,
+            $balloon-size-close-margin-right,
+            $balloon-size-close,
+            $balloon-primary-color-close,
+            $balloon-primary-color-close-hover
+        );
+        @include balloonArrow(
+            $balloon-size-arrow-size,
+            $balloon-size-arrow-size,
+            $balloon-primary-color-arrow-border,
+            $balloon-primary-color-arrow-bg
+        );
+    }
+
+    &-normal{
+        @include balloonState(
+            $balloon-normal-color,
+            $balloon-normal-color-border,
+            $balloon-normal-color-bg,
+            $balloon-normal-shadow
+        );
+        @include balloonClose(
+            $balloon-size-close-margin-top,
+            $balloon-size-close-margin-right,
+            $balloon-size-close,
+            $balloon-normal-color-close,
+            $balloon-normal-color-close-hover
+        );
+        @include balloonArrow(
+            $balloon-size-arrow-size,
+            $balloon-size-arrow-size,
+            $balloon-normal-color-arrow-border,
+            $balloon-normal-color-arrow-bg
+        );
+    }
+
+    @include showHidden();
+
+    // size
+    &-medium {
+        @include balloonSize($balloon-size-padding-top,$balloon-size-padding-right,$balloon-size-padding-bottom,$balloon-size-padding-left);
+    }
+    //带关闭按钮的右侧padding变大
+    &-closable {
+        @include balloonSize($balloon-size-padding-top,$balloon-size-padding-closable-right,$balloon-size-padding-bottom,$balloon-size-padding-left);
+    }
+
+}
+
+.#{$css-prefix}balloon-tooltip{
+    @include box-sizing;
+    @include global-font;
+    @include balloonBounding($balloon-tooltip-border-style);
+
+    border-radius: $balloon-border-corner;
+
+
+    @include tooltipState(
+                    $balloon-tooltip-color,
+                    $balloon-tooltip-color-border,
+                    $balloon-tooltip-color-bg,
+                    $balloon-tooltip-shadow
+    );
+
+    @include tooltipArrow(
+            $balloon-size-arrow-size,
+            $balloon-size-arrow-size,
+            $balloon-tooltip-color-arrow-border,
+            $balloon-tooltip-color-arrow-bg
+    );
+
+    @include showHidden();
+
+    // size
+    &-medium {
+        @include balloonSize($balloon-tooltip-size-padding-top,$balloon-tooltip-size-padding-right,$balloon-tooltip-size-padding-bottom,$balloon-tooltip-size-padding-left);
+    }
+
+}
+

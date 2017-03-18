@@ -1,0 +1,331 @@
+@charset "UTF-8";
+
+@import "../../next-core/lib/next.scss";
+@import "../../next-input/lib/index.scss";
+@import "../../next-select/lib/index.scss";
+@import "../../next-button/lib/index.scss";
+@import "../../next-icon/lib/index.scss";
+@import "./scss/function.scss";
+@import "./scss/mixin.scss";
+@import "./scss/placeholder.scss";
+@import "./scss/variable.scss";
+
+
+.#{$css-prefix}{
+    &search{
+
+        @include box-sizing;
+        @include global-font;
+
+        .#{$css-prefix}search-lt{
+            float: left;
+            border: $search-secondary-border;
+            border-right: 0 none;
+            height: 100%;
+            border-top-left-radius: $search-border-radius;
+            border-bottom-left-radius: $search-border-radius;
+        }
+
+        .#{$css-prefix}search-rt{
+            float: left;
+        }
+
+        .#{$css-prefix}search-lt:hover{
+            border-color: $search-secondary-hover-border-color;
+        }
+
+        .#{$css-prefix}select{
+            float: left;
+            border: 0 none;
+            border-top-left-radius: $search-border-radius;
+            border-bottom-left-radius: $search-border-radius;
+        }
+
+        .#{$css-prefix}btn{
+            box-shadow:none;
+            border-radius: 0;
+            font-size: $search-button-text-size;
+            border-top-right-radius: $search-border-radius;
+            border-bottom-right-radius: $search-border-radius;
+        }
+        .#{$css-prefix}icon:before{
+            font-size: $search-button-text-size;
+            width: auto;
+        }
+
+        .#{$css-prefix}icon-large{
+            width: auto;
+        }
+
+        .next-icon{
+            margin: $search-button-icon-margin;
+        }
+
+        .filter{
+            width: auto !important;
+
+            .#{$css-prefix}icon:before{
+                font-size: $search-filter-arrow-size;
+            }
+        }
+
+        .search-custom{
+            padding: 0 8px;
+            float: left;
+
+            input{
+                border: 0;
+                outline: 0;
+                width: 100%;
+            }
+        }
+
+        &.medium{
+            height: $search-height-m;
+
+            .#{$css-prefix}select,
+            .search-custom{
+                height: $search-height-m - $search-secondary-border-width*2;
+                line-height: $search-height-m - $search-secondary-border-width*2;
+                width: 100%;
+                overflow: hidden;
+
+                input{
+                    height: $search-height-m - $search-secondary-border-width*2;
+                    line-height: $search-height-m - $search-secondary-border-width*2;
+                }
+            }
+
+            .#{$css-prefix}btn{
+                height: $search-height-m;
+                line-height: $search-height-m - 2;
+            }
+
+            .#{$css-prefix}btn .#{$css-prefix}icon{
+
+                @include icon-handler($search-button-icon-m);
+
+                &:before{
+                    color: $search-button-icon-color;
+                }
+            }
+
+
+
+            .filter{
+                border-right: $search-filter-divider;
+            }
+        }
+
+        &.large{
+            height: $search-height-l;
+
+            .#{$css-prefix}select,
+            .search-custom{
+                height: $search-height-l - $search-secondary-border-width*2;
+                line-height: $search-height-l - $search-secondary-border-width*2;
+                width: 100%;
+                overflow: hidden;
+
+                input{
+                    height: $search-height-l - $search-secondary-border-width*2;
+                    line-height: $search-height-l - $search-secondary-border-width*2;
+                }
+            }
+
+            .#{$css-prefix}btn{
+                height: $search-height-l;
+                line-height: $search-height-l - 2;
+            }
+
+            .#{$css-prefix}btn .#{$css-prefix}icon{
+
+                @include icon-handler($search-button-icon-l);
+
+                &:before{
+                    color: $search-button-icon-color;
+                }
+
+            }
+
+            .filter{
+                border-right: $search-filter-divider;
+            }
+        }
+
+        &.auto-width{
+
+            display: inline-table;
+            width: 100%;
+
+            .#{$css-prefix}search-lt{
+                float: none;
+                display: table-cell;
+                width: 100%;
+                vertical-align: top;
+
+                .#{$css-prefix}search-lt-input{
+                    //width: 80% !important;
+                    float: none !important;
+                    overflow: auto;
+                }
+
+                .#{$css-prefix}select-inner{
+                    overflow: auto;
+                }
+
+                .search-custom{
+                    //width: 100% !important;
+                    float: none !important;
+                    //overflow: auto;
+                    width: auto;
+                }
+            }
+
+            .#{$css-prefix}search-rt{
+                white-space: nowrap;
+            }
+
+
+
+        }
+
+
+    }
+
+    &search-primary{
+
+        .#{$css-prefix}search-lt{
+            border: $search-border;
+            border-right: 0 none;
+        }
+
+        &.medium{
+
+            .#{$css-prefix}select,
+            .search-custom{
+                height: $search-height-m - $search-border-width*2;
+                line-height: $search-height-m - $search-border-width*2;
+                width: 100%;
+                overflow: hidden;
+
+                input{
+                    height: $search-height-m - $search-border-width*2;
+                    line-height: $search-height-m - $search-border-width*2;
+                }
+            }
+
+        }
+
+        &.large{
+
+            .#{$css-prefix}select,
+            .search-custom{
+                height: $search-height-l - $search-border-width*2;
+                line-height: $search-height-l - $search-border-width*2;
+                width: 100%;
+                overflow: hidden;
+
+                input{
+                    height: $search-height-l - $search-border-width*2;
+                    line-height: $search-height-l - $search-border-width*2;
+                }
+            }
+
+        }
+
+    }
+
+    &search-normal{
+
+        display: inline-block;
+
+        .#{$css-prefix}btn{
+            border: $search-normal-border;
+            background-color: $search-normal-button-background;
+            color: $search-normal-button-text-color;
+        }
+
+        &:hover .#{$css-prefix}btn{
+            border: $search-normal-hover-border;
+            border-left: $search-normal-border;
+        }
+
+        &:hover .#{$css-prefix}search-lt{
+            border: $search-normal-hover-border;
+            border-right: 0 none;
+        }
+
+        .#{$css-prefix}btn .#{$css-prefix}icon:before{
+            color: $search-normal-button-icon-color;
+        }
+
+        .#{$css-prefix}btn:hover .#{$css-prefix}icon:before{
+            color: $search-normal-button-icon-color;
+        }
+
+        &.medium{
+            height: $search-normal-height-m;
+
+            .#{$css-prefix}select,
+            .search-custom{
+                height: $search-normal-height-m - $search-normal-border-width*2;
+                line-height: $search-normal-height-m - $search-normal-border-width*2;
+                width: 100%;
+                overflow: hidden;
+
+                input{
+                    height: $search-normal-height-m - $search-normal-border-width*2;
+                    line-height: $search-normal-height-m - $search-normal-border-width*2;
+                }
+            }
+
+            .#{$css-prefix}btn{
+                height: $search-normal-height-m;
+                line-height: $search-normal-height-m - 2;
+                font-size: $search-normal-button-text-size;
+            }
+
+            .#{$css-prefix}btn .#{$css-prefix}icon{
+
+                @include icon-handler($search-normal-button-icon-size-m);
+
+                &:before{
+                    color: $search-normal-button-icon-color;
+                }
+            }
+
+        }
+
+        &.small{
+            height: $search-normal-height-s;
+
+            .#{$css-prefix}select,
+            .search-custom{
+                height: $search-normal-height-s - $search-normal-border-width*2;
+                line-height: $search-normal-height-s - $search-normal-border-width*2;
+                width: 100%;
+                overflow: hidden;
+
+                input{
+                    height: $search-normal-height-s - $search-normal-border-width*2;
+                    line-height: $search-normal-height-s - $search-normal-border-width*2;
+                }
+            }
+
+            .#{$css-prefix}btn{
+                height: $search-normal-height-s;
+                line-height: $search-normal-height-s - 2;
+                font-size: $search-normal-button-text-size;
+            }
+
+            .#{$css-prefix}icon{
+                @include icon-handler($search-normal-button-icon-size-s);
+            }
+        }
+
+    }
+
+
+}
+

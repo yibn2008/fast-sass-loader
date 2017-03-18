@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+// breadcrumb variables
+// --------------------------------------------------
+
+////
+/// @module breadcrumb: 面包屑
+/// @tag Breadcrumb
+/// @category component
+/// @family breadcrumb
+/// @varPrefix $breadcrumb-
+/// @classPrefix {prefix}-breadcrumb
+////
+
+// Unconfigurable
+// ----------------------------------------
+
+// 整体高度，不可配
+$breadcrumb-height: $s4 !default;
+// text 最小宽度，不可配
+$breadcrumb-text-min-width: $s4 !default;
+
+// Size
+// ----------------------------------------
+
+/// size
+/// @namespace size/text
+$breadcrumb-size-m-font-size: $font-size-base-caption !default;
+
+/// size
+/// @namespace size/text-ellipsis
+$breadcrumb-size-ellipsis-font-size: $font-size-base-caption !default;
+
+/// size
+/// @namespace size/text-number
+$breadcrumb-size-number-font-size: $font-size-base-caption !default;
+
+/// size
+/// @namespace size/text-keyword
+$breadcrumb-size-keyword-font-size: $font-size-base-caption !default;
+
+/// size
+/// @namespace size/icon-arrow
+$breadcrumb-size-m-icon-size: $icon-xs !default;
+
+/// margin(l, r)
+/// @namespace size/icon-arrow
+$breadcrumb-size-m-icon-margin: $s2 !default;
+
+// Statement:Normal
+// ----------------------------------------
+
+/// text(color)
+/// @namespace statement/normal
+$breadcrumb-text-color: $color-n2-3 !default;
+
+/// text-ellipsis(color)
+/// @namespace statement/normal
+$breadcrumb-text-ellipsis-color: $color-n2-3 !default;
+
+/// text-current(color)
+/// @namespace statement/normal
+$breadcrumb-text-current-color: $color-n2-4 !default;
+
+/// text-number(color)
+/// @namespace statement/normal
+$breadcrumb-text-number-color: $color-b1-6 !default;
+
+/// text-keyword(color)
+/// @namespace statement/normal
+$breadcrumb-text-keyword-color: $color-n2-4 !default;
+
+/// icon-arrow(color)
+/// @namespace statement/normal
+$breadcrumb-icon-color: $color-n1-8 !default;
+
+// Statement:Hovr
+// ----------------------------------------
+
+/// text(color)
+/// @namespace statement/hover
+$breadcrumb-text-color-hover: $color-b1-6 !default;
+
+/// text-current(color)
+/// @namespace statement/hover
+$breadcrumb-text-current-color-hover: $color-b1-6 !default;
+
+/// text-number(color)
+/// @namespace statement/hover
+$breadcrumb-text-number-color-hover: $color-b1-6 !default;
+
+/// text-keyword(color)
+/// @namespace statement/hover
+$breadcrumb-text-keyword-color-hover: $color-b1-6 !default;

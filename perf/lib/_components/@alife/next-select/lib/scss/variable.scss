@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+////
+/// @module select: 选择器
+/// @tag Select
+/// @category component
+/// @family selector
+/// @varPrefix $select-
+/// @classPrefix {prefix}-select
+////
+
+// select variables
+// --------------------------------------------------
+
+$select-prefix: '.#{$css-prefix}select';
+
+/// text(color)
+/// @namespace statement/normal
+$select-color: $color-n2-4 !default;
+/// hint(color)
+/// @namespace statement/normal
+$select-color-hint: $color-n2-2 !default;
+/// text(color)
+/// @namespace statement/disabled
+$select-color-disabled: $color-n2-1 !default;
+
+/// corner(radius)
+/// @namespace statement/normal
+$select-border-radius: $corner-radius-r0 !default;
+
+/// border(color)
+/// @namespace statement/normal
+$select-color-border: $color-n1-7 !default;
+/// border(color)
+/// @namespace statement/hover
+$select-color-border-hover: $color-n1-8 !default;
+/// border(color)
+/// @namespace statement/focus
+$select-color-border-focus: $color-b2-6 !default;
+/// border&arrow(color)
+/// @namespace statement/disabled
+$select-color-border-disabled: $color-n1-5 !default;
+/// border(color)
+/// @namespace statement/active
+$select-color-border-active: $color-b2-6 !default;
+
+/// background(color)
+/// @namespace statement/normal
+$select-color-bg: $color-n1-1 !default;
+/// background(color)
+/// @namespace statement/disabled
+$select-color-bg-disabled: $color-n1-2 !default;
+
+/// width
+/// @namespace size/border
+$select-border-width: $line-1-width !default;
+/// style
+/// @namespace size/border
+$select-border-style: $line-solid !default;
+/// size
+/// @namespace size/text
+$select-font: $font-size-base-body1 !default;
+/// icon(color)
+/// @namespace statement/normal
+$select-icon-color: $color-n1-8 !default;
+
+/// tag(background)
+/// @namespace statement/normal
+$select-color-item-bg: $color-n1-4 !default;
+
+//large
+
+/// height(large)
+/// @namespace size/bounding
+$select-large-height: $s10 !default;
+
+/// padding(large)
+/// @namespace size/bounding
+$select-large-padding-lr: $s2 !default;
+/// padding-multiple(large)
+/// @namespace size/bounding
+$select-large-padding-multiple: $s2 !default;
+/// padding-multiple-tb(large)
+/// @namespace size/bounding
+$select-large-padding-multiple-tb: $s2 !default;
+/// size(large)
+/// @namespace size/icon
+$select-icon-large-size: $icon-m !default;
+/// size(large)
+/// @namespace size/text
+$select-large-font: $font-size-base-body1 !default;
+
+//middle
+
+/// height(medium)
+/// @namespace size/bounding
+$select-middle-height: $s7 !default;
+/// padding(medium)
+/// @namespace size/bounding
+$select-middle-padding-lr: $s2 !default;
+/// padding-multiple(medium)
+/// @namespace size/bounding
+$select-middle-padding-multiple: $s1 !default;
+/// padding-multiple-tb(medium)
+/// @namespace size/bounding
+$select-middle-padding-multiple-tb: $s1 !default;
+/// size(medium)
+/// @namespace size/icon
+$select-icon-middle-size: $icon-s !default;
+/// size(medium)
+/// @namespace size/text
+$select-middle-font: $font-size-base-body1 !default;
+
+//small
+/// height(small)
+/// @namespace size/bounding
+$select-small-height: $s5 !default;
+/// padding(small)
+/// @namespace size/bounding
+$select-small-padding-lr: $s2 !default;
+/// padding-multiple(small)
+/// @namespace size/bounding
+$select-small-padding-multiple: $s1 !default;
+/// padding-multiple-tb(small)
+/// @namespace size/bounding
+$select-small-padding-multiple-tb: 2px !default;
+/// size(small)
+/// @namespace size/icon
+$select-icon-small-size: $icon-xs !default;
+/// size(small)
+/// @namespace size/text
+$select-small-font: $font-size-base-caption !default;
+
+//no border
+/// no-border text(color)
+/// @namespace statement/hover
+$select-no-border-hover-color: $color-b1-6 !default;
+
+/// no-border background(color)
+/// @namespace statement/normal
+$select-box-bg: $color-n1-2 !default;
+/// no-border border(color)
+/// @namespace statement/normal
+$select-box-border-color: $color-n1-7 !default;
+
+
+$select-box-padding-large: $s2;
+$select-box-padding-medium: $s1;
+$select-box-padding-small: $s1;
+$select-box-padding-small-tb: 2px;
+$select-box-split: $s1;
+
+/// item-corner(radius)
+/// @namespace statement/normal
+$select-item-border-radius: $corner-radius-r1 !default;
+
+/// item-margin(hoz)
+/// @namespace size/item
+$select-item-margin-right: $s1 !default;
+/// item-padding(hoz)
+/// @namespace size/item
+$select-item-padding-hoz: $s1 !default;
+/// item-padding(ver)
+/// @namespace size/item
+$select-item-padding-ver: $s0 !default;

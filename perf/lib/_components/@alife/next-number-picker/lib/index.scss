@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+@import "../../next-core/lib/next.scss";
+@import "../../next-input/lib/index.scss";
+@import "../../next-icon/lib/index.scss";
+@import "./scss/function.scss";
+@import "./scss/mixin.scss";
+@import "./scss/placeholder.scss";
+@import "./scss/variable.scss";
+
+#{$number-picker-prefix} {
+    @include box-sizing;
+    @include global-font;
+
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+
+    @include clearfix();
+
+    &-disabled {
+        & #{$number-picker-prefix}-handler-wrap #{$number-picker-prefix}-handler {
+            &-up,
+            &-down {
+                @include number-picker-disabled();
+                &-inner:before {
+                    cursor: not-allowed;
+                }
+            }
+        }
+    }
+
+    &-input-wrap {
+        overflow: hidden;
+        float: left;
+
+        #{$number-picker-prefix}-input input {
+            margin: 0;
+            padding: 0;
+
+            font-size: $number-picker-font-size;
+            text-align: center;
+            &[disabled] {
+                @include number-picker-disabled();
+            }
+        }
+    }
+
+    &-handler-wrap {
+        float: right;
+        margin-left: $number-picker-handler-margin-left;
+        position: relative;
+
+        #{$number-picker-prefix}-handler {
+            text-align: center;
+            cursor: pointer;
+            line-height: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.1s linear;
+            display: block;
+            border: $line-solid $number-picker-border-width $number-picker-border-color;
+            color: $number-picker-color;
+            background-color: $number-picker-bg;
+
+            &:active {
+                text-decoration: none;
+            }
+            &:hover {
+                color: $number-picker-color-hover;
+                border-color: $number-picker-border-color;
+            }
+
+            &-up,
+            &-down {
+                &-disabled {
+                    @include number-picker-disabled();
+                }
+                &-disabled &-inner:before {
+                    cursor: not-allowed;
+                }
+            }
+
+            &-up {
+                margin-bottom: $number-picker-handler-margin-bottom;
+            }
+        }
+    }
+
+    &-handler-up-inner,
+    &-handler-down-inner {
+        user-select: none;
+        cursor: pointer;
+
+        line-height: $number-picker-handler-height - 2 * $number-picker-border-width;
+
+    }
+    &-normal {
+        & #{$number-picker-prefix}-input {
+            width: $number-picker-width;
+            input {
+                line-height: $number-picker-height - 2;
+                height: $number-picker-height + 2 * $number-picker-border-width - 2;
+            }
+        }
+        #{$number-picker-prefix}-handler {
+            width: $number-picker-handler-width;
+            height: $number-picker-handler-height;
+            border-radius: $number-picker-handler-corner;
+            .#{$css-prefix}icon {
+                @include icon-handler($number-picker-handler-icon-size);
+            }
+        }
+    }
+
+    &-inline {
+        & #{$number-picker-prefix}-handler-wrap,
+        & #{$number-picker-prefix}-input-wrap {
+            position: relative;
+            float: left;
+        }
+
+        & #{$number-picker-prefix}-handler-wrap {
+            width: $number-picker-inline-width + 2 * ($number-picker-inline-handler-width + $number-picker-handler-margin-left);
+            margin-left: 0;
+
+            & #{$number-picker-prefix}-handler {
+                width: $number-picker-inline-handler-width;
+                height: $number-picker-inline-handler-height;
+                border-radius: $number-picker-inline-handler-corner;
+
+                margin: 0;
+
+                &-up-inner,
+                &-down-inner {
+                    line-height: $number-picker-inline-handler-height - 2 * $number-picker-border-width;
+                }
+
+                &-up {
+                    float: right;
+                }
+
+                .#{$css-prefix}icon {
+                    @include icon-handler($number-picker-inline-handler-icon-size);
+                }
+            }
+        }
+
+        & #{$number-picker-prefix}-input-wrap {
+            margin-left: -($number-picker-inline-width + $number-picker-inline-handler-width + $number-picker-handler-margin-left);
+        }
+
+        & #{$number-picker-prefix}-input {
+            width: $number-picker-inline-width;
+            input {
+                line-height: $number-picker-inline-height - 2 * $number-picker-border-width - 2;
+                height: $number-picker-inline-height - 2;
+            }
+        }
+    }
+}
+

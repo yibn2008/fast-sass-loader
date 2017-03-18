@@ -1,0 +1,421 @@
+@charset "UTF-8";
+@import "../../next-core/lib/next.scss";
+@import "../../next-icon/lib/index.scss";
+@import "../../next-animate/lib/index.scss";
+@import "./scss/function.scss";
+@import "./scss/mixin.scss";
+@import "./scss/placeholder.scss";
+@import "./scss/variable.scss";
+@import "./scss/motion.scss";
+
+.#{$css-prefix} {
+
+    &tag {
+        @include box-sizing;
+        @include global-font;
+        a {
+            @include link;
+        }
+
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        border-style: solid;
+        overflow: hidden;
+        white-space: nowrap;
+        text-decoration: none;
+        transition: all .1s $ease-in-out-circ;
+        border-radius: $tag-corner-radius;
+        cursor: pointer;
+        max-width: 100%;
+
+        & .#{$css-prefix}tag-opt,
+        & .#{$css-prefix}tag-number,
+        > .#{$css-prefix}tag-body,
+        > .#{$css-prefix}tag-tail {
+            display: inline-block;
+            text-align: center;
+            white-space: nowrap;
+
+        }
+        & .#{$css-prefix}tag-opt {
+            width: $tag-interactive-tail-width;
+            vertical-align: middle;
+        }
+
+        &[disabled],
+        &.disabled {
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+    }
+
+    &tag-medium {
+        @include tag-size(
+                $tag-size-m-margin,
+                $tag-size-m-height,
+                $tag-size-m-padding-lr,
+                $tag-size-m-text-size,
+                $tag-size-m-line-height,
+                $tag-border-width);
+
+        & .#{$css-prefix}tag-opt {
+            // height: $tag-size-m-height + 2 * $tag-border-width;
+            height: $tag-size-m-height;
+            @include tag-tail-icon-size($tag-size-m-icon-font);
+        }
+    }
+
+    // Hint: 暂时不支持 large ，如果用户取 size = 'large' ，则使用 medium 的样式
+    &tag-large {
+        @include tag-size(
+                $tag-size-m-margin,
+                $tag-size-m-height,
+                $tag-size-m-padding-lr,
+                $tag-size-m-text-size,
+                $tag-size-m-line-height,
+                $tag-border-width);
+
+        & .#{$css-prefix}tag-opt {
+            // height: $tag-size-m-height + 2 * $tag-border-width;
+            height: $tag-size-m-height;
+            @include tag-tail-icon-size($tag-size-m-icon-font);
+        }
+    }
+
+    &tag-small {
+        @include tag-size(
+                $tag-size-s-margin,
+                $tag-size-s-height,
+                $tag-size-s-padding-lr,
+                $tag-size-s-text-size,
+                $tag-size-s-line-height,
+                $tag-border-width);
+
+        & .#{$css-prefix}tag-opt {
+            // height: $tag-size-s-height + 2 * $tag-border-width;
+            height: $tag-size-s-height;
+            @include tag-tail-icon-size($tag-size-s-icon-font);
+        }
+    }
+
+    // &tag-close {
+    //     width: 0;
+    //     padding: 0;
+    //     margin: 0;
+    // }
+
+    &tag-selectable {
+
+        .#{$css-prefix}tag-body {
+            width: 100%;
+            @extend %ellipsis;
+        }
+
+        &.#{$css-prefix}tag-level-normal {
+            @include tag-statement(
+                    $tag-selectable-normal-text-color,
+                    $tag-selectable-normal-background-color,
+                    $tag-selectable-normal-border-color,
+                    $tag-selectable-normal-text-color-hover,
+                    $tag-selectable-normal-background-color-hover,
+                    $tag-selectable-normal-border-color-hover,
+                    $tag-selectable-normal-text-color-disabled,
+                    $tag-selectable-normal-background-color-disabled,
+                    $tag-selectable-normal-border-color-disabled
+            );
+
+            &.#{$css-prefix}tag-selected {
+
+                @include tag-statement-selected(
+                        $tag-selectable-normal-text-color-selected,
+                        $tag-selectable-normal-background-color-selected,
+                        $tag-selectable-normal-border-color-selected,
+                        $tag-selectable-normal-text-color-selected-hover,
+                        $tag-selectable-normal-background-color-selected-hover,
+                        $tag-selectable-normal-border-color-selected-hover
+                );
+
+                @include tag-selected-tick(
+                        $tag-selectable-normal-icon-selected,
+                        $tag-selectable-normal-icon-color-selected,
+                        $tag-selectable-normal-tail-bg-color,
+                        $tag-selectable-normal-tail-bg-color-selected-hover
+                );
+            }
+        }
+
+        &.#{$css-prefix}tag-level-primary {
+            @include tag-statement(
+                    $tag-selectable-primary-text-color,
+                    $tag-selectable-primary-background-color,
+                    $tag-selectable-primary-border-color,
+                    $tag-selectable-primary-text-color-hover,
+                    $tag-selectable-primary-background-color-hover,
+                    $tag-selectable-primary-border-color-hover,
+                    $tag-selectable-primary-text-color-disabled,
+                    $tag-selectable-primary-background-color-disabled,
+                    $tag-selectable-primary-border-color-disabled
+            );
+
+            &.#{$css-prefix}tag-selected {
+
+                @include tag-statement-selected(
+                        $tag-selectable-primary-text-color-selected,
+                        $tag-selectable-primary-background-color-selected,
+                        $tag-selectable-primary-border-color-selected,
+                        $tag-selectable-primary-text-color-selected-hover,
+                        $tag-selectable-primary-background-color-selected-hover,
+                        $tag-selectable-primary-border-color-selected-hover
+                );
+            }
+        }
+
+        &.#{$css-prefix}tag-level-secondary {
+            @include tag-statement(
+                    $tag-selectable-secondary-text-color,
+                    $tag-selectable-secondary-background-color,
+                    $tag-selectable-secondary-border-color,
+                    $tag-selectable-secondary-text-color-hover,
+                    $tag-selectable-secondary-background-color-hover,
+                    $tag-selectable-secondary-border-color-hover,
+                    $tag-selectable-secondary-text-color-disabled,
+                    $tag-selectable-secondary-background-color-disabled,
+                    $tag-selectable-secondary-border-color-disabled
+            );
+
+            &.#{$css-prefix}tag-selected {
+
+                @include tag-statement-selected(
+                        $tag-selectable-secondary-text-color-selected,
+                        $tag-selectable-secondary-background-color-selected,
+                        $tag-selectable-secondary-border-color-selected,
+                        $tag-selectable-secondary-text-color-selected-hover,
+                        $tag-selectable-secondary-background-color-selected-hover,
+                        $tag-selectable-secondary-border-color-selected-hover
+                );
+
+                @include tag-selected-tick(
+                        $tag-selectable-secondary-icon-selected,
+                        $tag-selectable-secondary-icon-color-selected,
+                        $tag-selectable-secondary-tail-bg-color,
+                        $tag-selectable-secondary-tail-bg-color-selected-hover
+                );
+            }
+        }
+    }
+
+    &tag-deletable {
+
+        .#{$css-prefix}tag-body {
+            width: calc(100% - #{$tag-deletable-tail-width});
+        }
+
+        .#{$css-prefix}tag-opt {
+            border-left: $tag-deletable-tail-border-left;
+            width: $tag-deletable-tail-width;
+        }
+
+        &.#{$css-prefix}tag-level-normal {
+            @include tag-deletable-statement(
+                    $tag-deletable-normal-text-color,
+                    $tag-deletable-normal-background-color,
+                    $tag-deletable-normal-border-color,
+                    $tag-deletable-normal-icon-color,
+                    $tag-deletable-normal-icon-background-color,
+                    $tag-deletable-normal-text-color-hover,
+                    $tag-deletable-normal-background-color-hover,
+                    $tag-deletable-normal-border-color-hover,
+                    $tag-deletable-normal-icon-color-hover,
+                    $tag-deletable-normal-icon-background-color-hover,
+                    $tag-deletable-normal-text-color-disabled,
+                    $tag-deletable-normal-background-color-disabled,
+                    $tag-deletable-normal-border-color-disabled,
+                    $tag-deletable-normal-icon-color-disabled,
+                    $tag-deletable-normal-icon-background-color-disabled
+            );
+        }
+
+        &.#{$css-prefix}tag-level-primary {
+            @include tag-deletable-statement(
+                    $tag-deletable-primary-text-color,
+                    $tag-deletable-primary-background-color,
+                    $tag-deletable-primary-border-color,
+                    $tag-deletable-primary-icon-color,
+                    $tag-deletable-primary-icon-background-color,
+                    $tag-deletable-primary-text-color-hover,
+                    $tag-deletable-primary-background-color-hover,
+                    $tag-deletable-primary-border-color-hover,
+                    $tag-deletable-primary-icon-color-hover,
+                    $tag-deletable-primary-icon-background-color-hover,
+                    $tag-deletable-primary-text-color-disabled,
+                    $tag-deletable-primary-background-color-disabled,
+                    $tag-deletable-primary-border-color-disabled,
+                    $tag-deletable-primary-icon-color-disabled,
+                    $tag-deletable-primary-icon-background-color-disabled
+            );
+        }
+
+        &.#{$css-prefix}tag-level-secondary {
+            @include tag-deletable-statement(
+                    $tag-deletable-secondary-text-color,
+                    $tag-deletable-secondary-background-color,
+                    $tag-deletable-secondary-border-color,
+                    $tag-deletable-secondary-icon-color,
+                    $tag-deletable-secondary-icon-background-color,
+                    $tag-deletable-secondary-text-color-hover,
+                    $tag-deletable-secondary-background-color-hover,
+                    $tag-deletable-secondary-border-color-hover,
+                    $tag-deletable-secondary-icon-color-hover,
+                    $tag-deletable-secondary-icon-background-color-hover,
+                    $tag-deletable-secondary-text-color-disabled,
+                    $tag-deletable-secondary-background-color-disabled,
+                    $tag-deletable-secondary-border-color-disabled,
+                    $tag-deletable-secondary-icon-color-disabled,
+                    $tag-deletable-secondary-icon-background-color-disabled
+            );
+        }
+
+    }
+
+    &tag-interactive {
+
+        &.#{$css-prefix}tag {
+            overflow: visible;
+        }
+
+        @include tag-interactive-statement(
+                $tag-interactive-l-text-color,
+                $tag-interactive-number-color,
+                $tag-interactive-l-background-color,
+                $tag-interactive-border-color,
+                $tag-interactive-r-text-color,
+                $tag-interactive-r-background-color,
+                $tag-interactive-l-text-color-hover,
+                $tag-interactive-number-color-hover,
+                $tag-interactive-l-background-color-hover,
+                $tag-interactive-border-color-hover,
+                $tag-interactive-r-text-color-hover,
+                $tag-interactive-r-background-color-hover,
+                $tag-interactive-l-text-color-disabled,
+                $tag-interactive-number-color-disabled,
+                $tag-interactive-l-background-color-disabled,
+                $tag-interactive-border-color-disabled,
+                null,
+                null
+        );
+
+        & .#{$css-prefix}tag-tail {
+            position: relative;
+            top: 0;
+        }
+
+        & .#{$css-prefix}tag-number {
+            width: $tag-interactive-number-width;
+            border-left: $tag-interactive-split-line;
+        }
+
+        & .#{$css-prefix}tag-opt {
+            display: none;
+            width: $tag-interactive-tail-width;
+            // height: $tag-interactive-tail-width;
+            position: relative;
+            top: -1px;
+            right: -1px;
+            border-radius: 0 $tag-corner-radius $tag-corner-radius 0;
+        }
+
+        &.hover .#{$css-prefix}tag-opt,
+        &:hover .#{$css-prefix}tag-opt {
+            display: inline-block;
+        }
+
+    }
+
+    &tag-link {
+
+        .#{$css-prefix}tag-body {
+            width: 100%;
+            @extend %ellipsis;
+        }
+
+        a {
+            color: $tag-link-normal-text-color;
+        }
+
+        &.#{$css-prefix}tag-level-normal {
+            @include tag-statement(
+                    $tag-link-normal-text-color,
+                    $tag-link-normal-background-color,
+                    $tag-link-normal-border-color,
+                    $tag-link-normal-text-color-hover,
+                    $tag-link-normal-background-color-hover,
+                    $tag-link-normal-border-color-hover,
+                    $tag-link-normal-text-color-disabled,
+                    $tag-link-normal-background-color-disabled,
+                    $tag-link-normal-border-color-disabled
+            );
+        }
+
+        &.#{$css-prefix}tag-level-primary {
+            @include tag-statement(
+                    $tag-link-primary-text-color,
+                    $tag-link-primary-background-color,
+                    $tag-link-primary-border-color,
+                    $tag-link-primary-text-color-hover,
+                    $tag-link-primary-background-color-hover,
+                    $tag-link-primary-border-color-hover,
+                    $tag-link-primary-text-color-disabled,
+                    $tag-link-primary-background-color-disabled,
+                    $tag-link-primary-border-color-disabled
+            );
+        }
+
+        &.#{$css-prefix}tag-level-secondary {
+            @include tag-statement(
+                    $tag-link-secondary-text-color,
+                    $tag-link-secondary-background-color,
+                    $tag-link-secondary-border-color,
+                    $tag-link-secondary-text-color-hover,
+                    $tag-link-secondary-background-color-hover,
+                    $tag-link-secondary-border-color-hover,
+                    $tag-link-secondary-text-color-disabled,
+                    $tag-link-secondary-background-color-disabled,
+                    $tag-link-secondary-border-color-disabled
+            );
+        }
+    }
+
+    &tag-readonly {
+
+        .#{$css-prefix}tag-body {
+            width: 100%;
+            @extend %ellipsis;
+        }
+
+        @include tag-statement(
+                $tag-readonly-text-color,
+                $tag-readonly-background-color,
+                $tag-readonly-border-color,
+                null,
+                null,
+                null,
+                $tag-readonly-text-color-disabled,
+                $tag-readonly-background-color-disabled,
+                $tag-readonly-border-color-disabled
+        )
+    }
+
+    // Animation
+    // -----------
+    &tag-zoom-enter,
+    &tag-zoom-appear {
+        animation: zoomIn .2s $ease-in-out-circ;
+        animation-fill-mode: both;
+    }
+
+    &tag-zoom-leave {
+        animation: zoomOut .2s $ease-in-out-circ;
+        animation-fill-mode: both;
+    }
+}

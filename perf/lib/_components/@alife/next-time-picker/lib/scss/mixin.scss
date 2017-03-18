@@ -1,0 +1,21 @@
+@mixin time-picker-size (
+    $height,
+    $font-size,
+    $icon-size
+) {
+    #{$time-picker-input-prefix} {
+        width: $s40;
+        display: inline-block;
+    
+        input {
+            @include inputSize($height, 0, $s2, $font-size);
+        }
+    }
+
+    #{$time-picker-icon-prefix} {
+        height: $height;
+        line-height: $height;
+
+        @include icon-handler($icon-size);
+    }
+}

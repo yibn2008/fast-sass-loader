@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+// number-picker mixins
+// --------------------------------------------------
+
+@mixin number-picker-disabled() {
+    color: $number-picker-color-disabled;
+    background-color: $number-picker-bg-disabled;
+    border-color: $number-picker-border-color-disabled;
+    cursor: default;
+    &:hover {
+        color: $number-picker-color-disabled;
+        background-color: $number-picker-bg-disabled;
+        border-color: $number-picker-border-color-disabled;
+        cursor: default;
+    }
+}

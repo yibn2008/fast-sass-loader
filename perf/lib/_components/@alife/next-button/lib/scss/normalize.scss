@@ -1,0 +1,37 @@
+#{$btn-prefix} {
+    @include global-font;
+
+    &,
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    color: inherit;
+    margin: 0;
+    overflow: visible;
+    text-transform: none;
+    cursor: pointer;
+
+    &[disabled] {
+        cursor: default;
+    }
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+
+    background-color: transparent;
+    text-decoration: none;
+
+    &:active,
+    &:hover {
+        outline: 0;
+    }
+}

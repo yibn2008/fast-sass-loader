@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+@import "../../next-core/lib/next.scss";
+@import "../../next-icon/lib/index.scss";
+@import "../../next-overlay/lib/index.scss";
+
+@import "./scss/_function.scss";
+@import "./scss/_mixin.scss";
+@import "./scss/_placeholder.scss";
+@import "./scss/_variable.scss";
+
+.#{$css-prefix} {
+    &feedback {
+        @include box-sizing;
+        @include global-font;
+
+        @include feedbackBounding();
+
+        .#{$css-prefix}feedback-wrapper {
+            position: fixed;
+            left: 50%;
+        }
+
+        &.#{$css-prefix}feedback-success {
+            @include feedbackState(
+                $feedback-success-color-title,
+                $feedback-success-color-content,
+                $feedback-success-color-icon,
+                $feedback-border-radius
+            );
+            &.#{$css-prefix}feedback-inline {
+                @include feedbackShape(
+                    inline,
+                    $feedback-success-color-bg-inline,
+                    $feedback-success-color-border-inline,
+                    none
+                );
+            }
+            &.#{$css-prefix}feedback-toast {
+                @include feedbackShape(
+                    toast,
+                    $feedback-success-color-bg-toast,
+                    $feedback-success-color-border-toast,
+                    $feedback-success-shadow-toast
+                );
+            }
+        }
+
+        &.#{$css-prefix}feedback-prompt {
+            @include feedbackState(
+                $feedback-prompt-color-title,
+                $feedback-prompt-color-content,
+                $feedback-prompt-color-icon,
+                $feedback-border-radius
+            );
+            &.#{$css-prefix}feedback-inline {
+                @include feedbackShape(
+                    inline,
+                    $feedback-prompt-color-bg-inline,
+                    $feedback-prompt-color-border-inline,
+                    none
+                );
+            }
+            &.#{$css-prefix}feedback-toast {
+                @include feedbackShape(
+                    toast,
+                    $feedback-prompt-color-bg-toast,
+                    $feedback-prompt-color-border-toast,
+                    $feedback-prompt-shadow-toast
+                );
+            }
+        }
+
+        &.#{$css-prefix}feedback-error {
+            @include feedbackState(
+                $feedback-error-color-title,
+                $feedback-error-color-content,
+                $feedback-error-color-icon,
+                $feedback-border-radius
+            );
+            &.#{$css-prefix}feedback-inline {
+                @include feedbackShape(
+                    inline,
+                    $feedback-error-color-bg-inline,
+                    $feedback-error-color-border-inline,
+                    none
+                );
+            }
+            &.#{$css-prefix}feedback-toast {
+                @include feedbackShape(
+                    toast,
+                    $feedback-error-color-bg-toast,
+                    $feedback-error-color-border-toast,
+                    $feedback-error-shadow-toast
+                );
+            }
+        }
+
+        &.#{$css-prefix}feedback-toast {
+            @include feedbackShape(
+                toast,
+                $feedback-error-color-bg-toast,
+                $feedback-error-color-border-toast,
+                $feedback-error-shadow-toast
+            );
+        }
+
+        &.#{$css-prefix}feedback-addon {
+            @include feedbackShape(
+                addon,
+                transparent,
+                transparent,
+                none
+            );
+            &.#{$css-prefix}feedback-medium,&.#{$css-prefix}feedback-large {
+                padding: 0;
+            }
+        }
+
+        &.#{$css-prefix}feedback-medium {
+            @include feedbackSize(
+                $borderWidth: $feedback-size-m-border-width,
+                $padding: $feedback-size-m-padding,
+                $titlePadding: $feedback-size-m-title-padding,
+                $titleFontSize: $feedback-size-m-title-font,
+                $contentPadding: $feedback-size-m-content-padding,
+                $contentMarginTop: $feedback-size-m-content-margin-top,
+                $contentFontSize: $feedback-size-m-content-font,
+                $iconSize: $feedback-size-m-icon
+            )
+            &.#{$css-prefix}feedback-title-content {
+                @include verticalAlignMiddle(
+                    $feedback-size-m-title-font,
+                    $feedback-size-m-icon,
+                    'title'
+                );
+            }
+            &.#{$css-prefix}feedback-only-content {
+                @include verticalAlignMiddle(
+                    $feedback-size-m-content-font,
+                    $feedback-size-m-icon,
+                    'content'
+                );
+            }
+        }
+
+        &.#{$css-prefix}feedback-large {
+            @include feedbackSize(
+                $borderWidth: $feedback-size-l-border-width,
+                $padding: $feedback-size-l-padding,
+                $titlePadding: $feedback-size-l-title-padding,
+                $titleFontSize: $feedback-size-l-title-font,
+                $contentPadding: $feedback-size-l-content-padding,
+                $contentMarginTop: $feedback-size-l-content-margin-top,
+                $contentFontSize: $feedback-size-l-content-font,
+                $iconSize: $feedback-size-l-icon
+            );
+            line-height: 18px;
+
+            &.#{$css-prefix}feedback-title-content {
+                @include verticalAlignMiddle(
+                    $feedback-size-l-title-font,
+                    $feedback-size-l-icon,
+                    'title'
+                );
+            }
+            &.#{$css-prefix}feedback-only-content {
+                @include verticalAlignMiddle(
+                    $feedback-size-l-content-font,
+                    $feedback-size-l-icon,
+                    'content'
+                );
+            }
+        }
+
+        &.#{$css-prefix}feedback-toast.#{$css-prefix}feedback-ie8 {
+            border-color: $color-n1-6;
+        }
+
+        &.#{$css-prefix}feedback-hide {
+            display: none;
+        }
+    }
+}

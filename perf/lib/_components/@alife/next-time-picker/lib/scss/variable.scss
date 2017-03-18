@@ -1,0 +1,124 @@
+////
+/// @module time-picker: 时间选择
+/// @tag TimePicker
+/// @category component
+/// @family time-picker
+/// @varPrefix $time-picker-
+/// @classPrefix {prefix}-time-picker
+////
+
+$time-picker-prefix: '.' + $css-prefix + 'time-picker';
+
+$time-picker-icon-prefix: '.' + $css-prefix + 'icon';
+
+$time-picker-input-prefix: '.' + $css-prefix + 'input';
+
+// 输入框
+// --------------------------------------------------
+
+/// icon margin(r)
+/// @namespace size/input
+$time-picker-icon-right: $s3 !default;
+
+/// input
+/// @namespace size/input
+$time-picker-input-s-height: $s5 !default;
+
+/// font
+/// @namespace size/input
+$time-picker-input-s-font: $font-size-base-caption !default;
+
+/// icon
+/// @namespace size/input
+$time-picker-icon-s-size: $icon-xs !default;
+
+/// input
+/// @namespace size/input
+$time-picker-input-m-height: $s7 !default;
+
+/// font
+/// @namespace size/input
+$time-picker-input-m-font: $font-size-base-body1 !default;
+
+/// icon
+/// @namespace size/input
+$time-picker-icon-m-size: $icon-s !default;
+
+/// input
+/// @namespace size/input
+$time-picker-input-l-height: $s10 !default;
+
+/// font
+/// @namespace size/input
+$time-picker-input-l-font: $font-size-base-subhead !default;
+
+/// icon
+/// @namespace size/input
+$time-picker-icon-l-size: $icon-m !default;
+
+/// icon color
+/// @namespace statement/normal
+$time-picker-icon-color: $color-n2-2 !default;
+
+// 日期单元
+// --------------------------------------------------
+
+/// panel border color
+/// @namespace statement/normal
+$time-picker-panel-border-color: $color-n1-7 !default;
+
+/// panel background
+/// @namespace statement/normal
+$time-picker-panel-background: $color-n1-1 !default;
+
+/// close
+/// @namespace statement/normal
+$time-picker-panel-clear-btn-color: $color-n2-1 !default;
+
+/// close
+/// @namespace statement/hover
+$time-picker-panel-clear-btn-hover-color: $color-n2-3 !default;
+
+/// text
+/// @namespace size/cell
+$time-picker-cell-font-size: $font-size-base-body1 !default;
+
+/// width
+/// @namespace size/cell
+$time-picker-cell-width: $s21 !default;
+
+/// height
+/// @namespace size/cell
+$time-picker-cell-height: $s7 !default;
+
+/// cell text
+/// @namespace statement/normal
+$time-picker-cell-color: $color-n2-3 !default;
+
+/// cell background
+/// @namespace statement/normal
+$time-picker-cell-bg: $color-n1-1 !default;
+
+/// cell text
+/// @namespace statement/hover
+$time-picker-cell-hover-color: $color-b1-6 !default;
+
+/// cell background
+/// @namespace statement/hover
+$time-picker-cell-hover-bg: $color-b1-1 !default;
+
+/// cell text
+/// @namespace statement/selected
+$time-picker-cell-selected-color: $color-n2-3 !default;
+
+/// cell background
+/// @namespace statement/selected
+$time-picker-cell-selected-bg: $color-n1-3 !default;
+
+/// cell text
+/// @namespace statement/disabled
+$time-picker-cell-disabled-color: $color-n2-1 !default;
+
+/// cell background
+/// @namespace statement/disabled
+$time-picker-cell-disabled-bg: $color-n1-1 !default;

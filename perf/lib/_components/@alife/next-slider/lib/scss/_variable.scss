@@ -1,0 +1,195 @@
+@charset "UTF-8";
+
+////
+/// @module slider: 跑马灯
+/// @tag Slider
+/// @category component
+/// @family slick
+/// @varPrefix $slick-
+/// @classPrefix {prefix}-slick
+////
+
+// slider variables
+// --------------------------------------------------
+
+$slick-prefix: '.' + $css-prefix + 'slick';
+
+
+// size
+// ---------
+
+/// position bottom
+/// @namespace size/dots
+$slick-dots-position-bottom: $s3 !default;
+
+/// position right
+/// @namespace size/dots
+$slick-dots-position-right: $s5 !default;
+
+/// diameter
+/// @namespace size/dots
+$slick-dots-diameter: $s2 !default;
+
+/// margin left/right
+/// @namespace size/dots
+$slick-dots-margin-lr: $s1 !default;
+
+/// margin top/bottom
+/// @namespace size/dots
+$slick-dots-margin-tb: $s0 !default;
+
+
+/// bg width
+/// @namespace size/arrow
+$slick-arrow-width-m: $s7 !default;
+
+/// bg width
+/// @namespace size/arrow
+$slick-arrow-width-l: $s12 !default;
+
+/// bg height
+/// @namespace size/arrow
+$slick-arrow-height-m: $s14 !default;
+
+/// bg height
+/// @namespace size/arrow
+$slick-arrow-height-l: $s24 !default;
+
+/// bg width
+/// @namespace size/arrow
+$slick-vertical-arrow-width-m: $s14 !default;
+
+/// bg width
+/// @namespace size/arrow
+$slick-vertical-arrow-width-l: $s24 !default;
+
+/// bg height
+/// @namespace size/arrow
+$slick-vertical-arrow-height-m: $s7 !default;
+
+/// bg height
+/// @namespace size/arrow
+$slick-vertical-arrow-height-l: $s12 !default;
+
+
+
+/// arrow size
+/// @namespace size/arrow
+$slick-arrow-icon-m: $icon-m !default;
+
+/// arrow size
+/// @namespace size/arrow
+$slick-arrow-icon-l: $icon-xl !default;
+
+/// arrow positon left/right
+/// @namespace size/arrow
+$slick-arrow-position-lr-m: $s1 !default;
+
+/// arrow positon left/right
+/// @namespace size/arrow
+$slick-arrow-position-lr-l: $s2 !default;
+
+
+/// arrow position top/bottom
+/// @namespace size/arrow
+$slick-vertical-arrow-position-tb-m: $s1 !default;
+
+/// arrow position top/bottom
+/// @namespace size/arrow
+$slick-vertical-arrow-position-tb-l: $s4 !default;
+
+
+/// padding left/right
+/// @namespace size/track
+$slick-track-padding-lr: $s6 !default;
+
+/// padding top/down
+/// @namespace size/track
+$slick-vertical-track-padding-tb: $s6 !default;
+
+/// border width
+/// @type width
+/// @namespace size/slide
+$slick-vertical-slide-border-width: 2px !default;
+
+// statement
+// ---------
+
+/// dots bg-color
+/// @namespace statements/normal
+$slick-dots-background-color-normal: $color-n1-9 !default;
+
+/// dots bg-color
+/// @namespace statements/hover
+$slick-dots-background-color-hover: $color-n1-8 !default;
+
+/// dots bg-color
+/// @namespace statements/selected
+$slick-dots-background-color-selected: $color-b1-6 !default;
+
+/// dots bg-opacity
+/// @type opacity
+/// @namespace statements/normal
+$slick-dots-background-opacity-normal: 0.32 !default;
+
+/// dots bg-opacity
+/// @type opacity
+/// @namespace statements/hover
+$slick-dots-background-opacity-hover: 0.32 !default;
+
+/// dots bg-opacity
+/// @type opacity
+/// @namespace statements/selected
+$slick-dots-background-opacity-selected: 1 !default;
+
+
+/// arrow color
+/// @namespace statements/normal
+$slick-arrow-icon-color-normal: $color-n1-1 !default;
+
+/// arrow color
+/// @namespace statements/normal
+$slick-arrow-icon-color-normal-outer: $color-n2-3 !default;
+
+/// arrow color
+/// @namespace statements/hover
+$slick-arrow-icon-color-hover: $color-n1-1 !default;
+
+/// arrow color
+/// @namespace statements/hover
+$slick-arrow-icon-color-hover-outer: $color-n2-4 !default;
+
+/// arrow color
+/// @namespace statements/disabled
+$slick-arrow-icon-color-disabled: $color-n2-3 !default;
+
+/// arrow color
+/// @namespace statements/disabled
+$slick-arrow-icon-color-disabled-outer: $color-n2-1 !default;
+
+/// arrow bg-color
+/// @namespace statements/normal
+$slick-arrow-bg-color-normal: $color-n1-9 !default;
+
+/// arrow bg-color
+/// @namespace statements/hover
+$slick-arrow-bg-color-hover: $color-n1-9 !default;
+
+/// arrow bg-color
+/// @namespace statements/disabled
+$slick-arrow-bg-color-disabled: $color-n1-2 !default;
+
+/// arrow bg-opacity
+/// @type opacity
+/// @namespace statements/normal
+$slick-arrow-bg-opacity-normal: 0.2 !default;
+
+/// arrow bg-opacity
+/// @type opacity
+/// @namespace statements/hover
+$slick-arrow-bg-opacity-hover: 0.4 !default;
+
+/// arrow bg-opacity
+/// @type opacity
+/// @namespace statements/disabled
+$slick-arrow-bg-opacity-disabled: 0.5 !default;

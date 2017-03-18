@@ -1,0 +1,102 @@
+// pagination mixins
+// --------------------------------------------------
+
+@mixin paginationSize(
+    $itemPaddingLeftRight,
+    $ellipsisFontSize,
+    $totalFontSize,
+    $currentFontSize,
+    $otherFontSize,
+    $filterHeight,
+    $numberPaddingLeftRight
+) {
+    #{$pagination-prefix}-item {
+        padding: 0 $itemPaddingLeftRight;
+    }
+    #{$pagination-prefix}-ellipsis {
+        font-size: $ellipsisFontSize;
+    }
+    #{$pagination-prefix}-display {
+        font-size: $totalFontSize;
+        em {
+            font-size: $currentFontSize;
+        }
+    }
+    #{$pagination-prefix}-jump {
+        font-size: $otherFontSize;
+    }
+    #{$pagination-prefix}-size-selector-title {
+        font-size: $otherFontSize;
+    }
+    #{$pagination-prefix}-size-selector-filter {
+        height: $filterHeight;
+        line-height: $filterHeight;
+    }
+    #{$pagination-prefix}-size-selector-btn {
+        padding: 0 $numberPaddingLeftRight;
+    }
+}
+
+@mixin arrowOnlySize(
+    $prevNextWidth
+) {
+    #{$pagination-prefix}-item {
+        &.prev,
+        &.next {
+            width: $prevNextWidth;
+            padding: 0;
+            .#{$css-prefix}icon {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@mixin arrowPrevOnlySize(
+    $prevWidth
+) {
+    #{$pagination-prefix}-item.prev {
+        width: $prevWidth;
+        padding: 0;
+        .#{$css-prefix}icon {
+            margin: 0 auto;
+        }
+    }
+}
+
+@mixin noBorderSize(
+    $displayMarginLeftRight
+) {
+    #{$pagination-prefix}-item {
+        &.prev,
+        &.next {
+            border: none;
+            background-color: transparent;
+            padding: 0;
+            .#{$css-prefix}icon {
+                margin: 0;
+
+                &:hover {
+                    color: $pagination-item-current-color;
+                }
+            }
+        }
+    }
+
+    #{$pagination-prefix}-display {
+        margin: 0 $displayMarginLeftRight;
+    }
+}
+
+@mixin miniSize(
+    $prevNextMarginLeftRight
+) {
+    #{$pagination-prefix}-item {
+        &.prev {
+            margin-right: $prevNextMarginLeftRight;
+        }
+        &.next {
+            margin-left: $prevNextMarginLeftRight;
+        }
+    }
+}

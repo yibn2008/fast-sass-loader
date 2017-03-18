@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+// Accordion mixins
+// --------------------------------------------------
+@mixin accordion-icon-size-handler($size, $left , $baseSize: $icon-s){
+    @if($size < 12) {
+        width: $baseSize;
+        font-size: #{$size} \9;
+        transform: scale($size/$baseSize);
+    }@else{
+        width: $size;
+        font-size: $size;
+    }
+    line-height: inherit;
+}
+
+@mixin accordion-icon-left-handler($size, $left, $baseSize: $icon-s){
+    @if($size < 12) {
+        left: $left - ($baseSize - $size) / 2;
+    }@else{
+        left: $left;
+    }
+}

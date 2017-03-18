@@ -1,0 +1,191 @@
+@charset "UTF-8";
+
+@import "../../next-core/lib/next.scss";
+@import "../../next-icon/lib/index.scss";
+@import "../../next-animate/lib/index.scss";
+@import "./scss/function.scss";
+@import "./scss/mixin.scss";
+@import "./scss/placeholder.scss";
+@import "./scss/variable.scss";
+
+// put your code here
+
+.#{$css-prefix} {
+    &loading {
+        position: relative;
+        display: inline-block;
+
+        &-tip {
+            display: none;
+        }
+
+        &.loading {
+            > #{$loading-prefix}-tip {
+                display: block;
+                position: absolute;
+                top: 50%;
+                margin-top: -10px;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                z-index: 4;
+                text-align: center;
+
+                // 动效
+                #{$loading-prefix}-flower {
+                    #{$loading-prefix}-icon{
+                      @include icon-handler($loading-icon-size);
+                    }
+                }
+                #{$loading-prefix}-fusion-reactor {
+                    width: 50px;
+                    height: 50px;
+                    position: relative;
+                    margin: 0 auto;
+                    margin-top: -15px;
+
+                    @include duration($loading-fusion-vector-seconds);
+                    @include count(infinite);
+                    @include function(linear);
+                    @include animation-name(vectorRoute);
+
+                    #{$loading-prefix}-dot {
+                        position: absolute;
+                        margin: auto;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background: $loading-color;
+
+                        @include function(ease-in-out);
+                        @include count(infinite);
+                        @include duration($loading-fusion-vector-dot-seconds);
+                    }
+                    #{$loading-prefix}-dot:nth-child(1) {
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+
+                        @include animation-name(vectorDotsX);
+                    }
+                    #{$loading-prefix}-dot:nth-child(2) {
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        @include animation-name(vectorDotsY);
+                    }
+                    #{$loading-prefix}-dot:nth-child(3) {
+                        top: 0;
+                        bottom: 0;
+                        right: 0;
+
+                        @include animation-name(vectorDotsXR);
+                    }
+                    #{$loading-prefix}-dot:nth-child(4) {
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+
+                        @include animation-name(vectorDotsYR);
+                    }
+                }
+
+                #{$loading-prefix}-dot-circle {
+                    #{$loading-prefix}-dot {
+                        text-indent: -9999em;
+                        overflow: hidden;
+                        font-size: 40px;
+                        width: 1em;
+                        height: 1em;
+                        margin: 0 auto;
+                        margin-top: -10px;
+                        border-radius: 50%;
+                        @include duration(1.7s);
+                        @include count(infinite);
+                        @include function(ease);
+                        @include animation-name(dotCircle);
+                        color: #fff;
+                    }
+                }
+            }
+
+            // 遮罩层
+            #{$loading-prefix}-component {
+                opacity: 0.7;
+                -webkit-filter: blur(1px);
+                filter: blur(1px);
+                filter: "progid\:DXImageTransform\.Microsoft\.Blur(PixelRadius\=1, MakeShadow\=false)"; /* IE6~IE9 */
+                position: relative;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+@include keyframes(vectorRoute) {
+    0% {
+        @include transform(rotate(0deg));
+    }
+    5% {
+        @include transform(rotate(-90deg));
+    }
+    25% {
+        @include transform(rotate(-90deg));
+    }
+    30% {
+        @include transform(rotate(-180deg));
+    }
+    50% {
+        @include transform(rotate(-180deg));
+    }
+    55% {
+        @include transform(rotate(-270deg));
+    }
+    75% {
+        @include transform(rotate(-270deg));
+    }
+    80% {
+        @include transform(rotate(-360deg));
+    }
+    100% {
+        @include transform(rotate(-360deg));
+    }
+}
+
+/* 20% 的时间在旋转 */
+@include keyframes(vectorDotsYR) {
+    @include loading-fusion(bottom);
+}
+
+@include keyframes(vectorDotsY) {
+    @include loading-fusion(top);
+}
+
+@include keyframes(vectorDotsX) {
+    @include loading-fusion(left);
+}
+
+@include keyframes(vectorDotsXR) {
+    @include loading-fusion(right);
+}
+
+@include keyframes(dotCircle) {
+    0% {
+        @include transform(rotate(0deg));
+        box-shadow: -0.11em -0.83em 0 -0.4em, -0.11em -0.83em 0 -0.42em, -0.11em -0.83em 0 -0.44em, -0.11em -0.83em 0 -0.46em, -0.11em -0.83em 0 -0.477em;
+    }
+    5%,
+    95% {
+        box-shadow: -0.11em -0.83em 0 -0.4em, -0.11em -0.83em 0 -0.42em, -0.11em -0.83em 0 -0.44em, -0.11em -0.83em 0 -0.46em, -0.11em -0.83em 0 -0.477em;
+    }
+    30% {
+        box-shadow: -0.11em -0.83em 0 -0.4em, -0.51em -0.66em 0 -0.42em, -0.75em -0.36em 0 -0.44em, -0.83em -0.03em 0 -0.46em, -0.81em 0.21em 0 -0.477em;
+    }
+    55% {
+        box-shadow: -0.11em -0.83em 0 -0.4em, -0.29em -0.78em 0 -0.42em, -0.43em -0.72em 0 -0.44em, -0.52em -0.65em 0 -0.46em, -0.57em -0.61em 0 -0.477em;
+    }
+    100% {
+        @include transform(rotate(360deg));
+        box-shadow: -0.11em -0.83em 0 -0.4em, -0.11em -0.83em 0 -0.42em, -0.11em -0.83em 0 -0.44em, -0.11em -0.83em 0 -0.46em, -0.11em -0.83em 0 -0.477em;
+    }
+}

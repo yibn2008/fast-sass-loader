@@ -1,0 +1,1076 @@
+@charset "UTF-8";
+
+////
+/// @module navigation: 导航
+/// @tag Navigation
+/// @category component
+/// @family navigation
+/// @varPrefix $navigation-
+/// @classPrefix {prefix}-navigation
+////
+
+$navi            : '.#{$css-prefix}navigation';
+$item            : '#{$navi}-item';
+$itemContent     : '#{$item}-content';
+$itemIcon        : '#{$item}-icon';
+$group           : '#{$navi}-group';
+$groupTitle      : '#{$group}-title';
+$groupContent    : '#{$group}-content';
+
+
+// 纯图标导航
+// ----------------------------------------
+
+/// background
+/// @namespace statement/normal
+$navigation-icononly-item-background: $color-transparent !default;
+
+/// background
+/// @namespace statement/selected
+$navigation-icononly-item-background-selected: $color-b1-6  !default;
+
+/// background
+/// @namespace statement/hover
+$navigation-icononly-item-background-hover: $color-n1-3 !default;
+
+/// icon-opacity
+/// @namespace statement/normal
+/// @type opacity
+$navigation-icononly-item-opacity: 1 !default;
+
+/// icon-opacity
+/// @namespace statement/hover
+/// @type opacity
+$navigation-icononly-item-opacity-hover: 1 !default;
+
+/// icon-opacity
+/// @namespace statement/selected
+/// @type opacity
+$navigation-icononly-item-opacity-selected: 1 !default;
+
+/// icon
+/// @namespace statement/normal
+$navigation-icononly-item-color: $color-n2-4 !default;
+
+/// icon
+/// @namespace statement/selected
+$navigation-icononly-item-color-selected: $color-n1-1 !default;
+
+/// icon
+/// @namespace statement/hover
+$navigation-icononly-item-color-hover: $color-n2-4 !default;
+
+/// border
+/// @namespace size/bounding
+$navigation-icononly-item-border-width: $line-1-width !default;
+
+/// border
+/// @namespace statement/normal
+$navigation-icononly-item-border-color: $color-n1-4 !default;
+
+/// line
+/// @namespace size/line
+$navigation-icononly-item-line-width: $line-1-width !default;
+
+/// line
+/// @namespace statement/normal
+$navigation-icononly-item-line-color: $color-transparent !default;
+
+// /// line
+// /// @namespace statement/selected
+$navigation-icononly-item-line-color-selected: $color-transparent !default;
+//
+// /// line
+// /// @namespace statement/hover
+$navigation-icononly-item-line-color-hover: $color-transparent !default;
+
+/// height
+/// @namespace size/bounding
+$navigation-icononly-item-height: $s12 !default;
+
+/// width
+/// @namespace size/bounding
+$navigation-icononly-item-width: $s15 !default;
+
+/// icon
+/// @namespace size/icon
+$navigation-icononly-item-icon-size: $icon-xs !default;
+
+// 常规导航
+// --------------------------------------------------
+
+/// text
+/// @namespace size/text
+$navigation-normal-item-fontsize: $font-size-base-body1 !default;
+
+/// background
+/// @namespace statement/normal
+$navigation-normal-item-background: $color-transparent !default;
+
+/// current-background
+/// @namespace statement/hover
+$navigation-normal-item-background-hover: $color-n1-3 !default;
+
+/// current-background
+/// @namespace statement/selected
+$navigation-normal-item-background-selected: $color-n1-3 !default;
+
+/// padding(l,r)
+/// @namespace size/bounding
+$navigation-normal-item-padding: $s5 !default;
+
+/// height
+/// @namespace size/bounding
+$navigation-normal-item-height: $s12 !default;
+
+/// text-opacity
+/// @namespace statement/normal
+/// @type opacity
+$navigation-normal-font-opacity: 1 !default;
+
+/// text-opacity
+/// @namespace statement/hover
+/// @type opacity
+$navigation-normal-font-opacity-hover: 1 !default;
+
+/// text-opacity
+/// @namespace statement/selected
+/// @type opacity
+$navigation-normal-font-opacity-selected: 1 !default;
+
+/// right-icon-margin(l)
+/// @namespace size/icon
+$navigation-normal-leaf-icon-margin: $s1 !default;
+
+/// right-icon-opacity
+/// @namespace statement/normal
+/// @type opacity
+$navigation-normal-leaf-icon-opacity: 1 !default;
+
+/// right-icon-opacity
+/// @namespace statement/hover
+/// @type opacity
+$navigation-normal-leaf-icon-opacity-hover: 1 !default;
+
+/// right-icon-opacity
+/// @namespace statement/selected
+/// @type opacity
+$navigation-normal-leaf-icon-opacity-selected: 1 !default;
+
+/// left-icon-margin(r)
+/// @namespace size/icon
+$navigation-normal-custom-icon-margin: $s1 !default;
+
+/// left-icon-opacity
+/// @namespace statement/normal
+/// @type opacity
+$navigation-normal-custom-icon-opacity: 1 !default;
+
+/// left-icon-opacity
+/// @namespace statement/hover
+/// @type opacity
+$navigation-normal-custom-icon-opacity-hover: 1 !default;
+
+/// left-icon-opacity
+/// @namespace statement/selected
+/// @type opacity
+$navigation-normal-custom-icon-opacity-selected: 1 !default;
+
+/// text
+/// @namespace statement/normal
+$navigation-normal-item-color: $color-n2-4 !default;
+
+/// text
+/// @namespace statement/hover
+$navigation-normal-item-color-hover: $color-n2-4 !default;
+
+/// text
+/// @namespace statement/selected
+$navigation-normal-item-color-selected: $color-n2-4 !default;
+
+/// line
+/// @namespace size/line
+$navigation-normal-item-line-width: $line-1-width !default;
+
+/// line
+/// @namespace statement/normal
+$navigation-normal-item-line-color: $color-transparent !default;
+
+/// line
+/// @namespace statement/hover
+$navigation-normal-item-line-color-hover: $color-transparent !default;
+
+/// line
+/// @namespace statement/selected
+$navigation-normal-item-line-color-selected: $color-transparent !default;
+
+/// border
+/// @namespace size/bounding
+$navigation-normal-border-width: $line-1-width !default;
+
+/// border
+/// @namespace statement/normal
+$navigation-normal-border-color: $color-n1-4 !default;
+
+/// height
+/// @namespace size/title
+$navigation-normal-item-group-title-height: $s10 !default;
+
+/// group-title-text
+/// @namespace statement/normal
+$navigation-normal-item-group-title-color: $color-n2-4 !default;
+
+/// text
+/// @namespace size/title
+$navigation-normal-item-group-title-fontsize: $font-size-base-subhead !default;
+
+/// padding(l,r)
+/// @namespace size/title
+$navigation-normal-item-group-title-padding: $s5 !default;
+
+/// current-line
+/// @namespace statement/selected
+$navigation-normal-item-current-color-selected: $color-b1-6 !default;
+
+/// current-line
+/// @namespace statement/selected
+$navigation-normal-item-current-right-color-selected: $color-b1-6 !default;
+
+/// current-line
+/// @namespace statement/hover
+$navigation-normal-item-current-color-hover: $color-b1-6 !default;
+
+/// current-line
+/// @namespace statement/normal
+$navigation-normal-item-current-color: $color-b1-6 !default;
+
+/// current-line
+/// @namespace size/line
+$navigation-normal-item-current-width-selected: $line-2-width !default;
+
+/// current-line
+/// @namespace size/line
+$navigation-normal-item-current-right-width-selected: $line-2-width !default;
+
+/// right-icon
+/// @namespace size/icon
+$navigation-normal-item-leaf-icon-size: $icon-xs !default;
+
+/// right-icon
+/// @namespace statement/normal
+$navigation-normal-item-leaf-icon-color: $color-n2-4 !default;
+
+/// right-icon
+/// @namespace statement/hover
+$navigation-normal-item-leaf-icon-color-hover: $color-n2-4 !default;
+
+/// right-icon
+/// @namespace statement/selected
+$navigation-normal-item-leaf-icon-color-selected: $color-n2-4 !default;
+
+/// left-icon
+/// @namespace size/icon
+$navigation-normal-item-custom-icon-size: $icon-xs !default;
+
+/// left-icon
+/// @namespace statement/normal
+$navigation-normal-item-custom-icon-color: $color-n2-4 !default;
+
+/// left-icon
+/// @namespace statement/hover
+$navigation-normal-item-custom-icon-color-hover: $color-n2-4 !default;
+
+/// left-icon
+/// @namespace statement/selected
+$navigation-normal-item-custom-icon-color-selected: $color-n2-4 !default;
+
+
+// 树式导航
+// --------------------------------------------------
+
+/// text
+/// @namespace size/text
+$navigation-tree-item-fontsize: $font-size-base-body1 !default;
+
+/// title-text
+/// @namespace size/text
+$navigation-tree-item-title-fontsize: $font-size-base-body1 !default;
+
+/// padding(l,r)
+/// @namespace size/bounding
+$navigation-tree-item-padding: $s5 !default;
+
+/// height
+/// @namespace size/bounding
+$navigation-tree-item-height: $s12 !default;
+
+/// text
+/// @namespace statement/normal
+$navigation-tree-item-color: $color-n2-4 !default;
+
+/// text
+/// @namespace statement/hover
+$navigation-tree-item-color-hover: $color-b1-6  !default;
+
+/// text
+/// @namespace statement/selected
+$navigation-tree-item-color-selected: $color-b1-6  !default;
+
+/// title-text
+/// @namespace statement/normal
+$navigation-tree-item-title-color: $color-n2-4 !default;
+
+/// title-text
+/// @namespace statement/hover
+$navigation-tree-item-title-color-hover: $color-n2-4  !default;
+
+/// title-text
+/// @namespace statement/selected
+$navigation-tree-item-title-color-selected: $color-n2-4  !default;
+
+/// border
+/// @namespace size/bounding
+$navigation-tree-item-border-width: $line-1-width !default;
+
+/// border
+/// @namespace statement/normal
+$navigation-tree-item-border-color: $color-n1-4 !default;
+
+/// background
+/// @namespace statement/normal
+$navigation-tree-item-background: $color-transparent !default;
+
+/// background
+/// @namespace statement/hover
+$navigation-tree-item-background-hover: $color-transparent !default;
+
+/// background
+/// @namespace statement/selected
+$navigation-tree-item-background-selected: $color-transparent !default;
+
+/// title-background
+/// @namespace statement/normal
+$navigation-tree-item-title-background: $color-transparent !default;
+
+/// title-background
+/// @namespace statement/hover
+$navigation-tree-item-title-background-hover: $color-transparent !default;
+
+/// title-background
+/// @namespace statement/selected
+$navigation-tree-item-title-background-selected: $color-transparent !default;
+
+/// padding
+/// @namespace size/branch
+$navigation-tree-item-leaf-padding: $s5 !default;
+
+
+/// height
+/// @namespace size/title
+$navigation-tree-item-group-title-height: $s10 !default;
+
+/// group-title-text
+/// @namespace statement/normal
+$navigation-tree-item-group-title-color: $color-n2-4 !default;
+
+/// text
+/// @namespace size/title
+$navigation-tree-item-group-title-fontsize: $font-size-base-subhead !default;
+
+/// padding(l,r)
+/// @namespace size/title
+$navigation-tree-item-group-title-padding: $s5 !default;
+
+/// left-icon
+/// @namespace size/icon
+$navigation-tree-item-custom-icon-size: $icon-xs !default;
+
+/// title-left-icon
+/// @namespace size/icon
+$navigation-tree-item-title-custom-icon-size: $icon-xs !default;
+
+/// left-icon
+/// @namespace statement/normal
+$navigation-tree-item-custom-icon-color: $color-n2-4 !default;
+
+/// left-icon
+/// @namespace statement/hover
+$navigation-tree-item-custom-icon-color-hover: $color-b1-6 !default;
+
+/// left-icon
+/// @namespace statement/selected
+$navigation-tree-item-custom-icon-color-selected: $color-b1-6 !default;
+
+/// title-left-icon-opacity
+/// @namespace statement/normal
+/// @type opacity
+$navigation-tree-item-title-custom-icon-opacity: 1 !default;
+
+/// title-left-icon-opacity
+/// @namespace statement/hover
+/// @type opacity
+$navigation-tree-item-title-custom-icon-opacity-hover: 1 !default;
+
+/// title-left-icon-opacity
+/// @namespace statement/selected
+/// @type opacity
+$navigation-tree-item-title-custom-icon-opacity-selected: 1 !default;
+
+/// title-right-icon-opacity
+/// @namespace statement/normal
+/// @type opacity
+$navigation-tree-item-title-leaf-icon-opacity: 1 !default;
+
+/// title-right-icon-opacity
+/// @namespace statement/hover
+/// @type opacity
+$navigation-tree-item-title-leaf-icon-opacity-hover: 1 !default;
+
+/// title-right-icon-opacity
+/// @namespace statement/selected
+/// @type opacity
+$navigation-tree-item-title-leaf-icon-opacity-selected: 1 !default;
+
+/// left-icon-opacity
+/// @namespace statement/normal
+/// @type opacity
+$navigation-tree-item-custom-icon-opacity: 1 !default;
+
+/// left-icon-opacity
+/// @namespace statement/hover
+/// @type opacity
+$navigation-tree-item-custom-icon-opacity-hover: 1 !default;
+
+/// left-icon-opacity
+/// @namespace statement/selected
+/// @type opacity
+$navigation-tree-item-custom-icon-opacity-selected: 1 !default;
+
+/// right-icon-opacity
+/// @namespace statement/normal
+/// @type opacity
+$navigation-tree-item-leaf-icon-opacity: 1 !default;
+
+/// right-icon-opacity
+/// @namespace statement/hover
+/// @type opacity
+$navigation-tree-item-leaf-icon-opacity-hover: 1 !default;
+
+/// right-icon-opacity
+/// @namespace statement/selected
+/// @type opacity
+$navigation-tree-item-leaf-icon-opacity-selected: 1 !default;
+
+/// title-text-opacity
+/// @namespace statement/normal
+/// @type opacity
+$navigation-tree-item-title-text-opacity: 1 !default;
+
+/// title-text-opacity
+/// @namespace statement/hover
+/// @type opacity
+$navigation-tree-item-title-text-opacity-hover: 1 !default;
+
+/// title-text-opacity
+/// @namespace statement/selected
+/// @type opacity
+$navigation-tree-item-title-text-opacity-selected: 1 !default;
+
+/// text-opacity
+/// @namespace statement/normal
+/// @type opacity
+$navigation-tree-item-text-opacity: 1 !default;
+
+/// text-opacity
+/// @namespace statement/hover
+/// @type opacity
+$navigation-tree-item-text-opacity-hover: 1 !default;
+
+/// text-opacity
+/// @namespace statement/selected
+/// @type opacity
+$navigation-tree-item-text-opacity-selected: 1 !default;
+
+/// right-icon
+/// @namespace size/icon
+$navigation-tree-item-leaf-icon-size: $icon-xs !default;
+
+/// title-right-icon
+/// @namespace size/icon
+$navigation-tree-item-title-leaf-icon-size: $icon-xs !default;
+
+/// title-right-icon
+/// @namespace statement/normal
+$navigation-tree-item-title-leaf-icon-color: $color-n2-4 !default;
+
+/// title-right-icon
+/// @namespace statement/hover
+$navigation-tree-item-title-leaf-icon-color-hover: $color-b1-6 !default;
+
+/// title-right-icon
+/// @namespace statement/selected
+$navigation-tree-item-title-leaf-icon-color-selected: $color-b1-6 !default;
+
+/// title-left-icon
+/// @namespace statement/normal
+$navigation-tree-item-title-custom-icon-color: $color-n2-4 !default;
+
+/// title-left-icon
+/// @namespace statement/hover
+$navigation-tree-item-title-custom-icon-color-hover: $color-b1-6 !default;
+
+/// title-left-icon
+/// @namespace statement/selected
+$navigation-tree-item-title-custom-icon-color-selected: $color-b1-6 !default;
+
+/// right-icon
+/// @namespace statement/normal
+$navigation-tree-item-leaf-icon-color: $color-n2-4 !default;
+
+/// right-icon
+/// @namespace statement/hover
+$navigation-tree-item-leaf-icon-color-hover: $color-b1-6 !default;
+
+/// right-icon
+/// @namespace statement/selected
+$navigation-tree-item-leaf-icon-color-selected: $color-b1-6 !default;
+
+/// line
+/// @namespace size/line
+$navigation-tree-item-line-width: $line-1-width !default;
+
+/// line
+/// @namespace statement/normal
+$navigation-tree-item-line-color: $color-transparent !default;
+
+/// line
+/// @namespace statement/hover
+$navigation-tree-item-line-color-hover: $color-transparent !default;
+
+/// line
+/// @namespace statement/selected
+$navigation-tree-item-line-color-selected: $color-transparent !default;
+
+/// current-line
+/// @namespace size/line
+$navigation-tree-item-current-width-selected: $line-2-width !default;
+
+/// current-line
+/// @namespace statement/normal
+$navigation-tree-item-current-color: $color-transparent !default;
+
+/// current-line
+/// @namespace statement/hover
+$navigation-tree-item-current-color-hover: $color-transparent!default;
+
+/// current-line
+/// @namespace statement/hover
+$navigation-tree-item-current-color-selected: $color-transparent !default;
+
+
+// 抽屉式导航
+// --------------------------------------------------
+
+/// text
+/// @namespace size/text
+$navigation-slip-item-fontsize: $font-size-base-body1 !default;
+
+/// background
+/// @namespace statement/normal
+$navigation-slip-item-background: $color-n1-1 !default;
+
+/// background
+/// @namespace statement/hover
+$navigation-slip-item-background-active: $color-n1-1 !default;
+
+/// padding(l,r)
+/// @namespace size/bounding
+$navigation-slip-item-padding: $s5 !default;
+
+/// height
+/// @namespace size/bounding
+$navigation-slip-item-height: $s12 !default;
+
+/// text
+/// @namespace statement/normal
+$navigation-slip-item-color: $color-n2-4 !default;
+
+/// text
+/// @namespace statement/hover
+$navigation-slip-item-color-active: $color-n2-4 !default;
+
+/// border
+/// @namespace size/bounding
+$navigation-slip-item-border-width: $line-1-width !default;
+
+/// border
+/// @namespace statement/normal
+$navigation-slip-item-border-color: $color-n1-4 !default;
+
+/// left-icon
+/// @namespace size/icon
+$navigation-slip-item-custom-icon-size: $icon-xs !default;
+
+/// left-icon
+/// @namespace statement/normal
+$navigation-slip-item-custom-icon-color: $color-n2-4 !default;
+
+/// left-icon
+/// @namespace statement/hover
+$navigation-slip-item-custom-icon-color-active: $color-n2-4 !default;
+
+/// right-icon
+/// @namespace size/icon
+$navigation-slip-item-leaf-icon-size: $icon-xs !default;
+
+/// right-icon
+/// @namespace statement/normal
+$navigation-slip-item-leaf-icon-color: $color-n2-4 !default;
+
+/// right-icon
+/// @namespace statement/hover
+$navigation-slip-item-leaf-icon-color-active: $color-b1-6 !default;
+
+/// left-icon-opacity
+/// @namespace statement/normal
+/// @type opacity
+$navigation-slip-item-custom-icon-opacity: 1 !default;
+
+/// left-icon-opacity
+/// @namespace statement/hover
+/// @type opacity
+$navigation-slip-item-custom-icon-opacity-hover: 1 !default;
+
+/// right-icon-opacity
+/// @namespace statement/normal
+/// @type opacity
+$navigation-slip-item-leaf-icon-opacity: 1 !default;
+
+/// right-icon-opacity
+/// @namespace statement/hover
+/// @type opacity
+$navigation-slip-item-leaf-icon-opacity-hover: 1 !default;
+
+/// text-opacity
+/// @namespace statement/normal
+/// @type opacity
+$navigation-slip-item-text-opacity: 1 !default;
+
+/// text-opacity
+/// @namespace statement/hover
+/// @type opacity
+$navigation-slip-item-text-opacity-hover: 1 !default;
+
+/// height
+/// @namespace size/title
+$navigation-slip-item-group-title-height: $s10 !default;
+
+/// group-title-text
+/// @namespace statement/normal
+$navigation-slip-item-group-title-color: $color-n2-4 !default;
+
+/// text
+/// @namespace size/title
+$navigation-slip-item-group-title-fontsize: $font-size-base-subhead !default;
+
+/// padding(l,r)
+/// @namespace size/title
+$navigation-slip-item-group-title-padding: $s5 !default;
+
+
+// 纯文字式导航
+// --------------------------------------------------
+
+
+/// background
+/// @namespace statement/normal
+$navigation-text-item-background: $color-transparent !default;
+
+/// text
+/// @namespace statement/normal
+$navigation-text-item-color: $color-n2-4 !default;
+
+/// text
+/// @namespace statement/selected
+$navigation-text-item-color-selected: $color-b1-6 !default;
+
+/// text
+/// @namespace statement/hover
+$navigation-text-item-color-hover: $color-b1-6 !default;
+
+/// right-icon
+/// @namespace statement/normal
+$navigation-text-item-leaf-color: $color-n2-4 !default;
+
+/// left-icon
+/// @namespace statement/normal
+$navigation-text-item-custom-color: $color-n2-4 !default;
+
+/// right-icon
+/// @namespace statement/selected
+$navigation-text-item-leaf-color-selected: $color-b1-6 !default;
+
+/// left-icon
+/// @namespace statement/selected
+$navigation-text-item-custom-color-selected: $color-b1-6 !default;
+
+/// right-icon
+/// @namespace statement/hover
+$navigation-text-item-leaf-color-hover: $color-b1-6 !default;
+
+/// left-icon
+/// @namespace statement/hover
+$navigation-text-item-custom-color-hover: $color-b1-6 !default;
+
+/// text
+/// @namespace size/text
+$navigation-text-item-fontsize: $font-size-base-body1 !default;
+
+/// padding(l,r)
+/// @namespace size/bounding
+$navigation-text-item-padding: $s5 !default;
+
+/// height
+/// @namespace size/bounding
+$navigation-text-item-height: $s11 !default;
+
+/// left-icon
+/// @namespace size/icon
+$navigation-text-item-custom-icon-size: $icon-xs !default;
+
+/// left-icon-margin(r)
+/// @namespace size/icon
+$navigation-text-item-custom-icon-margin: $s1 !default;
+
+/// right-icon-margin(l)
+/// @namespace size/icon
+$navigation-text-item-leaf-icon-margin: $s1 !default;
+
+/// right-icon
+/// @namespace size/icon
+$navigation-text-item-leaf-icon-size: $icon-xxs !default;
+
+/// left-icon-opacity
+/// @namespace statement/normal
+/// @type opacity
+$navigation-text-item-custom-icon-opacity: 1 !default;
+
+/// left-icon-opacity
+/// @namespace statement/hover
+/// @type opacity
+$navigation-text-item-custom-icon-opacity-hover: 1 !default;
+
+/// left-icon-opacity
+/// @namespace statement/selected
+/// @type opacity
+$navigation-text-item-custom-icon-opacity-selected: 1 !default;
+
+/// right-icon-opacity
+/// @namespace statement/normal
+/// @type opacity
+$navigation-text-item-leaf-icon-opacity: 1 !default;
+
+/// right-icon-opacity
+/// @namespace statement/hover
+/// @type opacity
+$navigation-text-item-leaf-icon-opacity-hover: 1 !default;
+
+/// right-icon-opacity
+/// @namespace statement/selected
+/// @type opacity
+$navigation-text-item-leaf-icon-opacity-selected: 1 !default;
+
+/// text-opacity
+/// @namespace statement/normal
+/// @type opacity
+$navigation-text-item-text-opacity: 1 !default;
+
+/// text-opacity
+/// @namespace statement/hover
+/// @type opacity
+$navigation-text-item-text-opacity-hover: 1 !default;
+
+/// text-opacity
+/// @namespace statement/selected
+/// @type opacity
+$navigation-text-item-text-opacity-selected: 1 !default;
+
+// 线条式导航
+// --------------------------------------------------
+
+/// text
+/// @namespace statement/normal
+$navigation-line-item-color: $color-n2-4 !default;
+
+/// text
+/// @namespace statement/selected
+$navigation-line-item-color-selected: $color-b1-6 !default;
+
+/// text
+/// @namespace statement/hover
+$navigation-line-item-color-hover: $color-b1-6 !default;
+
+/// right-icon
+/// @namespace statement/normal
+$navigation-line-item-leaf-color: $color-n2-4 !default;
+
+/// left-icon
+/// @namespace statement/normal
+$navigation-line-item-custom-color: $color-n2-4 !default;
+
+/// right-icon
+/// @namespace statement/selected
+$navigation-line-item-leaf-color-selected: $color-b1-6 !default;
+
+/// left-icon
+/// @namespace statement/selected
+$navigation-line-item-custom-color-selected: $color-b1-6 !default;
+
+/// right-icon
+/// @namespace statement/hover
+$navigation-line-item-leaf-color-hover: $color-b1-6 !default;
+
+/// left-icon
+/// @namespace statement/hover
+$navigation-line-item-custom-color-hover: $color-b1-6 !default;
+
+/// background
+/// @namespace statement/normal
+$navigation-line-item-background: $color-transparent !default;
+
+/// background
+/// @namespace statement/selected
+$navigation-line-item-background-selected: $color-transparent !default;
+
+/// background
+/// @namespace statement/hover
+$navigation-line-item-background-hover: $color-transparent !default;
+
+/// text
+/// @namespace size/text
+$navigation-line-item-fontsize: $font-size-base-body1 !default;
+
+/// padding(l,r)
+/// @namespace size/bounding
+$navigation-line-item-padding: $s5 !default;
+
+/// height
+/// @namespace size/bounding
+$navigation-line-item-height: $s11 !default;
+
+/// left-icon
+/// @namespace size/icon
+$navigation-line-item-custom-icon-size: $icon-xs !default;
+
+/// right-icon
+/// @namespace size/icon
+$navigation-line-item-leaf-icon-size: $icon-xxs !default;
+
+/// current-line
+/// @namespace size/line
+$navigation-line-item-border-width-selected: $line-2-width !default;
+
+/// line
+/// @namespace statement/normal
+$navigation-line-border-color: $color-n1-6 !default;
+
+/// line
+/// @namespace statement/selected
+$navigation-line-border-color-selected: $color-n1-6 !default;
+
+/// line
+/// @namespace statement/hover
+$navigation-line-border-color-hover: $color-n1-6 !default;
+
+/// current-line
+/// @namespace statement/selected
+$navigation-line-item-border-color-selected: $color-b1-6 !default;
+
+/// current-line
+/// @namespace statement/hover
+$navigation-line-item-border-color-hover: $color-b1-6 !default;
+
+// left-icon-margin(r)
+/// @namespace size/icon
+$navigation-line-item-custom-icon-margin: $s1 !default;
+
+/// left-icon-opacity
+/// @namespace statement/normal
+/// @type opacity
+$navigation-line-item-custom-icon-opacity: 1 !default;
+
+/// left-icon-opacity
+/// @namespace statement/hover
+/// @type opacity
+$navigation-line-item-custom-icon-opacity-hover: 1 !default;
+
+/// left-icon-opacity
+/// @namespace statement/selected
+/// @type opacity
+$navigation-line-item-custom-icon-opacity-selected: 1 !default;
+
+/// right-icon-margin(l)
+/// @namespace size/icon
+$navigation-line-item-leaf-icon-margin: $s1 !default;
+
+/// right-icon-opacity
+/// @namespace statement/normal
+/// @type opacity
+$navigation-line-item-leaf-icon-opacity: 1 !default;
+
+/// right-icon-opacity
+/// @namespace statement/hover
+/// @type opacity
+$navigation-line-item-leaf-icon-opacity-hover: 1 !default;
+
+/// right-icon-opacity
+/// @namespace statement/selected
+/// @type opacity
+$navigation-line-item-leaf-icon-opacity-selected: 1 !default;
+
+/// text-opacity
+/// @namespace statement/normal
+/// @type opacity
+$navigation-line-item-text-opacity: 1 !default;
+
+/// text-opacity
+/// @namespace statement/hover
+/// @type opacity
+$navigation-line-item-text-opacity-hover: 1 !default;
+
+/// text-opacity
+/// @namespace statement/selected
+/// @type opacity
+$navigation-line-item-text-opacity-selected: 1 !default;
+
+// 填充式导航
+// --------------------------------------------------
+
+/// text
+/// @namespace statement/normal
+$navigation-filling-item-color: $color-n1-1 !default;
+
+/// text
+/// @namespace statement/selected
+$navigation-filling-item-color-selected: $color-n1-1 !default;
+
+/// text
+/// @namespace statement/hover
+$navigation-filling-item-color-hover: $color-n1-1 !default;
+
+
+/// text
+/// @namespace size/text
+$navigation-filling-item-fontsize: $font-size-base-body1 !default;
+
+/// padding(l,r)
+/// @namespace size/bounding
+$navigation-filling-item-padding: $s5 !default;
+
+/// height
+/// @namespace size/bounding
+$navigation-filling-item-height: $s11 !default;
+
+/// background
+/// @namespace statement/normal
+$navigation-filling-item-background: $color-n1-9 !default;
+
+/// current-background
+/// @namespace statement/selected
+$navigation-filling-item-background-selected: $color-n2-4 !default;
+
+/// current-background
+/// @namespace statement/hover
+$navigation-filling-item-background-hover: $color-n2-4 !default;
+
+/// right-icon
+/// @namespace size/icon
+$navigation-filling-item-leaf-icon-size: $icon-xxs !default;
+
+/// right-icon
+/// @namespace statement/normal
+$navigation-filling-item-leaf-icon-color: $color-n1-1 !default;
+
+/// right-icon
+/// @namespace statement/hover
+$navigation-filling-item-leaf-icon-color-hover: $color-n1-1 !default;
+
+/// right-icon
+/// @namespace statement/selected
+$navigation-filling-item-leaf-icon-color-selected: $color-n1-1 !default;
+
+/// left-icon
+/// @namespace size/icon
+$navigation-filling-item-custom-icon-size: $icon-xs !default;
+
+/// left-icon
+/// @namespace statement/normal
+$navigation-filling-item-custom-icon-color: $color-n1-1 !default;
+
+/// left-icon
+/// @namespace statement/hover
+$navigation-filling-item-custom-icon-color-hover: $color-n1-1 !default;
+
+/// left-icon
+/// @namespace statement/selected
+$navigation-filling-item-custom-icon-color-selected: $color-n1-1 !default;
+
+/// currer-corner
+/// @namespace size/corner
+$navigation-filling-item-border-radius: $corner-radius-r0 !default;
+
+/// left-icon-margin(r)
+/// @namespace size/icon
+$navigation-filling-item-custom-icon-margin: $s1 !default;
+
+/// left-icon-opacity
+/// @namespace statement/normal
+/// @type opacity
+$navigation-filling-item-custom-icon-opacity: 1 !default;
+
+/// left-icon-opacity
+/// @namespace statement/hover
+/// @type opacity
+$navigation-filling-item-custom-icon-opacity-hover: 1 !default;
+
+/// left-icon-opacity
+/// @namespace statement/selected
+/// @type opacity
+$navigation-filling-item-custom-icon-opacity-selected: 1 !default;
+
+/// right-icon-margin(l)
+/// @namespace size/icon
+$navigation-filling-item-leaf-icon-margin: $s1 !default;
+
+/// right-icon-opacity
+/// @namespace statement/normal
+/// @type opacity
+$navigation-filling-item-leaf-icon-opacity: 1 !default;
+
+/// right-icon-opacity
+/// @namespace statement/hover
+/// @type opacity
+$navigation-filling-item-leaf-icon-opacity-hover: 1 !default;
+
+/// right-icon-opacity
+/// @namespace statement/selected
+/// @type opacity
+$navigation-filling-item-leaf-icon-opacity-selected: 1 !default;
+
+/// text-opacity
+/// @namespace statement/normal
+/// @type opacity
+$navigation-filling-item-text-opacity: .8 !default;
+
+/// text-opacity
+/// @namespace statement/hover
+/// @type opacity
+$navigation-filling-item-text-opacity-hover: 1 !default;
+
+/// text-opacity
+/// @namespace statement/selected
+/// @type opacity
+$navigation-filling-item-text-opacity-selected: 1 !default;
+
+///set-selected-position-color
+$navigation-item-current-color-set-selected :$color-b1-6 !default;

@@ -7,13 +7,9 @@ lib-cov
 *.pid
 *.gz
 
-pids
-logs
-results
-
-npm-debug.log
-node_modules
-coverage
-examples
-test
-.idea
+/node_modules/
+/coverage/
+/examples/
+/test/
+/.idea
+/perf/

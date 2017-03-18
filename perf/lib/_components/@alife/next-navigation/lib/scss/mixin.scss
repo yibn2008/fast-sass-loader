@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+// navigation mixins
+// --------------------------------------------------
+@mixin navigationTransition (
+    $property : all,
+    $options  : 0.3s ease
+) {
+    transition: $property $options
+}
+
+@mixin navigationState (
+    $color,
+    $fontsize,
+    $borderStyle,
+    $borderWidth,
+    $borderColor
+) {
+    color: $color;
+    font-size: $fontsize;
+    border-style: $borderStyle;
+    border-width: $borderWidth;
+    border-color: $borderColor;
+}
+
+@mixin navigationItemLine (
+    $borderStyle,
+    $borderWidth,
+    $borderColor
+) {
+    @include navigationItemLineTop(
+        $borderStyle,
+        $borderWidth,
+        $borderColor
+    );
+
+    @include navigationItemLineBottom(
+        $borderStyle,
+        $borderWidth,
+        $borderColor
+    );
+}
+
+@mixin navigationItemLineTop (
+    $borderStyle,
+    $borderWidth,
+    $borderColor
+) {
+    border-top-style: $borderStyle;
+    border-top-width: $borderWidth;
+    border-top-color: $borderColor;
+}
+
+@mixin navigationItemLineBottom (
+    $borderStyle,
+    $borderWidth,
+    $borderColor
+) {
+    border-bottom-style: $borderStyle;
+    border-bottom-width: $borderWidth;
+    border-bottom-color: $borderColor;
+}

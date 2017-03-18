@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+// notice mixins
+// --------------------------------------------------
+
+@mixin noticeBounding(){
+    position: relative;
+    display: block;
+    vertical-align: baseline;
+}
+
+@mixin noticeState(
+    $titleColor,
+    $contentColor,
+    $colorIcon,
+    $colorClose
+){
+    .#{$css-prefix}notice-title{
+        color: $titleColor;
+    }
+    .#{$css-prefix}notice-content{
+        color: $contentColor;
+    }
+    .#{$css-prefix}notice-symbol{
+        color: $colorIcon;
+    }
+    .#{$css-prefix}notice-close{
+        color: $colorClose;
+        :hover{
+            color: $colorClose;
+        }
+    }
+}
+
+@mixin noticeSize(
+    $borderWidth,
+    $padding,
+    $titlePadding,
+    $titleFontSize,
+    $contentMarginTop,
+    $contentPadding,
+    $contentFontSize,
+    $iconSize
+){
+    border-width: $borderWidth;
+    padding: $padding;
+
+    .#{$css-prefix}notice-symbol{
+        float: left;
+        @include icon-handler($iconSize);
+        line-height: $iconSize;
+    }
+    .#{$css-prefix}notice-title{
+        padding: $titlePadding;
+        font-size: $titleFontSize;
+    }
+    .#{$css-prefix}notice-content{
+        margin-top: $contentMarginTop;
+        padding: $contentPadding;
+        font-size: $contentFontSize;
+    }
+    .#{$css-prefix}notice-symbol + .#{$css-prefix}notice-content {
+        margin-top: 0;
+    }
+}
+
+@mixin noticeSizeClose($top, $right, $iconSize){
+    position: absolute;
+    top: $top;
+    right: $right;
+    .#{$css-prefix}icon {
+        @include icon-handler($iconSize);
+        line-height: $iconSize;
+    }
+}
+@mixin noticeShape(
+    $shape,
+    $colorBorder,
+    $colorBg
+){
+    background: $colorBg;
+    @if ($shape == 'addon') {
+        &.#{$css-prefix}notice-large {
+            border-width: $notice-size-l-border-width-addon;
+            padding: $notice-size-l-padding-addon;
+        }
+        &.#{$css-prefix}notice-medium {
+            border-width: $notice-size-m-border-width-addon;
+            padding: $notice-size-m-padding-addon;
+        }
+    }
+    @else {
+        border-color: $colorBorder;
+        border-radius: $notice-border-radius;
+        border-style:  $notice-border-style;
+    }
+}
+
+@mixin verticalAlignMiddle(
+    $fontSize,
+    $iconSize,
+    $className
+) {
+    @if ($fontSize > $iconSize) {
+        .#{$css-prefix}notice-symbol {
+            line-height: $fontSize;
+        }
+    }
+
+    @if ($fontSize < $iconSize) {
+        .#{$css-prefix}notice-#{$className} {
+            line-height: $iconSize;
+        }
+    }
+}

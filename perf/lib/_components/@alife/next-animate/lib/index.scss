@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+@import "../../next-core/lib/next.scss";
+@import "./scss/function.scss";
+@import "./scss/mixin.scss";
+@import "./scss/placeholder.scss";
+@import "./scss/variable.scss";
+@import "./scss/_fading-entrances/fading-entrances.scss";
+@import "./scss/_fading-exits/fading-exits.scss";
+@import "./scss/_sliding-entrances/sliding-entrances.scss";
+@import "./scss/_sliding-exits/sliding-exits.scss";
+@import "./scss/_zooming-entrances/zooming-entrances.scss";
+@import "./scss/_zooming-exits/zooming-exits.scss";
+@import "./scss/_expand-entrances/_expandInDown.scss";
+@import "./scss/_expand-exits/_expandOutUp.scss";
+
+.expandInDown {
+    @include expandInDown();
+}
+
+.expandOutUp {
+    @include expandOutUp();
+}
+
+.fadeIn {
+    @include fadeIn();
+}
+
+.fadeInDown {
+    @include fadeInDown();
+}
+
+.fadeInDownBig {
+    @include fadeInDownBig();
+}
+
+.fadeInLeft {
+    @include fadeInLeft();
+}
+
+.fadeInLeftBig {
+    @include fadeInLeftBig();
+}
+
+.fadeInRight {
+    @include fadeInRight();
+}
+
+.fadeInRightBig {
+    @include fadeInRightBig();
+}
+
+.fadeInUp {
+    @include fadeInUp();
+}
+
+.fadeInUpBig {
+    @include fadeInUpBig();
+}
+
+.fadeOut {
+    @include fadeOut();
+}
+
+.fadeOutDown {
+    @include fadeOutDown();
+}
+
+.fadeOutDownBig {
+    @include fadeOutDownBig();
+}
+
+.fadeOutLeft {
+    @include fadeOutLeft();
+}
+
+.fadeOutLeftBig {
+    @include fadeOutLeftBig();
+}
+
+.fadeOutRight {
+    @include fadeOutRight();
+}
+
+.fadeOutRightBig {
+    @include fadeOutRightBig();
+}
+
+.fadeOutUp {
+    @include fadeOutUp();
+}
+
+.fadeOutUpBig {
+    @include fadeOutUpBig();
+}
+
+.slideInDown {
+    @include slideInDown();
+}
+
+.slideInLeft {
+    @include slideInLeft();
+}
+
+.slideInRight {
+    @include slideInRight();
+}
+
+.slideInUp {
+    @include slideInUp();
+}
+
+.slideOutDown {
+    @include slideOutDown();
+}
+
+.slideOutLeft {
+    @include slideOutLeft();
+}
+
+.slideOutRight {
+    @include slideOutRight();
+}
+
+.slideOutUp {
+    @include slideOutUp();
+}
+
+.zoomIn {
+    @include zoomIn();
+}
+
+.zoomInDown {
+    @include zoomInDown();
+}
+
+.zoomInLeft {
+    @include zoomInLeft();
+}
+
+.zoomInRight {
+    @include zoomInRight();
+}
+
+.zoomInUp {
+    @include zoomInUp();
+}
+
+.zoomOut {
+    @include zoomOut();
+}
+
+.zoomOutDown {
+    @include zoomOutDown();
+}
+
+.zoomOutLeft {
+    @include zoomOutLeft();
+}
+
+.zoomOutRight {
+    @include zoomOutRight();
+}
+
+.zoomOutUp {
+    @include zoomOutUp();
+}

@@ -1,0 +1,652 @@
+@charset "UTF-8";
+
+////
+/// @module tag: 标签
+/// @tag Tag
+/// @category component
+/// @family tag
+/// @varPrefix $tag-
+/// @classPrefix {prefix}-tag
+////
+
+
+
+// Size
+// -------------------
+
+/// height
+/// @namespace size/bounding
+$tag-size-m-height: $s7 !default;
+/// height
+/// @namespace size/bounding
+$tag-size-s-height: $s5 !default;
+
+/// padding(l,r)
+/// @namespace size/bounding
+$tag-size-m-padding-lr: $s2 !default;
+/// padding(l,r)
+/// @namespace size/bounding
+$tag-size-s-padding-lr: $s2 !default;
+
+/// size
+/// @namespace size/text
+$tag-size-m-text-size: $font-size-base-caption !default;
+/// size
+/// @namespace size/text
+$tag-size-s-text-size: $font-size-base-caption !default;
+
+/// border
+/// @namespace size/bounding
+$tag-border-width: $line-1-width !default;
+
+/// icon size
+/// @namespace size/icon
+$tag-size-m-icon-font: $icon-xs !default;
+/// icon size
+/// @namespace size/icon
+$tag-size-s-icon-font: $icon-xxs !default;
+
+/// split-line width
+/// @type width
+/// @namespace size/deletable-tail
+$tag-deletable-split-line-width: 1px !default;
+/// tail width
+/// @namespace size/deletable-tail
+$tag-deletable-tail-width: $s7 !default;
+
+
+/// tail width
+/// @namespace size/interactive-tail
+$tag-interactive-tail-width: $s7 !default;
+
+/// number width
+/// @namespace size/interactive-tail
+$tag-interactive-number-width: $s7 !default;
+
+// Unconfigurable for size
+// -------------------
+
+$tag-size-m-margin: $s2 !default;
+$tag-size-s-margin: $s1 !default;
+$tag-size-m-line-height: $tag-size-m-height - 2 * $tag-border-width;
+$tag-size-s-line-height: $tag-size-s-height - 2 * $tag-border-width;
+
+// Animation
+$ease-in-out-circ: cubic-bezier(0.78, 0.14, 0.15, 0.86);
+
+
+// Statement
+// -------------------
+/// corner-radius
+/// @namespace statement/normal
+$tag-corner-radius: $corner-radius-r1 !default;
+
+// icon - unconfigurable
+$tag-selectable-normal-icon-selected: $icon-content-select;
+
+/// icon-color
+/// @namespace statement/selected
+$tag-selectable-normal-icon-color-selected: $color-n1-1 !default;
+
+/// tail-background-color
+/// @namespace statement/selected
+$tag-selectable-normal-tail-bg-color: $color-b7-6 !default;
+/// tail-background-color
+/// @namespace statement/selected-hover
+$tag-selectable-normal-tail-bg-color-selected-hover: $color-b2-6 !default;
+
+/// icon
+/// @namespace statement/selected
+$tag-selectable-secondary-icon-selected: $icon-content-select !default;
+/// icon-color
+/// @namespace statement/selected
+$tag-selectable-secondary-icon-color-selected: $color-n1-1 !default;
+
+/// tail-background-color
+/// @namespace statement/selected
+$tag-selectable-secondary-tail-bg-color: $color-b7-6 !default;
+/// tail-background-color
+/// @namespace statement/selected-hover
+$tag-selectable-secondary-tail-bg-color-selected-hover: $color-b2-6 !default;
+
+/// text-color
+/// @namespace statement/normal
+$tag-selectable-normal-text-color: $color-n2-3 !default;
+/// border-color
+/// @namespace statement/normal
+$tag-selectable-normal-border-color: $color-n1-7 !default;
+/// background-color
+/// @namespace statement/normal
+$tag-selectable-normal-background-color: $color-n1-1 !default;
+
+
+
+/// text-color
+/// @namespace statement/hover
+$tag-selectable-normal-text-color-hover: $color-n2-4 !default;
+/// background-color
+/// @namespace statement/hover
+$tag-selectable-normal-background-color-hover: $color-n1-2 !default;
+/// border-color
+/// @namespace statement/hover
+$tag-selectable-normal-border-color-hover: $color-n1-8 !default;
+
+/// text-color
+/// @namespace statement/disabled
+$tag-selectable-normal-text-color-disabled: $color-n2-1 !default;
+/// background-color
+/// @namespace statement/disabled
+$tag-selectable-normal-background-color-disabled: $color-n1-2 !default;
+/// border-color
+/// @namespace statement/disabled
+$tag-selectable-normal-border-color-disabled: $color-n1-6 !default;
+
+/// text-color
+/// @namespace statement/selected
+$tag-selectable-normal-text-color-selected: $color-b7-6 !default;
+/// background-color
+/// @namespace statement/selected
+$tag-selectable-normal-background-color-selected: $color-n1-1 !default;
+/// border-color
+/// @namespace statement/selected
+$tag-selectable-normal-border-color-selected: $color-b7-6 !default;
+
+/// text-color
+/// @namespace statement/selected-hover
+$tag-selectable-normal-text-color-selected-hover: $color-b7-9 !default;
+/// background-color
+/// @namespace statement/selected-hover
+$tag-selectable-normal-background-color-selected-hover: $color-n1-1 !default;
+/// border-color
+/// @namespace statement/selected-hover
+$tag-selectable-normal-border-color-selected-hover: $color-b7-9 !default;
+
+
+
+/// text-color
+/// @namespace statement/normal
+$tag-selectable-secondary-text-color: $color-n2-3 !default;
+/// border-color
+/// @namespace statement/normal
+$tag-selectable-secondary-border-color: $color-n1-1 !default;
+/// background-color
+/// @namespace statement/normal
+$tag-selectable-secondary-background-color: $color-n1-1 !default;
+
+/// text-color
+/// @namespace statement/hover
+$tag-selectable-secondary-text-color-hover: $color-n2-4 !default;
+/// border-color
+/// @namespace statement/hover
+$tag-selectable-secondary-border-color-hover: $color-n1-8 !default;
+/// background-color
+/// @namespace statement/hover
+$tag-selectable-secondary-background-color-hover: $color-n1-2 !default;
+
+/// text-color
+/// @namespace statement/disabled
+$tag-selectable-secondary-text-color-disabled: $color-n2-1 !default;
+/// border-color
+/// @namespace statement/disabled
+$tag-selectable-secondary-border-color-disabled: $color-n1-6 !default;
+/// background-color
+/// @namespace statement/disabled
+$tag-selectable-secondary-background-color-disabled: $color-n1-2 !default;
+
+/// text-color
+/// @namespace statement/selected
+$tag-selectable-secondary-text-color-selected: $color-n2-4 !default;
+/// border-color
+/// @namespace statement/selected
+$tag-selectable-secondary-border-color-selected: $color-b7-6 !default;
+/// background-color
+/// @namespace statement/selected
+$tag-selectable-secondary-background-color-selected: $color-n1-1 !default;
+
+/// text-color
+/// @namespace statement/selected-hover
+$tag-selectable-secondary-text-color-selected-hover: $color-b7-9 !default;
+/// border-color
+/// @namespace statement/selected-hover
+$tag-selectable-secondary-border-color-selected-hover: $color-b7-9 !default;
+/// background-color
+/// @namespace statement/selected-hover
+$tag-selectable-secondary-background-color-selected-hover: $color-n1-1 !default;
+
+
+/// text-color
+/// @namespace statement/normal
+$tag-selectable-primary-text-color: $color-n2-3 !default;
+/// border-color
+/// @namespace statement/normal
+$tag-selectable-primary-border-color: $color-n1-1 !default;
+/// background-color
+/// @namespace statement/normal
+$tag-selectable-primary-background-color: $color-n1-2 !default;
+
+/// text-color
+/// @namespace statement/hover
+$tag-selectable-primary-text-color-hover: $color-n2-4 !default;
+/// border-color
+/// @namespace statement/hover
+$tag-selectable-primary-border-color-hover: $color-n1-1 !default;
+/// background-color
+/// @namespace statement/hover
+$tag-selectable-primary-background-color-hover: $color-n1-1 !default;
+
+/// text-color
+/// @namespace statement/disabled
+$tag-selectable-primary-text-color-disabled: $color-n2-1 !default;
+/// border-color
+/// @namespace statement/disabled
+$tag-selectable-primary-border-color-disabled: $color-n1-1 !default;
+/// background-color
+/// @namespace statement/disabled
+$tag-selectable-primary-background-color-disabled: $color-n1-2 !default;
+
+/// text-color
+/// @namespace statement/selected
+$tag-selectable-primary-text-color-selected: $color-n1-1 !default;
+/// border-color
+/// @namespace statement/selected
+$tag-selectable-primary-border-color-selected: $color-b1-6 !default;
+/// background-color
+/// @namespace statement/selected
+$tag-selectable-primary-background-color-selected: $color-b1-6 !default;
+
+/// text-color
+/// @namespace statement/selected-hover
+$tag-selectable-primary-text-color-selected-hover: $color-n1-2 !default;
+/// border-color
+/// @namespace statement/selected-hover
+$tag-selectable-primary-border-color-selected-hover: $color-b1-9 !default;
+/// background-color
+/// @namespace statement/selected-hover
+$tag-selectable-primary-background-color-selected-hover: $color-b1-9 !default;
+
+
+// shape: deletable
+// ----------------
+
+/// border
+/// @namespace statement/border
+$tag-deletable-border: $line1 !default;
+
+/// border-color
+/// @namespace statement/normal
+$tag-deletable-normal-border-color: $color-n1-7 !default;
+
+/// border-color
+/// @namespace statement/hover
+$tag-deletable-normal-border-color-hover: $color-n1-7 !default;
+
+/// border-color
+/// @namespace statement/disabled
+$tag-deletable-normal-border-color-disabled: $color-n1-7 !default;
+
+
+/// border-color
+/// @namespace statement/normal
+$tag-deletable-primary-border-color: $color-n1-7 !default;
+
+/// border-color
+/// @namespace statement/hover
+$tag-deletable-primary-border-color-hover: $color-n1-7 !default;
+
+/// border-color
+/// @namespace statement/disabled
+$tag-deletable-primary-border-color-disabled: $color-n1-7 !default;
+
+/// border-color
+/// @namespace statement/normal
+$tag-deletable-secondary-border-color: $color-n1-7 !default;
+
+/// border-color
+/// @namespace statement/hover
+$tag-deletable-secondary-border-color-hover: $color-n1-7 !default;
+
+/// border-color
+/// @namespace statement/disabled
+$tag-deletable-secondary-border-color-disabled: $color-n1-7 !default;
+
+
+
+
+/// split-line style
+/// @namespace statement/normal
+$tag-deletable-split-line-style: $line-solid !default;
+/// split-line color
+/// @namespace statement/normal
+$tag-deletable-split-line-color: $color-n1-9 !default;
+
+// unconfigurable
+$tag-deletable-tail-border-left: $tag-deletable-split-line-style $tag-deletable-split-line-width transparentize($tag-deletable-split-line-color, 0.9) !default;
+
+
+/// R-icon-color
+/// @namespace statement/normal
+$tag-deletable-normal-icon-color: $color-n2-3 !default;
+/// R-background-color
+/// @namespace statement/normal
+$tag-deletable-normal-icon-background-color: $color-n1-1 !default;
+/// R-icon-color
+/// @namespace statement/hover
+$tag-deletable-normal-icon-color-hover: $color-n2-4 !default;
+/// R-background-color
+/// @namespace statement/hover
+$tag-deletable-normal-icon-background-color-hover: $color-n1-2 !default;
+/// R-icon-color
+/// @namespace statement/disabled
+$tag-deletable-normal-icon-color-disabled: $color-n2-1 !default;
+/// R-background-color
+/// @namespace statement/disabled
+$tag-deletable-normal-icon-background-color-disabled: $color-n1-2 !default;
+
+/// R-icon-color
+/// @namespace statement/normal
+$tag-deletable-primary-icon-color: $color-n2-3 !default;
+/// R-background-color
+/// @namespace statement/normal
+$tag-deletable-primary-icon-background-color: $color-n1-1 !default;
+/// R-icon-color
+/// @namespace statement/hover
+$tag-deletable-primary-icon-color-hover: $color-n2-4 !default;
+/// R-background-color
+/// @namespace statement/hover
+$tag-deletable-primary-icon-background-color-hover: $color-n1-2 !default;
+/// R-icon-color
+/// @namespace statement/disabled
+$tag-deletable-primary-icon-color-disabled: $color-n2-1 !default;
+/// R-background-color
+/// @namespace statement/disabled
+$tag-deletable-primary-icon-background-color-disabled: $color-n1-2 !default;
+
+/// R-icon-color
+/// @namespace statement/normal
+$tag-deletable-secondary-icon-color: $color-n2-3 !default;
+/// R-background-color
+/// @namespace statement/normal
+$tag-deletable-secondary-icon-background-color: $color-n1-1 !default;
+/// R-icon-color
+/// @namespace statement/hover
+$tag-deletable-secondary-icon-color-hover: $color-n2-4 !default;
+/// R-background-color
+/// @namespace statement/hover
+$tag-deletable-secondary-icon-background-color-hover: $color-n1-2 !default;
+/// R-icon-color
+/// @namespace statement/disabled
+$tag-deletable-secondary-icon-color-disabled: $color-n2-1 !default;
+/// R-background-color
+/// @namespace statement/disabled
+$tag-deletable-secondary-icon-background-color-disabled: $color-n1-2 !default;
+
+
+/// L-text-color
+/// @namespace statement/normal
+$tag-deletable-normal-text-color: $color-n2-3 !default;
+/// L-background-color
+/// @namespace statement/normal
+$tag-deletable-normal-background-color: $color-n1-1 !default;
+
+/// L-text-color
+/// @namespace statement/hover
+$tag-deletable-normal-text-color-hover: $color-n2-4 !default;
+/// L-background-color
+/// @namespace statement/hover
+$tag-deletable-normal-background-color-hover: $color-n1-3 !default;
+
+/// L-text-color
+/// @namespace statement/disabled
+$tag-deletable-normal-text-color-disabled: $color-n2-1 !default;
+
+/// L-background-color
+/// @namespace statement/disabled
+$tag-deletable-normal-background-color-disabled: $color-n1-2 !default;
+
+
+/// L-text-color
+/// @namespace statement/normal
+$tag-deletable-primary-text-color: $color-n2-3 !default;
+/// L-background-color
+/// @namespace statement/normal
+$tag-deletable-primary-background-color: $color-n1-2 !default;
+
+/// L-text-color
+/// @namespace statement/hover
+$tag-deletable-primary-text-color-hover: $color-n2-4 !default;
+/// L-background-color
+/// @namespace statement/hover
+$tag-deletable-primary-background-color-hover: $color-n1-1 !default;
+
+/// L-text-color
+/// @namespace statement/disabled
+$tag-deletable-primary-text-color-disabled: $color-n2-1 !default;
+/// L-background-color
+/// @namespace statement/disabled
+$tag-deletable-primary-background-color-disabled: $color-n1-2 !default;
+
+
+/// L-text-color
+/// @namespace statement/normal
+$tag-deletable-secondary-text-color: $color-n2-3 !default;
+/// L-background-color
+/// @namespace statement/normal
+$tag-deletable-secondary-background-color: $color-n1-1 !default;
+
+/// L-text-color
+/// @namespace statement/hover
+$tag-deletable-secondary-text-color-hover: $color-n2-4 !default;
+/// L-background-color
+/// @namespace statement/hover
+$tag-deletable-secondary-background-color-hover: $color-n1-2 !default;
+
+/// L-text-color
+/// @namespace statement/disabled
+$tag-deletable-secondary-text-color-disabled: $color-n2-1 !default;
+/// L-background-color
+/// @namespace statement/disabled
+$tag-deletable-secondary-background-color-disabled: $color-n1-2 !default;
+
+
+
+// shape: interactive
+// ----------------
+
+// $tag-interactive-border: $line1 !default;
+
+
+/// border-color
+/// @namespace statement/normal
+$tag-interactive-border-color: $color-n1-7 !default;
+
+/// L-text-color
+/// @namespace statement/normal
+$tag-interactive-l-text-color: $color-n2-3 !default;
+/// L-background-color
+/// @namespace statement/normal
+$tag-interactive-l-background-color: $color-n1-1 !default;
+
+/// border-color
+/// @namespace statement/hover
+$tag-interactive-border-color-hover: $color-n1-7 !default;
+
+/// L-text-color
+/// @namespace statement/hover
+$tag-interactive-l-text-color-hover: $color-n2-4 !default;
+/// L-background-color
+/// @namespace statement/hover
+$tag-interactive-l-background-color-hover: $color-n1-1 !default;
+
+/// border-color
+/// @namespace statement/disabled
+$tag-interactive-border-color-disabled: $color-n1-7 !default;
+
+/// L-text-color
+/// @namespace statement/disabled
+$tag-interactive-l-text-color-disabled: $color-n2-1 !default;
+/// L-text-background
+/// @namespace statement/disabled
+$tag-interactive-l-background-color-disabled: $color-n1-2 !default;
+
+
+/// R-icon-color
+/// @namespace statement/normal
+$tag-interactive-r-text-color: $color-n1-1 !default;
+/// R-icon-background
+/// @namespace statement/normal
+$tag-interactive-r-background-color: $color-b2-6 !default;
+
+/// R-icon-color
+/// @namespace statement/hover
+$tag-interactive-r-text-color-hover: $color-n1-2 !default;
+/// R-icon-background
+/// @namespace statement/hover
+$tag-interactive-r-background-color-hover: $color-b2-6 !default;
+
+/// number color
+/// @namespace statement/normal
+$tag-interactive-number-color: $color-n2-3 !default;
+
+/// number color
+/// @namespace statement/hover
+$tag-interactive-number-color-hover: $color-b2-6 !default;
+
+/// number color
+/// @namespace statement/disabled
+$tag-interactive-number-color-disabled: $color-n2-1 !default;
+
+/// divider color
+/// @namespace statement/split-line
+$tag-interactive-split-color: $color-n1-5 !default;
+
+/// divider style
+/// @namespace statement/split-line
+$tag-interactive-split-line-style: $line-dashed !default;
+
+// unconfigurable
+$tag-interactive-split-line: $tag-interactive-split-line-style 1px $tag-interactive-split-color;
+
+
+
+
+
+
+
+// shape: link
+// ----------------
+
+/// text-color
+/// @namespace statement/normal
+$tag-link-normal-text-color: $color-n2-3 !default;
+/// background-color
+/// @namespace statement/normal
+$tag-link-normal-background-color: $color-n1-1 !default;
+/// border-color
+/// @namespace statement/normal
+$tag-link-normal-border-color: $color-n1-7 !default;
+
+/// text-color
+/// @namespace statement/hover
+$tag-link-normal-text-color-hover: $color-n2-4 !default;
+/// background-color
+/// @namespace statement/hover
+$tag-link-normal-background-color-hover: $color-n1-2 !default;
+/// border-color
+/// @namespace statement/hover
+$tag-link-normal-border-color-hover: $color-n1-7 !default;
+
+/// text-color
+/// @namespace statement/disabled
+$tag-link-normal-text-color-disabled: $color-n2-1 !default;
+/// background-color
+/// @namespace statement/disabled
+$tag-link-normal-background-color-disabled: $color-n1-2 !default;
+/// border-color
+/// @namespace statement/disabled
+$tag-link-normal-border-color-disabled: $color-n1-6 !default;
+
+/// text-color
+/// @namespace statement/normal
+$tag-link-primary-text-color: $color-n2-3 !default;
+/// background-color
+/// @namespace statement/normal
+$tag-link-primary-background-color: $color-n1-2 !default;
+/// border-color
+/// @namespace statement/normal
+$tag-link-primary-border-color: $color-n1-1 !default;
+
+/// text-color
+/// @namespace statement/hover
+$tag-link-primary-text-color-hover: $color-n2-4 !default;
+/// background-color
+/// @namespace statement/hover
+$tag-link-primary-background-color-hover: $color-n1-1 !default;
+/// border-color
+/// @namespace statement/hover
+$tag-link-primary-border-color-hover: $color-n1-1 !default;
+
+/// text-color
+/// @namespace statement/disabled
+$tag-link-primary-text-color-disabled: $color-n2-1 !default;
+/// background-color
+/// @namespace statement/disabled
+$tag-link-primary-background-color-disabled: $color-n1-2 !default;
+/// border-color
+/// @namespace statement/disabled
+$tag-link-primary-border-color-disabled: $color-n1-1 !default;
+
+/// text-color
+/// @namespace statement/normal
+$tag-link-secondary-text-color: $color-n2-3 !default;
+/// background-color
+/// @namespace statement/normal
+$tag-link-secondary-background-color: $color-n1-1 !default;
+/// border-color
+/// @namespace statement/normal
+$tag-link-secondary-border-color: $color-n1-1 !default;
+
+/// text-color
+/// @namespace statement/hover
+$tag-link-secondary-text-color-hover: $color-n2-4 !default;
+/// background-color
+/// @namespace statement/hover
+$tag-link-secondary-background-color-hover: $color-n1-2 !default;
+/// border-color
+/// @namespace statement/hover
+$tag-link-secondary-border-color-hover: $color-b1-9 !default;
+
+/// text-color
+/// @namespace statement/disabled
+$tag-link-secondary-text-color-disabled: $color-n2-1 !default;
+/// background-color
+/// @namespace statement/disabled
+$tag-link-secondary-background-color-disabled: $color-n1-2 !default;
+/// background-color
+/// @namespace statement/disabled
+$tag-link-secondary-border-color-disabled: $color-n1-6 !default;
+
+
+// shape: readonly
+// ----------------
+
+/// text-color
+/// @namespace statement/normal
+$tag-readonly-text-color: $color-n2-3 !default;
+/// background-color
+/// @namespace statement/normal
+$tag-readonly-background-color: $color-n1-1 !default;
+/// border-color
+/// @namespace statement/normal
+$tag-readonly-border-color: $color-n1-6 !default;
+
+/// text-color
+/// @namespace statement/disabled
+$tag-readonly-text-color-disabled: $color-n2-1 !default;
+
+/// background-color
+/// @namespace statement/disabled
+$tag-readonly-background-color-disabled: $color-n1-2 !default;
+
+/// border-color
+/// @namespace statement/disabled
+$tag-readonly-border-color-disabled: $color-n1-6 !default;

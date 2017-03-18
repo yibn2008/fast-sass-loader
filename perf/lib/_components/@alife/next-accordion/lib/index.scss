@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+@import "../../next-core/lib/next.scss";
+@import "../../next-icon/lib/index.scss";
+@import "./scss/function.scss";
+@import "./scss/mixin.scss";
+@import "./scss/placeholder.scss";
+@import "./scss/variable.scss";
+
+
+
+// put your code here
+#{$accordion-prefix}{
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    @include clearfix;
+    border:solid $accordion-border-color;
+    border-width:0 $accordion-border-width $accordion-border-width;
+    #{$accordion-prefix}-icon{
+        //margin-right:$accordion-icon-margin-r;
+        position:absolute;
+        //left: $accordion-icon-margin-l;
+        @include accordion-icon-left-handler($accordion-icon-size, $accordion-icon-margin-l);
+        //margin-left:$accordion-icon-margin-l;
+        transform:rotate(-270deg);
+        transition: transform .3s;
+        margin-top:-2px;
+        &:before{
+            @include icon-size-handler($accordion-icon-size);
+            color: $accordion-icon-color;
+        }
+    }
+    #{$accordion-prefix}-section-expand{
+        >#{$accordion-prefix}-section-content{
+            display:block;
+            padding: $accordion-content-padding-y $accordion-content-padding-x;
+            height: auto;
+            opacity:1;
+        }
+        >#{$accordion-prefix}-section-title>#{$accordion-prefix}-icon{
+            transform:rotate(-180deg) translate(-1px,0);
+        }
+    }
+
+    &-section{
+        &-title{
+            overflow:hidden;
+            border-top: $accordion-border-width solid $accordion-border-color;
+            height: $accordion-title-height;
+            line-height: $accordion-title-height - 1;
+            background: $accordion-title-bgcolor;
+            font-size: $accordion-title-font-size;
+            color: $accordion-title-font-color;
+            cursor: pointer;
+            position: relative;
+            padding-left: $accordion-icon-margin-r + $accordion-icon-margin-l + $accordion-icon-size;
+        }
+        &-title-disabled{
+            cursor: not-allowed;
+        }
+        &-title-mutli{
+            height: auto;
+            line-height: $accordion-title-mutli-line-height;
+            padding-top: $accordion-title-mutli-padding-y;
+            padding-bottom: $accordion-title-mutli-padding-y;
+        }
+        &-content{
+            overflow: hidden;
+            height: 0;
+            padding: 0 $accordion-content-padding-x;
+            background: $accordion-content-bgcolor;
+            font-size: $accordion-content-font-size;
+            color: $accordion-content-color;
+            transition: all .3s;
+            opacity: 0;
+        }
+    }
+}

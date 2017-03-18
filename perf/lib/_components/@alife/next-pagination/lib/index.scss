@@ -1,0 +1,212 @@
+@import "../../next-core/lib/next.scss";
+@import "../../next-button/lib/index.scss";
+@import "../../next-input/lib/index.scss";
+@import "../../next-select/lib/index.scss";
+
+@import "./scss/variable.scss";
+@import "./scss/mixin.scss";
+
+#{$pagination-prefix} {
+    @include box-sizing;
+    @include global-font;
+    @include clearfix;
+
+    &-pages {
+        display: inline-block;
+    }
+
+    &-list {
+        display: inline-block;
+        margin: 0 $pagination-item-split;
+        vertical-align: top;
+    }
+    &-item {
+        display: inline-block;
+        & + #{$pagination-prefix}-item {
+            margin-left: $pagination-item-split;
+        }
+        &.current,
+        &.current:focus {
+            border-color: $pagination-item-current-border-color;
+            background: $pagination-item-current-bg;
+            color: $pagination-item-current-color;
+        }
+    }
+    &-ellipsis {
+        display: inline-block;
+        margin: 0 $s2;
+        color: $pagination-ellipsis-color;
+    }
+    &-display {
+        display: inline-block;
+        margin: 0 $s4;
+        color: $pagination-total-color;
+        em {
+            font-style: normal;
+            color: $pagination-current-color;
+        }
+    }
+    &-jump {
+        display: inline-block;
+        vertical-align: top;
+        color: $pagination-jump-color;
+
+        .#{$css-prefix}input {
+            width: $pagination-input-width;
+            margin: 0 $pagination-input-margin;
+        }
+
+        #{$pagination-prefix}-go {
+            margin-left: $s1;
+            vertical-align: top;
+        }
+    }
+    &-size-selector {
+        display: inline-block;
+
+        &-title {
+            margin-right: $pagination-size-selector-title-margin-right;
+            color: $pagination-size-selector-title-color;
+        }
+        &-filter {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        &-dropdown {
+            vertical-align: middle;
+            min-width: 50px;
+        }
+        &-btn.#{$css-prefix}btn-text {
+            height: initial;
+            line-height: initial;
+
+            &.current {
+                color: $pagination-item-current-color;
+            }
+
+            & + #{$pagination-prefix}-size-selector-btn {
+                border-left: $line-1-width solid $color-n1-6;
+            }
+        }
+    }
+
+    &.hide {
+        display: none;
+    }
+
+    &.start {
+        #{$pagination-prefix}-pages {
+            float: right;
+        }
+        #{$pagination-prefix}-size-selector {
+            float: left;
+            margin-right: $s10;
+        }
+    }
+
+    &.end {
+        #{$pagination-prefix}-pages {
+            float: left;
+        }
+        #{$pagination-prefix}-size-selector {
+            float: right;
+            margin-left: $s10;
+        }
+    }
+
+    &-simple {
+        #{$pagination-prefix}-item {
+            &.prev,
+            &.next {
+                margin: 0;
+            }
+        }
+    }
+
+    &-small,
+    &.small {
+        @include paginationSize(
+            $itemPaddingLeftRight: $s2 - 2px,
+            $ellipsisFontSize: $pagination-small-ellipsis-font-size,
+            $totalFontSize: $pagination-small-total-font-size,
+            $currentFontSize: $pagination-small-current-font-size,
+            $otherFontSize: $pagination-small-jump-font-size,
+            $filterHeight: $pagination-small-size-selector-filter-height,
+            $numberPaddingLeftRight: $pagination-small-size-selector-number-padding
+        );
+
+        &#{$pagination-prefix}-arrow-only {
+            @include arrowOnlySize($s5);
+        }
+
+        &#{$pagination-prefix}-arrow-prev-only {
+            @include arrowPrevOnlySize($s5);
+        }
+
+        &#{$pagination-prefix}-no-border {
+            @include noBorderSize($s2);
+        }
+
+        &#{$pagination-prefix}-mini {
+            @include miniSize($s1);
+        }
+    }
+
+    &-medium,
+    &.medium {
+        @include paginationSize(
+            $itemPaddingLeftRight: $s3 - 2px,
+            $ellipsisFontSize: $pagination-ellipsis-font-size,
+            $totalFontSize: $pagination-total-font-size,
+            $currentFontSize: $pagination-current-font-size,
+            $otherFontSize: $pagination-jump-font-size,
+            $filterHeight: $pagination-size-selector-filter-height,
+            $numberPaddingLeftRight: $pagination-size-selector-number-padding
+        );
+
+        &#{$pagination-prefix}-arrow-only {
+            @include arrowOnlySize($s7);
+        }
+
+        &#{$pagination-prefix}-arrow-prev-only {
+            @include arrowPrevOnlySize($s7);
+        }
+
+        &#{$pagination-prefix}-no-border {
+            @include noBorderSize($s3);
+        }
+
+        &#{$pagination-prefix}-mini {
+            @include miniSize($s1);
+        }
+    }
+
+    &-large,
+    &.large {
+        @include paginationSize(
+            $itemPaddingLeftRight: $s4 - 1px,
+            $ellipsisFontSize: $pagination-large-ellipsis-font-size,
+            $totalFontSize: $pagination-large-total-font-size,
+            $currentFontSize: $pagination-large-current-font-size,
+            $otherFontSize: $pagination-large-jump-font-size,
+            $filterHeight: $pagination-large-size-selector-filter-height,
+            $numberPaddingLeftRight: $pagination-large-size-selector-number-padding
+        );
+
+        &#{$pagination-prefix}-arrow-only {
+            @include arrowOnlySize($s10);
+        }
+
+        &#{$pagination-prefix}-arrow-prev-only {
+            @include arrowPrevOnlySize($s10);
+        }
+
+        &#{$pagination-prefix}-no-border {
+            @include noBorderSize($s4);
+        }
+
+        &#{$pagination-prefix}-mini {
+            @include miniSize($s2);
+        }
+    }
+}

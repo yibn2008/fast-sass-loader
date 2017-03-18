@@ -1,0 +1,110 @@
+@import "../../next-core/lib/next.scss";
+@import '../../next-overlay/lib/index.scss';
+@import '../../next-feedback/lib/index.scss';
+@import '../../next-button/lib/index.scss';
+@import '../../next-icon/lib/index.scss';
+
+@import "./scss/variable.scss";
+@import "./scss/mixin.scss";
+
+
+// put your code here
+#{$dialog-prefix} {
+    @include box-sizing;
+    @include global-font;
+    background: $dialog-bg;
+    box-shadow: $dialog-shadow;
+    position: fixed;
+    z-index: 1001;
+    border: $dialog-border-width $dialog-border-color solid;
+    border-radius: $dialog-border-radius;
+    &-header {
+        font-size: $dialog-title-font-size;
+        margin: 0;
+        padding: $dialog-title-padding-top $dialog-title-padding-left-right $dialog-title-padding-bottom;
+        border-bottom: $dialog-title-border-width solid $dialog-title-border-color;
+        padding-right: $dialog-title-padding-right;
+        background: $dialog-title-bg-color;
+    }
+    &-body {
+        font-size: $dialog-content-font-size;
+        color: $dialog-content-color;
+        padding: $dialog-content-padding-top $dialog-content-padding-left-right $dialog-content-padding-bottom;
+    }
+    &-footer {
+        padding: $dialog-footer-padding-top $dialog-footer-padding-left-right $dialog-footer-padding-bottom;
+        border-top: $dialog-footer-border-width solid $dialog-footer-border-color;
+        background: $dialog-footer-bg-color;
+        .#{$css-prefix}btn {
+            margin-right: 5px;
+        }
+    }
+    &.right {
+        #{$dialog-prefix}-footer {
+            text-align: right;
+            .#{$css-prefix}btn {
+                margin-right: 0px;
+                margin-left: 5px;
+            }
+        }
+    }
+    &.center {
+        #{$dialog-prefix}-footer {
+            text-align: center;
+        }
+    }
+    #{$dialog-prefix}-close {
+        font-size: 14px;
+        position: absolute;
+        top: $dialog-close-top;
+        right: $dialog-close-right;
+        color: $dialog-close-color;
+        width: $dialog-close-width;
+        height: $dialog-close-width;
+        .#{$css-prefix}icon {
+             @include icon-handler($dialog-close-size);
+             position: absolute;
+             top: 50%;
+             margin-top: -($dialog-close-size/2);
+             left: 50%;
+             margin-left: -($dialog-close-size/2);
+        }
+        &:hover {
+            color: $dialog-close-color-hovered;
+            background: $dialog-close-bg-hovered;
+        }
+    }
+    &-alert,
+    &-confirm,
+    &-success,
+    &-info {
+        min-width: 300px;
+        .#{$css-prefix}icon {
+            margin-right: 10px;
+        }
+        .#{$css-prefix}icon:before {
+            font-size: 32px;
+            vertical-align: middle;
+        }
+    }
+    &-alert {
+        .#{$css-prefix}icon {
+            color: $dialog-alert-icon-color;
+        }
+    }
+    &-confirm {
+        .#{$css-prefix}icon {
+            color: $dialog-confirm-icon-color;
+        }
+    }
+    &-success {
+        .#{$css-prefix}icon {
+            color: $color-f3-1;
+        }
+    }
+}
+
+#{$dialog-prefix}-wrapper.opened .#{$css-prefix}overlay-backdrop {
+    background: $dialog-modal-bg;
+    opacity: $dialog-modal-opacity;
+}

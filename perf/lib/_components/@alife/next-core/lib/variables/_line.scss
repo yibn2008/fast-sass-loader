@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+////
+/// @group Variables 变量
+/// @module line: 线条
+/// @type String
+/// @category style
+////
+
+// Line
+// 根据 Alibaba Base DPL(BASE DPL)
+// 边框主要用于呈现元素内容区域，显示元素的操作区域；线主要用于管理和分隔列表和页面布局内的内容。以便让内容生成更好的视觉效果及空间感。
+
+// ************************** 公共变量, 供开发者和设计师引用 *********************** //
+
+/// Line 1
+/// @export width
+/// @type Length
+$line-1-width: 1px !default;
+
+/// Line 2
+/// @export width
+/// @type Length
+$line-2-width: 2px !default;
+
+/// Line 3
+/// @export width
+/// @type Length
+$line-3-width: 4px !default;
+
+/// Solid
+/// @export style
+/// @unconfigurable
+$line-solid: solid !default;
+
+/// Dashed
+/// @export style
+/// @unconfigurable
+$line-dashed: dashed !default;
+
+/// Dotted
+/// @export style
+/// @unconfigurable
+$line-dotted: dotted !default;
+
+
+// ----------- 以下变量后期将弃用, 请勿使用 ----------- //
+
+$line1: $line-1-width $line-solid;
+$line1-dashed: $line-1-width $line-dashed;
+$line1-dotted: $line-1-width $line-dotted;
+
+$line2: $line-2-width $line-solid;
+$line2-dashed: $line-2-width $line-dashed;
+$line2-dotted: $line-2-width $line-dotted;
+
+$line3: $line-3-width $line-solid;
+$line3-dashed: $line-3-width $line-dashed;
+$line3-dotted: $line-3-width $line-dotted;

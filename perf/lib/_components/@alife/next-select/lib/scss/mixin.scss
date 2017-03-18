@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+// select mixins
+// --------------------------------------------------
+
+@mixin selectState(
+    $color,
+    $colorDisabled,
+    $colorHint,
+    $colorBorder,
+    $colorBorderHover,
+    $colorBorderFocus,
+    $colorBorderDisabled,
+    $colorBgDisabled,
+    $colorBorderActive,
+    $colorBackground
+) {
+    color: $color;
+    border-color: $colorBorder;
+    background-color: $colorBackground;
+    &.disabled {
+        color: $colorDisabled;
+        border-color: $colorBorderDisabled;
+        background-color: $colorBgDisabled;
+        cursor: not-allowed;
+        &:hover {
+            border-color: $colorBorderDisabled;
+        }
+        #{$select-prefix}-arrow {
+            color: $colorBorderDisabled;
+        }
+        #{$select-prefix}-inner-item {
+            .#{$css-prefix}icon-close:before{
+                color:  $colorDisabled;
+            }
+        }
+    }
+    &:hover {
+        border-color: $colorBorderHover;
+    }
+    &:focus {
+        border-color: $colorBorderActive;
+        outline: 0;
+    }
+    &:active {
+        border-color: $colorBorderActive;
+    }
+}
+
+@mixin selectSize(
+    $height,
+    $padding,
+    $padding-multiple,
+    $padding-multiple-tb,
+    $fontSize,
+    $borderWidth,
+    $icon-size
+) {
+    height: $height;
+    line-height: $height - $borderWidth * 2;
+    padding-left: $padding;
+    padding-right: $icon-size * 2 + 1;
+    font-size: $fontSize;
+    border-width: $borderWidth;
+    &.no-arrow {
+        padding-right: $padding;
+    }
+    #{$select-prefix}-arrow, #{$select-prefix}-clear{
+        right: $icon-size / 2;
+        top: 0px;
+        @include icon-handler($icon-size, $icon-s, $icon-size / 2);
+    }
+    .#{$css-prefix}comobobox-arrow-wrapper {
+        width: $icon-size*2 + 1;
+        border-radius: 0 $select-border-radius $select-border-radius 0;
+    }
+
+    #{$select-prefix}-inner-item {
+        height: ($height - $padding-multiple-tb * 2 - $borderWidth * 2);
+        line-height: ($height - $padding-multiple-tb * 2 - $borderWidth * 2);
+        margin-top: $padding-multiple-tb;
+        .#{$css-prefix}icon-close{
+            margin-left:2px;
+        }
+    }
+
+    &.multiple{
+        padding-left: $padding-multiple;
+        height: auto;
+        min-height: $height;
+    }
+    &.#{$css-prefix}comobobox #{$select-prefix}-clear{
+        position: absolute;
+        right: $icon-size * 2 + 5;
+    }
+}

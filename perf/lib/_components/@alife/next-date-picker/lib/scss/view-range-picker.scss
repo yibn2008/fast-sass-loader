@@ -1,0 +1,95 @@
+//
+// range-picker 样式
+//
+
+#{$range-picker-prefix} {
+    & {
+        position: relative;
+        display: inline-block;   
+    }
+
+    &-trigger {
+        position: relative;
+        transition: border 0.3s ease 0.1s;
+        color: $date-picker-input-color;
+        border: $line1 $date-picker-input-border-color;
+        background-color: $date-picker-input-background;
+    }
+
+    &-disabled {
+        color: $color-n2-1;
+        border-color: $color-n1-5;
+        background-color: $color-n1-2;
+        cursor: not-allowed;
+    }
+
+    &-separator {
+        color: $date-picker-input-separator-color;
+    }
+
+    #{$date-picker-input-prefix} {
+        background-color: transparent;
+        outline: 0;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        width: $s25;
+        text-align: center;
+    }
+
+    #{$date-picker-icon-prefix} {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: $date-picker-icon-right;
+        color: $date-picker-icon-color;
+
+        &:hover{
+            color: $date-picker-icon-color-hover;
+        }
+    }
+
+    &-small {
+        @include range-picker-size (
+            $date-picker-input-s-height,
+            $date-picker-input-s-font,
+            $date-picker-icon-s-font
+        );
+    }
+
+    &-medium {
+        @include range-picker-size (
+            $date-picker-input-m-height,
+            $date-picker-input-m-font,
+            $date-picker-icon-m-font
+        );
+    }
+
+    &-large {
+        @include range-picker-size (
+            $date-picker-input-l-height,
+            $date-picker-input-l-font,
+            $date-picker-icon-l-font
+        );
+    }
+
+    &-panel {
+        width: 540px;
+        border: $line1 $date-picker-panel-border-color;
+        background: $date-picker-panel-background;
+        position: relative;
+
+        #{$range-picker-prefix}-input {
+            display: block;
+            padding: 3px;
+            border-bottom: $line1 $date-picker-panel-inner-border-color;
+        }
+
+        #{$date-picker-input-prefix} {
+            width: 120px;
+            border: 0;
+            color: $date-picker-panel-input-color;
+            text-align: center;
+        }
+    }
+}

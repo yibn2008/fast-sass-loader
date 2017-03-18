@@ -3,7 +3,6 @@
 !.npmignore
 !.editorconfig
 
-lib-cov
 *.seed
 *.log
 *.csv
@@ -16,8 +15,7 @@ pids
 logs
 results
 
-npm-debug.log
 /node_modules
-coverage
-.idea
-/tests/runtime/*
+/coverage
+/.idea
+/test/runtime/*

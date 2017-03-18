@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+@import "../../../next-core/lib/next.scss";
+
+// breadcrumb mixins
+// --------------------------------------------------
+
+@mixin breadcrumbBounding() {
+    display: block;
+
+    .#{$css-prefix}breadcrumb-item {
+        display: inline-block;
+
+        .#{$css-prefix}breadcrumb-text {
+            display: inline-block;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .#{$css-prefix}breadcrumb-separator {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        &:last-child .#{$css-prefix}breadcrumb-separator {
+            display: none;
+        }
+    }
+}
+
+@mixin breadcrumbSize(
+    $height,
+    $minWidth,
+    $fontSize,
+    $ellipsisFontSize,
+    $numberFontSize,
+    $keywordFontSize,
+    $separatorSize,
+    $separatorMargin
+) {
+    .#{$css-prefix}breadcrumb-item {
+        .#{$css-prefix}breadcrumb-text {
+            height: $height;
+            min-width: $minWidth;
+            font-size: $fontSize;
+            line-height: $height;
+        }
+
+        .#{$css-prefix}breadcrumb-separator {
+            height: $height;
+            margin: 0 $separatorMargin;
+            font-size: $separatorSize;
+            line-height: $height;
+
+            .#{$css-prefix}icon {
+                @include icon-handler($separatorSize);
+            }
+        }
+
+        .#{$css-prefix}breadcrumb-text-ellipsis {
+            font-size: $ellipsisFontSize;
+        }
+
+        .#{$css-prefix}breadcrumb-text-number {
+            font-size: $numberFontSize;
+        }
+
+        .#{$css-prefix}breadcrumb-text-keyword {
+            font-size: $keywordFontSize;
+        }
+    }
+}
+
+@mixin breadcrumbState(
+    $textColor,
+    $ellipsisTextColor,
+    $currentTextColor,
+    $numberTextColor,
+    $keywordTextColor,
+    $iconColor,
+    $textColorHover,
+    $currentTextColorHover,
+    $numberTextColorHover,
+    $keywordTextColorHover
+) {
+    .#{$css-prefix}breadcrumb-item {
+        .#{$css-prefix}breadcrumb-text {
+            color: $textColor;
+        }
+
+        .#{$css-prefix}breadcrumb-text.activated {
+            color: $currentTextColor;
+        }
+
+        .#{$css-prefix}breadcrumb-text-ellipsis {
+            color: $ellipsisTextColor;
+        }
+
+        .#{$css-prefix}breadcrumb-text-number {
+            color: $numberTextColor;
+        }
+
+        .#{$css-prefix}breadcrumb-text-keyword {
+            color: $keywordTextColor;
+        }
+
+        .#{$css-prefix}breadcrumb-separator {
+            color: $iconColor;
+        }
+
+        .#{$css-prefix}breadcrumb-text:hover {
+            color: $textColorHover;
+        }
+
+        .#{$css-prefix}breadcrumb-text.activated:hover {
+            color: $currentTextColorHover;
+        }
+
+        .#{$css-prefix}breadcrumb-text-number:hover {
+            color: $numberTextColorHover;
+        }
+
+        .#{$css-prefix}breadcrumb-text-keyword:hover {
+            color: $keywordTextColorHover;
+        }
+    }
+}
