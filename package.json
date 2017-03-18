@@ -10,7 +10,7 @@
     "test-cov": "istanbul cover _mocha --report lcov -- test/**/*.test.js",
     "test-report": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "ci": "npm run lint && npm run test-cov && npm run test-report",
-    "release": "npm test && npm-ensure -t changelog && git release $npm_package_version && tnpm publish",
+    "release": "npm test && npm-ensure -t changelog && git release $npm_package_version && npm publish",
     "precommit": "standard && npm-ensure -t deps"
   },
   "ensure": {

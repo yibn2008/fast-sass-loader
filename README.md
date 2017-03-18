@@ -63,13 +63,13 @@ Child extract-text-webpack-plugin:
 [build] sass-loader: 64892.699ms
 ```
 
-Since the `sass-loader` doesn't dedupe the repeated sass files, the result will be very very large (6.95MB!!!), and the total compile time takes 64.9 seconds (nearly 6 times longer than `fast-sass-loader`).
+Since the `sass-loader` doesn't dedupe repeated sass files, the result will be very very large (6.95MB!!!), and the total compile time takes 64.9 seconds (nearly 6 times longer than `fast-sass-loader`).
 
 ### Why `fast-sass-loader` is faster than `sass-loader` ?
 
 1. Support sass file dedupe, so `node-sass` won't compile same file repeatedly, the performance improvement is s ignificant when your sass files number grows very large.
 2. Before node-sass compile, `fast-sass-loader` will merge all sass files into a single file, so node-sass only need to compile one large file, it's faster than `@importer` of [libsass](https://github.com/sass/libsass).
-3. The internal cache will store all result for every entry,
+3. The internal cache will store all result for every entry, only compile sass when related file changed.
 
 ## Install
 
