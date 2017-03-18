@@ -7,8 +7,9 @@
     "lint": "standard --fix && npm-ensure -t deps",
     "test": "npm run lint && npm run test-local",
     "test-local": "mocha test/**/*.test.js",
-    "test-cov": "istanbul cover _mocha test/**/*.test.js",
-    "ci": "npm run lint && npm run test-cov && alicov",
+    "test-cov": "istanbul cover _mocha --report lcov -- test/**/*.test.js",
+    "test-report": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "ci": "npm run lint && npm run test-cov && npm run test-report",
     "release": "npm test && npm-ensure -t changelog && git release $npm_package_version && tnpm publish",
     "precommit": "standard && npm-ensure -t deps"
   },
@@ -27,7 +28,8 @@
       "afterEach"
     ],
     "ignore": [
-      "/test"
+      "/test",
+      "/perf"
     ]
   },
   "dependencies": {
@@ -42,9 +44,11 @@
     "webpack": "1.x || 2.x"
   },
   "devDependencies": {
+    "coveralls": "^2.12.0",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^2.0.0",
     "file-loader": "^0.9.0",
+    "husky": "^0.13.2",
     "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
     "node-sass": "^4.0.0",

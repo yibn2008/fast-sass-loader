@@ -19,3 +19,4 @@ results
 /coverage
 /.idea
 /test/runtime/*
+/perf/dist/*
