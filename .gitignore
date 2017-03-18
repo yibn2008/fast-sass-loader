@@ -1,19 +1,11 @@
 .*
-!.gitignore
-!.npmignore
-!.editorconfig
-
-*.seed
+**/.DS_Store
 *.log
-*.csv
-*.dat
-*.out
-*.pid
-*.gz
-
-pids
-logs
-results
+!.editorconfig
+!.npmignore
+!.gitignore
+!.build
+!.*.yml
 
 /node_modules
 /coverage
