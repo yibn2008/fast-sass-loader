@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "lint": "standard --fix && npm-ensure -t deps",
+    "perf": "node perf/index.js",
     "test": "npm run lint && npm run test-local",
     "test-local": "mocha test/**/*.test.js",
     "test-cov": "istanbul cover _mocha --report lcov -- test/**/*.test.js",
