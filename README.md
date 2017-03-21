@@ -120,6 +120,8 @@ and you need install **node-sass** and **webpack** as peer dependencies.
 
 ## Warning
 
+### Mixing import `.scss` and`.sass` file is not allowed
+
 Since `fast-sass-loader` will parse `@import` and merge all files into single sass file, you cannot import `.scss` file from `.sass` (or opposite).
 
 For example:
@@ -132,6 +134,38 @@ body {
   background: #FFF;
 }
 ```
+
+### Avoid same variable name in different sass files
+
+Since `fast-sass-loader` will dedupe sass file, later imported file will be ignored. Using same variable name in different sass fill would produce unexpected output.
+
+For example (compile `entry.scss` with fast-sass-loader):
+
+```sass
+// a.scss
+$foobar: #000;
+```
+
+```sass
+// b.scss
+@import "a.scss";
+$foobar: #AAA;
+
+h1 { color: $foobar; }
+```
+
+```sass
+// entry.scss
+@import "b.scss";
+@import "a.scss"; // this file will be ignore: $foobar === #AAA
+
+// will output:
+// h1 { color: #AAA; }
+// h2 { color: #AAA; }
+h2 { color: $foobar; }
+```
+
+You can use variable prefix to bypass.
 
 ## License
 
