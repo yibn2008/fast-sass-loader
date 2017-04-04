@@ -93,7 +93,10 @@ and you need install **node-sass** and **webpack** as peer dependencies.
         test: /\.(scss|sass)$/,
         use: [
           'css-loader',
-          'fast-sass-loader'
+          {
+            loader: 'fast-sass-loader',
+            includePaths: [ ... ]
+          }
         ]
       },
       // other loaders ...

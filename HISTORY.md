@@ -1,4 +1,13 @@
 
+1.2.0 / 2017-04-04
+==================
+
+  * feat: add include paths support
+  * docs: add same variable name warning
+  * fix: fix github languages
+  * chore: add performance test case
+  * chore: cheanup configs
+
 1.1.0 / 2017-03-18
 ==================
 
