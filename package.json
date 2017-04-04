@@ -1,7 +1,7 @@
 {
   "name": "fast-sass-loader",
   "description": "fast sass loader for webpack",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "lib/index.js",
   "scripts": {
     "lint": "standard --fix && npm-ensure -t deps",
