@@ -95,7 +95,9 @@ and you need install **node-sass** and **webpack** as peer dependencies.
           'css-loader',
           {
             loader: 'fast-sass-loader',
-            includePaths: [ ... ]
+            options: {
+              includePaths: [ ... ]
+            }
           }
         ]
       },
