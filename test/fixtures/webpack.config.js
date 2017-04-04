@@ -22,7 +22,12 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           use: [
             cssLoader,
-            loader
+            {
+              loader: loader,
+              options: {
+                includePaths: [ path.join(__dirname, 'extra')]
+              }
+            }
           ]
         })
       },

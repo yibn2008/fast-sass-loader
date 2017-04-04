@@ -6,3 +6,6 @@
 /*
   @import "~not-exists-module2/index.scss";  // this should be skiped
 */
+
+// include test
+@import "include-test";
