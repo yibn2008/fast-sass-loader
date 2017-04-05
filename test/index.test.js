@@ -10,6 +10,29 @@ function clearCRLF (raw) {
   return raw.replace(/\r/g, '').trim()
 }
 
+function handleError (err, stats, done) {
+  if (err) {
+    console.error(err.stack || err)
+    if (err.details) {
+      console.error(err.details)
+    }
+    done(err)
+    return false
+  }
+
+  console.log(stats.toString({
+    colors: true    // Shows colors in the console
+  }))
+
+  const info = stats.toJson()
+  if (stats.hasErrors()) {
+    done(info.errors)
+    return false
+  }
+
+  return true
+}
+
 describe('test sass-loader', function () {
   this.timeout(10000)
 
@@ -23,23 +46,26 @@ describe('test sass-loader', function () {
     }
 
     compiler.run((err, stats) => {
-      if (err) {
-        console.error(err)
+      if (!handleError(err, stats, done)) {
+        return
       }
 
-      assert.equal(stats.errors, undefined)
+      try {
+        assert.equal(stats.errors, undefined)
 
-      let css = fs.readFileSync(path.join(__dirname, 'runtime/normal/index.css'), 'utf8')
-      let expect = fs.readFileSync(path.join(__dirname, 'fixtures/normal/expect.css'), 'utf8')
+        let css = fs.readFileSync(path.join(__dirname, 'runtime/normal/index.css'), 'utf8')
+        let expect = fs.readFileSync(path.join(__dirname, 'fixtures/normal/expect.css'), 'utf8')
 
-      assert.equal(clearCRLF(css), clearCRLF(expect))
+        assert.equal(clearCRLF(css), clearCRLF(expect))
 
-      let css2 = fs.readFileSync(path.join(__dirname, 'runtime/normal/index2.css'), 'utf8')
-      let expect2 = fs.readFileSync(path.join(__dirname, 'fixtures/normal/expect2.css'), 'utf8')
+        let css2 = fs.readFileSync(path.join(__dirname, 'runtime/normal/index2.css'), 'utf8')
+        let expect2 = fs.readFileSync(path.join(__dirname, 'fixtures/normal/expect2.css'), 'utf8')
 
-      assert.equal(clearCRLF(css2), clearCRLF(expect2))
-
-      done()
+        assert.equal(clearCRLF(css2), clearCRLF(expect2))
+        done()
+      } catch (err) {
+        done(err)
+      }
     })
   })
 
@@ -53,18 +79,22 @@ describe('test sass-loader', function () {
     }
 
     compiler.run((err, stats) => {
-      if (err) {
-        console.error(err)
+      if (!handleError(err, stats, done)) {
+        return
       }
 
-      assert.equal(stats.errors, undefined)
+      try {
+        assert.equal(stats.errors, undefined)
 
-      let css = fs.readFileSync(path.join(__dirname, 'runtime/simple/index.css'), 'utf8')
-      let expect = fs.readFileSync(path.join(__dirname, 'fixtures/simple/expect.css'), 'utf8')
+        let css = fs.readFileSync(path.join(__dirname, 'runtime/simple/index.css'), 'utf8')
+        let expect = fs.readFileSync(path.join(__dirname, 'fixtures/simple/expect.css'), 'utf8')
 
-      assert.equal(clearCRLF(css), clearCRLF(expect))
+        assert.equal(clearCRLF(css), clearCRLF(expect))
 
-      done()
+        done()
+      } catch (err) {
+        done(err)
+      }
     })
   })
 })
