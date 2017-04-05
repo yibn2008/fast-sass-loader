@@ -1,4 +1,11 @@
 
+1.2.3 / 2017-04-05
+==================
+
+  * fix: handle inline loader
+  * test: add simple test case
+  * test: add unit test for simple condition
+
 1.2.2 / 2017-04-04
 ==================
 
