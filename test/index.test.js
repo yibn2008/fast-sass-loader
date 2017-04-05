@@ -4,6 +4,7 @@ const assert = require('assert')
 const fs = require('fs')
 const path = require('path')
 const webpack = require('webpack')
+const rmdir = require('rimraf')
 const utils = require('../lib/utils')
 
 function clearCRLF (raw) {
@@ -36,14 +37,15 @@ function handleError (err, stats, done) {
 describe('test sass-loader', function () {
   this.timeout(10000)
 
+  const runtimeDir = path.join(__dirname, 'runtime')
+
+  beforeEach(done => {
+    rmdir(runtimeDir, done)
+  })
+
   it('should load normal sass file', function (done) {
     const config = require('./fixtures/normal/webpack.config.js')
     const compiler = webpack(config)
-
-    let runtimeDir = path.join(__dirname, 'runtime')
-    if (!utils.fstat(runtimeDir)) {
-      fs.mkdirSync(runtimeDir)
-    }
 
     compiler.run((err, stats) => {
       if (!handleError(err, stats, done)) {
@@ -72,11 +74,6 @@ describe('test sass-loader', function () {
   it('should compile without options', function (done) {
     const config = require('./fixtures/simple/webpack.config.js')
     const compiler = webpack(config)
-
-    let runtimeDir = path.join(__dirname, 'runtime')
-    if (!utils.fstat(runtimeDir)) {
-      fs.mkdirSync(runtimeDir)
-    }
 
     compiler.run((err, stats) => {
       if (!handleError(err, stats, done)) {
