@@ -2,17 +2,16 @@
 
 const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const loader = require.resolve('../..')
+const loader = require.resolve('../../..')
 const cssLoader = require.resolve('css-loader')
 
 module.exports = {
   context: path.join(__dirname),
   entry: {
-    index: './actual/index.scss',
-    index2: './actual/index2.sass'
+    index: './index.scss'
   },
   output: {
-    path: path.join(__dirname, '../runtime'),
+    path: path.join(__dirname, '../../runtime/simple'),
     filename: '[name].js'
   },
   module: {
@@ -22,12 +21,7 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           use: [
             cssLoader,
-            {
-              loader: loader,
-              options: {
-                includePaths: [ path.join(__dirname, 'extra')]
-              }
-            }
+            loader
           ]
         })
       },
@@ -37,9 +31,6 @@ module.exports = {
       }
     ]
   },
-  // resolve: {
-  //   root: [ path.join(__dirname, 'node_modules') ]
-  // },
   plugins: [
     new ExtractTextPlugin('[name].css')
   ]
