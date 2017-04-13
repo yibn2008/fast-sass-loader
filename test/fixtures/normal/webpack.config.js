@@ -25,7 +25,7 @@ module.exports = {
             {
               loader: loader,
               options: {
-                includePaths: [ path.join(__dirname, 'extra')]
+                includePaths: [ path.join(__dirname, 'extra'), 'sass_modules']
               }
             }
           ]
