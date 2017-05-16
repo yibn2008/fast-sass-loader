@@ -164,10 +164,11 @@ h1 { color: $foobar; }
 @import "b.scss";
 @import "a.scss"; // this file will be ignore: $foobar === #AAA
 
+h2 { color: $foobar; }
+
 // will output:
 // h1 { color: #AAA; }
 // h2 { color: #AAA; }
-h2 { color: $foobar; }
 ```
 
 You can use variable prefix to bypass.
