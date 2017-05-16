@@ -28,7 +28,7 @@ fast sass loader for webpack. 5~10 times faster than **sass-loader**, and suppor
 
 ## Performance
 
-You can execute `npm run perf` to see the performance benchmark:
+performance benchmark:
 
 ```text
 ************** RUN WITH FAST SASS LOADER **************
