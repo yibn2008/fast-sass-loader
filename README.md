@@ -134,7 +134,7 @@ If you want to prepend Sass code before the actual entry file, you can set the d
 
 ```javascript
 {
-    loader: "sass-loader",
+    loader: "fast-sass-loader",
     options: {
         data: "$env: " + process.env.NODE_ENV + ";"
     }
