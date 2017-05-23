@@ -1,4 +1,10 @@
 
+1.2.5 / 2017-05-24
+==================
+
+  * fix: remove performance test
+  * fix: fix Files with double extensions are not resolved, close #11
+
 1.2.4 / 2017-04-13
 ==================
 
