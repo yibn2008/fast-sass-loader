@@ -72,26 +72,34 @@ describe('test sass-loader', function () {
   })
 
   it('should compile without options', function (done) {
-    const config = require('./fixtures/simple/webpack.config.js')
-    const compiler = webpack(config)
+    runSimpleTest(done, 'simple')
+  })
 
-    compiler.run((err, stats) => {
-      if (!handleError(err, stats, done)) {
-        return
-      }
-
-      try {
-        assert.equal(stats.errors, undefined)
-
-        let css = fs.readFileSync(path.join(__dirname, 'runtime/simple/index.css'), 'utf8')
-        let expect = fs.readFileSync(path.join(__dirname, 'fixtures/simple/expect.css'), 'utf8')
-
-        assert.equal(clearCRLF(css), clearCRLF(expect))
-
-        done()
-      } catch (err) {
-        done(err)
-      }
-    })
+  it('should resolve files with double extensions', function (done) {
+    runSimpleTest(done, 'double-extensions')
   })
 })
+
+function runSimpleTest (done, fixtureName) {
+  const config = require('./fixtures/' + fixtureName + '/webpack.config.js')
+  const compiler = webpack(config)
+
+  compiler.run((err, stats) => {
+    if (!handleError(err, stats, done)) {
+      return
+    }
+
+    try {
+      assert.equal(stats.errors, undefined)
+
+      let css = fs.readFileSync(path.join(__dirname, 'runtime/' + fixtureName + '/index.css'), 'utf8')
+      let expect = fs.readFileSync(path.join(__dirname, 'fixtures/' + fixtureName + '/expect.css'), 'utf8')
+
+      assert.equal(clearCRLF(css), clearCRLF(expect))
+
+      done()
+    } catch (err) {
+      done(err)
+    }
+  })
+}
