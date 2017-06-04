@@ -71,6 +71,30 @@ describe('test sass-loader', function () {
     })
   })
 
+  it('should load sass file with data option', function (done) {
+    const config = require('./fixtures/withData/webpack.config.js')
+    const compiler = webpack(config)
+
+    compiler.run((err, stats) => {
+      if (!handleError(err, stats, done)) {
+        return
+      }
+
+      try {
+        assert.equal(stats.errors, undefined)
+
+        let css = fs.readFileSync(path.join(__dirname, 'runtime/withData/index.css'), 'utf8')
+        let expect = fs.readFileSync(path.join(__dirname, 'fixtures/withData/expect.css'), 'utf8')
+
+        assert.equal(clearCRLF(css), clearCRLF(expect))
+        
+        done()
+      } catch (err) {
+        done(err)
+      }
+    })
+  })
+
   it('should compile without options', function (done) {
     const config = require('./fixtures/simple/webpack.config.js')
     const compiler = webpack(config)
