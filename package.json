@@ -41,7 +41,7 @@
   },
   "peerDependencies": {
     "node-sass": "4.x || 3.x",
-    "webpack": "1.x || 2.x"
+    "webpack": "1.x || 2.x || 3.x"
   },
   "devDependencies": {
     "coveralls": "^2.12.0",
