@@ -123,6 +123,26 @@ and you need install **node-sass** and **webpack** as peer dependencies.
 }
 ```
 
+## Options
+
+### includePaths:
+
+An array of paths that [node-sass](https://github.com/sass/node-sass) can look in to attempt to resolve your @import declarations. When using data, it is recommended that you use this.
+
+### data:
+If you want to prepend Sass code before the actual entry file, you can set the data option. In this case, the loader will not override the data option but just append the entry's content. This is especially useful when some of your Sass variables depend on the environment:
+
+```javascript
+{
+    loader: "fast-sass-loader",
+    options: {
+        data: "$env: " + process.env.NODE_ENV + ";"
+    }
+}
+```
+
+Please note: Since you're injecting code, this will break the source mappings in your entry file. Often there's a simpler solution than this.
+
 ## Warning
 
 ### Mixing import `.scss` and`.sass` file is not allowed
