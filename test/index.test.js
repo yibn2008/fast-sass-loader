@@ -87,7 +87,7 @@ describe('test sass-loader', function () {
         let expect = fs.readFileSync(path.join(__dirname, 'fixtures/withData/expect.css'), 'utf8')
 
         assert.equal(clearCRLF(css), clearCRLF(expect))
-        
+
         done()
       } catch (err) {
         done(err)
@@ -101,6 +101,12 @@ describe('test sass-loader', function () {
 
   it('should resolve files with double extensions', function (done) {
     runSimpleTest(done, 'double-extensions')
+  })
+
+  context('when compiling SASS', function () {
+    it('supports import lines without trailing semicolons', function (done) {
+      runSimpleTest(done, 'sass');
+    });
   })
 })
 
