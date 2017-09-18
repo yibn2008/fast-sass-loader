@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/yibn2008/fast-sass-loader.svg?branch=master)](https://travis-ci.org/yibn2008/fast-sass-loader)
 [![Coverage Status](https://coveralls.io/repos/github/yibn2008/fast-sass-loader/badge.svg)](https://coveralls.io/github/yibn2008/fast-sass-loader)
 
-High performance sass loader for webpack 1/2.
+High performance sass loader for webpack 1/2/3.
 
 Features:
 
@@ -12,8 +12,6 @@ Features:
 - support url resolve, never worry about the problem with `url(...)` (see https://github.com/webpack-contrib/sass-loader#problems-with-url)
 
 fast sass loader for webpack. 5~10 times faster than **sass-loader**, and support url resolve.
-
-**Good News: Now `fast-sass-loader` support webpack 2**
 
 ## vs `sass-loader`
 
