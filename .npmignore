@@ -13,3 +13,6 @@ lib-cov
 /test/
 /.idea
 /perf/
+
+
+.justconf

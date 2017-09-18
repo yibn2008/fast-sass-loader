@@ -13,3 +13,6 @@
 /.idea
 /test/runtime/*
 /perf/dist/*
+
+
+.justconf
