@@ -1,4 +1,11 @@
 
+1.3.0 / 2017-09-18
+==================
+
+  * chore: bump to 1.3.0
+  * doc: update docs
+  * feat: add webpack 3 support
+
 1.2.5 / 2017-05-24
 ==================
 
