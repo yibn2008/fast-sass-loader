@@ -102,6 +102,10 @@ describe('test sass-loader', function () {
   it('should resolve files with double extensions', function (done) {
     runSimpleTest(done, 'double-extensions')
   })
+
+  it('should be able to import non sass files with a passed transformer', function(done) {
+    runSimpleTest(done, 'withTransformer')
+  })
 })
 
 function runSimpleTest (done, fixtureName) {

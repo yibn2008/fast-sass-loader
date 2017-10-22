@@ -141,6 +141,24 @@ If you want to prepend Sass code before the actual entry file, you can set the d
 
 Please note: Since you're injecting code, this will break the source mappings in your entry file. Often there's a simpler solution than this.
 
+### transformers:
+If you want to import files that aren't basic Sass or css files, you can use the transformers option. This option takes an array of transformer entries, each with a list of file extensions and a tranform function. If an imported file's extension matches one of the transformers' extensions, the file contents will be passed to the corresponding transform function. Your transform function should return a sass string that will be directly written into your compiled Sass file. This is especially useful if you use .json files to share your basic styles across platforms and you'd like to import your .json files directly into your Sass.
+```javascript
+{
+    loader: "fast-sass-loader",
+    options: {
+        transformers: [
+            {
+                extensions: [".json"],
+                transform: function(rawFile) {
+                    return jsonToSass(rawFile);
+                }
+            }
+        ]
+    }
+}
+```
+
 ## Warning
 
 ### Mixing import `.scss` and`.sass` file is not allowed
