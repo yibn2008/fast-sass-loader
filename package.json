@@ -48,7 +48,7 @@
   },
   "peerDependencies": {
     "node-sass": "4.x || 3.x",
-    "webpack": "1.x || 2.x || 3.x"
+    "webpack": "1.x || 2.x || 3.x || 4.x"
   },
   "devDependencies": {
     "coveralls": "^2.12.0",
@@ -64,7 +64,7 @@
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.3",
     "standard": "*",
-    "webpack": "1.x || 2.x || 3.x"
+    "webpack": "1.x || 2.x || 3.x || 4.x"
   },
   "repository": {
     "type": "git",
