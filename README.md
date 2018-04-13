@@ -209,6 +209,20 @@ h2 { color: $foobar; }
 
 You can use variable prefix to bypass.
 
+### Avoid nested @import in sass rules
+
+fast-sass-loader does't support `@import` statement in sass rules, e.g:
+
+```sass
+.a {
+  @import 'group'
+}
+
+.b {
+  @import 'group'
+}
+```
+
 ## License
 
 MIT
