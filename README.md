@@ -211,7 +211,7 @@ You can use variable prefix to bypass.
 
 ### Avoid nested @import in sass rules
 
-fast-sass-loader does't support `@import` statement in sass rules, e.g:
+fast-sass-loader doesn't support `@import` statement in sass rules, for example:
 
 ```sass
 .a {
@@ -222,6 +222,8 @@ fast-sass-loader does't support `@import` statement in sass rules, e.g:
   @import 'group'
 }
 ```
+
+you should wrap the rules that you want to import with mixin, then include them in your `.a { ... }` or `.b { ... }`
 
 ## License
 
