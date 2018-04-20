@@ -34,6 +34,30 @@ function handleError (err, stats, done) {
   return true
 }
 
+function runSimpleTest(done, fixtureName) {
+  const config = require('./fixtures/' + fixtureName + '/webpack.config.js')
+  const compiler = webpack(config)
+
+  compiler.run((err, stats) => {
+    if (!handleError(err, stats, done)) {
+      return
+    }
+
+    try {
+      assert.equal(stats.errors, undefined)
+
+      let css = fs.readFileSync(path.join(__dirname, 'runtime/' + fixtureName + '/index.css'), 'utf8')
+      let expect = fs.readFileSync(path.join(__dirname, 'fixtures/' + fixtureName + '/expect.css'), 'utf8')
+
+      assert.equal(clearCRLF(css), clearCRLF(expect))
+
+      done()
+    } catch (err) {
+      done(err)
+    }
+  })
+}
+
 describe('test sass-loader', function () {
   this.timeout(10000)
 
@@ -87,7 +111,7 @@ describe('test sass-loader', function () {
         let expect = fs.readFileSync(path.join(__dirname, 'fixtures/withData/expect.css'), 'utf8')
 
         assert.equal(clearCRLF(css), clearCRLF(expect))
-        
+
         done()
       } catch (err) {
         done(err)
@@ -99,6 +123,10 @@ describe('test sass-loader', function () {
     runSimpleTest(done, 'simple')
   })
 
+  it.only('should auto remove BOM header', function (done) {
+    runSimpleTest(done, 'bom-issue')
+  })
+
   it('should resolve files with double extensions', function (done) {
     runSimpleTest(done, 'double-extensions')
   })
@@ -107,27 +135,3 @@ describe('test sass-loader', function () {
     runSimpleTest(done, 'withTransformer')
   })
 })
-
-function runSimpleTest (done, fixtureName) {
-  const config = require('./fixtures/' + fixtureName + '/webpack.config.js')
-  const compiler = webpack(config)
-
-  compiler.run((err, stats) => {
-    if (!handleError(err, stats, done)) {
-      return
-    }
-
-    try {
-      assert.equal(stats.errors, undefined)
-
-      let css = fs.readFileSync(path.join(__dirname, 'runtime/' + fixtureName + '/index.css'), 'utf8')
-      let expect = fs.readFileSync(path.join(__dirname, 'fixtures/' + fixtureName + '/expect.css'), 'utf8')
-
-      assert.equal(clearCRLF(css), clearCRLF(expect))
-
-      done()
-    } catch (err) {
-      done(err)
-    }
-  })
-}

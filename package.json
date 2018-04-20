@@ -64,7 +64,7 @@
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.3",
     "standard": "*",
-    "webpack": "1.x || 2.x || 3.x || 4.x"
+    "webpack": "3.x"
   },
   "repository": {
     "type": "git",
