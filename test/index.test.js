@@ -123,7 +123,7 @@ describe('test sass-loader', function () {
     runSimpleTest(done, 'simple')
   })
 
-  it.only('should auto remove BOM header', function (done) {
+  it('should auto remove BOM header', function (done) {
     runSimpleTest(done, 'bom-issue')
   })
 
@@ -133,5 +133,9 @@ describe('test sass-loader', function () {
 
   it('should be able to import non sass files with a passed transformer', function(done) {
     runSimpleTest(done, 'withTransformer')
+  })
+
+  it('should be able to skip import in comment', function(done) {
+    runSimpleTest(done, 'comment-import')
   })
 })
