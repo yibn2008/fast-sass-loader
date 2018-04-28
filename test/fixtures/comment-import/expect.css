@@ -1,0 +1,9 @@
+/* @import"header.scss"; */
+.header {
+  color: #000; }
+
+.foobar {
+  color: #FFF;
+  background-image: url(_/normal/actual/img/logo.png); }
+
+/* @import "footer.scss"; */
