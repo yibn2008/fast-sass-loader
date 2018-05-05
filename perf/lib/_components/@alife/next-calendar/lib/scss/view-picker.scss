@@ -1,0 +1,159 @@
+
+
+
+#{$calendar-prefix} {
+    &-header {
+        #{$calendar-prefix}-picker {
+            padding: $s2;
+            text-align: right;
+        }
+
+        #{$calendar-prefix}-complex-picker,
+        #{$calendar-prefix}-range-picker,
+        #{$calendar-prefix}-month-picker {
+            height: $calendar-card-header-height;
+            line-height: $calendar-card-header-height;
+            background: $calendar-card-header-background;
+            padding: 0;
+            text-align: center;
+            position: relative;
+
+            a {
+                cursor: pointer;
+                color: $calendar-card-header-color;
+            }
+            a:hover {
+                color: $calendar-card-header-hover-color;
+            }
+
+            #{$calendar-icon-prefix} {
+                @include icon-handler($calendar-card-header-icon-size);
+            }
+        }
+
+        #{$calendar-prefix}-range-picker {
+            &-left,
+            &-right {
+                width: 50%;
+                float: left;
+                position: relative;
+                text-align: center;
+            }
+            &:after {
+                visibility: hidden;
+                display: block;
+                height: 0;
+                font-size: 0;
+                content: '\0020';
+                clear: both;
+            }
+        }
+
+        #{$calendar-prefix}-prev-decade-btn,
+        #{$calendar-prefix}-next-decade-btn,
+        #{$calendar-prefix}-prev-year-btn,
+        #{$calendar-prefix}-next-year-btn,
+        #{$calendar-prefix}-prev-month-btn,
+        #{$calendar-prefix}-next-month-btn {
+            position: absolute;
+            top: 0;
+            padding: 0 $s1;
+            font-size: $font-size-base-subhead;
+            display: inline-block;
+            height: 100%;
+            font-weight: 300;
+        }
+
+        #{$calendar-prefix}-ym-select {
+            a {
+                font-size: $font-size-base-caption;
+                padding: 0 $s1;
+                font-weight: 700;
+                display: inline-block;
+                color: $calendar-card-header-ym-color;
+            }
+        }
+
+        #{$calendar-prefix}-prev-decade-btn,
+        #{$calendar-prefix}-prev-year-btn {
+            left: $s2;
+        }
+
+        #{$calendar-prefix}-prev-month-btn {
+            left: $s7;
+        }
+
+        #{$calendar-prefix}-next-decade-btn,
+        #{$calendar-prefix}-next-year-btn {
+            right: $s2;
+        }
+
+        #{$calendar-prefix}-next-month-btn {
+            right: $s7;
+        }
+
+        #{$calendar-radio-prefix}-group {
+            margin-left: $s2;
+            vertical-align: middle;
+        }
+
+        #{$calendar-select-prefix} {
+            margin-left: $s1;
+            text-align: left;
+            min-width: 0;
+            vertical-align: middle;
+            max-width: $s20;
+
+            &.small {
+                font-size: $font-size-base-caption;
+            }
+
+            &.medium {
+                font-size: $font-size-base-body1;
+            }
+        }
+    }
+
+    &-body {
+        padding: 8px;
+        border-top: $line1 $calendar-card-border-color;
+
+        #{$calendar-prefix}-table {
+            table-layout: fixed;
+            border: 0;
+            border-collapse: collapse;
+            background-color: transparent;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &-footer {
+        height: $calendar-card-footer-height;
+        line-height: $calendar-card-footer-height;
+        border-top: $line1 $calendar-card-border-color;
+
+        #{$calendar-prefix}-today-btn {
+            display: block;
+            padding: 0 $s4;
+            text-align: center;
+            cursor: pointer;
+            height: 100%;
+            color: $calendar-card-footer-color;
+            background: $calendar-card-footer-background;
+
+            &:hover {
+                color: $calendar-card-footer-hover-color;
+            }
+        }
+
+        #{$calendar-prefix}-today-btn-disabled {
+            cursor: not-allowed;
+
+            &:hover {
+                color: $calendar-card-footer-color;
+            }
+        }
+    }
+
+}

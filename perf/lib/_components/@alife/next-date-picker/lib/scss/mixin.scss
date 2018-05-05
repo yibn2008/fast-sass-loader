@@ -1,0 +1,50 @@
+
+
+
+
+@mixin date-picker-size (
+    $height,
+    $font-size,
+    $icon-size
+) {
+    #{$date-picker-input-prefix} {
+        width: $s40;
+        display: inline-block;
+    
+        input {
+            @include inputSize($height, 0, $s2, $font-size);
+        }
+    }
+
+    #{$date-picker-icon-prefix} {
+        height: $height;
+        line-height: $height;
+
+        @include icon-handler($icon-size);
+    }
+}
+
+@mixin range-picker-size (
+    $height,
+    $font-size,
+    $icon-size
+) {
+    #{$range-picker-prefix}-trigger {
+        margin: 0;
+        padding-right: $height;
+    }
+
+    #{$date-picker-input-prefix} {
+        display: inline-block;
+
+        input {
+            @include inputSize($height, 0, $s2, $font-size);
+        }
+    }
+    #{$date-picker-icon-prefix} {
+        height: $height;
+        line-height: $height;
+
+        @include icon-handler($icon-size);
+    }
+}

@@ -1,0 +1,250 @@
+@charset "UTF-8";
+
+
+
+
+
+
+
+
+
+
+$input-prefix: '.#{$css-prefix}input';
+
+
+
+
+
+
+$input-border-width: $line-1-width !default;
+
+
+
+$input-color-bg: $color-n1-1 !default;
+
+
+
+$input-color-hint: $color-n2-2 !default;
+
+
+
+$input-color-disabled: $color-n2-1 !default;
+
+
+
+$input-color-border-disabled: $color-n1-5 !default;
+
+
+
+$input-color-bg-disabled: $color-n1-2 !default;
+
+
+
+
+
+
+
+$input-single-color: $color-n2-4 !default;
+
+
+
+
+$input-single-color-border: $color-n1-7 !default;
+
+
+
+$input-single-color-border-hover: $color-n1-8 !default;
+
+
+
+$input-single-color-border-focus: $color-b2-6 !default;
+
+
+
+
+
+
+
+$input-multiple-color: $color-n2-4 !default;
+
+
+
+$input-multiple-color-border: $color-n1-7 !default;
+
+
+
+$input-multiple-color-border-hover: $color-n1-8 !default;
+
+
+
+$input-multiple-color-border-focus: $color-b2-6 !default;
+
+
+
+$input-multiple-corner: $corner-radius-r0 !default;
+
+
+
+$input-multiple-size-padding-lr: $s2 !default;
+
+
+
+$input-multiple-size-padding-tb: $s1 !default;
+
+
+
+
+$input-multiple-font-size: $font-size-base-body1 !default;
+
+
+
+
+$input-multiple-corner: $corner-radius-r0 !default;
+
+
+
+
+
+
+$input-addon-color-bg: $color-n1-2 !default;
+
+
+
+$input-addon-color: $color-n2-2 !default;
+
+
+
+
+
+
+$input-size-l-corner: $corner-radius-r0 !default;
+
+
+
+$input-size-l-height: $s10 !default;
+
+
+
+$input-size-l-margin: $s0 !default;
+
+
+
+$input-size-l-padding: $s2 !default;
+
+
+
+
+$input-size-l-font: $font-size-base-body1 !default;
+
+
+
+
+
+
+$input-size-m-corner: $corner-radius-r0 !default;
+
+
+
+$input-size-m-height: $s7 !default;
+
+
+
+$input-size-m-margin: $s0 !default;
+
+
+
+$input-size-m-padding: $s2 !default;
+
+
+
+$input-size-m-font: $font-size-base-body1 !default;
+
+
+
+
+
+
+$input-size-s-corner: $corner-radius-r0 !default;
+
+
+
+$input-size-s-height: $s5 !default;
+
+
+
+$input-size-s-margin: $s0 !default;
+
+
+
+$input-size-s-padding: $s1 !default;
+
+
+
+
+$input-size-s-font: $font-size-base-body1 !default;
+
+
+
+
+
+
+$input-size-feedback-bottom: $s1 !default;
+
+
+
+$input-feedback-icon-size-s: $icon-xs !default;
+
+
+
+$input-feedback-icon-size-m: $icon-xs !default;
+
+
+
+$input-feedback-icon-size-l: $icon-xs !default;
+
+
+
+
+$input-success-feedback-color: $color-f3-1 !default;
+
+
+
+$input-color-feedback-border-error: $color-f2-1 !default;
+
+
+
+
+
+
+$input-color-maxlen-error: $color-f2-1 !default;
+
+
+
+$input-color-maxlen: $color-n2-4 !default;
+
+
+
+$input-font-size-maxlen: $font-size-base-caption !default;
+
+
+
+
+
+
+$input-clear-color: $color-n2-1 !default;
+
+
+
+$input-clear-hover-color: $color-n2-2 !default;
+
+
+
+$input-clear-s-icon-size: $icon-xs !default;
+
+
+
+$input-clear-m-icon-size: $icon-s !default;
+
+
+
+$input-clear-l-icon-size: $icon-m !default;

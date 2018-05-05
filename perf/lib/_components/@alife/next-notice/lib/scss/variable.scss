@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$notice-shadow: $shadow-sd1 !default;
+
+
+$notice-border-radius: $corner-radius-r0 !default;
+
+
+$notice-border-style: $line-solid !default;
+
+
+$notice-color-close: $color-n2-2 !default;
+
+
+
+
+
+
+$notice-prompt-color-bg: $color-n1-1 !default;
+
+
+$notice-prompt-color-border: $color-b2-3 !default;
+
+
+$notice-prompt-color-title: $color-n2-4 !default;
+
+
+$notice-prompt-color-content: $color-n2-3 !default;
+
+
+$notice-prompt-color-icon: $color-b2-6 !default;
+
+
+$notice-prompt-color-bg-addon: $color-transparent !default;
+
+
+
+
+
+
+$notice-warning-color-bg: $color-n1-1 !default;
+
+
+$notice-warning-color-border: $color-f1-1 !default;
+
+
+$notice-warning-color-title: $color-n2-4 !default;
+
+
+$notice-warning-color-content: $color-n2-3 !default;
+
+
+$notice-warning-color-icon: $color-f1-1 !default;
+
+
+$notice-warning-color-bg-addon: $color-transparent !default;
+
+
+
+
+
+
+$notice-system-color-bg: $color-f1-1 !default;
+
+
+$notice-system-color-border: $color-f1-1 !default;
+
+
+$notice-system-color-title: $color-n1-1 !default;
+
+
+$notice-system-color-content: $color-n1-1 !default;
+
+
+$notice-system-color-icon: $color-n1-1 !default;
+
+
+$notice-system-color-close: $color-n1-1 !default;
+
+
+
+
+
+
+$notice-size-l-padding-top: $s5 !default;
+
+
+$notice-size-l-padding-right: $s5 !default;
+
+
+$notice-size-l-padding-bottom: $s5 !default;
+
+
+$notice-size-l-padding-left: $s5 !default;
+
+
+$notice-size-l-border-width: $line-2-width !default;
+
+
+$notice-size-l-title-padding-left: $s3 !default;
+
+
+$notice-size-l-title-padding-right: $s5 !default;
+
+
+$notice-size-l-content-padding-left: $s3 !default;
+
+
+$notice-size-l-content-padding-right: $s5 !default;
+
+
+$notice-size-l-content-margin-top: $s2 !default;
+
+
+$notice-size-l-title-font: $font-size-base-subhead !default;
+
+
+$notice-size-l-content-font: $font-size-base-body1 !default;
+
+
+$notice-size-l-icon: $icon-xl !default;
+
+
+$notice-size-l-close: $icon-s !default;
+
+
+$notice-size-l-close-top: $s3 !default;
+
+
+$notice-size-l-close-right: $s3 !default;
+
+$notice-size-l-padding: $notice-size-l-padding-top $notice-size-l-padding-right $notice-size-l-padding-bottom $notice-size-l-padding-left !default;
+$notice-size-l-title-padding: 0 $notice-size-l-title-padding-right 0 $notice-size-l-title-padding-left + $notice-size-l-icon !default;
+$notice-size-l-content-padding: 0 $notice-size-l-content-padding-right 0 $notice-size-l-content-padding-left + $notice-size-l-icon !default;
+
+
+
+
+
+
+$notice-size-m-padding-top: $s3 !default;
+
+
+$notice-size-m-padding-right: $s3 !default;
+
+
+$notice-size-m-padding-bottom: $s3 !default;
+
+
+$notice-size-m-padding-left: $s3 !default;
+
+
+$notice-size-m-border-width: $line-2-width !default;
+
+
+$notice-size-m-title-padding-left: $s2 !default;
+
+
+$notice-size-m-title-padding-right: $s5 !default;
+
+
+$notice-size-m-content-padding-left: $s2 !default;
+
+
+$notice-size-m-content-padding-right: $s5 !default;
+
+
+$notice-size-m-content-margin-top: $s1 !default;
+
+
+$notice-size-m-title-font: $font-size-base-body1 !default;
+
+
+$notice-size-m-content-font: $font-size-base-body1 !default;
+
+
+$notice-size-m-icon: $icon-s !default;
+
+
+$notice-size-m-close: $icon-s !default;
+
+
+$notice-size-m-close-top: $s3 !default;
+
+
+$notice-size-m-close-right: $s3 !default;
+
+$notice-size-m-padding: $notice-size-m-padding-top $notice-size-m-padding-right $notice-size-m-padding-bottom $notice-size-m-padding-left !default;
+$notice-size-m-title-padding: 0 $notice-size-m-title-padding-right 0 $notice-size-m-title-padding-left + $notice-size-m-icon !default;
+$notice-size-m-content-padding: 0 $notice-size-m-content-padding-right 0 $notice-size-m-content-padding-left + $notice-size-m-icon !default;
+
+
+
+
+
+$notice-size-l-padding-top-addon: $s0 !default;
+
+
+$notice-size-l-padding-right-addon: $s0 !default;
+
+
+$notice-size-l-padding-bottom-addon: $s0 !default;
+
+
+$notice-size-l-padding-left-addon: $s0 !default;
+
+
+$notice-size-l-border-width-addon: $s0 !default;
+
+$notice-size-l-padding-addon: $notice-size-l-padding-top-addon $notice-size-l-padding-right-addon $notice-size-l-padding-bottom-addon  $notice-size-l-padding-left-addon !default;
+
+
+
+
+
+$notice-size-m-padding-top-addon: $s0 !default;
+
+
+$notice-size-m-padding-right-addon: $s0 !default;
+
+
+$notice-size-m-padding-bottom-addon: $s0 !default;
+
+
+$notice-size-m-padding-left-addon: $s0 !default;
+
+
+$notice-size-m-border-width-addon: $s0 !default;
+
+$notice-size-m-padding-addon: $notice-size-m-padding-top-addon $notice-size-m-padding-right-addon $notice-size-m-padding-bottom-addon  $notice-size-m-padding-left-addon !default;

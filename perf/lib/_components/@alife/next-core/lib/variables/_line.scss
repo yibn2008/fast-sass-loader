@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$line-1-width: 1px !default;
+
+
+
+
+$line-2-width: 2px !default;
+
+
+
+
+$line-3-width: 4px !default;
+
+
+
+
+$line-solid: solid !default;
+
+
+
+
+$line-dashed: dashed !default;
+
+
+
+
+$line-dotted: dotted !default;
+
+
+
+
+$line1: $line-1-width $line-solid;
+$line1-dashed: $line-1-width $line-dashed;
+$line1-dotted: $line-1-width $line-dotted;
+
+$line2: $line-2-width $line-solid;
+$line2-dashed: $line-2-width $line-dashed;
+$line2-dotted: $line-2-width $line-dotted;
+
+$line3: $line-3-width $line-solid;
+$line3-dashed: $line-3-width $line-dashed;
+$line3-dotted: $line-3-width $line-dotted;

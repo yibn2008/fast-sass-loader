@@ -1,0 +1,207 @@
+
+
+
+#{$step-prefix}-circle {
+    #{$step-prefix}-item {
+        &-container {
+            #{$step-prefix}-item-node {
+                position: relative;
+                display: inline-block;
+                text-align: center;
+                padding: 0 $step-circle-item-node-padding;
+                width: $step-circle-item-node-size + $step-circle-item-node-padding * 2;
+                height: $step-circle-item-node-size;
+                cursor: pointer;
+            }
+
+            #{$step-prefix}-item-node-circle {
+                display: block;
+                width: $step-circle-item-node-size;
+                height: $step-circle-item-node-size;
+                font-size: $step-circle-item-node-font-size;
+                line-height: $step-circle-item-node-size - 2 * $step-circle-item-node-border-width;
+                text-align: center;
+                border: $step-circle-item-node-border-width solid;
+                border-radius: $step-circle-item-node-corner;
+                transition: background-color .3s ease, border-color .3s ease;
+
+                #{$step-icon-prefix} {
+                    @include icon-handler($step-circle-item-node-icon-size);
+                }
+            }
+
+            #{$step-prefix}-item-title {
+                font-size: $step-circle-item-title-size;
+                line-height: $step-circle-item-title-size + 4;
+                margin-top: $step-circle-item-title-margin-top;
+                text-align: center;
+            }
+
+            #{$step-prefix}-item-progress {
+                width: $step-circle-item-node-size;
+                height: $step-circle-item-node-size;
+
+                #{$step-progress-prefix}-circle-text {
+                    color: $step-circle-item-node-finish-color;
+                    font-size: $step-circle-item-node-font-size;
+                }
+
+                #{$step-progress-prefix}-circle-underlay {
+                    stroke: $step-circle-item-node-wait-border-color;
+                    stroke-width: $s1;
+                }
+
+                #{$step-progress-prefix}-circle-overlay-normal {
+                    stroke: $step-circle-item-node-finish-border-color;
+                    stroke-width: $s1;
+                }
+            }
+        }
+
+        &-tail {
+            position: absolute;
+            width: calc(100% - #{$step-circle-item-node-size + 2*$step-circle-item-node-padding});
+            height: auto;
+            left: calc(50% + #{$step-circle-item-node-size/2 + $step-circle-item-node-padding});
+            top: ($step-circle-item-node-size - $step-circle-item-tail-size) / 2;
+
+            i {
+                display: block;
+                vertical-align: top;
+                height: $step-circle-item-tail-size;
+                width: 100%;
+                position: relative;
+                transition: all .4s ease;
+            }
+        }
+    }
+
+    #{$step-prefix}-item-wait {
+        @include step-item-state(
+                'circle',
+                $step-circle-item-node-wait-background,
+                $step-circle-item-title-wait-color,
+                $step-circle-item-node-wait-color,
+                $step-circle-item-tail-wait-color,
+                $step-circle-item-node-wait-border-color
+        );
+    }
+
+    #{$step-prefix}-item-process {
+        @include step-item-state(
+                'circle',
+                $step-circle-item-node-process-background,
+                $step-circle-item-title-process-color,
+                $step-circle-item-node-process-color,
+                $step-circle-item-tail-process-color,
+                $step-circle-item-node-process-border-color
+        );
+    }
+
+    #{$step-prefix}-item-finish {
+        @include step-item-state(
+                'circle',
+                $step-circle-item-node-finish-background,
+                $step-circle-item-title-finish-color,
+                $step-circle-item-node-finish-color,
+                $step-circle-item-tail-finish-color,
+                $step-circle-item-node-finish-border-color
+        );
+    }
+
+    #{$step-prefix}-item-disabled {
+        @include step-item-state(
+                'circle',
+                $step-circle-item-node-disabled-background,
+                $step-circle-item-title-disabled-color,
+                $step-circle-item-node-disabled-color,
+                $step-circle-item-tail-disabled-color,
+                $step-circle-item-node-disabled-border-color
+        );
+
+        #{$step-prefix}-item-node-placeholder,
+        #{$step-prefix}-item-node {
+            cursor: not-allowed;
+        }
+    }
+    
+    #{$step-prefix}-item-read-only {
+        #{$step-prefix}-item-node-placeholder,
+        #{$step-prefix}-item-node {
+            cursor: default;
+        }
+    }
+    
+    #{$step-prefix}-item-last {
+        #{$step-prefix}-item-tail {
+            display: none;
+        }
+    }
+}
+
+
+
+
+#{$step-prefix}-circle#{$step-prefix}-vertical {
+    #{$step-prefix}-item {
+        &-container {
+            & {
+                position: relative;
+                min-height: $step-circle-item-node-size + $step-circle-item-node-padding * 2;
+            }
+            
+            #{$step-prefix}-item-node-placeholder {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            #{$step-prefix}-item-node {
+                padding: $step-circle-item-node-padding 0;
+                width: $step-circle-item-node-size;
+                height: $step-circle-item-node-size + $step-circle-item-node-padding * 2;
+            }
+
+            #{$step-prefix}-item-body {
+                display: inline-block;
+                margin-left: $step-circle-vertical-item-body-margin-left + $step-circle-item-node-size;
+                padding-top: $step-circle-vertical-item-node-padding;
+            }
+
+            #{$step-prefix}-item-title {
+                margin-top: $step-circle-vertical-item-title-margin-top;
+                text-align: left;
+            }
+
+            #{$step-prefix}-item-content {
+                margin-top: $step-circle-vertical-item-content-margin-top;
+                min-height: $s2;
+                text-align: left;
+                font-size: $step-circle-item-content-font-size;
+                line-height: $step-circle-item-content-font-size + 4;
+                color: $step-circle-item-content-color;
+            }
+        }
+
+        &-tail {
+            position: absolute;
+            width: auto;
+            height: calc(100% - #{$step-circle-item-node-size + 2*$step-circle-item-node-padding});
+            top: $step-circle-item-node-size + 2*$step-circle-item-node-padding;
+            left: ($step-circle-item-node-size - $step-circle-vertical-item-tail-size) / 2;
+
+            i {
+                display: block;
+                vertical-align: top;
+                height: 100%;
+                width: $step-circle-vertical-item-tail-size;
+                position: relative;
+                transition: all .4s ease;
+            }
+        }
+    }
+
+    #{$step-prefix}-item-first {
+        margin-top: -$step-circle-vertical-item-node-padding;
+    }
+}

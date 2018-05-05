@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+
+
+
+
+
+
+
+
+
+$number-picker-prefix: '.#{$css-prefix}number-picker';
+
+
+
+
+
+
+
+
+$number-picker-color: $color-n2-3 !default;
+
+
+$number-picker-bg: $color-n1-2 !default;
+
+
+
+
+$number-picker-border-color: $color-n1-7 !default;
+
+
+
+$number-picker-border-width: $line-1-width !default;
+
+
+
+$number-picker-color-hover: $color-b1-6 !default;
+
+
+$number-picker-border-color-hover: $color-b1-6 !default;
+
+
+$number-picker-font-size: $font-size-base-body2 !default;
+
+
+
+$number-picker-color-disabled: $color-n2-1 !default;
+
+
+$number-picker-bg-disabled: $color-n1-3 !default;
+
+
+$number-picker-border-color-disabled: $color-n1-5 !default;
+
+
+
+
+
+$number-picker-width: $s10 !default;
+
+
+$number-picker-height: $s8 !default;
+
+
+
+$number-picker-handler-width: $s5 !default;
+
+
+$number-picker-handler-corner: $corner-radius-r0 !default;
+
+
+$number-picker-handler-icon-size: $icon-xxs !default;
+
+
+$number-picker-handler-margin-bottom: 2px !default;
+$number-picker-handler-margin-left: 2px !default;
+$number-picker-handler-height: ($number-picker-height + 2 * $number-picker-border-width - $number-picker-handler-margin-bottom) / 2;
+
+
+
+$number-picker-inline-width: $s11 !default;
+
+
+$number-picker-inline-height: $s7 !default;
+
+
+
+$number-picker-inline-handler-width: $s7 !default;
+
+
+$number-picker-inline-handler-height: $s7 !default;
+
+
+$number-picker-inline-handler-corner: $corner-radius-r0 !default;
+
+
+$number-picker-inline-handler-icon-size: $icon-xs !default;

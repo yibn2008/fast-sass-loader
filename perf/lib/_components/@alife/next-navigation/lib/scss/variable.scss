@@ -1,0 +1,1076 @@
+@charset "UTF-8";
+
+
+
+
+
+
+
+
+
+
+$navi            : '.#{$css-prefix}navigation';
+$item            : '#{$navi}-item';
+$itemContent     : '#{$item}-content';
+$itemIcon        : '#{$item}-icon';
+$group           : '#{$navi}-group';
+$groupTitle      : '#{$group}-title';
+$groupContent    : '#{$group}-content';
+
+
+
+
+
+
+
+$navigation-icononly-item-background: $color-transparent !default;
+
+
+
+$navigation-icononly-item-background-selected: $color-b1-6  !default;
+
+
+
+$navigation-icononly-item-background-hover: $color-n1-3 !default;
+
+
+
+
+$navigation-icononly-item-opacity: 1 !default;
+
+
+
+
+$navigation-icononly-item-opacity-hover: 1 !default;
+
+
+
+
+$navigation-icononly-item-opacity-selected: 1 !default;
+
+
+
+$navigation-icononly-item-color: $color-n2-4 !default;
+
+
+
+$navigation-icononly-item-color-selected: $color-n1-1 !default;
+
+
+
+$navigation-icononly-item-color-hover: $color-n2-4 !default;
+
+
+
+$navigation-icononly-item-border-width: $line-1-width !default;
+
+
+
+$navigation-icononly-item-border-color: $color-n1-4 !default;
+
+
+
+$navigation-icononly-item-line-width: $line-1-width !default;
+
+
+
+$navigation-icononly-item-line-color: $color-transparent !default;
+
+
+
+$navigation-icononly-item-line-color-selected: $color-transparent !default;
+
+
+
+$navigation-icononly-item-line-color-hover: $color-transparent !default;
+
+
+
+$navigation-icononly-item-height: $s12 !default;
+
+
+
+$navigation-icononly-item-width: $s15 !default;
+
+
+
+$navigation-icononly-item-icon-size: $icon-xs !default;
+
+
+
+
+
+
+$navigation-normal-item-fontsize: $font-size-base-body1 !default;
+
+
+
+$navigation-normal-item-background: $color-transparent !default;
+
+
+
+$navigation-normal-item-background-hover: $color-n1-3 !default;
+
+
+
+$navigation-normal-item-background-selected: $color-n1-3 !default;
+
+
+
+$navigation-normal-item-padding: $s5 !default;
+
+
+
+$navigation-normal-item-height: $s12 !default;
+
+
+
+
+$navigation-normal-font-opacity: 1 !default;
+
+
+
+
+$navigation-normal-font-opacity-hover: 1 !default;
+
+
+
+
+$navigation-normal-font-opacity-selected: 1 !default;
+
+
+
+$navigation-normal-leaf-icon-margin: $s1 !default;
+
+
+
+
+$navigation-normal-leaf-icon-opacity: 1 !default;
+
+
+
+
+$navigation-normal-leaf-icon-opacity-hover: 1 !default;
+
+
+
+
+$navigation-normal-leaf-icon-opacity-selected: 1 !default;
+
+
+
+$navigation-normal-custom-icon-margin: $s1 !default;
+
+
+
+
+$navigation-normal-custom-icon-opacity: 1 !default;
+
+
+
+
+$navigation-normal-custom-icon-opacity-hover: 1 !default;
+
+
+
+
+$navigation-normal-custom-icon-opacity-selected: 1 !default;
+
+
+
+$navigation-normal-item-color: $color-n2-4 !default;
+
+
+
+$navigation-normal-item-color-hover: $color-n2-4 !default;
+
+
+
+$navigation-normal-item-color-selected: $color-n2-4 !default;
+
+
+
+$navigation-normal-item-line-width: $line-1-width !default;
+
+
+
+$navigation-normal-item-line-color: $color-transparent !default;
+
+
+
+$navigation-normal-item-line-color-hover: $color-transparent !default;
+
+
+
+$navigation-normal-item-line-color-selected: $color-transparent !default;
+
+
+
+$navigation-normal-border-width: $line-1-width !default;
+
+
+
+$navigation-normal-border-color: $color-n1-4 !default;
+
+
+
+$navigation-normal-item-group-title-height: $s10 !default;
+
+
+
+$navigation-normal-item-group-title-color: $color-n2-4 !default;
+
+
+
+$navigation-normal-item-group-title-fontsize: $font-size-base-subhead !default;
+
+
+
+$navigation-normal-item-group-title-padding: $s5 !default;
+
+
+
+$navigation-normal-item-current-color-selected: $color-b1-6 !default;
+
+
+
+$navigation-normal-item-current-right-color-selected: $color-b1-6 !default;
+
+
+
+$navigation-normal-item-current-color-hover: $color-b1-6 !default;
+
+
+
+$navigation-normal-item-current-color: $color-b1-6 !default;
+
+
+
+$navigation-normal-item-current-width-selected: $line-2-width !default;
+
+
+
+$navigation-normal-item-current-right-width-selected: $line-2-width !default;
+
+
+
+$navigation-normal-item-leaf-icon-size: $icon-xs !default;
+
+
+
+$navigation-normal-item-leaf-icon-color: $color-n2-4 !default;
+
+
+
+$navigation-normal-item-leaf-icon-color-hover: $color-n2-4 !default;
+
+
+
+$navigation-normal-item-leaf-icon-color-selected: $color-n2-4 !default;
+
+
+
+$navigation-normal-item-custom-icon-size: $icon-xs !default;
+
+
+
+$navigation-normal-item-custom-icon-color: $color-n2-4 !default;
+
+
+
+$navigation-normal-item-custom-icon-color-hover: $color-n2-4 !default;
+
+
+
+$navigation-normal-item-custom-icon-color-selected: $color-n2-4 !default;
+
+
+
+
+
+
+
+$navigation-tree-item-fontsize: $font-size-base-body1 !default;
+
+
+
+$navigation-tree-item-title-fontsize: $font-size-base-body1 !default;
+
+
+
+$navigation-tree-item-padding: $s5 !default;
+
+
+
+$navigation-tree-item-height: $s12 !default;
+
+
+
+$navigation-tree-item-color: $color-n2-4 !default;
+
+
+
+$navigation-tree-item-color-hover: $color-b1-6  !default;
+
+
+
+$navigation-tree-item-color-selected: $color-b1-6  !default;
+
+
+
+$navigation-tree-item-title-color: $color-n2-4 !default;
+
+
+
+$navigation-tree-item-title-color-hover: $color-n2-4  !default;
+
+
+
+$navigation-tree-item-title-color-selected: $color-n2-4  !default;
+
+
+
+$navigation-tree-item-border-width: $line-1-width !default;
+
+
+
+$navigation-tree-item-border-color: $color-n1-4 !default;
+
+
+
+$navigation-tree-item-background: $color-transparent !default;
+
+
+
+$navigation-tree-item-background-hover: $color-transparent !default;
+
+
+
+$navigation-tree-item-background-selected: $color-transparent !default;
+
+
+
+$navigation-tree-item-title-background: $color-transparent !default;
+
+
+
+$navigation-tree-item-title-background-hover: $color-transparent !default;
+
+
+
+$navigation-tree-item-title-background-selected: $color-transparent !default;
+
+
+
+$navigation-tree-item-leaf-padding: $s5 !default;
+
+
+
+
+$navigation-tree-item-group-title-height: $s10 !default;
+
+
+
+$navigation-tree-item-group-title-color: $color-n2-4 !default;
+
+
+
+$navigation-tree-item-group-title-fontsize: $font-size-base-subhead !default;
+
+
+
+$navigation-tree-item-group-title-padding: $s5 !default;
+
+
+
+$navigation-tree-item-custom-icon-size: $icon-xs !default;
+
+
+
+$navigation-tree-item-title-custom-icon-size: $icon-xs !default;
+
+
+
+$navigation-tree-item-custom-icon-color: $color-n2-4 !default;
+
+
+
+$navigation-tree-item-custom-icon-color-hover: $color-b1-6 !default;
+
+
+
+$navigation-tree-item-custom-icon-color-selected: $color-b1-6 !default;
+
+
+
+
+$navigation-tree-item-title-custom-icon-opacity: 1 !default;
+
+
+
+
+$navigation-tree-item-title-custom-icon-opacity-hover: 1 !default;
+
+
+
+
+$navigation-tree-item-title-custom-icon-opacity-selected: 1 !default;
+
+
+
+
+$navigation-tree-item-title-leaf-icon-opacity: 1 !default;
+
+
+
+
+$navigation-tree-item-title-leaf-icon-opacity-hover: 1 !default;
+
+
+
+
+$navigation-tree-item-title-leaf-icon-opacity-selected: 1 !default;
+
+
+
+
+$navigation-tree-item-custom-icon-opacity: 1 !default;
+
+
+
+
+$navigation-tree-item-custom-icon-opacity-hover: 1 !default;
+
+
+
+
+$navigation-tree-item-custom-icon-opacity-selected: 1 !default;
+
+
+
+
+$navigation-tree-item-leaf-icon-opacity: 1 !default;
+
+
+
+
+$navigation-tree-item-leaf-icon-opacity-hover: 1 !default;
+
+
+
+
+$navigation-tree-item-leaf-icon-opacity-selected: 1 !default;
+
+
+
+
+$navigation-tree-item-title-text-opacity: 1 !default;
+
+
+
+
+$navigation-tree-item-title-text-opacity-hover: 1 !default;
+
+
+
+
+$navigation-tree-item-title-text-opacity-selected: 1 !default;
+
+
+
+
+$navigation-tree-item-text-opacity: 1 !default;
+
+
+
+
+$navigation-tree-item-text-opacity-hover: 1 !default;
+
+
+
+
+$navigation-tree-item-text-opacity-selected: 1 !default;
+
+
+
+$navigation-tree-item-leaf-icon-size: $icon-xs !default;
+
+
+
+$navigation-tree-item-title-leaf-icon-size: $icon-xs !default;
+
+
+
+$navigation-tree-item-title-leaf-icon-color: $color-n2-4 !default;
+
+
+
+$navigation-tree-item-title-leaf-icon-color-hover: $color-b1-6 !default;
+
+
+
+$navigation-tree-item-title-leaf-icon-color-selected: $color-b1-6 !default;
+
+
+
+$navigation-tree-item-title-custom-icon-color: $color-n2-4 !default;
+
+
+
+$navigation-tree-item-title-custom-icon-color-hover: $color-b1-6 !default;
+
+
+
+$navigation-tree-item-title-custom-icon-color-selected: $color-b1-6 !default;
+
+
+
+$navigation-tree-item-leaf-icon-color: $color-n2-4 !default;
+
+
+
+$navigation-tree-item-leaf-icon-color-hover: $color-b1-6 !default;
+
+
+
+$navigation-tree-item-leaf-icon-color-selected: $color-b1-6 !default;
+
+
+
+$navigation-tree-item-line-width: $line-1-width !default;
+
+
+
+$navigation-tree-item-line-color: $color-transparent !default;
+
+
+
+$navigation-tree-item-line-color-hover: $color-transparent !default;
+
+
+
+$navigation-tree-item-line-color-selected: $color-transparent !default;
+
+
+
+$navigation-tree-item-current-width-selected: $line-2-width !default;
+
+
+
+$navigation-tree-item-current-color: $color-transparent !default;
+
+
+
+$navigation-tree-item-current-color-hover: $color-transparent!default;
+
+
+
+$navigation-tree-item-current-color-selected: $color-transparent !default;
+
+
+
+
+
+
+
+$navigation-slip-item-fontsize: $font-size-base-body1 !default;
+
+
+
+$navigation-slip-item-background: $color-n1-1 !default;
+
+
+
+$navigation-slip-item-background-active: $color-n1-1 !default;
+
+
+
+$navigation-slip-item-padding: $s5 !default;
+
+
+
+$navigation-slip-item-height: $s12 !default;
+
+
+
+$navigation-slip-item-color: $color-n2-4 !default;
+
+
+
+$navigation-slip-item-color-active: $color-n2-4 !default;
+
+
+
+$navigation-slip-item-border-width: $line-1-width !default;
+
+
+
+$navigation-slip-item-border-color: $color-n1-4 !default;
+
+
+
+$navigation-slip-item-custom-icon-size: $icon-xs !default;
+
+
+
+$navigation-slip-item-custom-icon-color: $color-n2-4 !default;
+
+
+
+$navigation-slip-item-custom-icon-color-active: $color-n2-4 !default;
+
+
+
+$navigation-slip-item-leaf-icon-size: $icon-xs !default;
+
+
+
+$navigation-slip-item-leaf-icon-color: $color-n2-4 !default;
+
+
+
+$navigation-slip-item-leaf-icon-color-active: $color-b1-6 !default;
+
+
+
+
+$navigation-slip-item-custom-icon-opacity: 1 !default;
+
+
+
+
+$navigation-slip-item-custom-icon-opacity-hover: 1 !default;
+
+
+
+
+$navigation-slip-item-leaf-icon-opacity: 1 !default;
+
+
+
+
+$navigation-slip-item-leaf-icon-opacity-hover: 1 !default;
+
+
+
+
+$navigation-slip-item-text-opacity: 1 !default;
+
+
+
+
+$navigation-slip-item-text-opacity-hover: 1 !default;
+
+
+
+$navigation-slip-item-group-title-height: $s10 !default;
+
+
+
+$navigation-slip-item-group-title-color: $color-n2-4 !default;
+
+
+
+$navigation-slip-item-group-title-fontsize: $font-size-base-subhead !default;
+
+
+
+$navigation-slip-item-group-title-padding: $s5 !default;
+
+
+
+
+
+
+
+
+$navigation-text-item-background: $color-transparent !default;
+
+
+
+$navigation-text-item-color: $color-n2-4 !default;
+
+
+
+$navigation-text-item-color-selected: $color-b1-6 !default;
+
+
+
+$navigation-text-item-color-hover: $color-b1-6 !default;
+
+
+
+$navigation-text-item-leaf-color: $color-n2-4 !default;
+
+
+
+$navigation-text-item-custom-color: $color-n2-4 !default;
+
+
+
+$navigation-text-item-leaf-color-selected: $color-b1-6 !default;
+
+
+
+$navigation-text-item-custom-color-selected: $color-b1-6 !default;
+
+
+
+$navigation-text-item-leaf-color-hover: $color-b1-6 !default;
+
+
+
+$navigation-text-item-custom-color-hover: $color-b1-6 !default;
+
+
+
+$navigation-text-item-fontsize: $font-size-base-body1 !default;
+
+
+
+$navigation-text-item-padding: $s5 !default;
+
+
+
+$navigation-text-item-height: $s11 !default;
+
+
+
+$navigation-text-item-custom-icon-size: $icon-xs !default;
+
+
+
+$navigation-text-item-custom-icon-margin: $s1 !default;
+
+
+
+$navigation-text-item-leaf-icon-margin: $s1 !default;
+
+
+
+$navigation-text-item-leaf-icon-size: $icon-xxs !default;
+
+
+
+
+$navigation-text-item-custom-icon-opacity: 1 !default;
+
+
+
+
+$navigation-text-item-custom-icon-opacity-hover: 1 !default;
+
+
+
+
+$navigation-text-item-custom-icon-opacity-selected: 1 !default;
+
+
+
+
+$navigation-text-item-leaf-icon-opacity: 1 !default;
+
+
+
+
+$navigation-text-item-leaf-icon-opacity-hover: 1 !default;
+
+
+
+
+$navigation-text-item-leaf-icon-opacity-selected: 1 !default;
+
+
+
+
+$navigation-text-item-text-opacity: 1 !default;
+
+
+
+
+$navigation-text-item-text-opacity-hover: 1 !default;
+
+
+
+
+$navigation-text-item-text-opacity-selected: 1 !default;
+
+
+
+
+
+
+$navigation-line-item-color: $color-n2-4 !default;
+
+
+
+$navigation-line-item-color-selected: $color-b1-6 !default;
+
+
+
+$navigation-line-item-color-hover: $color-b1-6 !default;
+
+
+
+$navigation-line-item-leaf-color: $color-n2-4 !default;
+
+
+
+$navigation-line-item-custom-color: $color-n2-4 !default;
+
+
+
+$navigation-line-item-leaf-color-selected: $color-b1-6 !default;
+
+
+
+$navigation-line-item-custom-color-selected: $color-b1-6 !default;
+
+
+
+$navigation-line-item-leaf-color-hover: $color-b1-6 !default;
+
+
+
+$navigation-line-item-custom-color-hover: $color-b1-6 !default;
+
+
+
+$navigation-line-item-background: $color-transparent !default;
+
+
+
+$navigation-line-item-background-selected: $color-transparent !default;
+
+
+
+$navigation-line-item-background-hover: $color-transparent !default;
+
+
+
+$navigation-line-item-fontsize: $font-size-base-body1 !default;
+
+
+
+$navigation-line-item-padding: $s5 !default;
+
+
+
+$navigation-line-item-height: $s11 !default;
+
+
+
+$navigation-line-item-custom-icon-size: $icon-xs !default;
+
+
+
+$navigation-line-item-leaf-icon-size: $icon-xxs !default;
+
+
+
+$navigation-line-item-border-width-selected: $line-2-width !default;
+
+
+
+$navigation-line-border-color: $color-n1-6 !default;
+
+
+
+$navigation-line-border-color-selected: $color-n1-6 !default;
+
+
+
+$navigation-line-border-color-hover: $color-n1-6 !default;
+
+
+
+$navigation-line-item-border-color-selected: $color-b1-6 !default;
+
+
+
+$navigation-line-item-border-color-hover: $color-b1-6 !default;
+
+
+
+$navigation-line-item-custom-icon-margin: $s1 !default;
+
+
+
+
+$navigation-line-item-custom-icon-opacity: 1 !default;
+
+
+
+
+$navigation-line-item-custom-icon-opacity-hover: 1 !default;
+
+
+
+
+$navigation-line-item-custom-icon-opacity-selected: 1 !default;
+
+
+
+$navigation-line-item-leaf-icon-margin: $s1 !default;
+
+
+
+
+$navigation-line-item-leaf-icon-opacity: 1 !default;
+
+
+
+
+$navigation-line-item-leaf-icon-opacity-hover: 1 !default;
+
+
+
+
+$navigation-line-item-leaf-icon-opacity-selected: 1 !default;
+
+
+
+
+$navigation-line-item-text-opacity: 1 !default;
+
+
+
+
+$navigation-line-item-text-opacity-hover: 1 !default;
+
+
+
+
+$navigation-line-item-text-opacity-selected: 1 !default;
+
+
+
+
+
+
+$navigation-filling-item-color: $color-n1-1 !default;
+
+
+
+$navigation-filling-item-color-selected: $color-n1-1 !default;
+
+
+
+$navigation-filling-item-color-hover: $color-n1-1 !default;
+
+
+
+
+$navigation-filling-item-fontsize: $font-size-base-body1 !default;
+
+
+
+$navigation-filling-item-padding: $s5 !default;
+
+
+
+$navigation-filling-item-height: $s11 !default;
+
+
+
+$navigation-filling-item-background: $color-n1-9 !default;
+
+
+
+$navigation-filling-item-background-selected: $color-n2-4 !default;
+
+
+
+$navigation-filling-item-background-hover: $color-n2-4 !default;
+
+
+
+$navigation-filling-item-leaf-icon-size: $icon-xxs !default;
+
+
+
+$navigation-filling-item-leaf-icon-color: $color-n1-1 !default;
+
+
+
+$navigation-filling-item-leaf-icon-color-hover: $color-n1-1 !default;
+
+
+
+$navigation-filling-item-leaf-icon-color-selected: $color-n1-1 !default;
+
+
+
+$navigation-filling-item-custom-icon-size: $icon-xs !default;
+
+
+
+$navigation-filling-item-custom-icon-color: $color-n1-1 !default;
+
+
+
+$navigation-filling-item-custom-icon-color-hover: $color-n1-1 !default;
+
+
+
+$navigation-filling-item-custom-icon-color-selected: $color-n1-1 !default;
+
+
+
+$navigation-filling-item-border-radius: $corner-radius-r0 !default;
+
+
+
+$navigation-filling-item-custom-icon-margin: $s1 !default;
+
+
+
+
+$navigation-filling-item-custom-icon-opacity: 1 !default;
+
+
+
+
+$navigation-filling-item-custom-icon-opacity-hover: 1 !default;
+
+
+
+
+$navigation-filling-item-custom-icon-opacity-selected: 1 !default;
+
+
+
+$navigation-filling-item-leaf-icon-margin: $s1 !default;
+
+
+
+
+$navigation-filling-item-leaf-icon-opacity: 1 !default;
+
+
+
+
+$navigation-filling-item-leaf-icon-opacity-hover: 1 !default;
+
+
+
+
+$navigation-filling-item-leaf-icon-opacity-selected: 1 !default;
+
+
+
+
+$navigation-filling-item-text-opacity: .8 !default;
+
+
+
+
+$navigation-filling-item-text-opacity-hover: 1 !default;
+
+
+
+
+$navigation-filling-item-text-opacity-selected: 1 !default;
+
+
+$navigation-item-current-color-set-selected :$color-b1-6 !default;

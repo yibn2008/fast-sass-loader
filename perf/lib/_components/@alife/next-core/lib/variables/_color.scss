@@ -1,0 +1,357 @@
+@charset "UTF-8";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$color-transparent: transparent;
+
+
+
+
+
+$color-b1-1: #FFF0E6 !default;
+
+
+$color-b1-6: #FF6A00 !default;
+
+
+$color-b1-9: #E35300 !default;
+
+
+
+$color-b1-2: #FFE3D1 !default;
+
+
+
+$color-b1-3: #FFC8A3 !default;
+
+
+
+$color-b1-4: #FFAC75 !default;
+
+
+
+$color-b1-5: #FF8B3D !default;
+
+
+
+$color-b1-7: #F75F00 !default;
+
+
+
+$color-b1-8: #F05800 !default;
+
+
+
+$color-b1-10: #D64F00 !default;
+
+
+
+
+
+
+$color-b2-1: #E8F6FF !default;
+
+
+$color-b2-2: #D3E9F7 !default;
+
+
+$color-b2-3: #A6D3F0 !default;
+
+
+$color-b2-6: #2192D9 !default;
+
+
+
+
+
+$color-b7-6: #4F74B3 !default;
+
+
+$color-b7-9: #2D559C !default;
+
+
+
+
+
+$color-n1-1: #FFFFFF !default;
+
+
+$color-n1-2: #F7F8FA !default;
+
+
+$color-n1-3: #F2F3F7 !default;
+
+
+$color-n1-4: #EBECF0 !default;
+
+
+$color-n1-5: #E6E7EB !default;
+
+
+$color-n1-6: #DCDEE3 !default;
+
+
+$color-n1-7: #C4C6CF !default;
+
+
+$color-n1-8: #A0A2AD !default;
+
+
+$color-n1-9: #000000 !default;
+
+
+$color-n1-10: #deeded !default;
+
+
+
+
+
+$color-n2-1: #CCCCCC !default;
+
+
+$color-n2-2: #999999 !default;
+
+
+$color-n2-3: #666666 !default;
+
+
+$color-n2-4: #333333 !default;
+
+
+$color-n2-5: #222222 !default;
+
+
+
+
+
+$color-f1-1: #FFA033 !default;
+
+
+$color-f1-2: #FFF1E8 !default;
+
+
+$color-f1-3: #EB7E10 !default;
+
+
+
+
+
+
+$color-f2-1: #FF3333 !default;
+
+
+$color-f2-2: #FAE7E7 !default;
+
+
+$color-f2-3: #E61C1C !default;
+
+
+
+
+
+
+$color-f3-1: #1DC11D !default;
+
+
+$color-f3-2: #E8F9E8 !default;
+
+
+$color-f3-3: #0DA80D !default;
+
+
+
+
+
+
+$color-f4-1: #2192D9 !default;
+
+
+$color-f4-2: #0B70AF !default;
+
+
+$color-f4-3: #0073bd !default;
+
+
+
+
+
+$color-f5-1: #0089FD !default;
+
+
+$color-f5-2: #DAEEFF !default;
+
+
+$color-f5-3: #306AC9 !default;
+
+
+
+
+
+$color-f6-1: #0089FD !default;
+
+
+$color-f6-2: #DAEEFF !default;
+
+
+$color-f6-3: #306AC9 !default;
+
+
+
+
+
+
+$color-b2-4: #7ABEE8 !default;
+$color-b2-5: #4DA8E1 !default;
+$color-b2-7: #1587D1 !default;
+$color-b2-8: #0A7EC9 !default;
+$color-b2-9: #0073BD !default;
+$color-b2-10: #006AB0 !default;
+
+$color-b3-1: #FFE2DB !default;
+$color-b3-2: #FFC8BF !default;
+$color-b3-3: #F7A394 !default;
+$color-b3-4: #ED8472 !default;
+$color-b3-5: #E3715D !default;
+$color-b3-6: #D9624E !default;
+$color-b3-7: #D15241 !default;
+$color-b3-8: #C43F31 !default;
+$color-b3-9: #BD3224 !default;
+$color-b3-10: #B32018 !default;
+
+$color-b4-1: #E7F5E5 !default;
+$color-b4-2: #CDEBC8 !default;
+$color-b4-3: #B0DEA9 !default;
+$color-b4-4: #92CC86 !default;
+$color-b4-5: #70B564 !default;
+$color-b4-6: #55A344 !default;
+$color-b4-7: #479635 !default;
+$color-b4-8: #3B8F28 !default;
+$color-b4-9: #358723 !default;
+$color-b4-10: #257D12 !default;
+
+$color-b5-1: #FEF7DA !default;
+$color-b5-2: #FFF2C2 !default;
+$color-b5-3: #FDE89D !default;
+$color-b5-4: #FFE27D !default;
+$color-b5-5: #FBD653 !default;
+$color-b5-6: #FACE32 !default;
+$color-b5-7: #F7BF25 !default;
+$color-b5-8: #F2B211 !default;
+$color-b5-9: #EDA807 !default;
+$color-b5-10: #E89A00 !default;
+
+$color-b6-1: #E9E6FA !default;
+$color-b6-2: #D5CFF7 !default;
+$color-b6-3: #B8AFED !default;
+$color-b6-4: #9F94E8 !default;
+$color-b6-5: #887BE3 !default;
+$color-b6-6: #6D5CDB !default;
+$color-b6-7: #5F4DD1 !default;
+$color-b6-8: #5240C7 !default;
+$color-b6-9: #4634BF !default;
+$color-b6-10: #3A27B5 !default;
+
+$color-b7-1: #E3EAF7 !default;
+$color-b7-2: #CCD9F0 !default;
+$color-b7-3: #AABEE0 !default;
+$color-b7-4: #84A1D1 !default;
+$color-b7-5: #6D8CC2 !default;
+$color-b7-7: #4369AB !default;
+$color-b7-8: #375EA3 !default;
+$color-b7-10: #224B94 !default;
+
+$color-b8-1: #FFEBEE !default;
+$color-b8-2: #FFD9E0 !default;
+$color-b8-3: #FFC2CE !default;
+$color-b8-4: #FFA3B6 !default;
+$color-b8-5: #FF89A1 !default;
+$color-b8-6: #F96985 !default;
+$color-b8-7: #F54E70 !default;
+$color-b8-8: #ED395D !default;
+$color-b8-9: #DE284C !default;
+$color-b8-10: #D1173F !default;
+
+
+
+
+$color-n2-6: transparent !default;
+$color-n2-7: transparent !default;
+$color-n2-8: transparent !default;
+$color-n2-9: transparent !default;
+$color-n2-10: transparent !default;
+
+
+
+
+$color-f1-4: transparent !default;
+$color-f1-5: transparent !default;
+$color-f1-6: transparent !default;
+$color-f1-7: transparent !default;
+$color-f1-8: transparent !default;
+$color-f1-9: transparent !default;
+$color-f1-10: transparent !default;
+
+$color-f2-4: transparent !default;
+$color-f2-5: transparent !default;
+$color-f2-6: transparent !default;
+$color-f2-7: transparent !default;
+$color-f2-8: transparent !default;
+$color-f2-9: transparent !default;
+$color-f2-10: transparent !default;
+
+$color-f3-4: transparent !default;
+$color-f3-5: transparent !default;
+$color-f3-6: transparent !default;
+$color-f3-7: transparent !default;
+$color-f3-8: transparent !default;
+$color-f3-9: transparent !default;
+$color-f3-10: transparent !default;
+
+$color-f4-4: transparent !default;
+$color-f4-5: transparent !default;
+$color-f4-6: transparent !default;
+$color-f4-7: transparent !default;
+$color-f4-8: transparent !default;
+$color-f4-9: transparent !default;
+$color-f4-10: transparent !default;
+
+$color-f5-4: transparent !default;
+$color-f5-5: transparent !default;
+$color-f5-6: transparent !default;
+$color-f5-7: transparent !default;
+$color-f5-8: transparent !default;
+$color-f5-9: transparent !default;
+$color-f5-10: transparent !default;
+
+$color-f6-1: transparent !default;
+$color-f6-2: transparent !default;
+$color-f6-3: transparent !default;
+$color-f6-4: transparent !default;
+$color-f6-5: transparent !default;
+$color-f6-6: transparent !default;
+$color-f6-7: transparent !default;
+$color-f6-8: transparent !default;
+$color-f6-9: transparent !default;
+$color-f6-10: transparent !default;

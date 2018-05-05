@@ -26,40 +26,9 @@ fast sass loader for webpack. 5~10 times faster than **sass-loader**, and suppor
 
 ## Performance
 
-performance benchmark:
+performance benchmark (run `npm run perf`):
 
-```text
-************** RUN WITH FAST SASS LOADER **************
-Hash: 37ed419b014ff87f0461
-Version: webpack 2.2.1
-Time: 7457ms
-        Asset     Size  Chunks                    Chunk Names
-dist/index.js  2.67 kB       0  [emitted]         index
-    index.css   627 kB       0  [emitted]  [big]  index
-   [0] ./index.scss 41 bytes {0} [built]
-   [1] ../~/.0.23.1@css-loader/lib/css-base.js 1.51 kB [built]
-Child extract-text-webpack-plugin:
-       [0] ../~/.0.23.1@css-loader/lib/css-base.js 1.51 kB {0} [built]
-       [1] ../~/.0.23.1@css-loader!../lib!./index.scss 648 kB {0} [built]
-
-[build] fast-sass-loader: 9348.760ms
-
-
-************** RUN WITH SASS LOADER **************
-Hash: 0b034e431d1a93826d38
-Version: webpack 2.2.1
-Time: 64124ms
-        Asset     Size  Chunks                    Chunk Names
-dist/index.js  2.67 kB       0  [emitted]         index
-    index.css  6.95 MB       0  [emitted]  [big]  index
-   [0] ./index.scss 41 bytes {0} [built]
-   [1] ../~/.0.23.1@css-loader/lib/css-base.js 1.51 kB [built]
-Child extract-text-webpack-plugin:
-       [0] ../~/.0.23.1@css-loader/lib/css-base.js 1.51 kB {0} [built]
-       [1] ../~/.0.23.1@css-loader!../~/.6.0.3@sass-loader/lib/loader.js!./index.scss 7.18 MB {0} [built]
-
-[build] sass-loader: 64892.699ms
-```
+![image](https://user-images.githubusercontent.com/4136679/39662788-e99dfa2c-5099-11e8-8e95-d09b68df437c.png)
 
 Since the `sass-loader` doesn't dedupe repeated sass files, the result will be very very large (6.95MB!!!), and the total compile time takes 64.9 seconds (nearly 6 times longer than `fast-sass-loader`).
 

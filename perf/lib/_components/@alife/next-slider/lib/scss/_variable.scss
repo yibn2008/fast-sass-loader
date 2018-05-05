@@ -1,0 +1,195 @@
+@charset "UTF-8";
+
+
+
+
+
+
+
+
+
+
+
+
+
+$slick-prefix: '.' + $css-prefix + 'slick';
+
+
+
+
+
+
+
+$slick-dots-position-bottom: $s3 !default;
+
+
+
+$slick-dots-position-right: $s5 !default;
+
+
+
+$slick-dots-diameter: $s2 !default;
+
+
+
+$slick-dots-margin-lr: $s1 !default;
+
+
+
+$slick-dots-margin-tb: $s0 !default;
+
+
+
+
+$slick-arrow-width-m: $s7 !default;
+
+
+
+$slick-arrow-width-l: $s12 !default;
+
+
+
+$slick-arrow-height-m: $s14 !default;
+
+
+
+$slick-arrow-height-l: $s24 !default;
+
+
+
+$slick-vertical-arrow-width-m: $s14 !default;
+
+
+
+$slick-vertical-arrow-width-l: $s24 !default;
+
+
+
+$slick-vertical-arrow-height-m: $s7 !default;
+
+
+
+$slick-vertical-arrow-height-l: $s12 !default;
+
+
+
+
+
+$slick-arrow-icon-m: $icon-m !default;
+
+
+
+$slick-arrow-icon-l: $icon-xl !default;
+
+
+
+$slick-arrow-position-lr-m: $s1 !default;
+
+
+
+$slick-arrow-position-lr-l: $s2 !default;
+
+
+
+
+$slick-vertical-arrow-position-tb-m: $s1 !default;
+
+
+
+$slick-vertical-arrow-position-tb-l: $s4 !default;
+
+
+
+
+$slick-track-padding-lr: $s6 !default;
+
+
+
+$slick-vertical-track-padding-tb: $s6 !default;
+
+
+
+
+$slick-vertical-slide-border-width: 2px !default;
+
+
+
+
+
+
+$slick-dots-background-color-normal: $color-n1-9 !default;
+
+
+
+$slick-dots-background-color-hover: $color-n1-8 !default;
+
+
+
+$slick-dots-background-color-selected: $color-b1-6 !default;
+
+
+
+
+$slick-dots-background-opacity-normal: 0.32 !default;
+
+
+
+
+$slick-dots-background-opacity-hover: 0.32 !default;
+
+
+
+
+$slick-dots-background-opacity-selected: 1 !default;
+
+
+
+
+$slick-arrow-icon-color-normal: $color-n1-1 !default;
+
+
+
+$slick-arrow-icon-color-normal-outer: $color-n2-3 !default;
+
+
+
+$slick-arrow-icon-color-hover: $color-n1-1 !default;
+
+
+
+$slick-arrow-icon-color-hover-outer: $color-n2-4 !default;
+
+
+
+$slick-arrow-icon-color-disabled: $color-n2-3 !default;
+
+
+
+$slick-arrow-icon-color-disabled-outer: $color-n2-1 !default;
+
+
+
+$slick-arrow-bg-color-normal: $color-n1-9 !default;
+
+
+
+$slick-arrow-bg-color-hover: $color-n1-9 !default;
+
+
+
+$slick-arrow-bg-color-disabled: $color-n1-2 !default;
+
+
+
+
+$slick-arrow-bg-opacity-normal: 0.2 !default;
+
+
+
+
+$slick-arrow-bg-opacity-hover: 0.4 !default;
+
+
+
+
+$slick-arrow-bg-opacity-disabled: 0.5 !default;

@@ -1,0 +1,28 @@
+#{$step-prefix} {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border: none;
+
+    &-item {
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        vertical-align: top;
+    }
+}
+
+#{$step-prefix}-horizontal {
+    display: flex;
+}
+
+#{$step-prefix}-item {
+    flex: 1;
+}
+
+#{$step-prefix}-vertical {
+    #{$step-prefix}-item {
+        display: block;
+        text-align: left;
+    }
+}

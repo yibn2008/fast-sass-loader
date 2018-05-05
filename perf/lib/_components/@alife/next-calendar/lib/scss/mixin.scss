@@ -1,0 +1,78 @@
+
+
+@mixin calendar-cell-state(
+    $background,
+    $color,
+    $border-color
+) {
+    background: $background;
+    color: $color;
+    border-color: $border-color;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+
+@mixin calendar-fullscreen-cell-size() {
+    text-align: left;
+    margin: 0 4px;
+    display: block;
+    padding: 4px 8px;
+    border-top: 2px solid;
+    -webkit-transition: background .3s ease;
+    transition: background .3s ease;
+
+    &-value {
+        display: block;
+        text-align: right;
+        background: transparent;
+        width: auto;
+        margin: 0 auto;
+        height: 22px;
+        padding: 0;
+        line-height: 22px;
+    }
+
+    &-content {
+        height: 90px;
+        overflow-y: auto;
+        position: static;
+        width: auto;
+        left: auto;
+        bottom: auto;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+
+
+@mixin calendar-card-cell-size(
+    $padding-tb,
+    $width,
+    $height,
+    $corner: 0
+) {
+    padding: $padding-tb 0;
+    text-align: center;
+
+    &-value {
+        display: block;
+        margin: 0 auto;
+        border-radius: $corner;
+        width: $width;
+        height: $height;
+        padding: 0;
+        line-height: $height - 2;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

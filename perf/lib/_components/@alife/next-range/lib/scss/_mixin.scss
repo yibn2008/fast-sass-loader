@@ -1,0 +1,235 @@
+@charset "UTF-8";
+
+
+
+
+@mixin rangeBounding(){
+    position: relative;
+    display: block;
+    width: 100%;
+    font-family: inherit;
+    font-weight: normal;
+    font-size: inherit;
+    line-height: inherit;
+    vertical-align: baseline;
+    cursor: pointer;
+
+    .#{$css-prefix}range-track{
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        border-radius: $range-size-m-track-radius;
+    }
+
+    .#{$css-prefix}range-selected{
+        position: absolute;
+        width: 0;
+        top: 50%;
+        left: 0;
+        border-radius: $range-size-m-track-radius;
+    }
+
+    .#{$css-prefix}range-scale{
+        position: relative;
+        width: 100%;
+        height: 12px;
+
+        .#{$css-prefix}range-scale-item{
+            position: absolute;
+            left: 0;
+            width: 2px;
+            border: $range-size-m-scale-item-border-width solid;
+            border-radius: $range-size-m-scale-radius;
+        }
+    }
+
+    .#{$css-prefix}range-slider{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        border-width: $range-size-slider-border-width;
+        border-style: $range-size-slider-border-style;
+        border-color: $range-normal-slider-border-color;
+        border-radius: 50%;
+    }
+
+    .#{$css-prefix}range-mark{
+        position: relative;
+        top: $range-size-m-mark-top;
+        cursor: auto;
+
+        .#{$css-prefix}range-mark-text{
+            position: absolute;
+            left: 0;
+            width: 30%;
+            margin-left: -15%;
+            padding-left: 2px;
+            text-align: center;
+        }
+    }
+
+    &.disabled {
+        cursor: not-allowed;
+
+        .#{$css-prefix}range-mark{
+            cursor: auto;
+        }
+    }
+}
+
+@mixin rangeState(
+    $unselectedColor,
+    $unselectedColorDisabled,
+    $unselectedColorHover,
+    $selectedColor,
+    $selectedColorDisabled,
+    $selectedColorHover,
+    $sliderBgColor,
+    $sliderBgColorDisabled,
+    $sliderBgColorHover,
+    $sliderBorderColor,
+    $sliderBorderColorDisabled,
+    $sliderBorderColorHover,
+    $markColor,
+    $markColorDisabled,
+    $markColorHover,
+    $markColorActivated,
+    $markColorActivatedDisabled,
+    $markColorActivatedHover
+){
+    .#{$css-prefix}range-track{
+        background-color: $unselectedColor;
+        &:hover{
+            background-color: $unselectedColorHover;
+        }
+    }
+
+    .#{$css-prefix}range-selected{
+        background-color: $selectedColor;
+        &:hover{
+            background-color: $selectedColorHover;
+        }
+    }
+
+    .#{$css-prefix}range-scale{
+        .#{$css-prefix}range-scale-item{
+            border-color: $unselectedColor;
+            &:hover{
+                border-color: $unselectedColorHover;
+            }
+
+            &.activated{
+                border-color: $selectedColor;
+                &:hover{
+                    border-color: $selectedColorHover;
+                }
+            }
+        }
+    }
+
+    .#{$css-prefix}range-slider{
+        background-color: $sliderBgColor;
+        border-color: $sliderBorderColor;
+        &:hover{
+            background-color: $sliderBgColorHover;
+            border-color: $sliderBorderColorHover;
+        }
+
+    }
+
+    .#{$css-prefix}range-mark{
+        .#{$css-prefix}range-mark-text{
+            color: $markColor;
+            &:hover{
+                color: $markColorHover;
+            }
+
+            &.activated{
+                color: $markColorActivated;
+                &:hover{
+                    color: $markColorActivatedHover;
+                }
+            }
+        }
+    }
+
+    &.disabled {
+        .#{$css-prefix}range-track{
+            background-color: $unselectedColorDisabled;
+        }
+
+        .#{$css-prefix}range-selected{
+            background-color: $selectedColorDisabled;
+        }
+
+        .#{$css-prefix}range-scale{
+            .#{$css-prefix}range-scale-item{
+                border-color: $unselectedColorDisabled;
+
+                &.activated{
+                    border-color: $selectedColorDisabled;
+                }
+            }
+        }
+
+        .#{$css-prefix}range-slider{
+            background-color: $sliderBgColorDisabled;
+            border-color: $sliderBorderColorDisabled;
+
+        }
+
+        .#{$css-prefix}range-mark{
+            .#{$css-prefix}range-mark-text{
+                color: $markColorDisabled;
+
+                &.activated{
+                    color: $markColorActivatedDisabled;
+                }
+            }
+        }
+    }
+}
+
+@mixin rangeSize(
+    $trackHeight,
+    $scaleHeight,
+    $sliderHW,
+    $sliderShadow,
+    $markFontsize,
+    $markFontweight,
+    $markLineheight
+){
+    .#{$css-prefix}range-track{
+        height: $trackHeight;
+        margin-top: -$trackHeight/2;
+    }
+
+    .#{$css-prefix}range-selected{
+        height: $trackHeight;
+        margin-top: -$trackHeight/2;
+    }
+
+    .#{$css-prefix}range-slider{
+        height: $sliderHW;
+        width: $sliderHW;
+        margin-top: -$sliderHW/2;
+        margin-left: -$sliderHW/2;
+        box-shadow: $sliderShadow;
+    }
+
+    .#{$css-prefix}range-mark{
+        margin-bottom: $markLineheight;
+
+        .#{$css-prefix}range-mark-text{
+            font-size: $markFontsize;
+            font-weight: $markFontweight;
+            line-height: $markLineheight;
+            height: $markLineheight;
+        }
+    }
+    .#{$css-prefix}range-scale{
+        .#{$css-prefix}range-scale-item{
+            height: $scaleHeight;
+        }
+    }
+}

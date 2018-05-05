@@ -1,0 +1,165 @@
+
+
+
+
+
+
+
+
+
+
+$progress-prefix: '.' + $css-prefix + 'progress';
+
+
+
+
+
+
+
+$progress-line-overlay-size-l: $s4 !default;
+
+
+
+$progress-line-overlay-size-m: $s2 !default;
+
+
+
+$progress-line-overlay-size-s: $s1 !default;
+
+
+
+$progress-line-underlay-size-l: $s4 !default;
+
+
+
+$progress-line-underlay-size-m: $s2 !default;
+
+
+
+$progress-line-underlay-size-s: $s1 !default;
+
+
+
+$progress-line-radius-l: $corner-radius-r0 !default;
+
+
+
+$progress-line-radius-m: $corner-radius-r0 !default;
+
+
+
+$progress-line-radius-s: $corner-radius-r0 !default;
+
+
+
+$progress-line-font-l: $font-size-base-body1 !default;
+
+
+
+$progress-line-font-m: $font-size-base-caption !default;
+
+
+
+$progress-line-font-s: $font-size-base-caption !default;
+
+
+
+$progress-line-font-color: $color-n2-4 !default;
+
+
+
+$progress-line-underlay-color: $color-n1-4 !default;
+
+
+
+$progress-line-normal-color: $color-f4-1 !default;
+
+
+
+$progress-line-started-color: $color-f2-1 !default;
+
+
+
+$progress-line-middle-color: $color-f1-1 !default;
+
+
+
+$progress-line-almostfinished-color: $color-f3-1 !default;
+
+
+
+$progress-line-error-color: $color-f2-1 !default;
+
+
+
+$progress-line-success-color: $color-f3-1 !default;
+
+
+
+
+
+
+
+$progress-circle-size-l: $s33 !default;
+
+
+
+$progress-circle-size-m: $s29 !default;
+
+
+
+$progress-circle-size-s: $s25 !default;
+
+
+
+$progress-circle-underlay-width: $s2 !default;
+
+
+
+$progress-circle-overlay-width: $s2 !default;
+
+
+
+$progress-circle-font-l: $font-size-base-display1 !default;
+
+
+
+$progress-circle-font-m: $font-size-base-headline !default;
+
+
+
+$progress-circle-font-s: $font-size-base-title !default;
+
+
+
+$progress-circle-underlay-color: $color-n1-4 !default;
+
+
+
+
+$progress-circle-corner: round !default; 
+
+
+
+$progress-circle-normal-color: $color-f4-1 !default;
+
+
+
+$progress-circle-started-color: $color-f2-1 !default;
+
+
+
+$progress-circle-middle-color: $color-f1-1 !default;
+
+
+
+$progress-circle-almostfinished-color: $color-f3-1 !default;
+
+
+
+$progress-circle-error-color: $color-f2-1 !default;
+
+
+
+$progress-circle-success-color: $color-f3-1 !default;
+

@@ -1,0 +1,239 @@
+
+
+
+
+
+
+
+
+
+
+$calendar-prefix: '.' + $css-prefix + 'calendar';
+
+$calendar-select-prefix: '.' + $css-prefix + 'select';
+
+$calendar-radio-prefix: '.' + $css-prefix + 'radio';
+
+$calendar-icon-prefix: '.' + $css-prefix +  'icon';
+
+
+
+
+
+
+
+$calendar-fullscreen-font-size: $font-size-base-body2 !default;
+
+
+
+$calendar-fullscreen-cell-normal-background: $color-n1-1 !default;
+
+
+
+$calendar-fullscreen-cell-normal-color: $color-n2-3 !default;
+
+
+
+$calendar-fullscreen-cell-normal-border-color: $color-n2-1 !default;
+
+
+
+$calendar-fullscreen-cell-hover-background: $color-b1-1 !default;
+
+
+
+$calendar-fullscreen-cell-hover-color: $color-b1-6 !default;
+
+
+
+$calendar-fullscreen-cell-hover-border-color: $color-b1-6 !default;
+
+
+
+$calendar-fullscreen-cell-select-background: $color-b1-1 !default;
+
+
+
+$calendar-fullscreen-cell-select-color: $color-b1-6 !default;
+
+
+
+$calendar-fullscreen-cell-select-border-color: $color-b1-6 !default;
+
+
+
+$calendar-fullscreen-cell-other-background: $color-n1-1 !default;
+
+
+
+$calendar-fullscreen-cell-other-color: $color-n2-1 !default;
+
+
+
+$calendar-fullscreen-cell-other-border-color: $color-n2-1 !default;
+
+
+
+
+
+
+
+
+$calendar-card-font-size: $font-size-base-caption !default;
+
+
+
+$calendar-card-cell-date-border-radius: $corner-radius-r0 !default;
+
+
+
+$calendar-card-cell-month-border-radius: $corner-radius-r0 !default;
+
+
+
+$calendar-card-cell-year-border-radius: $corner-radius-r0 !default;
+
+
+
+$calendar-card-cell-corner: $corner-radius-r0 !default;
+
+
+
+$calendar-card-border-color: $color-n1-5 !default;
+
+
+
+$calendar-card-cell-normal-background: $color-n1-1 !default;
+
+
+
+$calendar-card-cell-normal-color: $color-n2-3 !default;
+
+
+
+$calendar-card-cell-normal-border-color: $color-n1-1 !default;
+
+
+
+$calendar-card-cell-hover-background: $color-b1-1 !default;
+
+
+
+$calendar-card-cell-hover-color: $color-b1-6 !default;
+
+
+
+$calendar-card-cell-hover-border-color: $color-b1-1 !default;
+
+
+
+$calendar-card-cell-select-background: $color-b1-6 !default;
+
+
+
+$calendar-card-cell-select-color: $color-n1-1 !default;
+
+
+
+$calendar-card-cell-select-border-color: $color-b1-6 !default;
+
+
+
+$calendar-card-cell-other-background: $color-n1-1 !default;
+
+
+
+$calendar-card-cell-other-color: $color-n2-1 !default;
+
+
+
+$calendar-card-cell-other-border-color: $color-n1-1 !default;
+
+
+
+$calendar-card-cell-disabled-background: $color-n1-3 !default;
+
+
+
+$calendar-card-cell-disabled-color: $color-n2-1 !default;
+
+
+
+$calendar-card-cell-disabled-border-color: $color-n1-3 !default;
+
+
+
+$calendar-card-cell-range-background: $color-b1-1 !default;
+
+
+
+$calendar-card-cell-range-color: $color-b1-6 !default;
+
+
+
+$calendar-card-cell-range-border-color: $color-b1-1 !default;
+
+
+
+$calendar-card-cell-today-background: $color-n1-1 !default;
+
+
+
+$calendar-card-cell-today-color: $color-b1-6 !default;
+
+
+
+$calendar-card-cell-today-border-color: $color-b1-6 !default;
+
+
+
+
+
+
+
+
+$calendar-card-week-color: $color-n2-2 !default;
+
+
+
+$calendar-card-header-height: $s8 !default;
+
+
+
+$calendar-card-header-icon-size: $icon-xs !default;
+
+
+
+$calendar-card-header-background: $color-n1-1 !default;
+
+
+
+$calendar-card-header-hover-color: $color-b1-6 !default;
+
+
+
+$calendar-card-header-color: $color-n2-2 !default;
+
+
+
+$calendar-card-header-ym-color: $color-n2-4 !default;
+
+
+
+$calendar-card-footer-height: $s8 !default;
+
+
+
+$calendar-card-footer-color: $color-n2-3 !default;
+
+
+
+$calendar-card-footer-background: $color-n1-1 !default;
+
+
+
+$calendar-card-footer-hover-color: $color-b1-6 !default;
+
+
+
+

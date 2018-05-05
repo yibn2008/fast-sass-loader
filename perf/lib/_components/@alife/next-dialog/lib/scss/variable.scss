@@ -1,0 +1,149 @@
+
+
+
+
+
+
+
+
+
+
+
+
+$dialog-prefix: ".#{$css-prefix}dialog";
+
+
+
+
+
+
+
+
+$dialog-shadow: $shadow-sd1 !default;
+
+$dialog-padding: $s5 !default;
+
+
+
+$dialog-border-width: $line-1-width !default;
+
+
+$dialog-border-color: $color-n1-1 !default;
+
+
+$dialog-border-radius: $corner-radius-r0 !default;
+
+
+
+
+$dialog-title-font-size: $font-size-base-subhead !default;
+
+
+
+$dialog-title-padding-top-bottom: $s5 !default;
+
+
+$dialog-title-padding-top: $s5 !default;
+
+
+$dialog-title-padding-bottom: $s0 !default;
+
+
+$dialog-title-padding-left-right: $s5 !default;
+
+
+$dialog-title-border-width: 1px !default;
+
+
+$dialog-title-border-color: $color-transparent !default;
+
+
+$dialog-title-bg-color: $color-transparent !default;
+
+
+
+$dialog-footer-padding-top-bottom: $s5 !default;
+
+
+$dialog-footer-padding-top: $s0 !default;
+
+
+$dialog-footer-padding-bottom: $s5 !default;
+
+
+$dialog-footer-padding-left-right: $s5 !default;
+
+
+$dialog-footer-border-width: 1px !default;
+
+
+$dialog-footer-border-color: $color-transparent !default;
+
+
+$dialog-footer-bg-color: $color-transparent !default;
+
+
+
+
+
+$dialog-content-font-size: $font-size-base-body1 !default;
+
+
+$dialog-content-color: $color-n2-4 !default;
+
+$dialog-content-padding: $s5 !default;
+
+
+$dialog-content-padding-top: $s5 !default;
+
+
+$dialog-content-padding-bottom: $s5 !default;
+
+
+$dialog-content-padding-left-right: $s5 !default;
+
+
+
+$dialog-close-color: $color-n2-2 !default;
+
+
+$dialog-close-color-hovered: $color-n2-4 !default;
+
+
+$dialog-close-bg-hovered: $color-transparent !default;
+
+
+$dialog-close-right: $s5 !default;
+
+
+$dialog-close-top: $s5 !default;
+
+
+$dialog-close-width: $s5 !default;
+
+
+
+$dialog-close-height: $s5 !default;
+
+
+$dialog-close-size: $icon-s !default;
+
+$dialog-title-padding-right: $dialog-close-size + $dialog-padding + 10;
+
+
+
+$dialog-alert-icon-color: $color-f1-1 !default;
+
+
+$dialog-confirm-icon-color: $color-f1-1 !default;
+
+
+
+$dialog-bg: $color-n1-1 !default;
+
+
+
+$dialog-modal-bg: $color-n1-9 !default;
+
+
+$dialog-modal-opacity: .2 !default;

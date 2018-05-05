@@ -1,0 +1,510 @@
+@charset "UTF-8";
+
+
+
+
+
+
+
+
+
+
+
+
+
+$tab-prefix: '.' + $css-prefix + 'tabs';
+
+
+
+
+
+
+$tab-content-min-height: $s5 !default;
+
+
+
+$tab-bar-height-size-m: $s11 !default;
+
+
+$tab-bar-height-size-s: $s9 !default;
+
+
+
+$tab-bar-padding-size-m: $s4 !default;
+
+
+$tab-bar-padding-size-s: $s2 !default;
+
+
+
+$tab-bar-text-size-m: $font-size-base-body2 !default;
+
+
+$tab-bar-text-size-s: $font-size-base-caption !default;
+
+
+
+$tab-bar-control-icon-size-m: $s3 !default;
+
+
+
+$tab-bar-control-icon-size-s: $s2 !default;
+
+
+
+$tab-bar-close-icon-margin-left-size-m: $s2 !default;
+
+
+
+$tab-bar-close-icon-margin-left-size-s: $s1 !default;
+
+
+
+$tab-bar-prev-icon-positon-right: $s8 !default;
+
+
+
+$tab-bar-next-icon-positon-right: $s2 !default;
+
+
+
+$tab-bar-down-icon-positon-right: $s2 !default;
+
+
+
+
+
+
+
+$tab-container-padding-left-m: $s15 !default;
+
+
+$tab-container-padding-left-s: $s14 !default;
+
+
+
+$tab-content-padding-m: $s4 !default;
+
+
+$tab-content-padding-s: $s3 !default;
+
+
+
+$tab-icon-size: $s3 !default;
+
+
+
+
+
+
+$tab-icon-color-normal: $color-n2-3 !default;
+
+
+
+$tab-icon-color-disabled: $color-n1-6 !default;
+
+
+
+
+
+
+
+
+
+$tab-strip-divider-border-width: $line-1-width !default;
+
+
+$tab-strip-border-line-width: $tab-strip-divider-border-width !default;
+
+
+
+$tab-strip-ink-bar-width: $line-1-width !default;
+
+
+
+$tab-strip-divider-border-style: $line-solid !default;
+
+
+
+$tab-strip-nav-item-border-style-active: $line-solid !default;
+
+
+
+$tab-strip-nav-item-border-width-active: $line-1-width !default;
+
+
+
+$tab-strip-nav-item-border-color-active: $color-b1-6 !default;
+
+
+$tab-strip-nav-item-border: $tab-strip-nav-item-border-width-active solid transparent;
+
+
+
+
+
+$tab-strip-nav-border-color: $color-b1-6 !default;
+
+
+
+$tab-strip-ink-bar-color: $color-b1-6 !default;
+
+
+
+$tab-strip-text-color-normal: $color-n2-3 !default;
+
+
+
+$tab-strip-text-color-hover: $color-n2-4 !default;
+
+
+
+$tab-strip-text-color-selected: $color-b1-6 !default;
+
+
+
+$tab-strip-text-color-disabled: $color-n1-6 !default;
+
+
+
+$tab-strip-divider-border-color: $color-n1-6 !default;
+
+
+
+$tab-strip-divider-line: $tab-strip-divider-border-style $tab-strip-divider-border-width $tab-strip-divider-border-color;
+
+
+
+$tab-strip-nav-item-border-active: $tab-strip-nav-item-border-width-active $tab-strip-nav-item-border-style-active transparent;
+
+
+
+
+
+
+$tab-strip-content-text-color: $color-n2-4 !default;
+
+
+
+$tab-strip-content-text-color-hover: $color-n2-4 !default;
+
+
+
+$tab-strip-content-bg-color: $color-transparent !default;
+
+
+
+$tab-strip-content-bg-color-hover: $color-transparent !default;
+
+
+
+
+
+
+$tab-wrapped-divider-border-width: $line-1-width !default;
+
+
+
+$tab-wrapped-tab-corner-radius: $corner-radius-r0 !default;
+
+
+
+$tab-wrapped-tab-top-border-radius: $tab-wrapped-tab-corner-radius $tab-wrapped-tab-corner-radius 0 0;
+
+
+$tab-wrapped-tab-bottom-border-radius: 0 0 $tab-wrapped-tab-corner-radius $tab-wrapped-tab-corner-radius;
+
+
+$tab-wrapped-tab-left-border-radius: $tab-wrapped-tab-corner-radius 0 0 $tab-wrapped-tab-corner-radius;
+
+
+$tab-wrapped-tab-right-border-radius: 0 $tab-wrapped-tab-corner-radius $tab-wrapped-tab-corner-radius 0;
+
+
+
+$tab-wrapped-tab-margin-right: $s1 !default;
+
+
+
+$tab-wrapped-tab-margin-bottom: $s1 !default;
+
+
+
+$tab-wrapped-bar-bg-color: $color-transparent !default;
+
+
+
+$tab-wrapped-ink-bar-width: $line-1-width !default;
+
+
+
+$tab-wrapped-ink-bar-color: $color-b1-6 !default;
+
+
+
+$tab-wrapped-nav-item-border-color-active: $color-b1-6 !default;
+
+
+
+$tab-wrapped-border-line-style: $line-solid !default;
+
+
+
+$tab-wrapped-border-line-width: $line-1-width !default;
+
+
+
+$tab-wrapped-border-line-color: $color-n1-6 !default;
+
+
+$tab-wrapped-bar-border: $tab-wrapped-border-line-style $tab-wrapped-border-line-width $tab-wrapped-border-line-color;
+
+
+
+$tab-wrapped-content-border-line-width: $line-1-width !default;
+
+
+
+$tab-wrapped-content-border-line-style: $line-solid !default;
+
+
+
+$tab-wrapped-content-border-line-color: $color-n1-6 !default;
+
+
+$tab-wrapped-content-border: $tab-wrapped-content-border-line-width $tab-wrapped-content-border-line-style $tab-wrapped-border-line-color;
+
+
+$tab-wrapped-content-border: $tab-wrapped-content-border;
+
+
+
+$tab-wrapped-text-color: $color-n2-3 !default;
+
+
+
+$tab-wrapped-text-color-hover: $color-n2-4 !default;
+
+
+
+$tab-wrapped-bg-color: $color-n1-2 !default;
+
+
+
+$tab-wrapped-bg-color-hover: $color-n1-3 !default;
+
+
+
+$tab-wrapped-border-line-color-hover: $color-n1-7 !default;
+
+
+
+$tab-wrapped-border-line-color: $color-n1-6 !default;
+
+
+
+$tab-wrapped-text-color-selected: $color-b1-6 !default;
+
+
+
+ $tab-wrapped-text-color-disabled: $color-n2-1 !default;
+
+
+
+$tab-wrapped-bg-color-selected: $color-n1-1 !default;
+
+
+
+$tab-wrapped-bg-color-disabled: $color-n1-2 !default;
+
+
+$tab-wrapped-divider-line: $tab-wrapped-bar-border;
+
+
+$tab-wrapped-content-position-top: $tab-wrapped-border-line-width;
+
+
+$tab-wrapped-content-position-right: $tab-wrapped-border-line-width;
+
+
+
+
+$tab-wrapped-content-text-color: $color-n2-4 !default;
+
+
+
+$tab-wrapped-content-text-color-hover: $color-n2-4 !default;
+
+
+
+$tab-wrapped-content-bg-color: $color-transparent !default;
+
+
+
+$tab-wrapped-content-bg-color-hover: $color-transparent !default;
+
+
+
+
+
+
+
+$tab-capsule-text-color: $color-n2-4 !default;
+
+
+
+$tab-capsule-text-color-hover: $color-n2-3 !default;
+
+
+
+$tab-capsule-text-color-selected: $color-n1-1 !default;
+
+
+
+$tab-capsule-text-color-disabled: $color-n2-1 !default;
+
+
+
+
+$tab-capsule-bg-color: $color-n1-1 !default;
+
+
+
+$tab-capsule-bg-color-hover: $color-n1-2 !default;
+
+
+
+$tab-capsule-bg-color-selected: $color-b1-6 !default;
+
+
+
+$tab-capsule-bg-color-disabled: $color-n1-2 !default;
+
+
+
+$tab-capsule-tab-border-line-color: $color-n2-2 !default;
+
+
+
+$tab-capsule-tab-border-line-color-hover: $color-n1-7 !default;
+
+
+
+$tab-capsule-tab-border-line-color-active: $color-b1-6 !default;
+
+
+
+$tab-capsule-corner-radius: $corner-radius-r2 !default;
+
+
+
+
+$tab-capsule-tab-border-line-width: $line-1-width !default;
+
+
+
+$tab-capsule-tab-border-line-style: $line-solid !default;
+
+
+$tab-capsule-tab-border: $tab-capsule-tab-border-line-width $tab-capsule-tab-border-line-style $tab-capsule-tab-border-line-color;
+
+
+$tab-capsule-tab-border-active: $tab-capsule-tab-border-line-width $tab-capsule-tab-border-line-style $tab-capsule-tab-border-line-color-active;
+
+
+
+
+$tab-capsule-content-text-color: $color-n2-4 !default;
+
+
+
+$tab-capsule-content-text-color-hover: $color-n2-4 !default;
+
+
+
+$tab-capsule-content-bg-color: $color-transparent !default;
+
+
+
+$tab-capsule-content-bg-color-hover: $color-transparent !default;
+
+
+
+
+
+
+
+
+$tab-text-item-sep-width: $line-1-width !default;
+
+
+
+$tab-text-item-sep-color: $color-n1-6 !default;
+
+
+
+$tab-text-text-color-normal: $color-n2-3 !default;
+
+
+
+$tab-text-text-color-hover: $color-n2-4 !default;
+
+
+
+$tab-text-text-color-selected: $color-b1-6 !default;
+
+
+
+$tab-text-text-color-disabled: $color-n2-1 !default;
+
+
+
+$tab-text-content-text-color: $color-n2-4 !default;
+
+
+
+$tab-text-content-text-color-hover: $color-n2-4 !default;
+
+
+
+$tab-text-content-bg-color: $color-transparent !default;
+
+
+
+$tab-text-content-bg-color-hover: $color-transparent !default;
+
+
+
+
+
+
+
+
+
+$tab-close-icon-margin-left: $s2 !default;
+
+
+
+$tab-close-icon-color: $color-n2-3 !default;
+
+
+
+$tab-close-icon-color-hover: $color-n2-4 !default;
+
+
+
+
+
+
+$ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+$ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+$ease-out-back: cubic-bezier(0.12, 0.4, 0.29, 1.46);
+$ease-in-back: cubic-bezier(0.71, -0.46, 0.88, 0.6);
+$ease-in-out-back: cubic-bezier(0.71, -0.46, 0.29, 1.46);
+$ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1);
+$ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.34);
+$ease-in-out-circ: cubic-bezier(0.78, 0.14, 0.15, 0.86);
+$ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+$ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);

@@ -1,0 +1,188 @@
+@charset "UTF-8";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$switch-size-m-width: $s12 !default;
+
+
+
+$switch-size-m-trigger: $s6 !default;
+
+
+$switch-size-m-radius-trigger: $corner-radius-r5 !default;
+
+
+$switch-size-m-radius-container: $corner-radius-r5 !default;
+
+
+
+
+$switch-size-s-width: $s9 !default;
+
+
+
+$switch-size-s-trigger: $s5 !default;
+
+
+$switch-size-s-radius-trigger: $corner-radius-r5 !default;
+
+
+
+$switch-size-s-radius-container: $corner-radius-r5 !default;
+
+
+
+$switch-border-width-container: $line-1-width !default;
+
+
+$switch-text-on-left: $s2 !default;
+
+
+$switch-text-off-right: $s0 !default;
+
+
+
+$switch-border-width-trigger: $line-1-width !default;
+
+
+
+
+
+$switch-normal-on-bg-color: $color-f3-1 !default;
+
+
+
+
+$switch-hover-on-bg-color: $color-f3-3 !default;
+
+
+
+
+$switch-disabled-on-bg-color: $color-n1-7 !default;
+
+
+
+
+
+
+$switch-normal-on-trigger-bg-color: $color-n1-1 !default;
+
+
+
+
+$switch-hover-on-trigger-bg-color: $color-n1-1 !default;
+
+
+
+
+
+$switch-disabled-on-trigger-bg-color: $color-n1-5 !default;
+
+
+
+
+$switch-normal-on-color-font: $color-n1-1 !default;
+
+
+
+
+
+$switch-disabled-on-color-font: $color-n1-6 !default;
+
+
+
+
+
+$switch-disabled-on-border-color: $color-n1-6 !default;
+
+
+
+
+$switch-handle-on-border-color: $color-transparent !default;
+
+
+
+
+
+
+$switch-on-shadow: $shadow-sd1 !default;
+
+
+
+
+
+
+
+$switch-normal-off-bg-color: $color-n1-1 !default;
+
+
+
+
+$switch-hover-off-bg-color: $color-n1-2 !default;
+
+
+
+
+$switch-disabled-off-bg-color: $color-n1-7 !default;
+
+
+
+
+
+$switch-normal-off-trigger-bg-color: $color-n1-1 !default;
+
+
+
+
+$switch-hover-off-trigger-bg-color: $color-n1-1 !default;
+
+
+
+
+$switch-disabled-off-trigger-bg-color: $color-n1-5 !default;
+
+
+
+$switch-handle-disabled-border-color: $color-transparent !default;
+
+
+
+$switch-normal-off-color-font: $color-n2-1 !default;
+
+
+
+
+
+$switch-disabled-off-color-font: $color-n1-6 !default;
+
+
+
+$switch-handle-off-border-color: $color-transparent !default;
+
+
+
+
+$switch-normal-off-border-color: $color-n1-6 !default;
+
+
+
+
+$switch-hover-off-border-color: $color-n1-7 !default;
+
+
+
+$switch-off-shadow: $shadow-sd1 !default;

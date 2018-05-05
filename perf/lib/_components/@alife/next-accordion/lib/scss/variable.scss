@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+
+
+
+
+
+
+
+
+
+$accordion-prefix: '.#{$css-prefix}accordion';
+
+
+
+
+
+
+
+
+
+$accordion-border-color: $color-n1-6 !default;
+
+
+$accordion-border-width: $line-1-width !default;
+
+
+
+$accordion-title-height : $s10 !default;
+
+
+$accordion-title-bgcolor : $color-n1-2 !default;
+
+
+$accordion-title-font-color : $color-n2-4 !default;
+
+
+$accordion-title-font-size : $font-size-base-body1 !default;
+
+
+$accordion-title-mutli-line-height : $s4 !default;
+
+
+$accordion-title-mutli-padding-y : $s3 !default;
+
+
+
+$accordion-icon-size : $icon-xxs !default;
+
+
+$accordion-icon-color : $color-n2-4 !default;
+
+
+$accordion-icon-margin-r : $s1 !default;
+
+
+$accordion-icon-margin-l : $s3 !default;
+
+
+
+$accordion-content-bgcolor : $color-n1-1 !default;
+
+
+$accordion-content-padding-x : $s4 !default;
+
+
+$accordion-content-padding-y : $s3 !default;
+
+
+$accordion-content-font-size : $font-size-base-body1 !default;
+
+
+$accordion-content-color : $color-n2-3 !default;

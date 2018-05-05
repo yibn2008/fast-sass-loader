@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+
+
+
+
+
+
+
+
+
+$menu-prefixCls: '.next-menu';
+
+$menu-width: $s1 * 50;
+
+
+
+$menu-padding-vertical: $s3 !default;
+
+
+$menu-padding-horizontal: $s5 !default;
+
+
+
+$menu-padding-title-horizontal: $s3 !default;
+
+
+
+$menu-divider-margin-hoz: $s5 !default;
+
+
+
+$menu-divider-margin-ver: $s2 !default;
+
+
+$menu-font-size: $font-size-base-body1 !default;
+
+
+$menu-line-height: $s7 !default;
+
+
+$menu-icon-margin: $s1 !default;
+
+
+
+$menu-color: $color-n2-4 !default;
+
+
+$menu-color-hover: $color-n2-4 !default;
+
+
+$menu-color-focused: $color-n2-4 !default;
+
+
+$menu-color-selected: $color-n2-4 !default;
+
+
+$menu-color-disabled: $color-n2-2 !default;
+
+
+$menu-background: $color-n1-1 !default;
+
+
+$menu-background-selected: $color-n1-1 !default;
+
+
+$menu-background-hover: $color-n1-3 !default;
+
+
+$menu-background-focused: $color-n1-3 !default;
+
+
+$menu-arrow-color: $color-n2-1 !default;
+
+
+$menu-arrow-color-hover: $color-n2-1 !default;
+
+
+
+$menu-shadow: $shadow-sd1 !default;
+
+
+$menu-shadow-focus: $shadow-sd2 !default;
+
+
+
+$menu-border-style: $line-solid !default;
+
+
+$menu-border-width: $line-1-width !default;
+
+
+
+$menu-border-color: $color-n1-5 !default;
+
+
+
+$menu-border-radius: $corner-radius-r0 !default;
+
+
+
+$menu-divider-border-color: $color-n1-5 !default;
+
+
+
+$menu-icon-color: $color-n2-1 !default;
+
+
+$menu-icon-size: $icon-xs !default;
+
+
+
+$menu-icon-selected-color: $color-b1-6 !default;
+
+
+
+$menu-submenu-title-size: $font-size-base-body1 !default;
+
+

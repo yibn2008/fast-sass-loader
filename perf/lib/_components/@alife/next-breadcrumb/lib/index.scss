@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+@import "../../next-core/lib/next.scss";
+@import "../../next-icon/lib/index.scss";
+
+@import "./scss/function.scss";
+@import "./scss/mixin.scss";
+@import "./scss/placeholder.scss";
+@import "./scss/variable.scss";
+
+
+
+.#{$css-prefix}{
+    &breadcrumb{
+        @include breadcrumbBounding();
+
+        &{
+            @include breadcrumbSize(
+                $breadcrumb-height,
+                $breadcrumb-text-min-width,
+                $breadcrumb-size-m-font-size,
+                $breadcrumb-size-ellipsis-font-size,
+                $breadcrumb-size-number-font-size,
+                $breadcrumb-size-keyword-font-size,
+                $breadcrumb-size-m-icon-size,
+                $breadcrumb-size-m-icon-margin
+            );
+
+            @include breadcrumbState(
+                $breadcrumb-text-color,
+                $breadcrumb-text-ellipsis-color,
+                $breadcrumb-text-current-color,
+                $breadcrumb-text-number-color,
+                $breadcrumb-text-keyword-color,
+                $breadcrumb-icon-color,
+                $breadcrumb-text-color-hover,
+                $breadcrumb-text-current-color-hover,
+                $breadcrumb-text-number-color-hover,
+                $breadcrumb-text-keyword-color-hover
+            );
+        }
+    }
+}

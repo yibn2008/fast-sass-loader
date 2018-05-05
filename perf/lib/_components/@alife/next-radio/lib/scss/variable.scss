@@ -1,0 +1,145 @@
+
+
+
+
+
+
+
+
+
+@charset "UTF-8";
+
+
+
+
+$radio-prefix : '.#{$css-prefix}radio';
+
+
+
+$radio-width: $s4 !default;
+
+
+$radio-circle-size: $s2 !default;
+
+
+$radio-radius-size: $corner-radius-circle !default;
+
+
+
+$radio-border-color: $color-n1-7 !default;
+
+
+$radio-hovered-border-color: $color-b1-6 !default;
+
+
+$radio-checked-border-color: $color-b1-6 !default;
+
+
+$radio-disabled-border-color: $color-n1-6 !default;
+
+
+$radio-checked-hovered-border-color: $color-b1-9 !default;
+
+
+
+
+$radio-checked-circle-color: $color-b1-6 !default;
+
+
+$radio-disabled-circle-color: $color-n2-1 !default;
+
+
+$radio-checked-hovered-circle-color: $color-b1-9 !default;
+
+
+
+
+$radio-bg-color: $color-n1-1 !default;
+
+
+$radio-disabled-bg-color: $color-n1-2 !default;
+
+
+$radio-checked-bg-color: $color-n1-1 !default;
+
+
+$radio-hovered-bg-color: $color-b1-1 !default;
+
+
+$radio-checked-hovered-bg-color: $color-b1-1 !default;
+
+
+
+
+$radio-button-border-color: $color-n1-8 !default;
+
+
+$radio-button-border-color-hovered: $color-n1-8 !default;
+
+
+$radio-button-border-color-checked: $color-b1-6 !default;
+
+
+$radio-button-border-color-disabled: $color-n1-5 !default;
+
+
+$radio-button-border-color-checked-disabled: $color-n1-5 !default;
+
+
+
+
+$radio-button-font-color: $color-n2-4 !default;
+
+
+$radio-button-font-color-hovered: $color-b1-6 !default;
+
+
+$radio-button-font-color-checked: $color-b1-6 !default;
+
+
+$radio-button-font-color-disabled: $color-n2-1 !default;
+
+
+$radio-button-font-color-checked-disabled: $color-n2-1 !default;
+
+
+
+
+$radio-button-bg-color: $color-n1-1 !default;
+
+
+$radio-button-bg-color-checked: $color-n1-1 !default;
+
+
+$radio-button-bg-color-hovered: $color-n1-1 !default;
+
+
+$radio-button-bg-color-disabled: $color-n1-2 !default;
+
+
+$radio-button-bg-color-checked-disabled: $color-n1-3 !default;
+
+
+
+
+$radio-button-font-size-large: $font-size-base-body1 !default;
+
+
+$radio-button-font-size-medium: $font-size-base-body1 !default;
+
+
+$radio-button-font-size-small: $font-size-base-caption !default;
+
+
+
+$radio-button-height-large: $s10 !default;
+
+
+$radio-button-height-medium: $s7 !default;
+
+
+$radio-button-height-small: $s5 !default;
+
+
+
+$radio-button-radius-size: $corner-radius-r1 !default;

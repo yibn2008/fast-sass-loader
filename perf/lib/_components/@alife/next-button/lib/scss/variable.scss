@@ -1,0 +1,566 @@
+
+
+
+
+
+
+
+
+
+$btn-prefix: '.' + $css-prefix + 'btn';
+
+$btn-icon-prefix: '.' + $css-prefix + 'icon';
+
+
+
+
+
+
+
+$btn-shadow: $shadow-sd0 !default;
+
+
+
+$btn-corner: $corner-radius-r1 !default;
+
+
+
+$btn-normal-color: $color-n2-4 !default;
+
+
+
+$btn-normal-color-hover: $color-n2-4 !default;
+
+
+
+$btn-normal-bg: $color-n1-2 !default;
+
+
+
+$btn-normal-bg-hover: $color-n1-3 !default;
+
+
+
+$btn-normal-border-color: $color-n1-7 !default;
+
+
+
+$btn-normal-border-color-hover: $color-n1-8 !default;
+
+
+
+$btn-normal-border-style: $line-solid !default;
+
+
+
+
+
+
+
+
+$btn-secondary-color: $color-b1-6 !default;
+
+
+
+$btn-secondary-color-hover: $color-n1-1 !default;
+
+
+
+$btn-secondary-bg: $color-b1-1 !default;
+
+
+
+$btn-secondary-bg-hover: $color-b1-6 !default;
+
+
+
+$btn-secondary-border-color: $color-b1-6 !default;
+
+
+
+$btn-secondary-border-color-hover: $color-b1-6 !default;
+
+
+
+$btn-secondary-border-style: $line-solid !default;
+
+
+
+
+
+
+
+
+$btn-primary-color: $color-n1-1 !default;
+
+
+
+$btn-primary-color-hover: $color-n1-1 !default;
+
+
+
+$btn-primary-bg: $color-b1-6 !default;
+
+
+
+$btn-primary-bg-hover: $color-b1-9 !default;
+
+
+
+$btn-primary-border-color: $color-transparent !default;
+
+
+
+$btn-primary-border-color-hover: $color-transparent !default;
+
+
+
+$btn-primary-border-style: $line-solid !default;
+
+
+
+
+
+
+
+
+$btn-color-disabled: $color-n2-1 !default;
+
+
+
+$btn-bg-disabled: $color-n1-2 !default;
+
+
+
+$btn-border-color-disabled: $color-n1-6 !default;
+
+
+
+
+
+
+
+
+$btn-size-s-margin: $s0 !default;
+
+
+
+$btn-size-s-padding: $s3 !default;
+
+
+
+$btn-size-s-height: $s5 !default;
+
+
+
+$btn-size-s-font: $font-size-base-caption !default;
+
+
+
+$btn-size-s-border-width: $line-1-width !default;
+
+
+
+$btn-size-s-icon-margin: $s1 !default;
+
+
+
+$btn-size-s-icon-size: $icon-xs !default;
+
+
+
+$btn-size-s-icon-split-size: $icon-xs !default;
+
+
+
+
+
+
+
+
+$btn-size-m-margin: $s0 !default;
+
+
+
+$btn-size-m-padding: $s4 !default;
+
+
+
+$btn-size-m-height: $s7 !default;
+
+
+
+$btn-size-m-font: $font-size-base-body1 !default;
+
+
+
+$btn-size-m-border-width: $line-1-width !default;
+
+
+
+$btn-size-m-icon-margin: $s1 !default;
+
+
+
+$btn-size-m-icon-size: $icon-xs !default;
+
+
+
+$btn-size-m-icon-split-size: $icon-xs !default;
+
+
+
+
+
+
+
+$btn-size-l-margin: $s0 !default;
+
+
+
+$btn-size-l-padding: $s5 !default;
+
+
+
+$btn-size-l-height: $s10 !default;
+
+
+
+$btn-size-l-font: $font-size-base-subhead !default;
+
+
+
+$btn-size-l-border-width: $line-1-width !default;
+
+
+
+$btn-size-l-icon-margin: $s2 !default;
+
+
+
+$btn-size-l-icon-size: $icon-s !default;
+
+
+
+$btn-size-l-icon-split-size: $icon-m !default;
+
+
+
+
+
+
+
+$btn-ghost-border-style: $line-solid !default;
+
+
+
+$btn-ghost-dark-color: $color-n1-1 !default;
+
+
+
+$btn-ghost-dark-border-color: $color-n1-1 !default;
+
+
+
+$btn-ghost-dark-color-hover: $color-n1-1 !default;
+
+
+
+$btn-ghost-dark-bg: $color-transparent !default;
+
+
+
+$btn-ghost-dark-bg-hover-rgb: $color-n1-1 !default;
+
+
+
+
+$btn-ghost-dark-bg-hover-opacity: 0.8 !default;
+$btn-ghost-dark-bg-hover: transparentize($btn-ghost-dark-bg-hover-rgb, $btn-ghost-dark-bg-hover-opacity);
+
+
+
+$btn-ghost-dark-border-color-hover: $color-n1-1 !default;
+
+
+
+$btn-ghost-dark-color-disabled-rgb: $color-n1-1 !default;
+
+
+
+
+$btn-ghost-dark-color-disabled-opacity: 0.6 !default;
+$btn-ghost-dark-color-disabled: transparentize($btn-ghost-dark-color-disabled-rgb, $btn-ghost-dark-color-disabled-opacity);
+
+
+
+$btn-ghost-dark-bg-disabled: $color-transparent !default;
+
+
+
+$btn-ghost-dark-border-color-disabled-rgb: $color-n1-1 !default;
+
+
+
+
+$btn-ghost-dark-border-color-disabled-opacity: 0.6 !default;
+$btn-ghost-dark-border-color-disabled: transparentize($btn-ghost-dark-border-color-disabled-rgb, $btn-ghost-dark-border-color-disabled-opacity);
+
+
+
+
+
+
+
+$btn-ghost-light-color: $color-n2-4 !default;
+
+
+
+$btn-ghost-light-border-color: $color-n2-4 !default;
+
+
+
+$btn-ghost-light-bg: $color-transparent !default;
+
+
+
+$btn-ghost-light-color-hover: $color-n2-4 !default;
+
+
+
+$btn-ghost-light-border-color-hover: $color-n2-4 !default;
+
+
+
+$btn-ghost-light-bg-hover-rgb: $color-n1-9 !default;
+
+
+
+
+$btn-ghost-light-bg-hover-opacity: 0.97 !default;
+$btn-ghost-light-bg-hover: transparentize($btn-ghost-light-bg-hover-rgb, $btn-ghost-light-bg-hover-opacity);
+
+
+
+$btn-ghost-light-color-disabled-rgb: $color-n1-9 !default;
+
+
+
+
+$btn-ghost-light-color-disabled-opacity: 0.9 !default;
+$btn-ghost-light-color-disabled: transparentize($btn-ghost-light-color-disabled-rgb, $btn-ghost-light-color-disabled-opacity);
+
+
+
+$btn-ghost-light-bg-disabled: $color-transparent !default;
+
+
+
+$btn-ghost-light-border-color-disabled-rgb: $color-n1-9 !default;
+
+
+
+
+$btn-ghost-light-border-color-disabled-opacity: 0.9 !default;
+$btn-ghost-light-border-color-disabled: transparentize($btn-ghost-light-border-color-disabled-rgb, $btn-ghost-light-border-color-disabled-opacity);
+
+
+
+
+
+
+
+$btn-warning-border-style: $line-solid !default;
+
+
+
+$btn-warning-primary-color: $color-n1-1 !default;
+
+
+
+$btn-warning-primary-color-hover: $color-n1-1 !default;
+
+
+
+$btn-warning-primary-border-color: $color-f2-1 !default;
+
+
+
+$btn-warning-primary-border-color-hover: $color-f2-3 !default;
+
+
+
+$btn-warning-primary-bg: $color-f2-1 !default;
+
+
+
+$btn-warning-primary-bg-hover: $color-f2-3 !default;
+
+
+
+$btn-warning-primary-color-disabled: $color-n2-1 !default;
+
+
+
+$btn-warning-primary-border-color-disabled: $color-n1-6 !default;
+
+
+
+$btn-warning-primary-bg-disabled: $color-n1-2 !default;
+
+
+
+
+
+
+
+$btn-warning-normal-color: $color-f2-1 !default;
+
+
+
+$btn-warning-normal-color-hover: $color-n1-1 !default;
+
+
+
+$btn-warning-normal-border-color: $color-f2-1 !default;
+
+
+
+$btn-warning-normal-border-color-hover: $color-f2-1 !default;
+
+
+
+$btn-warning-normal-bg: $color-n1-1 !default;
+
+
+
+$btn-warning-normal-bg-hover: $color-f2-1 !default;
+
+
+
+$btn-warning-normal-color-disabled: $color-n2-1 !default;
+
+
+
+$btn-warning-normal-border-color-disabled: $color-n1-6 !default;
+
+
+
+$btn-warning-normal-bg-disabled: $color-n1-2 !default;
+
+
+
+
+
+
+
+
+$btn-text-primary-color: $color-b2-6 !default;
+
+
+
+$btn-text-primary-color-hover: $color-b1-6 !default;
+
+
+
+$btn-text-disabled-color: $color-n2-1 !default;
+
+
+
+$btn-text-loading-color: $color-n2-4 !default;
+
+
+
+
+
+
+
+$btn-text-secondary-color: $color-n2-4 !default;
+
+
+
+$btn-text-secondary-color-hover: $color-b1-6 !default;
+
+
+
+
+
+
+
+$btn-text-normal-color: $color-n2-3 !default;
+
+
+
+$btn-text-normal-color-hover: $color-b1-6 !default;
+
+
+
+
+
+
+
+$btn-text-size-s-height: $s4 !default;
+
+
+
+$btn-text-size-s-margin: $s0 !default;
+
+
+
+$btn-text-size-s-font: $font-size-base-caption !default;
+
+
+
+$btn-text-icon-size-s: $icon-s !default;
+
+
+
+$btn-text-icon-s-margin: $s1 !default;
+
+
+
+
+
+
+
+$btn-text-size-m-height: $s5 !default;
+
+
+
+$btn-text-size-m-margin: $s0 !default;
+
+
+
+$btn-text-size-m-font: $font-size-base-body1 !default;
+
+
+
+$btn-text-icon-size-m: $icon-m !default;
+
+
+
+$btn-text-icon-m-margin: $s1 !default;
+
+
+
+
+
+
+
+$btn-text-size-l-height: $s6 !default;
+
+
+
+$btn-text-size-l-margin: $s0 !default;
+
+
+
+$btn-text-size-l-font: $font-size-base-subhead !default;
+
+
+
+$btn-text-icon-size-l: $icon-l !default;
+
+
+
+$btn-text-icon-l-margin: $s2 !default;

@@ -1,0 +1,67 @@
+
+
+
+@mixin step-item-size(
+    $height: auto,
+    $width: auto,
+    $margin-left: 0,
+    $margin-right: 0
+) {
+    height: $height;
+    line-height: $height;
+    margin-left: $margin-left;
+    margin-right: $margin-right;
+}
+
+
+
+
+@mixin step-item-state(
+    $shape: 'circle',
+    $background: $color-n1-1,
+    $title-color: $color-n1-9,
+    $icon-color: $color-n1-9,
+    $tail-color: $color-n1-9,
+    $icon-border-color: $color-n1-9,
+    $content-color: $color-n1-9
+) {
+    #{$step-prefix}-item-tail {
+        i {
+            background: $tail-color;
+        }
+    }
+
+    #{$step-prefix}-item-container {
+
+        #{$step-prefix}-item-title {
+            color: $title-color;
+        }
+
+        #{$step-prefix}-item-node {
+            color: $icon-color;
+        }
+
+        #{$step-prefix}-item-node-circle {
+            background: $background;
+            border-color: $icon-border-color;
+        }
+
+        #{$step-prefix}-item-node-dot {
+            background: $background;
+            border-color: $icon-border-color;
+        }
+    }
+
+    @if ($shape == 'arrow') {
+        background: $background;
+
+        &:before {
+            border: $step-arrow-item-border-width solid $background;
+            border-left-color: transparent;
+        }
+
+        &:after {
+            border-left-color: $background;
+        }
+    }
+}

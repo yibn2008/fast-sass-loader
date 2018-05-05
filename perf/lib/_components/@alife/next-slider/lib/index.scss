@@ -1,0 +1,256 @@
+@charset "UTF-8";
+
+@import "../../next-core/lib/next.scss";
+@import "../../next-icon/lib/index.scss";
+@import "./scss/_function.scss";
+@import "./scss/_mixin.scss";
+@import "./scss/_placeholder.scss";
+@import "./scss/_variable.scss";
+
+
+
+
+#{$slick-prefix} {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-touch-callout: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+
+    &-initialized {
+        #{$slick-prefix}-slide {
+            display: block;
+        }
+    }
+
+    &-list {
+        position: relative;
+        overflow: hidden;
+        display: block;
+        margin: 0;
+        padding: 0;
+        transform: translate3d(0, 0, 0);
+
+        &:focus {
+            outline: none;
+        }
+
+        &.dragging {
+            cursor: pointer;
+            cursor: hand;
+        }
+    }
+
+    &-track {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: block;
+        transform: translate3d(0, 0, 0);
+    }
+
+    &-slide {
+        float: left;
+        height: auto;
+        outline: 0;
+        [dir="rtl"] & {
+            float: right;
+        }
+
+        img {
+            display: block;
+        }
+    }
+
+    &-arrow {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        text-align: center;
+
+        
+        &-inline {
+            @include slick-arrow-statement(
+                    $slick-arrow-icon-color-normal,
+                    $slick-arrow-icon-color-hover,
+                    $slick-arrow-icon-color-disabled,
+                    $slick-arrow-bg-color-normal,
+                    $slick-arrow-bg-color-hover,
+                    $slick-arrow-bg-color-disabled,
+                    $slick-arrow-bg-opacity-normal,
+                    $slick-arrow-bg-opacity-hover,
+                    $slick-arrow-bg-opacity-disabled
+            );
+        }
+
+        &-outer {
+            @include slick-arrow-statement(
+                    $slick-arrow-icon-color-normal-outer,
+                    $slick-arrow-icon-color-hover-outer,
+                    $slick-arrow-icon-color-disabled-outer,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+            );
+
+        }
+    }
+
+    &-dots {
+        display: block;
+        position: absolute;
+        z-index: 100;
+
+        li {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+
+            margin: $slick-dots-margin-tb $slick-dots-margin-lr;
+
+            button {
+                border: 0;
+                outline: none;
+                padding: 0;
+                height: $slick-dots-diameter;
+                width: $slick-dots-diameter;
+                border-radius: 50%;
+                background: $slick-dots-background-color-normal;
+                opacity: $slick-dots-background-opacity-normal;
+
+                &:hover {
+                    background-color: $slick-dots-background-color-hover;
+                    opacity: $slick-dots-background-opacity-hover;
+                }
+            }
+        }
+
+        & #{$slick-prefix}-active button {
+            background: $slick-dots-background-color-selected;
+            opacity: $slick-dots-background-opacity-selected;
+        }
+
+        
+        &-horizontal {
+            @include slick-dots-position(
+                    0,
+                    0,
+                    0,
+                    null,
+                    100%,
+                    null,
+                    null,
+                    $slick-dots-position-bottom,
+                    0
+            );
+            text-align: center;
+        }
+
+        
+        &-vertical {
+            @include slick-dots-position(
+                    0,
+                    0,
+                    0,
+                    null,
+                    $slick-dots-diameter + 4 * 2,
+                    0,
+                    $slick-dots-position-right,
+                    0,
+                    null
+            );
+
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+
+    
+    &#{$slick-prefix}-horizontal {
+
+        &#{$slick-prefix}-outer {
+            padding: 0 $slick-track-padding-lr;
+        }
+
+        #{$slick-prefix}-arrow {
+            &-normal {
+                @include slick-arrow-size($slick-arrow-width-m, $slick-arrow-height-m, $slick-arrow-icon-m);
+
+                &#{$slick-prefix}-arrow-inline {
+                    @include slick-arrow-position-horizontal(calc((100% - #{$slick-arrow-height-m}) / 2), 0, null, 0);
+                }
+                &#{$slick-prefix}-arrow-outer {
+                    @include slick-arrow-position-horizontal(
+                            calc((100% - #{$slick-arrow-height-m}) / 2), 
+                            -$slick-arrow-position-lr-m,                 
+                            null,                                        
+                            -$slick-arrow-position-lr-m                  
+                    );
+                }
+            }
+
+            &-large {
+                @include slick-arrow-size($slick-arrow-width-l, $slick-arrow-height-l, $slick-arrow-icon-l);
+
+                &#{$slick-prefix}-arrow-inline {
+                    @include slick-arrow-position-horizontal(calc((100% - #{$slick-arrow-height-l}) / 2), 0, null, 0);
+                }
+                &#{$slick-prefix}-arrow-outer {
+                    @include slick-arrow-position-horizontal(
+                            calc((100% - #{$slick-arrow-height-l}) / 2),
+                            -$slick-arrow-position-lr-l,
+                            null, -$slick-arrow-position-lr-l
+                    );
+                }
+            }
+        }
+    }
+
+    
+    &#{$slick-prefix}-vertical {
+
+        &#{$slick-prefix}-outer {
+            padding: $slick-vertical-track-padding-tb 0;
+        }
+
+        #{$slick-prefix} {
+            &-slide {
+                display: block;
+                height: auto;
+                
+            }
+
+            &-arrow {
+                &-normal {
+
+                    @include slick-arrow-size($slick-vertical-arrow-width-m, $slick-vertical-arrow-height-m, $slick-arrow-icon-m);
+
+                    &#{$slick-prefix}-arrow-inline {
+                        @include slick-arrow-position-vertical(0, null, 0, calc((100% - #{$slick-vertical-arrow-width-m}) / 2));
+                    }
+                    &#{$slick-prefix}-arrow-outer {
+                        @include slick-arrow-position-vertical(-$slick-vertical-arrow-position-tb-m, null, -$slick-vertical-arrow-position-tb-m, calc((100% - #{$slick-vertical-arrow-width-m}) / 2));
+                    }
+
+                }
+                &-large {
+                    @include slick-arrow-size($slick-vertical-arrow-width-l, $slick-vertical-arrow-height-l, $slick-arrow-icon-l);
+                    &#{$slick-prefix}-arrow-inline {
+                        @include slick-arrow-position-vertical(0, null, 0, calc((100% - #{$slick-vertical-arrow-width-l}) / 2));
+                    }
+                    &#{$slick-prefix}-arrow-outer {
+                        @include slick-arrow-position-vertical(-$slick-vertical-arrow-position-tb-l, null, -$slick-vertical-arrow-position-tb-l, calc((100% - #{$slick-vertical-arrow-width-l}) / 2));
+                    }
+                }
+            }
+        }
+    }
+}

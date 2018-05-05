@@ -1,0 +1,272 @@
+@charset "UTF-8";
+
+@import "./_color.scss";
+@import "../util/_functions.scss";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$shadow-sides-base: "base" !default;
+$shadow-sides-up: "up" !default;
+$shadow-sides-right: "right" !default;
+$shadow-sides-down: "down" !default;
+$shadow-sides-left: "left" !default;
+
+
+
+
+
+
+
+$shadow-x: 1 !default; 
+
+
+
+
+
+$shadow-y: $shadow-x !default; 
+
+
+
+
+
+$shadow-distance-sd1: 1;
+
+
+$shadow-distance-sd2: 2;
+
+
+$shadow-distance-sd3: 3;
+
+
+$shadow-distance-sd4: 4;
+
+
+$shadow-distance-sd5: 5;
+
+
+
+
+
+$shadow-opacity-sd1: 0.32 !default;
+
+
+$shadow-opacity-sd2: 0.32 !default;
+
+
+$shadow-opacity-sd3: 0.32 !default;
+
+
+$shadow-opacity-sd4: 0.32 !default;
+
+
+$shadow-opacity-sd5: 0.32 !default;
+
+
+
+
+
+$shadow-color-sd1: $color-n1-9 !default;
+
+
+
+$shadow-color-sd2: $color-n1-9 !default;
+
+
+
+$shadow-color-sd3: $color-n1-9 !default;
+
+
+
+$shadow-color-sd4: $color-n1-9 !default;
+
+
+
+$shadow-color-sd5: $color-n1-9 !default;
+
+
+
+$shadow-color-opacity-sd1: rgba($shadow-color-sd1, $shadow-opacity-sd1) !default;
+$shadow-color-opacity-sd2: rgba($shadow-color-sd2, $shadow-opacity-sd2) !default;
+$shadow-color-opacity-sd3: rgba($shadow-color-sd3, $shadow-opacity-sd3) !default;
+$shadow-color-opacity-sd4: rgba($shadow-color-sd4, $shadow-opacity-sd4) !default;
+$shadow-color-opacity-sd5: rgba($shadow-color-sd5, $shadow-opacity-sd5) !default;
+
+
+
+
+
+
+$shadow-elevation-sd1: 3 !default;
+
+
+
+$shadow-elevation-sd2: 3 !default;
+
+
+
+$shadow-elevation-sd3: 5 !default;
+
+
+
+$shadow-elevation-sd4: 7 !default;
+
+
+
+$shadow-elevation-sd5: 10 !default;
+
+
+
+
+
+
+
+$shadow-sd0: shadow-maker($shadow-sides-base, 0, 1, 0, 0);
+
+
+
+
+
+$shadow-sd1: shadow-maker($shadow-sides-base, $shadow-elevation-sd1, $shadow-color-opacity-sd1, $shadow-distance-sd1, $shadow-distance-sd1);
+
+
+
+
+
+$shadow-sd1-up: shadow-maker($shadow-sides-up, $shadow-elevation-sd1, $shadow-color-opacity-sd1, $shadow-distance-sd1, $shadow-distance-sd1);
+
+
+
+
+
+$shadow-sd1-right: shadow-maker($shadow-sides-right, $shadow-elevation-sd1, $shadow-color-opacity-sd1, $shadow-distance-sd1, $shadow-distance-sd1);
+
+
+
+
+
+$shadow-sd1-down: shadow-maker($shadow-sides-down, $shadow-elevation-sd1, $shadow-color-opacity-sd1, $shadow-distance-sd1, $shadow-distance-sd1);
+
+
+
+
+
+$shadow-sd1-left: shadow-maker($shadow-sides-left, $shadow-elevation-sd1, $shadow-color-opacity-sd1, $shadow-distance-sd1, $shadow-distance-sd1);
+
+
+
+
+
+$shadow-sd2: shadow-maker($shadow-sides-base, $shadow-elevation-sd2, $shadow-color-opacity-sd2, $shadow-distance-sd2, $shadow-distance-sd2);
+
+
+
+
+$shadow-sd2-up: shadow-maker($shadow-sides-up, $shadow-elevation-sd2, $shadow-color-opacity-sd2, $shadow-distance-sd2, $shadow-distance-sd2);
+
+
+
+
+$shadow-sd2-right: shadow-maker($shadow-sides-right, $shadow-elevation-sd2, $shadow-color-opacity-sd2, $shadow-distance-sd2, $shadow-distance-sd2);
+
+
+
+
+$shadow-sd2-down: shadow-maker($shadow-sides-down, $shadow-elevation-sd2, $shadow-color-opacity-sd2, $shadow-distance-sd2, $shadow-distance-sd2);
+
+
+
+
+$shadow-sd2-left: shadow-maker($shadow-sides-left, $shadow-elevation-sd2, $shadow-color-opacity-sd2, $shadow-distance-sd2, $shadow-distance-sd2);
+
+
+
+
+
+$shadow-sd3: shadow-maker($shadow-sides-base, $shadow-elevation-sd3, $shadow-color-opacity-sd3, $shadow-distance-sd3, $shadow-distance-sd3);
+
+
+
+
+$shadow-sd3-up: shadow-maker($shadow-sides-up, $shadow-elevation-sd3, $shadow-color-opacity-sd3, $shadow-distance-sd3, $shadow-distance-sd3);
+
+
+
+
+$shadow-sd3-right: shadow-maker($shadow-sides-right, $shadow-elevation-sd3, $shadow-color-opacity-sd3, $shadow-distance-sd3, $shadow-distance-sd3);
+
+
+
+
+$shadow-sd3-down: shadow-maker($shadow-sides-down, $shadow-elevation-sd3, $shadow-color-opacity-sd3, $shadow-distance-sd3, $shadow-distance-sd3);
+
+
+
+
+$shadow-sd3-left: shadow-maker($shadow-sides-left, $shadow-elevation-sd3, $shadow-color-opacity-sd3, $shadow-distance-sd3, $shadow-distance-sd3);
+
+
+
+
+
+$shadow-sd4: shadow-maker($shadow-sides-base, $shadow-elevation-sd4, $shadow-color-opacity-sd4, $shadow-distance-sd4, $shadow-distance-sd4);
+
+
+
+
+$shadow-sd4-up: shadow-maker($shadow-sides-up, $shadow-elevation-sd4, $shadow-color-opacity-sd4, $shadow-distance-sd4, $shadow-distance-sd4);
+
+
+
+
+$shadow-sd4-right: shadow-maker($shadow-sides-right, $shadow-elevation-sd4, $shadow-color-opacity-sd4, $shadow-distance-sd4, $shadow-distance-sd4);
+
+
+
+
+$shadow-sd4-down: shadow-maker($shadow-sides-down, $shadow-elevation-sd4, $shadow-color-opacity-sd4, $shadow-distance-sd4, $shadow-distance-sd4);
+
+
+
+
+$shadow-sd4-left: shadow-maker($shadow-sides-left, $shadow-elevation-sd4, $shadow-color-opacity-sd4, $shadow-distance-sd4, $shadow-distance-sd4);
+
+
+
+
+
+$shadow-sd5: shadow-maker($shadow-sides-base, $shadow-elevation-sd5, $shadow-color-opacity-sd5, $shadow-distance-sd5, $shadow-distance-sd5);
+
+
+
+
+$shadow-sd5-up: shadow-maker($shadow-sides-up, $shadow-elevation-sd5, $shadow-color-opacity-sd5, $shadow-distance-sd5, $shadow-distance-sd5);
+
+
+
+
+$shadow-sd5-right: shadow-maker($shadow-sides-right, $shadow-elevation-sd5, $shadow-color-opacity-sd5, $shadow-distance-sd5, $shadow-distance-sd5);
+
+
+
+
+$shadow-sd5-down: shadow-maker($shadow-sides-down, $shadow-elevation-sd5, $shadow-color-opacity-sd5, $shadow-distance-sd5, $shadow-distance-sd5);
+
+
+
+
+$shadow-sd5-left: shadow-maker($shadow-sides-left, $shadow-elevation-sd5, $shadow-color-opacity-sd5, $shadow-distance-sd5, $shadow-distance-sd5);

@@ -1,0 +1,16 @@
+#{$time-picker-prefix},
+#{$time-picker-prefix}-panel {
+    @include global-font;
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    &,
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+}

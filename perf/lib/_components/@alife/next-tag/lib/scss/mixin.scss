@@ -1,0 +1,290 @@
+@charset "UTF-8";
+
+
+
+
+@mixin tag-statement(
+    $color,
+    $bg-color,
+    $border-color,
+    $hover-color,
+    $hover-bg-color,
+    $hover-border-color,
+    $disabled-color,
+    $disabled-bg-color,
+    $disabled-border-color
+) {
+    color: $color;
+    background-color: $bg-color;
+    border-color: $border-color;
+
+    &.hover,
+    &:hover {
+        color: $hover-color;
+        background-color: $hover-bg-color;
+        border-color: $hover-border-color;
+    }
+
+    &[disabled],
+    &.disabled {
+        color: $disabled-color;
+        background-color: $disabled-bg-color;
+        border-color: $disabled-border-color;
+    }
+}
+
+@mixin tag-deletable-statement (
+    $color,
+    $bg-color,
+    $border-color,
+    $tail-color,
+    $tail-bg-color,
+    $hover-color,
+    $hover-bg-color,
+    $hover-border-color,
+    $hover-tail-color,
+    $hover-tail-bg-color,
+    $disabled-color,
+    $disabled-bg-color,
+    $disabled-border-color,
+    $disabled-tail-color,
+    $disabled-tail-bg-color
+) {
+    border-color: $border-color;
+
+    .#{$css-prefix}tag-body {
+        color: $color;
+        background-color: $bg-color;
+
+        &.hover,
+        &:hover {
+            color: $hover-color;
+            background-color: $hover-bg-color;
+        }
+    }
+
+    .#{$css-prefix}tag-tail {
+        color: $tail-color;
+        background: $tail-bg-color;
+
+        &.hover,
+        &:hover {
+            color: $hover-tail-color;
+            background: $hover-tail-bg-color;
+        }
+    }
+
+    
+    &.hover {
+        border-color: $hover-border-color;
+
+        .#{$css-prefix}tag-body {
+            color: $hover-color;
+            background-color: $hover-bg-color;
+        }
+
+        .#{$css-prefix}tag-tail {
+            color: $hover-tail-color;
+            background: $hover-tail-bg-color;
+        }
+    }
+
+    &[disabled],
+    &.disabled {
+        border-color: $disabled-border-color;
+
+        .#{$css-prefix}tag-body {
+            color: $disabled-color;
+            background-color: $disabled-bg-color;
+        }
+
+        .#{$css-prefix}tag-tail {
+            color: $disabled-tail-color;
+            background-color: $disabled-tail-bg-color;
+        }
+    }
+}
+
+@mixin tag-interactive-statement(
+    $color,
+    $number-color,
+    $bg-color,
+    $border-color,
+    $icon-color,
+    $icon-bg,
+    $hover-color,
+    $hover-number-color,
+    $hover-bg-color,
+    $hover-border-color,
+    $hover-icon-color,
+    $hover-icon-bg,
+    $disabled-color,
+    $disabled-number-color,
+    $disabled-bg-color,
+    $disabled-border-color,
+    $disabled-icon-color,
+    $disabled-icon-bg
+) {
+    color: $color;
+    background-color: $bg-color;
+    border-color: $border-color;
+
+    .#{$css-prefix}tag-number {
+        color: $number-color;
+    }
+
+    .#{$css-prefix}tag-opt {
+        color: $icon-color;
+        background-color: $icon-bg;
+    }
+
+    &.hover,
+    &:hover {
+        color: $hover-color;
+        background-color: $hover-bg-color;
+        border-color: $hover-border-color;
+
+        .#{$css-prefix}tag-number {
+            color: $hover-number-color;
+        }
+
+        .#{$css-prefix}tag-opt {
+            color: $hover-icon-color;
+            background-color: $hover-icon-bg;
+        }
+    }
+
+    &[disabled],
+    &.disabled {
+        color: $disabled-color;
+        background-color: $disabled-bg-color;
+        border-color: $disabled-border-color;
+
+        .#{$css-prefix}tag-number {
+            color: $disabled-number-color;
+        }
+
+        .#{$css-prefix}tag-opt {
+            color: $disabled-icon-color;
+            background-color: $disabled-icon-bg;
+        }
+    }
+}
+
+
+@mixin tag-opt-statement(
+    $icon-color,
+    $icon-bg,
+    $icon-color-hover,
+    $icon-bg-hover,
+    $icon-color-disabled,
+    $icon-bg-disabled
+) {
+
+    .#{$css-prefix}tag-opt {
+        color: $icon-color;
+        background-color: $icon-bg;
+
+        &.hover,
+        &:hover {
+            color: $icon-color-hover;
+            background-color: $icon-bg-hover;
+        }
+    }
+
+    &.#{$css-prefix}tag-disabled {
+        .#{$css-prefix}tag-opt {
+            color: $icon-color-disabled;
+            background-color: $icon-bg-disabled;
+        }
+    }
+
+    
+    &.hover {
+        .#{$css-prefix}tag-opt {
+            color: $icon-color-hover;
+            background-color: $icon-bg-hover;
+        }
+    }
+}
+
+
+@mixin tag-statement-selected(
+    $color,
+    $bg-color,
+    $border-color,
+    $hover-color,
+    $hover-bg-color,
+    $hover-border-color
+) {
+    color: $color;
+    background-color: $bg-color;
+    border-color: $border-color;
+
+    &.hover,
+    &:hover {
+        color: $hover-color;
+        background-color: $hover-bg-color;
+        border-color: $hover-border-color;
+    }
+}
+
+
+@mixin tag-size(
+    $margin: 0,
+    $height: 0,
+    $padding: 0,
+    $font-size: 0,
+    $line-height: 0,
+    $border-width: 0
+) {
+    margin: $margin;
+    height: $height;
+    font-size: $font-size;
+    line-height: $line-height;
+    border-width: $border-width;
+    > .#{$css-prefix}tag-body {
+        padding-left: $padding;
+        padding-right: $padding;
+    }
+}
+
+
+@mixin tag-tail-icon-size($size: $s3) {
+    .#{$css-prefix}icon {
+        @include icon-handler($size);
+    }
+}
+
+@mixin tag-selected-tick($tick-icon, $tick-icon-color, $tick-bg, $tick-bg-hover) {
+    &:before {
+        position: absolute;
+        content: " ";
+        right: -9px;
+        bottom: -9px;
+        -webkit-font-smoothing: antialiased;
+        background: $tick-bg;
+        transform: rotate(45deg);
+        width: 18px;
+        height: 18px;
+    }
+    &:after {
+        position: absolute;
+        right: -2px;
+        bottom: -3px;
+        line-height: 14px;
+        font-size: 12px;
+        font-family: NextIcon;
+        -webkit-font-smoothing: antialiased;
+        content: $tick-icon;
+        
+        transform: scale(.6);
+        color: $tick-icon-color;
+    }
+    &.hover,
+    &:hover {
+        &:before {
+            background: $tick-bg-hover;
+        }
+    }
+}

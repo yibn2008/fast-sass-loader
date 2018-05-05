@@ -1,0 +1,652 @@
+@charset "UTF-8";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$tag-size-m-height: $s7 !default;
+
+
+$tag-size-s-height: $s5 !default;
+
+
+
+$tag-size-m-padding-lr: $s2 !default;
+
+
+$tag-size-s-padding-lr: $s2 !default;
+
+
+
+$tag-size-m-text-size: $font-size-base-caption !default;
+
+
+$tag-size-s-text-size: $font-size-base-caption !default;
+
+
+
+$tag-border-width: $line-1-width !default;
+
+
+
+$tag-size-m-icon-font: $icon-xs !default;
+
+
+$tag-size-s-icon-font: $icon-xxs !default;
+
+
+
+
+$tag-deletable-split-line-width: 1px !default;
+
+
+$tag-deletable-tail-width: $s7 !default;
+
+
+
+
+$tag-interactive-tail-width: $s7 !default;
+
+
+
+$tag-interactive-number-width: $s7 !default;
+
+
+
+
+$tag-size-m-margin: $s2 !default;
+$tag-size-s-margin: $s1 !default;
+$tag-size-m-line-height: $tag-size-m-height - 2 * $tag-border-width;
+$tag-size-s-line-height: $tag-size-s-height - 2 * $tag-border-width;
+
+
+$ease-in-out-circ: cubic-bezier(0.78, 0.14, 0.15, 0.86);
+
+
+
+
+
+
+$tag-corner-radius: $corner-radius-r1 !default;
+
+
+$tag-selectable-normal-icon-selected: $icon-content-select;
+
+
+
+$tag-selectable-normal-icon-color-selected: $color-n1-1 !default;
+
+
+
+$tag-selectable-normal-tail-bg-color: $color-b7-6 !default;
+
+
+$tag-selectable-normal-tail-bg-color-selected-hover: $color-b2-6 !default;
+
+
+
+$tag-selectable-secondary-icon-selected: $icon-content-select !default;
+
+
+$tag-selectable-secondary-icon-color-selected: $color-n1-1 !default;
+
+
+
+$tag-selectable-secondary-tail-bg-color: $color-b7-6 !default;
+
+
+$tag-selectable-secondary-tail-bg-color-selected-hover: $color-b2-6 !default;
+
+
+
+$tag-selectable-normal-text-color: $color-n2-3 !default;
+
+
+$tag-selectable-normal-border-color: $color-n1-7 !default;
+
+
+$tag-selectable-normal-background-color: $color-n1-1 !default;
+
+
+
+
+
+$tag-selectable-normal-text-color-hover: $color-n2-4 !default;
+
+
+$tag-selectable-normal-background-color-hover: $color-n1-2 !default;
+
+
+$tag-selectable-normal-border-color-hover: $color-n1-8 !default;
+
+
+
+$tag-selectable-normal-text-color-disabled: $color-n2-1 !default;
+
+
+$tag-selectable-normal-background-color-disabled: $color-n1-2 !default;
+
+
+$tag-selectable-normal-border-color-disabled: $color-n1-6 !default;
+
+
+
+$tag-selectable-normal-text-color-selected: $color-b7-6 !default;
+
+
+$tag-selectable-normal-background-color-selected: $color-n1-1 !default;
+
+
+$tag-selectable-normal-border-color-selected: $color-b7-6 !default;
+
+
+
+$tag-selectable-normal-text-color-selected-hover: $color-b7-9 !default;
+
+
+$tag-selectable-normal-background-color-selected-hover: $color-n1-1 !default;
+
+
+$tag-selectable-normal-border-color-selected-hover: $color-b7-9 !default;
+
+
+
+
+
+$tag-selectable-secondary-text-color: $color-n2-3 !default;
+
+
+$tag-selectable-secondary-border-color: $color-n1-1 !default;
+
+
+$tag-selectable-secondary-background-color: $color-n1-1 !default;
+
+
+
+$tag-selectable-secondary-text-color-hover: $color-n2-4 !default;
+
+
+$tag-selectable-secondary-border-color-hover: $color-n1-8 !default;
+
+
+$tag-selectable-secondary-background-color-hover: $color-n1-2 !default;
+
+
+
+$tag-selectable-secondary-text-color-disabled: $color-n2-1 !default;
+
+
+$tag-selectable-secondary-border-color-disabled: $color-n1-6 !default;
+
+
+$tag-selectable-secondary-background-color-disabled: $color-n1-2 !default;
+
+
+
+$tag-selectable-secondary-text-color-selected: $color-n2-4 !default;
+
+
+$tag-selectable-secondary-border-color-selected: $color-b7-6 !default;
+
+
+$tag-selectable-secondary-background-color-selected: $color-n1-1 !default;
+
+
+
+$tag-selectable-secondary-text-color-selected-hover: $color-b7-9 !default;
+
+
+$tag-selectable-secondary-border-color-selected-hover: $color-b7-9 !default;
+
+
+$tag-selectable-secondary-background-color-selected-hover: $color-n1-1 !default;
+
+
+
+
+$tag-selectable-primary-text-color: $color-n2-3 !default;
+
+
+$tag-selectable-primary-border-color: $color-n1-1 !default;
+
+
+$tag-selectable-primary-background-color: $color-n1-2 !default;
+
+
+
+$tag-selectable-primary-text-color-hover: $color-n2-4 !default;
+
+
+$tag-selectable-primary-border-color-hover: $color-n1-1 !default;
+
+
+$tag-selectable-primary-background-color-hover: $color-n1-1 !default;
+
+
+
+$tag-selectable-primary-text-color-disabled: $color-n2-1 !default;
+
+
+$tag-selectable-primary-border-color-disabled: $color-n1-1 !default;
+
+
+$tag-selectable-primary-background-color-disabled: $color-n1-2 !default;
+
+
+
+$tag-selectable-primary-text-color-selected: $color-n1-1 !default;
+
+
+$tag-selectable-primary-border-color-selected: $color-b1-6 !default;
+
+
+$tag-selectable-primary-background-color-selected: $color-b1-6 !default;
+
+
+
+$tag-selectable-primary-text-color-selected-hover: $color-n1-2 !default;
+
+
+$tag-selectable-primary-border-color-selected-hover: $color-b1-9 !default;
+
+
+$tag-selectable-primary-background-color-selected-hover: $color-b1-9 !default;
+
+
+
+
+
+
+
+$tag-deletable-border: $line1 !default;
+
+
+
+$tag-deletable-normal-border-color: $color-n1-7 !default;
+
+
+
+$tag-deletable-normal-border-color-hover: $color-n1-7 !default;
+
+
+
+$tag-deletable-normal-border-color-disabled: $color-n1-7 !default;
+
+
+
+
+$tag-deletable-primary-border-color: $color-n1-7 !default;
+
+
+
+$tag-deletable-primary-border-color-hover: $color-n1-7 !default;
+
+
+
+$tag-deletable-primary-border-color-disabled: $color-n1-7 !default;
+
+
+
+$tag-deletable-secondary-border-color: $color-n1-7 !default;
+
+
+
+$tag-deletable-secondary-border-color-hover: $color-n1-7 !default;
+
+
+
+$tag-deletable-secondary-border-color-disabled: $color-n1-7 !default;
+
+
+
+
+
+
+$tag-deletable-split-line-style: $line-solid !default;
+
+
+$tag-deletable-split-line-color: $color-n1-9 !default;
+
+
+$tag-deletable-tail-border-left: $tag-deletable-split-line-style $tag-deletable-split-line-width transparentize($tag-deletable-split-line-color, 0.9) !default;
+
+
+
+
+$tag-deletable-normal-icon-color: $color-n2-3 !default;
+
+
+$tag-deletable-normal-icon-background-color: $color-n1-1 !default;
+
+
+$tag-deletable-normal-icon-color-hover: $color-n2-4 !default;
+
+
+$tag-deletable-normal-icon-background-color-hover: $color-n1-2 !default;
+
+
+$tag-deletable-normal-icon-color-disabled: $color-n2-1 !default;
+
+
+$tag-deletable-normal-icon-background-color-disabled: $color-n1-2 !default;
+
+
+
+$tag-deletable-primary-icon-color: $color-n2-3 !default;
+
+
+$tag-deletable-primary-icon-background-color: $color-n1-1 !default;
+
+
+$tag-deletable-primary-icon-color-hover: $color-n2-4 !default;
+
+
+$tag-deletable-primary-icon-background-color-hover: $color-n1-2 !default;
+
+
+$tag-deletable-primary-icon-color-disabled: $color-n2-1 !default;
+
+
+$tag-deletable-primary-icon-background-color-disabled: $color-n1-2 !default;
+
+
+
+$tag-deletable-secondary-icon-color: $color-n2-3 !default;
+
+
+$tag-deletable-secondary-icon-background-color: $color-n1-1 !default;
+
+
+$tag-deletable-secondary-icon-color-hover: $color-n2-4 !default;
+
+
+$tag-deletable-secondary-icon-background-color-hover: $color-n1-2 !default;
+
+
+$tag-deletable-secondary-icon-color-disabled: $color-n2-1 !default;
+
+
+$tag-deletable-secondary-icon-background-color-disabled: $color-n1-2 !default;
+
+
+
+
+$tag-deletable-normal-text-color: $color-n2-3 !default;
+
+
+$tag-deletable-normal-background-color: $color-n1-1 !default;
+
+
+
+$tag-deletable-normal-text-color-hover: $color-n2-4 !default;
+
+
+$tag-deletable-normal-background-color-hover: $color-n1-3 !default;
+
+
+
+$tag-deletable-normal-text-color-disabled: $color-n2-1 !default;
+
+
+
+$tag-deletable-normal-background-color-disabled: $color-n1-2 !default;
+
+
+
+
+$tag-deletable-primary-text-color: $color-n2-3 !default;
+
+
+$tag-deletable-primary-background-color: $color-n1-2 !default;
+
+
+
+$tag-deletable-primary-text-color-hover: $color-n2-4 !default;
+
+
+$tag-deletable-primary-background-color-hover: $color-n1-1 !default;
+
+
+
+$tag-deletable-primary-text-color-disabled: $color-n2-1 !default;
+
+
+$tag-deletable-primary-background-color-disabled: $color-n1-2 !default;
+
+
+
+
+$tag-deletable-secondary-text-color: $color-n2-3 !default;
+
+
+$tag-deletable-secondary-background-color: $color-n1-1 !default;
+
+
+
+$tag-deletable-secondary-text-color-hover: $color-n2-4 !default;
+
+
+$tag-deletable-secondary-background-color-hover: $color-n1-2 !default;
+
+
+
+$tag-deletable-secondary-text-color-disabled: $color-n2-1 !default;
+
+
+$tag-deletable-secondary-background-color-disabled: $color-n1-2 !default;
+
+
+
+
+
+
+
+
+
+
+
+$tag-interactive-border-color: $color-n1-7 !default;
+
+
+
+$tag-interactive-l-text-color: $color-n2-3 !default;
+
+
+$tag-interactive-l-background-color: $color-n1-1 !default;
+
+
+
+$tag-interactive-border-color-hover: $color-n1-7 !default;
+
+
+
+$tag-interactive-l-text-color-hover: $color-n2-4 !default;
+
+
+$tag-interactive-l-background-color-hover: $color-n1-1 !default;
+
+
+
+$tag-interactive-border-color-disabled: $color-n1-7 !default;
+
+
+
+$tag-interactive-l-text-color-disabled: $color-n2-1 !default;
+
+
+$tag-interactive-l-background-color-disabled: $color-n1-2 !default;
+
+
+
+
+$tag-interactive-r-text-color: $color-n1-1 !default;
+
+
+$tag-interactive-r-background-color: $color-b2-6 !default;
+
+
+
+$tag-interactive-r-text-color-hover: $color-n1-2 !default;
+
+
+$tag-interactive-r-background-color-hover: $color-b2-6 !default;
+
+
+
+$tag-interactive-number-color: $color-n2-3 !default;
+
+
+
+$tag-interactive-number-color-hover: $color-b2-6 !default;
+
+
+
+$tag-interactive-number-color-disabled: $color-n2-1 !default;
+
+
+
+$tag-interactive-split-color: $color-n1-5 !default;
+
+
+
+$tag-interactive-split-line-style: $line-dashed !default;
+
+
+$tag-interactive-split-line: $tag-interactive-split-line-style 1px $tag-interactive-split-color;
+
+
+
+
+
+
+
+
+
+
+
+
+$tag-link-normal-text-color: $color-n2-3 !default;
+
+
+$tag-link-normal-background-color: $color-n1-1 !default;
+
+
+$tag-link-normal-border-color: $color-n1-7 !default;
+
+
+
+$tag-link-normal-text-color-hover: $color-n2-4 !default;
+
+
+$tag-link-normal-background-color-hover: $color-n1-2 !default;
+
+
+$tag-link-normal-border-color-hover: $color-n1-7 !default;
+
+
+
+$tag-link-normal-text-color-disabled: $color-n2-1 !default;
+
+
+$tag-link-normal-background-color-disabled: $color-n1-2 !default;
+
+
+$tag-link-normal-border-color-disabled: $color-n1-6 !default;
+
+
+
+$tag-link-primary-text-color: $color-n2-3 !default;
+
+
+$tag-link-primary-background-color: $color-n1-2 !default;
+
+
+$tag-link-primary-border-color: $color-n1-1 !default;
+
+
+
+$tag-link-primary-text-color-hover: $color-n2-4 !default;
+
+
+$tag-link-primary-background-color-hover: $color-n1-1 !default;
+
+
+$tag-link-primary-border-color-hover: $color-n1-1 !default;
+
+
+
+$tag-link-primary-text-color-disabled: $color-n2-1 !default;
+
+
+$tag-link-primary-background-color-disabled: $color-n1-2 !default;
+
+
+$tag-link-primary-border-color-disabled: $color-n1-1 !default;
+
+
+
+$tag-link-secondary-text-color: $color-n2-3 !default;
+
+
+$tag-link-secondary-background-color: $color-n1-1 !default;
+
+
+$tag-link-secondary-border-color: $color-n1-1 !default;
+
+
+
+$tag-link-secondary-text-color-hover: $color-n2-4 !default;
+
+
+$tag-link-secondary-background-color-hover: $color-n1-2 !default;
+
+
+$tag-link-secondary-border-color-hover: $color-b1-9 !default;
+
+
+
+$tag-link-secondary-text-color-disabled: $color-n2-1 !default;
+
+
+$tag-link-secondary-background-color-disabled: $color-n1-2 !default;
+
+
+$tag-link-secondary-border-color-disabled: $color-n1-6 !default;
+
+
+
+
+
+
+
+$tag-readonly-text-color: $color-n2-3 !default;
+
+
+$tag-readonly-background-color: $color-n1-1 !default;
+
+
+$tag-readonly-border-color: $color-n1-6 !default;
+
+
+
+$tag-readonly-text-color-disabled: $color-n2-1 !default;
+
+
+
+$tag-readonly-background-color-disabled: $color-n1-2 !default;
+
+
+
+$tag-readonly-border-color-disabled: $color-n1-6 !default;

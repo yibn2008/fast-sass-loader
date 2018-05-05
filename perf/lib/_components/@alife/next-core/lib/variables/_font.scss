@@ -1,0 +1,223 @@
+@charset "UTF-8";
+
+////
+/// @group Variables 变量
+/// @module font: 字体
+/// @type String
+/// @category style
+/// @export
+////
+
+// Font & Typography
+// 根据 Alibaba Base DPL(BASE DPL) 设计规范实现
+// 字体主要解决的是内容可读性以及信息的层级表达，同时选择不同的字体来传达不同的设计风格的统一性和整体性，从而在阅读的舒适性上达到平衡。
+// -------------------------------
+
+
+// ******************************** 公共变量, 供开发者和设计师引用 ******************************** //
+
+// ------------------- font-weight ------------------- //
+
+/// Light
+/// @export weightcore
+/// @unconfigurable
+$font-weight-core-light: lighter !default;
+
+/// Thin
+/// @export weightcore
+/// @unconfigurable
+$font-weight-core-thin: 200 !default;
+
+/// Regular
+/// @export weightcore
+/// @unconfigurable
+$font-weight-core-regular: normal !default;
+
+/// Medium
+/// @export weightcore
+/// @unconfigurable
+$font-weight-core-medium: 500 !default;
+
+/// Bold
+/// @export weightcore
+/// @unconfigurable
+$font-weight-core-bold: bold !default;
+
+/// Bolder
+/// @export weightcore
+/// @unconfigurable
+$font-weight-core-bolder: bolder !default;
+
+// ------------------- font-family ------------------- //
+
+/// Font Family
+$font-family-base: Roboto, "Helvetica Neue", Helvetica, Tahoma, Arial, "PingFang SC", "Microsoft YaHei" !default;
+
+$font-family-en: Roboto, "Helvetica Neue", Helvetica, Tahoma, Arial !default;
+$font-family-zh: "Microsoft YaHei", SimSun, Arial !default;
+
+$font-custom-path: "//i.alicdn.com/artascope-font/20160419204543/font/" !default;
+$font-custom-name: Roboto !default;
+$font-name-thin: roboto-thin !default;
+$font-name-light: roboto-light !default;
+$font-name-regular: roboto-regular !default;
+$font-name-medium: roboto-medium !default;
+$font-name-bold: roboto-bold !default;
+$font-name-bolder: roboto-bolder !default;
+$font-lineheight-base: 1.2857142;
+
+// ------------------- Base Font Style ------------------- //
+
+/// Display3 Size
+/// @export size
+$font-size-base-display3: 56px !default;
+/// Display2 Size
+/// @export size
+$font-size-base-display2: 48px !default;
+/// Display1 Size
+/// @export size
+$font-size-base-display1: 36px !default;
+/// Headline Size
+/// @export size
+$font-size-base-headline: 24px !default;
+/// Title Size
+/// @export size
+$font-size-base-title: 20px !default;
+/// Subhead Size
+/// @export size
+$font-size-base-subhead: 16px !default;
+/// Body2 Size
+/// @export size
+$font-size-base-body2: 14px !default;
+/// Body1 Size
+/// @export size
+$font-size-base-body1: 14px !default;
+/// Caption Size
+/// @export size
+$font-size-base-caption: 12px !default;
+
+
+/// Display3 Weight
+/// @export weight
+$font-weight-base-display3: $font-weight-core-regular !default;
+/// Display2 Weight
+/// @export weight
+$font-weight-base-display2: $font-weight-core-regular !default;
+/// Display1 Weight
+/// @export weight
+$font-weight-base-display1: $font-weight-core-regular !default;
+/// Headline Weight
+/// @export weight
+$font-weight-base-headline: $font-weight-core-medium !default;
+/// Title Weight
+/// @export weight
+$font-weight-base-title: $font-weight-core-medium !default;
+/// Subhead Weight
+/// @export weight
+$font-weight-base-subhead: $font-weight-core-regular !default;
+/// Body2 Weight
+/// @export weight
+$font-weight-base-body2: $font-weight-core-medium !default;
+/// Body1 Weight
+/// @export weight
+$font-weight-base-body1: $font-weight-core-regular !default;
+/// Caption Weight
+/// @export weight
+$font-weight-base-caption: $font-weight-core-regular !default;
+
+
+/// Display3 Line Height
+/// @export lineheight
+$font-lineheight-base-display3: 84px !default;
+/// Display2 Line Height
+/// @export lineheight
+$font-lineheight-base-display2: 68px !default;
+/// Display1 Line Height
+/// @export lineheight
+$font-lineheight-base-display1: 54px !default;
+/// Headline Line Height
+/// @export lineheight
+$font-lineheight-base-headline: 36px !default;
+/// Title Line Height
+/// @export lineheight
+$font-lineheight-base-title: 30px !default;
+/// Subhead Line Height
+/// @export lineheight
+$font-lineheight-base-subhead: 24px !default;
+/// Body2 Line Height
+/// @export lineheight
+$font-lineheight-base-body2: 20px !default;
+/// Body1 Line Height
+/// @export lineheight
+$font-lineheight-base-body1: 20px !default;
+/// Caption Line Height
+/// @export lineheight
+$font-lineheight-base-caption: 18px !default;
+
+
+
+// ******************************** 私有变量, 请勿引用 ******************************** //
+
+// ------------------- english ------------------- //
+
+$font-size-en-display3: 56px !default;
+$font-size-en-display2: 48px !default;
+$font-size-en-display1: 36px !default;
+$font-size-en-headline: 24px !default;
+$font-size-en-title: 20px !default;
+$font-size-en-subhead: 16px !default;
+$font-size-en-body2: 14px !default;
+$font-size-en-body1: 14px !default;
+$font-size-en-caption: 12px !default;
+
+$font-lineheight-en-display3: 84px !default;
+$font-lineheight-en-display2: 68px !default;
+$font-lineheight-en-display1: 54px !default;
+$font-lineheight-en-headline: 36px !default;
+$font-lineheight-en-title: 30px !default;
+$font-lineheight-en-subhead: 24px !default;
+$font-lineheight-en-body2: 20px !default;
+$font-lineheight-en-body1: 20px !default;
+$font-lineheight-en-caption: 18px !default;
+
+$font-weight-en-display3: $font-weight-core-regular !default;
+$font-weight-en-display2: $font-weight-core-regular !default;
+$font-weight-en-display1: $font-weight-core-regular !default;
+$font-weight-en-headline: $font-weight-core-medium !default;
+$font-weight-en-title: $font-weight-core-medium !default;
+$font-weight-en-subhead: $font-weight-core-regular !default;
+$font-weight-en-body2: $font-weight-core-medium !default;
+$font-weight-en-body1: $font-weight-core-regular !default;
+$font-weight-en-caption: $font-weight-core-regular !default;
+
+// ------------------- chinese ------------------- //
+
+$font-size-zh-display3: 56px !default;
+$font-size-zh-display2: 48px !default;
+$font-size-zh-display1: 36px !default;
+$font-size-zh-headline: 24px !default;
+$font-size-zh-title: 20px !default;
+$font-size-zh-subhead: 16px !default;
+$font-size-zh-body2: 14px !default;
+$font-size-zh-body1: 14px !default;
+$font-size-zh-caption: 12px !default;
+
+$font-lineheight-zh-display3: 84px !default;
+$font-lineheight-zh-display2: 68px !default;
+$font-lineheight-zh-display1: 54px !default;
+$font-lineheight-zh-headline: 36px !default;
+$font-lineheight-zh-title: 30px !default;
+$font-lineheight-zh-subhead: 24px !default;
+$font-lineheight-zh-body2: 25px !default;
+$font-lineheight-zh-body1: 25px !default;
+$font-lineheight-zh-caption: 18px !default;
+
+$font-weight-zh-display3: $font-weight-core-regular !default;
+$font-weight-zh-display2: $font-weight-core-regular !default;
+$font-weight-zh-display1: $font-weight-core-regular !default;
+$font-weight-zh-headline: $font-weight-core-bold !default;
+$font-weight-zh-title: $font-weight-core-bold !default;
+$font-weight-zh-subhead: $font-weight-core-regular !default;
+$font-weight-zh-body2: $font-weight-core-bold !default;
+$font-weight-zh-body1: $font-weight-core-regular !default;
+$font-weight-zh-caption: $font-weight-core-regular !default;

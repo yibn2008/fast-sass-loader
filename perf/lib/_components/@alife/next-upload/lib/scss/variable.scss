@@ -1,0 +1,363 @@
+
+
+
+
+
+
+
+
+
+@charset "UTF-8";
+
+
+
+
+
+
+
+$upload-list-text-height: $s7 !default;
+
+
+$upload-list-text-padding-top-bottom: $s0 !default;
+
+
+$upload-list-text-padding-left-right: $s2 !default;
+
+$upload-list-text-padding: $upload-list-text-padding-top-bottom $upload-list-text-padding-left-right !default;
+
+
+$upload-list-text-font-size: $font-size-base-caption !default;
+
+
+$upload-list-text-close-icon-size: $icon-xs !default;
+
+
+$upload-list-text-close-icon-right: $s3 !default;
+
+
+$upload-list-text-name-extra-margin-left: $s2 !default;
+
+
+
+$upload-list-text-bg-color: $color-n1-3 !default;
+
+
+$upload-list-text-bg-color-hover: $color-n1-3 !default;
+
+
+$upload-list-text-bg-color-error: $color-f2-2 !default;
+
+
+
+$upload-list-text-close-icon-color: $color-n2-2 !default;
+
+
+$upload-list-text-close-icon-color-hover: $color-n2-3 !default;
+
+
+
+$upload-list-text-name-font-color: $color-n2-4 !default;
+
+
+$upload-list-text-name-font-color-hover: $color-b2-6 !default;
+
+
+
+$upload-list-text-name-extra-font-color: $color-n2-2 !default;
+
+
+$upload-list-text-name-extra-font-color-hover: $color-n2-2 !default;
+
+
+
+
+
+
+
+$upload-list-item-text-image-padding: $s2 !default;
+
+
+
+$upload-list-item-text-picture-size: 50px !default;
+
+
+$upload-list-item-text-picture-icon-size: $icon-l !default;
+
+
+$upload-list-item-text-image-font-size: $font-size-base-caption !default;
+
+
+$upload-list-text-image-close-icon-size: $icon-xs !default;
+
+
+$upload-list-text-image-close-icon-right: $s1 !default;
+
+
+$upload-list-item-text-image-border-width: $line-1-width !default;
+
+
+
+$upload-list-item-text-image-bg-color: $color-n1-1 !default;
+
+
+$upload-list-item-text-image-bg-color-hover: $color-n1-2 !default;
+
+
+$upload-list-text-image-close-icon-color: $color-n2-2 !default;
+
+
+$upload-list-text-image-close-icon-color-hover: $color-n2-3 !default;
+
+
+$upload-list-item-text-image-border-style: $line-solid !default;
+
+
+$upload-list-item-text-image-border-color: $color-n1-6 !default;
+
+
+$upload-list-item-text-image-border-color-error: $color-f2-1 !default;
+
+
+$upload-list-item-text-image-border-color-hover: $color-n1-6 !default;
+
+
+$upload-list-item-text-image-picture-border-color: $color-n1-6 !default;
+
+
+$upload-list-item-text-image-picture-background-color: $color-n1-2 !default;
+
+
+
+
+
+
+
+
+$upload-card-size: 100px !default;
+
+
+$upload-card-margin-right: $s3 !default;
+
+
+$upload-card-margin-bottom: $s4 !default;
+
+
+$upload-card-add-icon-size: $icon-l !default;
+
+
+$upload-card-add-icon-margin-top: $s6 !default;
+
+
+$upload-card-add-text-size: $font-size-base-body1 !default;
+
+
+$upload-card-add-text-margin-top: $s3 !default;
+
+
+$upload-card-border-width: $line-1-width !default;
+
+
+
+
+$upload-select-card-border-style: $line-dashed !default;
+
+
+
+$upload-select-card-border-color: $color-n1-7 !default;
+
+
+$upload-select-card-border-color-hover: $color-b2-6 !default;
+
+
+$upload-select-card-border-color-disable: $color-n1-5 !default;
+
+
+
+$upload-select-card-font-color: $color-n2-3 !default;
+
+
+$upload-select-card-font-color-hover: $color-n2-3 !default;
+
+
+$upload-select-card-font-color-disable: $color-n1-7 !default;
+
+
+
+$upload-select-card-bg-color: $color-n1-1 !default;
+
+
+$upload-select-card-bg-color-disable: $color-n1-1 !default;
+
+
+$upload-select-card-bg-color-uploading: $color-n1-2 !default;
+
+
+$upload-select-card-bg-color-error: $color-n1-2 !default;
+
+
+
+
+$upload-list-item-border-style: $line-solid !default;
+
+
+$upload-list-item-border-color: $color-n1-7 !default;
+
+
+$upload-list-item-border-color-error: $color-f2-1 !default;
+
+
+$upload-list-item-border-color-done-hover: $color-n1-7 !default;
+
+$upload-list-item-border: $upload-card-border-width $upload-list-item-border-style $upload-list-item-border-color !default;
+
+$upload-select-card-thumbnail-font-color: $color-n1-7 !default;
+
+
+$upload-select-card-thumbnail-font-size: $font-size-base-caption !default;
+
+
+$upload-select-card-thumbnail-icon-size: $icon-xxl !default;
+
+
+
+
+$upload-list-item-name-padding-top-bottom: $s0 !default;
+
+
+$upload-list-item-name-padding-left-right: $s0 !default;
+
+
+$upload-list-item-name-margin-top: $s1 !default;
+$upload-list-item-name-padding: $upload-list-item-name-padding-top-bottom $upload-list-item-name-padding-left-right !default;
+
+
+$upload-list-item-name-font-size: $font-size-base-caption !default;
+
+
+$upload-list-item-name-font-color: $color-n2-3 !default;
+
+
+$upload-list-item-margin: 0 $upload-card-margin-right ($s4 + $upload-list-item-name-margin-top + $upload-list-item-name-font-size) 0 !default;
+
+
+
+
+$upload-select-card-tool-height: $s7 !default;
+
+$upload-select-card-thumbnail-inner-margin: $s2 !default;
+
+$upload-select-card-tool-font-color: $color-n1-1 !default;
+
+$upload-select-card-tool-bg-color: rgba($color-n1-9, .7) !default;
+
+$upload-select-card-tool-icon-size: $icon-s !default;
+
+
+
+
+$upload-select-icon-font-color-dragover: $color-n1-7 !default;
+
+$upload-select-icon-font-size-dragover: $s12 !default;
+
+
+
+
+
+
+
+
+$upload-drag-zone-padding: $s4 !default;
+
+
+$upload-drag-zone-font-size: $font-size-base-body1 !default;
+
+
+$upload-drag-zone-border-width: $line-1-width !default;
+
+
+
+$upload-drag-zone-border-style: $line-dashed !default;
+
+
+$upload-drag-zone-border-color: $color-n1-6 !default;
+
+
+$upload-drag-zone-over-border-color: $color-n1-6 !default;
+
+
+
+$upload-drag-zone-font-color: $color-n2-2 !default;
+
+
+$upload-drag-zone-over-font-color: $color-n2-2 !default;
+
+
+
+$upload-drag-zone-tips-bg-color: $color-n1-1 !default;
+
+
+$upload-drag-zone-tips-over-bg-color: $color-n1-3 !default;
+
+
+$upload-drag-zone-upload-list-item-margin: 0 $s3 ($upload-list-item-name-margin-top + $upload-list-item-name-font-size) 0 !default;
+
+
+
+
+
+
+
+
+
+$upload-cropper-inner-width: 400px !default;
+
+
+
+$upload-cropper-inner-height: 260px !default;
+
+
+$upload-cropper-inner-reset-margin-top-bottom: $s3 !default;
+
+
+$upload-cropper-inner-reset-font-size: $font-size-base-caption !default;
+
+
+
+$upload-cropper-inner-reset-font-color: $color-n2-3 !default;
+
+
+$upload-previewer-font-color: $color-n2-2 !default;
+
+
+$upload-cropper-valid-zone-border-width: $line-1-width !default;
+
+$upload-cropper-valid-zone-border-style: $line-dashed !default;
+
+$upload-cropper-valid-zone-border-color: #fff !default;
+
+$upload-cropper-valid-zone-border: $upload-cropper-valid-zone-border-width $upload-cropper-valid-zone-border-style $upload-cropper-valid-zone-border-color !default;
+
+$upload-cropper-invalid-zone-bg-color: $color-n1-9 !default;
+
+$upload-cropper-invalid-zone-bg-opacity: 0.7 !default;
+
+
+
+
+
+
+
+
+$upload-batch-inner-submit-margin-top: $s3 !default;
+
+
+$upload-batch-title-font-color: $color-n2-4 !default;
+
+
+$upload-batch-title-font-size: $font-size-base-body1 !default;
+
+
+$upload-batch-inner-shadow: $shadow-sd2 !default;
+
+
+$upload-batch-inner-border-color: $color-n1-6 !default;

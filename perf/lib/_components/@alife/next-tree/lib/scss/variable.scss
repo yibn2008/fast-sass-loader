@@ -1,0 +1,166 @@
+
+
+
+
+
+
+
+
+
+$tree-prefix: '.' + $css-prefix + 'tree';
+
+
+
+
+
+
+$tree-node-margin: $s2 !default;
+
+
+
+$tree-node-title-margin: $s1 !default;
+
+
+
+$tree-node-title-padding: $s1 !default;
+
+
+
+$tree-node-title-font-size: $font-size-base-body1 !default;
+
+
+
+$tree-node-title-border-radius: $corner-radius-r1 !default;
+
+
+
+$tree-switch-arrow-size: $icon-xs !default;
+
+
+
+$tree-switch-size: $s4 !default;
+
+
+
+$tree-switch-icon-size: $icon-xxs !default;
+
+
+
+$tree-switch-border-width: $line-1-width !default;
+
+
+
+$tree-switch-margint-right: $s2 !default;
+
+
+
+$tree-line-width: $line-1-width !default;
+
+$tree-child-indent: $s6 !default;
+$tree-child-indent-left: ($tree-switch-size - 1) / 2;
+$tree-child-indent-right: $tree-child-indent - $tree-line-width - $tree-child-indent-left;
+$tree-node-title-height: $s5 !default;
+
+
+
+
+
+
+$tree-node-normal-color: $color-n2-3 !default;
+
+
+
+$tree-node-normal-background: $color-transparent !default;
+
+
+
+$tree-line-color: $color-n1-5 !default;
+
+
+
+$tree-line-style: $line-solid !default;
+
+
+
+$tree-switch-arrow-color: $color-n2-2 !default;
+
+
+
+$tree-switch-border-color: $color-n1-7 !default;
+
+
+
+$tree-switch-bg-color: $color-n1-1 !default;
+
+
+
+$tree-switch-icon-color: $color-n2-3 !default;
+
+
+
+$tree-switch-corner: $corner-radius-r1 !default;
+
+
+
+
+
+
+$tree-node-hover-color: $color-n2-3 !default;
+
+
+
+$tree-node-hover-background-rgb: $color-b1-6 !default;
+
+
+
+
+$tree-node-hover-background-opacity: 0.9 !default;
+
+$tree-node-hover-background: transparentize($tree-node-hover-background-rgb, $tree-node-hover-background-opacity);
+
+
+
+$tree-switch-hover-arrow-color: $color-n2-4 !default;
+
+
+
+$tree-switch-hover-border-color: $color-n1-8 !default;
+
+
+
+$tree-switch-hover-bg-color: $color-n1-2 !default;
+
+
+
+$tree-switch-hover-icon-color: $color-n2-4 !default;
+
+
+
+
+
+
+$tree-node-selected-color: $color-n2-3 !default;
+
+
+
+$tree-node-selected-background-rgb: $color-b1-6 !default;
+
+
+
+
+$tree-node-selected-background-opacity: 0.8 !default;
+
+$tree-node-selected-background: transparentize($tree-node-selected-background-rgb, $tree-node-selected-background-opacity);
+
+
+
+
+
+
+$tree-node-disabled-color: $color-n2-2 !default;
+
+
+
+$tree-node-disabled-background: $color-transparent !default;
+
+$tree-line-style: $tree-line-width $tree-line-style $tree-line-color;

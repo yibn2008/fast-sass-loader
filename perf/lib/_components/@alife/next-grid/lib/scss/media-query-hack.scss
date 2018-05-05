@@ -1,0 +1,67 @@
+$bps: ((
+        "xxs",
+        $grid-xxs,
+        $grid-space-xxs
+), (
+    "xs",
+    $grid-xs,
+    $grid-space-xs
+), (
+    "s",
+    $grid-s,
+    $grid-space-s
+), (
+    "m",
+    $grid-m,
+    $grid-space-m
+), (
+    "l",
+    $grid-l,
+    $grid-space-l
+), (
+    "xl",
+    $grid-xl,
+    $grid-space-xl
+));
+
+@each $bp in $bps {
+    $name: nth($bp, 1);
+    $bpWidth: nth($bp, 2);
+    $spaceWidth: nth($bp, 3);
+    $minQuery: $bpWidth + $spaceWidth * 2;
+    $minNumber: strip-units($minQuery);
+
+    .next-w#{$minNumber} {
+        .#{$css-prefix}row {
+            padding: 0 $spaceWidth - ($grid-gutter / 2);
+        }
+        .#{$css-prefix}row-fixed {
+            width: $bpWidth;
+        }
+        .#{$css-prefix}row-fluid {
+            max-width: $bpWidth;
+        }
+        .#{$css-prefix}row .#{$css-prefix}col-#{$name}-hidden {
+            display: none;
+        }
+    }
+
+    .next-w#{$minNumber}-together {
+        @for $i from 1 through $grid-columns {
+            .#{$css-prefix}row .#{$css-prefix}col-#{$name}-#{$i} {
+                $width: percentage($i / $grid-columns);
+                max-width: $width;
+                width: $width;
+            }
+        }
+        @for $i from 1 through $grid-columns-5p {
+            .#{$css-prefix}row .#{$css-prefix}col-#{$name}-#{$i}p#{$grid-columns-5p} {
+                $width: percentage($i / $grid-columns-5p);
+                max-width: $width;
+                width: $width;
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,189 @@
+@charset "UTF-8";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$balloon-font-size: $font-size-base-caption !default;
+
+
+$balloon-size-padding-top: $s4 !default;
+
+
+$balloon-size-padding-right: $s4 !default;
+
+
+$balloon-size-padding-closable-right: $s7 !default;
+
+
+$balloon-size-padding-bottom: $s4 !default;
+
+
+$balloon-size-padding-left: $s4 !default;
+
+
+$balloon-size-max-width: 300px !default;
+
+
+
+$balloon-border-style: $line-solid !default;
+
+
+
+$balloon-border-width: 1px !default;
+
+
+
+$balloon-border-corner: $corner-radius-r0  !default;
+
+$balloon-size-padding: $balloon-size-padding-top $balloon-size-padding-right $balloon-size-padding-bottom $balloon-size-padding-left;
+$balloon-size-closable-padding: $balloon-size-padding-top $balloon-size-padding-closable-right $balloon-size-padding-bottom $balloon-size-padding-left;
+
+
+
+
+
+
+$balloon-shadow: true !default;
+
+
+
+
+
+$balloon-normal-color: $color-n2-4 !default;
+
+
+$balloon-normal-color-bg: $color-n1-1 !default;
+
+
+$balloon-normal-color-border: $color-transparent !default;
+
+
+$balloon-normal-color-close: $color-n2-2 !default;
+
+
+$balloon-normal-color-close-hover: $color-n2-4 !default;
+
+
+$balloon-normal-shadow: $shadow-sd1 !default;
+
+
+$balloon-normal-color-arrow-bg: $balloon-normal-color-bg;
+
+
+$balloon-normal-color-arrow-border: $balloon-normal-color-border ;
+
+
+
+
+
+
+
+$balloon-primary-color: $color-n2-4  !default;
+
+
+$balloon-primary-color-bg: $color-b2-1  !default;
+
+
+$balloon-primary-color-border: $color-f4-1  !default;
+
+
+$balloon-primary-color-close: $color-n2-2  !default;
+
+
+$balloon-primary-color-close-hover: $color-n2-4  !default;
+
+
+$balloon-primary-color-arrow-bg: $balloon-primary-color-bg;
+
+
+$balloon-primary-color-arrow-border: $balloon-primary-color-border;
+
+
+$balloon-primary-shadow: $shadow-sd1  !default;
+
+
+
+
+
+
+$balloon-size-close: $icon-xxs !default;
+
+
+$balloon-size-close-margin-top: $s3 !default;
+
+
+$balloon-size-close-margin-right: $s3 !default;
+
+
+
+
+
+$balloon-size-arrow-size: $s3 !default;
+$balloon-size-arrow-expose: -$balloon-size-arrow-size/2 - 1;
+$balloon-size-arrow-center: 50% + #{$balloon-size-arrow-expose};
+
+
+$balloon-size-arrow-margin: $s3 !default;
+
+$balloon-shadow-top: shadow-maker($shadow-sides-base,1, rgba($shadow-color-sd1, 0.1),-1, -1);
+$balloon-shadow-right: shadow-maker($shadow-sides-base,1,rgba($shadow-color-sd1, 0.1),1, -1);
+$balloon-shadow-bottom: shadow-maker($shadow-sides-base,1,rgba($shadow-color-sd1, 0.1),1, 1);
+$balloon-shadow-left: shadow-maker($shadow-sides-base,1,rgba($shadow-color-sd1, 0.1),-1, 1);
+
+
+
+
+
+$balloon-tooltip-color: $color-n2-4 !default;
+
+
+$balloon-tooltip-color-border:$color-n1-6 !default;
+
+
+$balloon-tooltip-color-bg:$color-n1-2 !default;
+
+
+
+
+
+$balloon-tooltip-shadow: none;
+
+
+$balloon-tooltip-size-padding-top: $s2 !default;
+
+
+$balloon-tooltip-size-padding-right: $s2 !default;
+
+
+
+$balloon-tooltip-size-padding-bottom: $s2 !default;
+
+
+$balloon-tooltip-size-padding-left: $s2 !default;
+
+
+
+
+
+
+
+$balloon-tooltip-color-arrow-border: $balloon-tooltip-color-border;
+
+
+$balloon-tooltip-color-arrow-bg: $balloon-tooltip-color-bg;
+
+
+$balloon-tooltip-border-style: $line-solid !default;

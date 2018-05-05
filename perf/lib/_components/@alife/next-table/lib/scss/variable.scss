@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+
+
+
+
+
+
+
+
+
+
+
+
+$table-prefix: '.#{$css-prefix}table' !default;
+
+
+
+$table-normal-border-width: $line-1-width !default;
+
+
+$table-normal-border-style: $line-solid !default;
+
+
+$table-normal-border-color: $color-n1-6 !default;
+
+
+
+$table-th-bg: $color-n1-4 !default;
+
+
+$table-th-color: $color-n2-4 !default;
+
+
+$table-th-font-size: $font-size-base-body1 !default;
+
+
+$table-body-font-size: $font-size-base-body1 !default;
+
+
+$table-cell-padding-left: $s4 !default;
+
+
+$table-cell-padding-top: $s3 !default;
+
+
+
+$table-empty-padding: $s8 !default;
+
+
+$table-empty-color: $color-n1-8 !default;
+
+
+
+$table-td-gray: $color-n1-2 !default;
+
+
+$table-td-normal: $color-n1-1 !default;
+
+
+
+$table-group-split: $s2 !default;
+
+
+$table-group-header-bg: $color-n1-4 !default;
+
+
+
+$table-sort-color: $color-n2-4 !default;
+
+
+$table-sort-color-current: $color-b1-6 !default;
+
+
+
+$table-expanded-ctrl-disabled-color: $color-n2-2 !default;
+
+
+
+$table-sort-icon-size: $icon-xs !default;
+
+
+
+$table-filter-icon-size: $icon-xs !default;
+
+
+
+$table-expanded-icon-size: $icon-xs !default;
+
+
+
+$table-tree-expanded-icon-size: $icon-xs !default;
+

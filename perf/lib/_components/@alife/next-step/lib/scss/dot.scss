@@ -1,0 +1,196 @@
+
+
+
+
+#{$step-prefix}-dot {
+    & {
+        padding: 4px 0 0 0;
+    }
+    
+    #{$step-prefix}-item {
+        &-container {
+            #{$step-prefix}-item-node {
+                position: relative;
+                display: inline-block;
+                width: $step-dot-item-dot-size + $step-dot-item-dot-padding * 2;
+                height: $step-dot-item-dot-size;
+                padding: 0 $step-dot-item-dot-padding;
+                line-height: $step-dot-item-dot-size;
+                text-align: center;
+                cursor: pointer;
+
+                #{$step-icon-prefix} {
+                    @include icon-handler($step-dot-item-dot-icon-size);
+                }
+            }
+
+            #{$step-prefix}-item-node-dot {
+                position: absolute;
+                top: 50%;
+                margin-top: -$step-dot-item-dot-size/2;
+                left: 50%;
+                margin-left: -$step-dot-item-dot-size/2;
+                display: block;
+                width: $step-dot-item-dot-size;
+                height: $step-dot-item-dot-size;
+                border: $step-dot-item-dot-border-width solid;
+                border-radius: $step-dot-item-dot-corner;
+                transition: background-color .3s ease, border-color .3s ease;
+            }
+
+            #{$step-prefix}-item-title {
+                font-size: $step-dot-item-title-size;
+                line-height: $step-dot-item-title-size + 4;
+                margin-top: $step-dot-item-title-margin-top;
+                text-align: center;
+            }
+        }
+
+        &-tail {
+            position: absolute;
+            width: calc(100% - #{$step-dot-item-dot-size + 2*$step-dot-item-dot-padding});
+            height: auto;
+            left: calc(50% + #{$step-dot-item-dot-size/2 + $step-dot-item-dot-padding});
+            top: ($step-dot-item-dot-size - $step-dot-item-tail-size) / 2;
+
+            i {
+                display: block;
+                vertical-align: top;
+                height: $step-dot-item-tail-size;
+                width: 100%;
+                position: relative;
+                transition: all .4s ease;
+            }
+        }
+    }
+
+    #{$step-prefix}-item-wait {
+        @include step-item-state(
+                'dot',
+                $step-dot-item-node-wait-background,
+                $step-dot-item-title-wait-color,
+                $step-dot-item-node-wait-color,
+                $step-dot-item-tail-wait-color,
+                $step-dot-item-node-wait-border-color
+        );
+    }
+
+    #{$step-prefix}-item-process {
+        @include step-item-state(
+                'dot',
+                $step-dot-item-node-process-background,
+                $step-dot-item-title-process-color,
+                $step-dot-item-node-process-color,
+                $step-dot-item-tail-process-color,
+                $step-dot-item-node-process-border-color
+        );
+    }
+
+    #{$step-prefix}-item-finish {
+        @include step-item-state(
+                'dot',
+                $step-dot-item-node-finish-background,
+                $step-dot-item-title-finish-color,
+                $step-dot-item-node-finish-color,
+                $step-dot-item-tail-finish-color,
+                $step-dot-item-node-finish-border-color
+        );
+    }
+
+    #{$step-prefix}-item-disabled {
+        @include step-item-state(
+                'dot',
+                $step-dot-item-node-disabled-background,
+                $step-dot-item-title-disabled-color,
+                $step-dot-item-node-disabled-color,
+                $step-dot-item-tail-disabled-color,
+                $step-dot-item-node-disabled-border-color
+        );
+
+        #{$step-prefix}-item-node-placeholder,
+        #{$step-prefix}-item-node {
+            cursor: not-allowed;
+        }
+    }
+
+    #{$step-prefix}-item-read-only {
+        #{$step-prefix}-item-node-placeholder,
+        #{$step-prefix}-item-node {
+            cursor: default;
+        }
+    }
+
+    #{$step-prefix}-item-last {
+        #{$step-prefix}-item-tail {
+            display: none;
+        }
+    }
+}
+
+
+
+
+
+#{$step-prefix}-dot#{$step-prefix}-vertical {
+    & {
+       padding: 0 0 0 4px; 
+    }
+    
+    #{$step-prefix}-item {
+        &-container {
+            & {
+                position: relative;
+                min-height: $step-dot-item-dot-size + $step-dot-item-dot-padding * 2;
+            }
+
+            #{$step-prefix}-item-node-placeholder {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            #{$step-prefix}-item-node {
+                width: $step-dot-item-dot-size;
+                height: $step-dot-item-dot-size + $step-dot-item-dot-padding * 2;
+                padding: $step-dot-item-dot-padding 0;
+            }
+
+            #{$step-prefix}-item-body {
+                display: inline-block;
+                margin-left: $step-dot-vertical-item-body-margin-left + $step-dot-item-dot-size;
+                padding-top: $step-dot-vertical-item-node-padding;
+            }
+
+            #{$step-prefix}-item-title {
+                margin-top: $step-dot-vertical-item-title-margin-top;
+                text-align: left;
+            }
+
+            #{$step-prefix}-item-content {
+                margin-top: $step-dot-vertical-item-content-margin-top;
+                min-height: $s2;
+                text-align: left;
+                font-size: $step-dot-item-content-font-size;
+                line-height: $step-dot-item-content-font-size + 4;
+                color: $step-dot-item-content-color;
+            }
+        }
+
+        &-tail {
+            position: absolute;
+            width: auto;
+            height: calc(100% - #{$step-dot-item-dot-size + 2*$step-dot-item-dot-padding});
+            top: $step-dot-item-dot-size + 2*$step-dot-item-dot-padding;
+            left: ($step-dot-item-dot-size - $step-dot-vertical-item-tail-size) / 2;
+
+            i {
+                display: block;
+                vertical-align: top;
+                height: 100%;
+                width: $step-dot-vertical-item-tail-size;
+                position: relative;
+                transition: all .4s ease;
+            }
+        }
+    }
+}

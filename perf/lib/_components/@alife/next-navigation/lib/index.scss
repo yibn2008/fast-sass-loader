@@ -1,0 +1,1478 @@
+@charset "UTF-8";
+@import "../../next-core/lib/next.scss";
+@import '../../next-icon/lib/index.scss';
+@import "../../next-menu/lib/index.scss";
+@import "./scss/function.scss";
+@import "./scss/mixin.scss";
+@import "./scss/placeholder.scss";
+@import "./scss/variable.scss";
+/*
+    common style
+*/
+#{$navi} {
+    @include navigationTransition();
+    @include box-sizing;
+    @include global-font;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    & *,
+    &-slip-container,
+    &-slip-main {
+        box-sizing: border-box;
+    }
+    & a,
+    & a:hover,
+    & a:link,
+    & a:visited {
+        color: $navigation-normal-item-color;
+        text-decoration: none;
+    }
+    &:after {
+        content: '';
+        font-size: 0;
+        clear: both;
+        height: 0;
+        display: block;
+    }
+    & &-children-show {
+        height: auto;
+        top: 100%;
+        opacity: 1;
+        display: block;
+    }
+
+    &-group-content {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+}
+#{$item} {
+    float: left;
+    position: relative;
+    text-align: left;
+    cursor: pointer;
+    z-index: 99;
+    & &-text {
+        vertical-align: middle;
+    }
+    & &-icon {
+        vertical-align: middle;
+        &:before {
+            text-align: center;
+        }
+    }
+    & &-custom-icon {
+        line-height: 0;
+    }
+    &-content {
+        font-size: 0;
+        display: block;
+        p {
+            padding: 0;
+            margin: 0;
+            line-height: inherit;
+        }
+        &-inner {
+            display: block;
+        }
+    }
+
+    &-align-right {
+        #{$item}-children-menu {
+            left: 0;
+            right: auto;
+        }
+    }
+
+    &-align-right {
+        #{$item}-children-menu {
+            left: auto;
+            right: 0;
+        }
+    }
+
+    &-align-center {
+        #{$item}-children-menu {
+            left: 50%;
+            right: auto;
+            transform: translateX(-50%);
+        }
+    }
+
+    &-children-menu {
+        min-width: 100%;
+        position: absolute;
+        top: 110%;
+        left: 0;
+        height: 0;
+        opacity: 0;
+        display: none;
+    }
+
+    &-children-menu-show {
+        z-index: 101!important;
+        #{$item}-children-menu {
+            height: auto;
+            top: 100%;
+            opacity: 1;
+            display: block;
+            z-index: 101!important;
+        }
+    }
+}
+#{$navi}-icononly {
+    background-color: $navigation-icononly-item-background;
+    width: $navigation-icononly-item-width;
+    @include navigationState( $navigation-icononly-item-color, inherit, $line-solid, $navigation-icononly-item-border-width, $navigation-icononly-item-border-color );
+    #{$item} {
+        float: none;
+        line-height: $navigation-icononly-item-height;
+        text-align: center;
+        &:after,
+        &:before {
+            content: '';
+            left: 0;
+            position: absolute;
+            height: $navigation-icononly-item-line-width;
+            width: 100%;
+            background-color: $navigation-icononly-item-line-color;
+        }
+        &:before {
+            top: 0;
+        }
+        &:after {
+            bottom: -$navigation-icononly-item-line-width;
+        }
+        &:first-child {
+            border-top-style: none;
+        }
+        &:last-child {
+            border-bottom-style: none;
+        }
+        &-icon {
+            opacity: $navigation-icononly-item-opacity;
+        }
+        &-selected {
+            color: $navigation-icononly-item-color-selected;
+            background-color: $navigation-icononly-item-background-selected;
+
+            #{$item}-icon {
+                opacity: $navigation-icononly-item-opacity-selected;
+            }
+
+            & #{$item}-content,
+            & #{$item}-content:visited,
+            & #{$item}-content:link,
+            & #{$item}-content:hover {
+                color: $navigation-icononly-item-color-selected;
+            }
+            &:before {
+                background-color: $navigation-icononly-item-line-color-selected;
+            }
+            &:after {
+                background-color: $navigation-icononly-item-line-color-selected;
+            }
+            
+            
+            
+            
+            
+            
+            
+            #{$item} {
+                &-content-inner,
+                &-content-inner:hover,
+                &-content-inner:link,
+                &-content-inner:visited {
+                    color: $navigation-icononly-item-color-selected;
+                }
+            }
+        }
+        &:hover {
+            background-color: $navigation-icononly-item-background-hover;
+            color: $navigation-icononly-item-color-hover;
+            #{$item}-icon {
+                opacity: $navigation-icononly-item-opacity-hover;
+            }
+            &:before {
+                background-color: $navigation-icononly-item-line-color-hover;
+            }
+            &:after {
+                background-color: $navigation-icononly-item-line-color-hover;
+            }
+            
+            
+            
+            
+            
+            
+            
+            #{$item} {
+                &-content-inner,
+                &-content-inner:hover,
+                &-content-inner:link,
+                &-content-inner:visited {
+                    color: $navigation-icononly-item-color-hover;
+                }
+            }
+        }
+        &-selected:hover {
+            color: $navigation-icononly-item-color-selected;
+            background-color: $navigation-icononly-item-background-selected;
+            #{$item} {
+                &-content-inner,
+                &-content-inner:hover,
+                &-content-inner:link,
+                &-content-inner:visited {
+                    color: $navigation-icononly-item-color-selected;
+                }
+            }
+        }
+        &-icon:before {
+            font-size: $navigation-icononly-item-icon-size;
+            line-height: $navigation-icononly-item-height;
+        }
+        &-content {
+            &-inner,
+            &-inner:hover,
+            &-inner:link,
+            &-inner:visited {
+                padding: 0 $s5;
+                color: $navigation-icononly-item-color;
+            }
+        }
+        &-text {
+            font-size: inherit;
+            display: none;
+        }
+    }
+    #{$navi}-sub {
+        display: none;
+    }
+    #{$group} {
+        display: none;
+    }
+}
+#{$navi}-normal {
+    @include navigationState( $navigation-normal-item-color, $navigation-normal-item-fontsize, $line-solid, $navigation-normal-border-width, $navigation-normal-border-color );
+    #{$groupTitle} {
+        padding: 0 $navigation-normal-item-group-title-padding;
+        height: $navigation-normal-item-group-title-height;
+        line-height: $navigation-normal-item-group-title-height;
+        font-size: $navigation-normal-item-group-title-fontsize;
+        color: $navigation-normal-item-group-title-color;
+        background-color: $navigation-normal-item-background;
+    }
+    #{$navi}-group-content {
+        #{$item} {
+            &:first-child:before {}
+        }
+    }
+    #{$item} {
+        float: none;
+        line-height: $navigation-normal-item-height;
+        background-color: $navigation-normal-item-background;
+        &:after,
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            height: $navigation-normal-item-line-width;
+            width: 100%;
+        }
+        &:before {
+            top: 0;
+        }
+        &:after {
+            bottom: -$navigation-normal-item-line-width;
+        }
+        &-text {
+            opacity: $navigation-normal-font-opacity;
+        }
+        &-leaf-icon {
+            opacity: $navigation-normal-leaf-icon-opacity;
+            color: $navigation-normal-item-leaf-icon-color;
+        }
+        &-custom-icon {
+            opacity: $navigation-normal-custom-icon-opacity;
+            color: $navigation-normal-item-custom-icon-color;
+        }
+        &:hover {
+            @include navigationTransition();
+            background-color: $navigation-normal-item-background-hover;
+            #{$item} {
+                &-text {
+                    opacity: $navigation-normal-font-opacity-hover;
+                }
+                &-content {
+                    color: $navigation-normal-item-color-hover;
+                    background-color: $navigation-normal-item-background-hover;
+                    &:before {
+                        background-color: $navigation-normal-item-current-color-hover;
+                        width: 0;
+                    }
+                }
+                &-leaf-icon {
+                    opacity: $navigation-normal-leaf-icon-opacity-hover;
+                    color: $navigation-normal-item-leaf-icon-color-hover;
+                }
+                &-custom-icon {
+                    opacity: $navigation-normal-custom-icon-opacity-hover;
+                    color: $navigation-normal-item-custom-icon-color-hover;
+                }
+            }
+            &:before {
+                background-color: $navigation-normal-item-line-color-hover;
+            }
+            &:after {
+                background-color: $navigation-normal-item-line-color-hover;
+            }
+            
+            
+            
+            
+            
+            
+            
+        }
+        &-selected,
+        &-selected-left {
+            background-color: $navigation-normal-item-background-selected;
+            border-left-color: $navigation-normal-item-current-color-selected;
+            border-left-width: $navigation-normal-item-current-width-selected;
+            #{$item} {
+                &-text {
+                    opacity: $navigation-normal-font-opacity-selected;
+                }
+                &-content {
+                    background-color: $navigation-normal-item-background-selected;
+                    color: $navigation-normal-item-color-selected;
+                    &:before {
+                        background-color: $navigation-normal-item-current-color-selected;
+                        width: $navigation-normal-item-current-width-selected;
+                    }
+                }
+                &-leaf-icon {
+                    opacity: $navigation-normal-leaf-icon-opacity-selected;
+                    color: $navigation-normal-item-leaf-icon-color-selected;
+                }
+                &-custom-icon {
+                    color: $navigation-normal-item-custom-icon-color-selected;
+                    opacity: $navigation-normal-custom-icon-opacity-selected;
+                }
+            }
+            &:hover {
+                #{$item}-content {
+                    &:before {
+                        background-color: $navigation-normal-item-current-color-selected;
+                        width: $navigation-normal-item-current-width-selected;
+                    }
+                }
+            }
+            &:before {
+                background-color: $navigation-normal-item-line-color-selected;
+            }
+            &:after {
+                background-color: $navigation-normal-item-line-color-selected;
+            }
+            
+            
+            
+            
+            
+            
+            
+            &:hover {
+                border-left-color: $navigation-normal-item-current-color-selected;
+                border-left-width: $navigation-normal-item-current-width-selected;
+            }
+        }
+        &-leaf-icon:before {
+            font-size: $navigation-normal-item-leaf-icon-size;
+            line-height: $navigation-normal-item-leaf-icon-size;
+        }
+        &-custom-icon:before {
+            font-size: $navigation-normal-item-custom-icon-size;
+            line-height: $navigation-normal-item-custom-icon-size;
+        }
+        &-custom-icon {
+            margin-right: $navigation-normal-custom-icon-margin;
+            opacity: $navigation-normal-custom-icon-opacity;
+        }
+        &-leaf-icon {
+            display: none;
+            margin-left: $navigation-normal-leaf-icon-margin;
+            opacity: $navigation-normal-leaf-icon-opacity;
+        }
+        &-content,
+        &-content:link,
+        &-content:visited {
+            @include navigationTransition();
+            color: $navigation-normal-item-color;
+        }
+        &-content-inner {
+            padding: 0 $navigation-normal-item-padding;
+            font-size: 0;
+        }
+        &-content:before {
+            
+            content: '';
+            position: absolute;
+            top: 0;
+            height: 100%;
+            left: 0;
+            width: 0;
+        }
+        &-text {
+            font-size: $navigation-normal-item-fontsize;
+            opacity: $navigation-normal-font-opacity;
+        }
+    }
+    #{$navi}-sub {
+        display: none;
+    }
+}
+#{$navi}-tree {
+    @include navigationState( $navigation-tree-item-color, $navigation-tree-item-fontsize, $line-solid, $navigation-tree-item-border-width, $navigation-tree-item-border-color );
+    #{$groupTitle} {
+        padding: 0 $navigation-tree-item-group-title-padding;
+        height: $navigation-tree-item-group-title-height;
+        width: auto;
+        line-height: $navigation-tree-item-group-title-height;
+        font-size: $navigation-tree-item-group-title-fontsize;
+        color: $navigation-tree-item-group-title-color;
+        background-color: $navigation-tree-item-background;
+    }
+
+    #{$item} {
+        float: none;
+        height: $navigation-tree-item-height;
+        width: auto;
+        line-height: $navigation-tree-item-height;
+        background-color: $navigation-tree-item-background;
+
+        &:after,
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            height: $navigation-tree-item-line-width;
+            width: 100%;
+        }
+        &:before {
+            top: 0;
+        }
+        &:after {
+            bottom: -$navigation-tree-item-line-width;
+        }
+
+        &-leaf-front {
+            #{$item}-leaf-icon {
+                float: none;
+                margin-left: 0;
+                margin-right: $s1;
+            }
+        }
+        &-children {
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+            @include navigationTransition();
+        }
+        &-opened {
+            height: auto;
+            > #{$item}-content #{$item}-leaf-icon {
+                transform: rotate(180deg);
+            }
+            > #{$item}-children {
+                opacity: 1;
+                height: auto;
+            }
+        }
+
+        #{$item}-content:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            height: 100%;
+            width: $navigation-tree-item-current-width-selected;
+        }
+
+        #{$item}-content:hover {
+            color: $navigation-tree-item-color-hover;
+            background-color: $navigation-tree-item-background-hover;
+
+            #{$item} {
+                &-content-inner {
+                    #{$item} {
+                        &-leaf-icon {
+                            color: $navigation-tree-item-leaf-icon-color-hover;
+                            opacity: $navigation-tree-item-leaf-icon-opacity-hover;
+                        }
+                        &-custom-icon {
+                            color: $navigation-tree-item-custom-icon-color-hover;
+                            opacity: $navigation-tree-item-custom-icon-opacity-hover;
+                        }
+                        &-text {
+                            opacity: $navigation-tree-item-text-opacity-hover;
+                            color: $navigation-tree-item-color-hover;
+                        }
+                    }
+                }
+
+                &-content-inner,
+                &-content-inner:hover,
+                &-content-inner:link,
+                &-content-inner:visited {
+                    color: $navigation-tree-item-color-hover;
+                }
+            }
+        }
+        &-selected {
+            #{$item}-content {
+                color: $navigation-tree-item-color-selected;
+                background-color: $navigation-tree-item-background-selected;
+
+                &:before {
+                    background-color: $navigation-tree-item-current-color-selected;
+                    width: $navigation-tree-item-current-width-selected;
+                }
+            }
+            #{$item} {
+                &-content-inner {
+                    #{$item} {
+                        &-leaf-icon {
+                            color: $navigation-tree-item-leaf-icon-color-selected;
+                            opacity: $navigation-tree-item-leaf-icon-opacity-selected;
+                        }
+                        &-custom-icon {
+                            color: $navigation-tree-item-custom-icon-color-selected;
+                            opacity: $navigation-tree-item-custom-icon-opacity-selected;
+                        }
+                        &-text {
+                            opacity: $navigation-tree-item-text-opacity-selected;
+                            color: $navigation-tree-item-color-selected;
+                        }
+                    }
+                }
+
+                &-content-inner,
+                &-content-inner:hover,
+                &-content-inner:link,
+                &-content-inner:visited {
+                    color: $navigation-tree-item-color-selected;
+                }
+            }
+
+            #{$item}-content:hover {
+                #{$item} {
+                    &-leaf-icon {
+                        color: $navigation-tree-item-leaf-icon-color-selected;
+                        opacity: $navigation-tree-item-leaf-icon-opacity-selected;
+                    }
+                    &-custom-icon {
+                        color: $navigation-tree-item-custom-icon-color-selected;
+                        opacity: $navigation-tree-item-custom-icon-opacity-selected;
+                    }
+                    &-text {
+                        opacity: $navigation-tree-item-text-opacity-selected;
+                    }
+
+                    &-content-inner,
+                    &-content-inner:hover,
+                    &-content-inner:link,
+                    &-content-inner:visited {
+                        color: $navigation-tree-item-color-selected;
+                    }
+                }
+
+                &:before {
+                    background-color: $navigation-tree-item-current-color-selected;
+                }
+                &:after {
+                    background-color: $navigation-tree-item-line-color-selected;
+                }
+            }
+        }
+        &-selected:before {
+            color: $navigation-tree-item-color-selected;
+        }
+        &-leaf-icon:before {
+            font-size: $navigation-tree-item-leaf-icon-size;
+            line-height: $navigation-tree-item-leaf-icon-size;
+        }
+        &-custom-icon:before {
+            font-size: $navigation-tree-item-custom-icon-size;
+            line-height: $navigation-tree-item-custom-icon-size;
+        }
+        &-icon {
+            @include navigationTransition();
+        }
+        &-leaf-icon {
+            float: right;
+        }
+        &-custom-icon {
+            margin-right: $s1;
+            opacity: $navigation-tree-item-custom-icon-opacity;
+            color: $navigation-tree-item-custom-icon-color;
+        }
+        &-leaf-icon {
+            margin-left: $s1;
+            opacity: $navigation-tree-item-leaf-icon-opacity;
+            color: $navigation-tree-item-leaf-icon-color;
+        }
+        &-empty-icon:before {
+            content: '';
+            margin-right: $s1;
+        }
+        &:last-child {
+            border: none;
+        }
+        &-content,
+        &-content:link,
+        &-content:visited {
+            height: $navigation-tree-item-height;
+            color: $navigation-tree-item-color;
+        }
+        &-content-inner {
+            padding: 0 $navigation-tree-item-padding;
+            font-size: 0;
+        }
+        &-text {
+            @include navigationTransition();
+            color: $navigation-tree-item-color;
+            font-size: $navigation-tree-item-fontsize;
+            opacity: $navigation-tree-item-text-opacity;
+        }
+    }
+
+    #{$item}-tree-title {
+        #{$item} {
+            &-text {
+                @include navigationTransition();
+                font-size: $navigation-tree-item-fontsize;
+            }
+            &-custom-icon:before {
+                font-size: $navigation-tree-item-custom-icon-size;
+            }
+            &-leaf-icon:before {
+                font-size: $navigation-tree-item-leaf-icon-size;
+            }
+        }
+
+        > #{$item}-content {
+            background-color: $navigation-tree-item-background;
+
+            #{$item} {
+                &-leaf-icon {
+                    color: $navigation-tree-item-leaf-icon-color;
+                    opacity: $navigation-tree-item-leaf-icon-opacity;
+                }
+                &-custom-icon {
+                    color: $navigation-tree-item-custom-icon-color;
+                    opacity: $navigation-tree-item-custom-icon-opacity;
+                }
+                &-text {
+                    color: $navigation-tree-item-color;
+                    opacity: $navigation-tree-item-text-opacity;
+                }
+                &-content-inner,
+                &-content-inner:hover,
+                &-content-inner:link,
+                &-content-inner:visited {
+                    color: $navigation-tree-item-custom-icon-color;
+                }
+            }
+        }
+
+        > #{$item}-content:hover {
+            background-color: $navigation-tree-item-background-hover;
+
+            #{$item} {
+                &-leaf-icon {
+                    color: $navigation-tree-item-leaf-icon-color-hover;
+                    opacity: $navigation-tree-item-leaf-icon-opacity-hover;
+                }
+                &-custom-icon {
+                    color: $navigation-tree-item-custom-icon-color-hover;
+                    opacity: $navigation-tree-item-custom-icon-opacity-hover;
+                }
+                &-text {
+                    color: $navigation-tree-item-color-hover;
+                    opacity: $navigation-tree-item-text-opacity-hover;
+                }
+                &-content-inner,
+                &-content-inner:hover,
+                &-content-inner:link,
+                &-content-inner:visited {
+                    color: $navigation-tree-item-custom-icon-color-hover;
+                }
+            }
+        }
+    }
+
+    #{$navi}-sub {
+        height: auto;
+        border: none;
+        overflow: hidden;
+        #{$item} {
+            
+        }
+    }
+}
+#{$navi}-text {
+    color: $navigation-text-item-color;
+    height: $navigation-text-item-height;
+    font-size: $navigation-text-item-fontsize;
+    &:before {
+        content: '';
+        height: 0;
+        font-size: 0;
+        clear: both;
+    }
+    #{$item} {
+        float: left;
+        background-color: $navigation-text-item-background;
+        &-content,
+        &-content:link,
+        &-content:visited {
+            height: $navigation-text-item-height;
+            line-height: $navigation-text-item-height;
+            color: $navigation-text-item-color;
+        }
+        &-content-inner {
+            padding: 0 $navigation-text-item-padding;
+            font-size: $navigation-text-item-fontsize;
+        }
+        &-content-inner,
+        &-content-inner:hover,
+        &-content-inner:link,
+        &-content-inner:visited {
+            color: $navigation-text-item-color;
+        }
+        &:hover {
+            #{$item} {
+                &-content {
+                    color: $navigation-text-item-color-hover;
+                }
+                &-text {
+                    opacity: $navigation-text-item-text-opacity-hover;
+                }
+                &-leaf-icon {
+                    color: $navigation-text-item-leaf-color-hover;
+                    opacity: $navigation-text-item-leaf-icon-opacity-hover;
+                    transform: rotate(180deg);
+                }
+                &-custom-icon {
+                    color: $navigation-text-item-custom-color-hover;
+                    opacity: $navigation-text-item-custom-icon-opacity-hover;
+                }
+                &-content-inner,
+                &-content-inner:hover,
+                &-content-inner:link,
+                &-content-inner:visited {
+                    color: $navigation-text-item-color-hover;
+                }
+            }
+        }
+        &-text {
+            font-size: $navigation-text-item-fontsize;
+        }
+        &-selected {
+            #{$item} {
+                &-content {
+                    color: $navigation-text-item-color-selected;
+                }
+                &-text {
+                    opacity: $navigation-text-item-text-opacity-selected;
+                }
+                &-leaf-icon {
+                    
+                    color: $navigation-text-item-leaf-color-selected;
+                    opacity: $navigation-text-item-leaf-icon-opacity-selected;
+                }
+                &-custom-icon {
+                    color: $navigation-text-item-custom-color-selected;
+                    opacity: $navigation-text-item-custom-icon-opacity-selected;
+                }
+                &-content-inner,
+                &-content-inner:hover,
+                &-content-inner:link,
+                &-content-inner:visited {
+                    color: $navigation-text-item-color-selected;
+                }
+            }
+        }
+        &-icon,
+        &-text {
+            @include navigationTransition();
+            opacity: $navigation-text-item-text-opacity;
+        }
+        &-leaf-icon:before {
+            font-size: $navigation-text-item-leaf-icon-size;
+            line-height: $navigation-text-item-leaf-icon-size;
+        }
+        &-leaf-icon {
+            margin-left: $navigation-text-item-leaf-icon-margin;
+            color: $navigation-text-item-leaf-color;
+            opacity: $navigation-text-item-leaf-icon-opacity;
+        }
+        &-custom-icon:before {
+            font-size: $navigation-text-item-custom-icon-size;
+            line-height: $navigation-text-item-custom-icon-size;
+        }
+        &-custom-icon {
+            margin-right: $navigation-text-item-custom-icon-margin;
+            color: $navigation-text-item-custom-color;
+            opacity: $navigation-text-item-custom-icon-opacity;
+        }
+    }
+    #{$group} {
+        display: none;
+    }
+}
+#{$navi}-line {
+    color: $navigation-line-item-color;
+    height: $navigation-line-item-height;
+    border-bottom-style: $line-solid;
+    border-bottom-width: $line-1-width;
+    border-bottom-color: $navigation-line-border-color;
+    font-size: $navigation-line-item-fontsize;
+    &:before {
+        content: '';
+        height: 0;
+        font-size: 0;
+        clear: both;
+    }
+    #{$item} {
+        float: left;
+        background-color: $navigation-line-item-background;
+        &-content,
+        &-content:link,
+        &-content:visited {
+            height: $navigation-line-item-height;
+            line-height: $navigation-line-item-height;
+            color: $navigation-line-item-color;
+            &:before {
+                @include navigationTransition();
+            }
+        }
+        &-content-inner {
+            padding: 0 $navigation-line-item-padding;
+            font-size: $navigation-line-item-fontsize;
+        }
+        &-selected {
+            background-color: $navigation-line-item-background-selected;
+            #{$item}-content {
+                color: $navigation-line-item-color-selected;
+                &:before {
+                    height: $navigation-line-item-border-width-selected;
+                    background-color: $navigation-line-item-border-color-selected;
+                }
+            }
+            #{$item} {
+                &-leaf-icon {
+                    color: $navigation-line-item-leaf-color-selected;
+                    opacity: $navigation-line-item-leaf-icon-opacity-selected;
+                    
+                }
+                &-text {
+                    opacity: $navigation-line-item-text-opacity-selected;
+                }
+                &-custom-icon {
+                    color: $navigation-line-item-custom-color-selected;
+                    opacity: $navigation-line-item-custom-icon-opacity-selected;
+                }
+                &-content-inner,
+                &-content-inner:hover,
+                &-content-inner:link,
+                &-content-inner:visited {
+                    color: $navigation-line-item-color-selected;
+                }
+            }
+        }
+        &-content:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            height: 0;
+            left: 0;
+            right: 0;
+        }
+        &:hover {
+            background-color: $navigation-line-item-background-hover;
+            #{$item}-content {
+                color: $navigation-line-item-color-hover;
+                &:before {
+                    height: $line-2-width;
+                    background-color: $navigation-line-item-color-hover;
+                }
+            }
+            #{$item} {
+                &-text {
+                    opacity: $navigation-line-item-text-opacity-hover;
+                }
+                &-leaf-icon {
+                    color: $navigation-line-item-leaf-color-hover;
+                    transform: rotate(180deg);
+                    opacity: $navigation-line-item-leaf-icon-opacity-hover;
+                }
+                &-custom-icon {
+                    color: $navigation-line-item-custom-color-hover;
+                    opacity: $navigation-line-item-custom-icon-opacity-hover;
+                }
+                &-content-inner,
+                &-content-inner:hover,
+                &-content-inner:link,
+                &-content-inner:visited {
+                    color: $navigation-line-item-color-hover;
+                }
+            }
+        }
+        &-icon,
+        &-text {
+            @include navigationTransition();
+        }
+        &-custom-icon:before {
+            font-size: $navigation-line-item-custom-icon-size;
+            line-height: $navigation-line-item-custom-icon-size;
+        }
+        &-leaf-icon:before {
+            font-size: $navigation-line-item-leaf-icon-size;
+            line-height: $navigation-line-item-leaf-icon-size;
+        }
+        &-leaf-icon {
+            margin-left: $navigation-line-item-leaf-icon-margin;
+            color: $navigation-line-item-leaf-color;
+            opacity: $navigation-line-item-leaf-icon-opacity;
+        }
+        &-custom-icon {
+            margin-right: $navigation-line-item-custom-icon-margin;
+            color: $navigation-line-item-custom-color;
+            opacity: $navigation-line-item-custom-icon-opacity;
+        }
+        &-text {
+            opacity: $navigation-line-item-text-opacity;
+        }
+    }
+    #{$group} {
+        display: none;
+    }
+}
+#{$navi}-filling {
+    background-color: $navigation-filling-item-background;
+    font-size: $navigation-filling-item-fontsize;
+    &:before {
+        content: '';
+        height: 0;
+        font-size: 0;
+        clear: both;
+    }
+    #{$item} {
+        float: left;
+        background-color: $navigation-filling-item-background;
+        &-content,
+        &-content:link,
+        &-content:visited {
+            height: $navigation-filling-item-height;
+            width: auto;
+            line-height: $navigation-filling-item-height;
+            color: $navigation-filling-item-color;
+            border-radius: $navigation-filling-item-border-radius;
+        }
+        &-content-inner,
+        &-content-inner:link,
+        &-content-inner:visited {
+            color: $navigation-filling-item-color;
+            padding: 0 $navigation-filling-item-padding;
+            font-size: $navigation-filling-item-fontsize;
+        }
+        &:hover {
+            background-color: $navigation-filling-item-background-hover;
+            color: $navigation-filling-item-color-hover;
+            border-radius: $navigation-filling-item-border-radius;
+            #{$item} {
+                &-text {
+                    opacity: $navigation-filling-item-text-opacity-hover;
+                }
+                &-leaf-icon {
+                    opacity: $navigation-filling-item-leaf-icon-opacity-hover;
+                    color: $navigation-filling-item-leaf-icon-color-hover;
+                    transform: rotate(180deg);
+                }
+                &-custom-icon {
+                    opacity: $navigation-filling-item-custom-icon-opacity-hover;
+                    color: $navigation-filling-item-custom-icon-color-hover;
+                }
+                &-content-inner,
+                &-content-inner:hover,
+                &-content-inner:link,
+                &-content-inner:visited {
+                    color: $navigation-filling-item-color-hover;
+                }
+            }
+        }
+        &-selected {
+            border-radius: $navigation-filling-item-border-radius;
+            #{$item} {
+                &-text {
+                    opacity: $navigation-filling-item-text-opacity-selected;
+                }
+                &-content {
+                    color: $navigation-filling-item-color-selected;
+                    background-color: $navigation-filling-item-background-selected;
+                }
+                &-leaf-icon {
+                    opacity: $navigation-filling-item-leaf-icon-opacity-selected;
+                    color: $navigation-filling-item-leaf-icon-color-selected;
+                    
+                }
+                &-custom-icon {
+                    opacity: $navigation-filling-item-custom-icon-opacity-selected;
+                    color: $navigation-filling-item-custom-icon-color-selected;
+                }
+                &-content-inner,
+                &-content-inner:hover,
+                &-content-inner:link,
+                &-content-inner:visited {
+                    color: $navigation-filling-item-color-selected;
+                }
+            }
+        }
+        &-icon,
+        &-text {
+            @include navigationTransition();
+        }
+        &-leaf-icon:before {
+            font-size: $navigation-filling-item-leaf-icon-size;
+            line-height: $navigation-filling-item-leaf-icon-size;
+        }
+        &-leaf-icon {
+            margin-left: $navigation-filling-item-leaf-icon-margin;
+            color: $navigation-filling-item-leaf-icon-color;
+            opacity: $navigation-filling-item-leaf-icon-opacity;
+        }
+        &-custom-icon:before {
+            font-size: $navigation-filling-item-custom-icon-size;
+            line-height: $navigation-filling-item-custom-icon-size;
+        }
+        &-custom-icon {
+            margin-right: $navigation-filling-item-custom-icon-margin;
+            color: $navigation-filling-item-custom-icon-color;
+            opacity: $navigation-filling-item-custom-icon-opacity;
+        }
+        &-text {
+            opacity: $navigation-filling-item-text-opacity;
+        }
+    }
+    #{$group} {
+        display: none;
+    }
+}
+#{$navi}-slip {
+    @include navigationState(
+        $navigation-slip-item-color,
+        $navigation-slip-item-fontsize,
+        $line-solid,
+        $navigation-slip-item-border-width,
+        $navigation-slip-item-border-color
+    );
+
+    #{$groupTitle} {
+        background-color: $navigation-slip-item-background;
+    }
+
+    #{$groupTitle} {
+        padding: 0 $navigation-slip-item-group-title-padding;
+        height: $navigation-slip-item-group-title-height;
+        line-height: $navigation-slip-item-group-title-height;
+        font-size: $navigation-slip-item-group-title-fontsize;
+        color: $navigation-normal-item-group-title-color;
+        background-color: $navigation-slip-item-background;
+    }
+
+    #{$item} {
+        float:none;
+        border-top: $navigation-slip-item-border-width $line-solid $color-transparent;
+        border-bottom: $navigation-slip-item-border-width $line-solid $color-transparent;
+        background-color: $navigation-slip-item-background;
+
+        &:first-child {
+            border-top-style:none
+        }
+
+        &:last-child {
+            border-bottom-style:none
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 0;
+            top: 0;
+            bottom: 0;
+            right: -$navigation-slip-item-border-width;
+            background-color: $navigation-slip-item-background-active;
+        }
+
+        &-active {
+            border-top: $navigation-slip-item-border-width $line-solid $navigation-slip-item-border-color;
+            border-bottom: $navigation-slip-item-border-width $line-solid $navigation-slip-item-border-color;
+
+
+            background-color: $navigation-slip-item-background-active;
+            color: $navigation-slip-item-color-active;
+
+            #{$item} {
+                &-text {
+                    opacity: $navigation-slip-item-text-opacity-hover;
+                }
+
+                &-leaf-icon {
+                    color: $navigation-slip-item-leaf-icon-color-active;
+                    opacity: $navigation-slip-item-leaf-icon-opacity-hover;
+                }
+
+                &-custom-icon {
+                    color: $navigation-slip-item-custom-icon-color-active;
+                    opacity: $navigation-slip-item-custom-icon-opacity-hover;
+                }
+
+                &-content-inner,
+                &-content-inner:link,
+                &-content-inner:hover,
+                &-content-inner:visited {
+                    color: $navigation-slip-item-color-active;
+                }
+            }
+
+            &:before {
+                background-color: $navigation-slip-item-background-active;
+                width: $navigation-slip-item-border-width;
+            }
+        }
+
+        &-custom-icon {
+            margin-right: $s1;
+            opacity: $navigation-slip-item-custom-icon-opacity;
+            color: $navigation-slip-item-custom-icon-color;
+        }
+
+        &-custom-icon:before {
+            font-size: $navigation-slip-item-custom-icon-size;
+            line-height: $navigation-slip-item-custom-icon-size;
+        }
+
+        &-leaf-icon:before {
+            font-size: $navigation-slip-item-custom-icon-size;
+            line-height: $navigation-slip-item-custom-icon-size;
+            color: $navigation-slip-item-leaf-icon-color;
+        }
+
+        &-leaf-icon {
+            position: absolute;
+            right: $navigation-slip-item-padding;
+            margin-left: $s1;
+            transform: rotate(-90deg);
+            opacity: $navigation-slip-item-leaf-icon-opacity;
+        }
+
+        &-content,
+        &-content:visited,
+        &-content:link {
+            position: relative;
+            height: $navigation-slip-item-height;
+            line-height: $navigation-slip-item-height;
+            width: auto;
+            color: $navigation-slip-item-color;
+        }
+
+        &-content-inner,
+        &-content-inner:link,
+        &-content-inner:hover,
+        &-content-inner:visited {
+            color: $navigation-slip-item-color;
+            font-size: $navigation-slip-item-fontsize;
+        }
+
+        &-content-inner {
+            padding: 0 $navigation-slip-item-padding;
+        }
+
+        &-icon {
+            @include navigationTransition();
+        }
+
+        &-text {
+            font-size: $navigation-slip-item-fontsize;
+            margin-right: $s4;
+            opacity: $navigation-slip-item-text-opacity;
+        }
+    }
+
+    #{$navi}-sub {
+        display: none
+    }
+
+    & #{$group} {
+        #{$item} {
+            &:first-child {
+                border-top-style: $line-solid;
+            }
+        }
+    }
+}
+#{$navi}-slip-main {
+    position: relative;
+    #{$navi} {
+        position: relative;
+        z-index: 100;
+    }
+    #{$navi}-slip-container {
+        @include navigationTransition(opacity);
+        position: absolute;
+        left: 100%;
+        top: 0;
+        opacity: 0;
+        margin-left: -1px;
+        z-index: 99;
+    }
+    #{$item}-active {
+        border-right-color: $navigation-slip-item-background-active;
+    }
+}
+#{$navi}-slip-content {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    display: none;
+    margin-left: -1px;
+    z-index: 99;
+    padding: $navigation-slip-item-padding;
+    @include navigationState( $navigation-slip-item-color, $navigation-slip-item-fontsize, $line-solid, $navigation-slip-item-border-width, $navigation-slip-item-border-color );
+}
+#{$navi}-slip-selected {
+    > #{$navi}-slip-container {
+        opacity: 1;
+        padding: $navigation-slip-item-padding;
+        @include navigationState( $navigation-slip-item-color, $navigation-slip-item-fontsize, $line-solid, $navigation-slip-item-border-width, $navigation-slip-item-border-color );
+        min-height: 100%;
+        min-width: 100%;
+    }
+}
+#{$navi}-horizontal {
+    #{$item} {
+        float: left;
+    }
+}
+#{$navi}-vertical {
+    #{$item} {
+        float: none;
+    }
+}
+#{$navi}-item-selected-left {
+    background-color: $navigation-normal-item-background-selected;
+    border-left-color: $navigation-normal-item-current-color-selected;
+    border-left-width: $navigation-normal-item-current-width-selected;
+    #{$item} {
+        &-text {
+            opacity: $navigation-normal-font-opacity-selected;
+        }
+        &-content {
+            background-color: $navigation-normal-item-background-selected;
+            color: $navigation-normal-item-color-selected;
+            &:before {
+                background-color: $navigation-normal-item-current-color-selected;
+                width: $navigation-normal-item-current-width-selected;
+            }
+        }
+        &-leaf-icon {
+            opacity: $navigation-normal-leaf-icon-opacity-selected;
+            color: $navigation-normal-item-leaf-icon-color-selected;
+        }
+        &-custom-icon {
+            color: $navigation-normal-item-custom-icon-color-selected;
+            opacity: $navigation-normal-custom-icon-opacity-selected;
+        }
+    }
+    &:hover {
+        #{$item}-content {
+            &:before {
+                background-color: $navigation-normal-item-current-color-selected;
+                width: $navigation-normal-item-current-width-selected;
+            }
+        }
+    }
+    &:before {
+        background-color: $navigation-normal-item-line-color-selected;
+    }
+    &:after {
+        background-color: $navigation-normal-item-line-color-selected;
+    }
+    &:hover {
+        border-left-color: $navigation-normal-item-current-color-selected;
+        border-left-width: $navigation-normal-item-current-width-selected;
+    }
+}
+#{$navi}-item-selected-right {
+    &:hover {
+        #{$item}-content {
+            &:before {
+                background-color: $navigation-normal-item-current-color-selected;
+                width: 0;
+            }
+            &:after {
+                position: absolute;
+                content: '';
+                top: 0;
+                right: 0;
+                height: 100%;
+                background-color: $navigation-normal-item-current-color-selected;
+                width: $navigation-normal-item-current-width-selected;
+            }
+        }
+    }
+    #{$item} {
+        &-content {
+            background-color: $navigation-normal-item-background-selected;
+            color: $navigation-normal-item-color-selected;
+            &:before {
+                width: 0 !important;
+            }
+            &:after {
+                position: absolute;
+                content: '';
+                top: 0;
+                right: 0;
+                height: 100%;
+                background-color: $navigation-normal-item-current-color-selected;
+                width: $navigation-normal-item-current-width-selected;
+            }
+        }
+    }
+}
+
+#{$navi}-filling,
+#{#navi}-text,
+#{#navi}-line {
+    #{$navi}-item-selected-top {
+        &:before {
+            position: absolute;
+            content: "";
+            top: 0;
+            width: 100%;
+            height: $navigation-normal-item-current-width-selected !important;
+            background-color: $navigation-item-current-color-set-selected !important;
+        }
+        &:hover {
+            #{$item}-content {
+                &:before {
+                    top: 0;
+                    background-color: $navigation-item-current-color-set-selected;
+                    width: 100%;
+                    height: $navigation-normal-item-current-width-selected;
+                }
+                &:after {}
+            }
+        }
+    }
+}
+
+#{$navi}-icononly,
+#{$navi}-tree,
+#{#navi}-normal,
+#{#navi}-slip {
+    #{$navi}-item-selected-top {
+        &:hover {
+            #{$item}-content {
+                &:before {
+                    top: 0;
+                    width: 100%;
+                    height: $navigation-normal-item-current-width-selected !important;
+                    background-color: $navigation-item-current-color-set-selected !important;
+                }
+            }
+        }
+
+        #{$item}-content {
+            &:before {
+                top: 0;
+                width: 100%;
+                height: $navigation-normal-item-current-width-selected !important;
+                background-color: $navigation-item-current-color-set-selected !important;
+            }
+        }
+    }
+}
+
+
+#{$navi}-filling,
+#{#navi}-text,
+#{#navi}-line {
+    #{$navi}-item-selected-bottom {
+    &:before {}
+    &:after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        background-color: $navigation-item-current-color-set-selected !important;
+        width: 100%;
+        height: $navigation-normal-item-current-width-selected !important;
+    }
+    &:hover {
+        #{$item}-content {
+            &:before {
+                width: 0 !important;
+            }
+            &:after {
+                bottom: 0;
+                background-color: $navigation-item-current-color-set-selected;
+                width: 100%;
+                height: $navigation-normal-item-current-width-selected;
+            }
+        }
+    }
+    #{$item} {
+        &-content {
+            &:before {
+                width: 0 !important;
+            }
+            &:after {
+                width: 0 !important;
+            }
+        }
+    }
+}
+}
+
+#{$navi}-icononly,
+#{$navi}-tree,
+#{#navi}-normal,
+#{#navi}-slip {
+    #{$navi}-item-selected-bottom {
+        &:hover {
+            #{$item}-content {
+                &:before {
+                    bottom: 0;
+                    background-color: $navigation-item-current-color-set-selected !important;
+                    width: 100%!important;
+                    height: $navigation-normal-item-current-width-selected !important;
+                }
+            }
+        }
+        #{$item} {
+            &-content {
+                background-color: $navigation-normal-item-background-selected;
+                color: $navigation-normal-item-color-selected;
+                &:before {
+                    bottom: 0;
+                    background-color: $navigation-item-current-color-set-selected !important;
+                    width: 100%!important;
+                    height: $navigation-normal-item-current-width-selected !important;
+                }
+            }
+        }
+    }
+}

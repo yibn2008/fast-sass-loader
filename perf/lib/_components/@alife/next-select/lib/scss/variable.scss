@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+
+
+
+
+
+
+
+
+
+
+
+
+$select-prefix: '.#{$css-prefix}select';
+
+
+
+$select-color: $color-n2-4 !default;
+
+
+$select-color-hint: $color-n2-2 !default;
+
+
+$select-color-disabled: $color-n2-1 !default;
+
+
+
+$select-border-radius: $corner-radius-r0 !default;
+
+
+
+$select-color-border: $color-n1-7 !default;
+
+
+$select-color-border-hover: $color-n1-8 !default;
+
+
+$select-color-border-focus: $color-b2-6 !default;
+
+
+$select-color-border-disabled: $color-n1-5 !default;
+
+
+$select-color-border-active: $color-b2-6 !default;
+
+
+
+$select-color-bg: $color-n1-1 !default;
+
+
+$select-color-bg-disabled: $color-n1-2 !default;
+
+
+
+$select-border-width: $line-1-width !default;
+
+
+$select-border-style: $line-solid !default;
+
+
+$select-font: $font-size-base-body1 !default;
+
+
+$select-icon-color: $color-n1-8 !default;
+
+
+
+$select-color-item-bg: $color-n1-4 !default;
+
+
+
+
+
+$select-large-height: $s10 !default;
+
+
+
+$select-large-padding-lr: $s2 !default;
+
+
+$select-large-padding-multiple: $s2 !default;
+
+
+$select-large-padding-multiple-tb: $s2 !default;
+
+
+$select-icon-large-size: $icon-m !default;
+
+
+$select-large-font: $font-size-base-body1 !default;
+
+
+
+
+
+$select-middle-height: $s7 !default;
+
+
+$select-middle-padding-lr: $s2 !default;
+
+
+$select-middle-padding-multiple: $s1 !default;
+
+
+$select-middle-padding-multiple-tb: $s1 !default;
+
+
+$select-icon-middle-size: $icon-s !default;
+
+
+$select-middle-font: $font-size-base-body1 !default;
+
+
+
+
+$select-small-height: $s5 !default;
+
+
+$select-small-padding-lr: $s2 !default;
+
+
+$select-small-padding-multiple: $s1 !default;
+
+
+$select-small-padding-multiple-tb: 2px !default;
+
+
+$select-icon-small-size: $icon-xs !default;
+
+
+$select-small-font: $font-size-base-caption !default;
+
+
+
+
+$select-no-border-hover-color: $color-b1-6 !default;
+
+
+
+$select-box-bg: $color-n1-2 !default;
+
+
+$select-box-border-color: $color-n1-7 !default;
+
+
+$select-box-padding-large: $s2;
+$select-box-padding-medium: $s1;
+$select-box-padding-small: $s1;
+$select-box-padding-small-tb: 2px;
+$select-box-split: $s1;
+
+
+
+$select-item-border-radius: $corner-radius-r1 !default;
+
+
+
+$select-item-margin-right: $s1 !default;
+
+
+$select-item-padding-hoz: $s1 !default;
+
+
+$select-item-padding-ver: $s0 !default;

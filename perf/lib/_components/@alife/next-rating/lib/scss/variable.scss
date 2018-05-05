@@ -1,0 +1,77 @@
+
+
+
+
+
+
+
+
+
+$rating-prefix: '.' + $css-prefix + 'rating';
+
+$rating-icon-prefix: '.' + $css-prefix + 'icon';
+
+
+
+
+$rating-small-text-margin-left: $s2 !default;
+
+
+
+$rating-small-icon-size: $icon-xs !default;
+
+
+
+$rating-small-font-size: $font-size-base-caption !default;
+
+
+
+$rating-medium-text-margin-left: $s3 !default;
+
+
+
+$rating-medium-icon-size: $icon-s !default;
+
+
+
+$rating-medium-font-size: $font-size-base-body1 !default;
+
+
+
+$rating-large-text-margin-left: $s4 !default;
+
+
+
+$rating-large-icon-size: $icon-m !default;
+
+
+
+$rating-large-font-size: $font-size-base-subhead !default;
+
+
+
+$rating-normal-underlay-color: $color-n1-7 !default;
+
+
+
+$rating-normal-overlay-color: $color-b1-6 !default;
+
+
+
+$rating-normal-overlay-hover-color: $color-b1-6 !default;
+
+
+
+$rating-grade-low-overlay-color: $color-n2-3 !default;
+
+
+
+$rating-grade-low-overlay-hover-color: $color-n2-2 !default;
+
+
+
+$rating-grade-high-overlay-color: $color-b1-6 !default;
+
+
+
+$rating-grade-high-overlay-hover-color: $color-b1-6 !default;

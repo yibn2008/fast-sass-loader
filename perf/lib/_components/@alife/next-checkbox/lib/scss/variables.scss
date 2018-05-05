@@ -1,0 +1,66 @@
+
+
+
+
+
+
+
+
+
+@charset "UTF-8";
+
+$checkbox-prefix: '.#{$css-prefix}checkbox';
+
+
+
+$checkbox-size: $s4 !default;
+
+
+$checkbox-border-radius: $corner-radius-r1 !default;
+
+
+$checkbox-circle-size: $icon-xs !default;
+
+
+
+$checkbox-border-color: $color-n1-7 !default;
+
+
+$checkbox-hovered-border-color: $color-b1-6 !default;
+
+
+$checkbox-checked-border-color: $color-b1-6 !default;
+
+
+$checkbox-disabled-border-color: $color-n1-6 !default;
+
+
+$checkbox-checked-hovered-border-color: $color-b1-9 !default;
+
+
+
+
+$checkbox-checked-circle-color: $color-b1-6 !default;
+
+
+$checkbox-disabled-circle-color: $color-n2-1 !default;
+
+
+$checkbox-checked-hovered-circle-color: $color-b1-9 !default;
+
+
+
+
+$checkbox-bg-color: $color-n1-1 !default;
+
+
+$checkbox-checked-bg-color: $color-n1-1 !default;
+
+
+$checkbox-hovered-bg-color: $color-b1-1 !default;
+
+
+$checkbox-checked-hovered-bg-color: $color-b1-1 !default;
+
+
+$checkbox-disabled-bg-color: $color-n1-2 !default;

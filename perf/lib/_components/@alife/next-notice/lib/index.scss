@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+@import "../../next-core/lib/next.scss";
+@import "../../next-icon/lib/index.scss";
+@import "../../next-animate/lib/index.scss";
+
+@import "./scss/function.scss";
+@import "./scss/mixin.scss";
+@import "./scss/placeholder.scss";
+@import "./scss/variable.scss";
+
+.#{$css-prefix}{
+    &notice{
+        @include box-sizing;
+        @include global-font;
+
+        @include noticeBounding();
+
+        &.#{$css-prefix}notice-warning{
+            @include noticeState(
+                $notice-warning-color-title,
+                $notice-warning-color-content,
+                $notice-warning-color-icon,
+                $notice-color-close
+            );
+            &.#{$css-prefix}notice-standalone{
+                @include noticeShape(
+                    standalone,
+                    $notice-warning-color-border,
+                    $notice-warning-color-bg
+                );
+            }
+            &.#{$css-prefix}notice-addon{
+                @include noticeShape(
+                    addon,
+                    $notice-warning-color-border,
+                    $notice-warning-color-bg-addon
+                );
+            }
+        }
+
+        &.#{$css-prefix}notice-prompt{
+            @include noticeState(
+                $notice-prompt-color-title,
+                $notice-prompt-color-content,
+                $notice-prompt-color-icon,
+                $notice-color-close
+            );
+            &.#{$css-prefix}notice-standalone{
+                @include noticeShape(
+                    standalone,
+                    $notice-prompt-color-border,
+                    $notice-prompt-color-bg
+                );
+            }
+            &.#{$css-prefix}notice-addon{
+                @include noticeShape(
+                    addon,
+                    $notice-prompt-color-border,
+                    $notice-prompt-color-bg-addon
+                );
+            }
+        }
+
+        &.#{$css-prefix}notice-standalone{
+            box-shadow: $notice-shadow;
+        }
+
+        &.#{$css-prefix}notice-system{
+            box-shadow: $notice-shadow;
+
+            @include noticeState(
+                $notice-system-color-title,
+                $notice-system-color-content,
+                $notice-system-color-icon,
+                $notice-system-color-close
+            );
+
+            @include noticeShape(
+                system,
+                $notice-system-color-border,
+                $notice-system-color-bg
+            );
+        }
+
+        &.#{$css-prefix}notice-medium{
+            @include noticeSize(
+                $notice-size-m-border-width,
+                $notice-size-m-padding,
+                $notice-size-m-content-padding,
+                $notice-size-m-title-font,
+                $notice-size-m-content-margin-top,
+                $notice-size-m-content-padding,
+                $notice-size-m-content-font,
+                $notice-size-m-icon
+            );
+            .#{$css-prefix}notice-close{
+                @include noticeSizeClose(
+                    $notice-size-m-close-top,
+                    $notice-size-m-close-right,
+                    $notice-size-m-close
+                );
+            }
+            &.#{$css-prefix}notice-title-content {
+                @include verticalAlignMiddle(
+                    $notice-size-m-title-font,
+                    $notice-size-m-icon,
+                    'title'
+                );
+            }
+            &.#{$css-prefix}notice-only-content {
+                @include verticalAlignMiddle(
+                    $notice-size-m-content-font,
+                    $notice-size-m-icon,
+                    'content'
+                );
+            }
+        }
+        &.#{$css-prefix}notice-large{
+            @include noticeSize(
+                $notice-size-l-border-width,
+                $notice-size-l-padding,
+                $notice-size-l-title-padding,
+                $notice-size-l-title-font,
+                $notice-size-l-content-margin-top,
+                $notice-size-l-content-padding,
+                $notice-size-l-content-font,
+                $notice-size-l-icon
+            );
+            .#{$css-prefix}notice-close{
+                @include noticeSizeClose(
+                    $notice-size-l-close-top,
+                    $notice-size-l-close-right,
+                    $notice-size-l-close
+                );
+            }
+            &.#{$css-prefix}notice-title-content {
+                @include verticalAlignMiddle(
+                    $notice-size-l-title-font,
+                    $notice-size-l-icon,
+                    'title'
+                );
+            }
+            &.#{$css-prefix}notice-only-content {
+                @include verticalAlignMiddle(
+                    $notice-size-l-content-font,
+                    $notice-size-l-icon,
+                    'content'
+                );
+            }
+        }
+
+    }
+}

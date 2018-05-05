@@ -1,0 +1,599 @@
+@charset "UTF-8";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$nav-prefixCls: '.#{$css-prefix}nav';
+$menu-prefixCls: '.#{$css-prefix}menu';
+
+
+
+
+$nav-primary-hoz-bg-color: $color-n2-4 !default;
+
+
+$nav-primary-hoz-item-hover-bg-color: $color-n1-9 !default;
+
+
+$nav-primary-hoz-item-hover-text-color: $color-n1-1 !default;
+
+
+$nav-primary-hoz-item-select-bg-color: $color-n1-9 !default;
+
+
+$nav-primary-hoz-item-select-text-color: $color-n1-1 !default;
+
+
+$nav-primary-hoz-item-active-color: $color-b1-6 !default;
+
+
+$nav-primary-hoz-item-active-line: $line-2-width !default;
+
+
+$nav-primary-hoz-text-color: $color-n1-1 !default;
+
+
+$nav-primary-hoz-height: $s11 !default;
+
+
+$nav-primary-hoz-item-opened-bg-color: $color-n2-4 !default;
+
+
+$nav-primary-hoz-item-opened-text-color: $color-n1-1 !default;
+
+
+$nav-primary-hoz-item-padding-lr: $s5 !default;
+
+
+$nav-primary-hoz-icon-down-size: $icon-xs !default;
+
+
+$nav-primary-hoz-icon-self-size: $icon-xs !default;
+
+
+$nav-primary-hoz-icon-down-margin: $s1 !default;
+
+
+$nav-primary-hoz-icon-self-margin: $s1 !default;
+
+
+
+
+$nav-primary-ver-bg-color: $color-n2-4 !default;
+
+
+$nav-primary-ver-item-hover-bg-color: $color-n1-9 !default;
+
+
+$nav-primary-ver-item-hover-text-color: $color-n1-1 !default;
+
+
+$nav-primary-ver-item-select-bg-color: $color-n1-9 !default;
+
+
+$nav-primary-ver-item-select-text-color: $color-n1-1 !default;
+
+
+$nav-primary-ver-item-active-color: $color-b1-6 !default;
+
+
+$nav-primary-ver-item-active-line: $line-2-width !default;
+
+
+$nav-primary-ver-text-color: $color-n1-1 !default;
+
+
+$nav-primary-ver-height: $s12 !default;
+
+
+$nav-primary-ver-item-opened-bg-color: $color-n2-4 !default;
+
+
+$nav-primary-ver-item-opened-text-color: $color-n1-1 !default;
+
+
+$nav-primary-ver-icon-down-size: $icon-xs !default;
+
+
+$nav-primary-ver-icon-self-size: $icon-xs !default;
+
+
+$nav-primary-ver-icon-down-margin: $s1 !default;
+
+
+$nav-primary-ver-icon-self-margin: $s1 !default;
+
+
+
+
+$nav-secondary-hoz-bg-color: $color-b1-6 !default;
+
+
+$nav-secondary-hoz-item-hover-bg-color: $color-b1-9 !default;
+
+
+$nav-secondary-hoz-item-hover-text-color: $color-n1-1 !default;
+
+
+$nav-secondary-hoz-item-select-bg-color: $color-b1-9 !default;
+
+
+$nav-secondary-hoz-item-select-text-color: $color-n1-1 !default;
+
+
+$nav-secondary-hoz-item-active-color: $color-b1-9 !default;
+
+
+$nav-secondary-hoz-item-active-line: $line-2-width !default;
+
+
+$nav-secondary-hoz-text-color: $color-n1-1 !default;
+
+
+$nav-secondary-hoz-height: $s11 !default;
+
+
+$nav-secondary-hoz-item-opened-bg-color: $color-b1-6 !default;
+
+
+$nav-secondary-hoz-item-opened-text-color: $color-n1-1 !default;
+
+
+
+$nav-secondary-hoz-item-padding-lr: $s5 !default;
+
+
+$nav-secondary-hoz-icon-down-size: $icon-xs !default;
+
+
+$nav-secondary-hoz-icon-self-size: $icon-xs !default;
+
+
+
+$nav-secondary-hoz-icon-down-margin: $s1 !default;
+
+
+$nav-secondary-hoz-icon-self-margin: $s1 !default;
+
+
+
+
+$nav-secondary-ver-bg-color: $color-b1-6 !default;
+
+
+$nav-secondary-ver-item-hover-bg-color: $color-b1-9 !default;
+
+
+$nav-secondary-ver-item-hover-text-color: $color-n1-1 !default;
+
+
+$nav-secondary-ver-item-select-bg-color: $color-b1-9 !default;
+
+
+$nav-secondary-ver-item-select-text-color: $color-n1-1 !default;
+
+
+$nav-secondary-ver-item-active-color: $color-b1-9 !default;
+
+
+$nav-secondary-ver-item-active-line: $line-2-width !default;
+
+
+$nav-secondary-ver-text-color: $color-n1-1 !default;
+
+
+$nav-secondary-ver-height: $s12 !default;
+
+
+$nav-secondary-ver-item-opened-bg-color: $color-b1-6 !default;
+
+
+$nav-secondary-ver-item-opened-text-color: $color-n1-1 !default;
+
+
+$nav-secondary-ver-icon-down-size: $icon-xs !default;
+
+
+$nav-secondary-ver-icon-self-size: $icon-xs !default;
+
+
+
+$nav-secondary-ver-icon-down-margin: $s1 !default;
+
+
+$nav-secondary-ver-icon-self-margin: $s1 !default;
+
+
+
+
+$nav-normal-hoz-bg-color: $color-n1-1 !default;
+
+
+$nav-normal-hoz-item-hover-bg-color: $color-n1-3 !default;
+
+
+$nav-normal-hoz-item-hover-text-color: $color-b1-6 !default;
+
+
+$nav-normal-hoz-item-select-bg-color: $color-n1-3 !default;
+
+
+$nav-normal-hoz-item-select-text-color: $color-b1-6 !default;
+
+
+$nav-normal-hoz-item-active-color: $color-b1-6 !default;
+
+
+$nav-normal-hoz-item-active-line: $line-2-width !default;
+
+
+$nav-normal-hoz-text-color: $color-n2-4 !default;
+
+
+$nav-normal-hoz-border-color: $color-n1-5 !default;
+
+
+$nav-normal-hoz-border-line: $line-1-width !default;
+
+
+$nav-normal-hoz-height: $s11 !default;
+
+
+$nav-normal-hoz-item-opened-bg-color: $color-n1-1 !default;
+
+
+$nav-normal-hoz-item-opened-text-color: $color-b1-6 !default;
+
+
+
+$nav-normal-hoz-item-padding-lr: $s5 !default;
+
+
+$nav-normal-hoz-icon-down-size: $icon-xs !default;
+
+
+$nav-normal-hoz-icon-self-size: $icon-xs !default;
+
+
+
+$nav-normal-hoz-icon-down-margin: $s1 !default;
+
+
+$nav-normal-hoz-icon-self-margin: $s1 !default;
+
+
+
+
+$nav-normal-ver-bg-color: $color-n1-1 !default;
+
+
+$nav-normal-ver-item-hover-bg-color: $color-n1-3 !default;
+
+
+$nav-normal-ver-item-hover-text-color: $color-b1-6 !default;
+
+
+$nav-normal-ver-item-select-bg-color: $color-n1-3 !default;
+
+
+$nav-normal-ver-item-select-text-color: $color-b1-6 !default;
+
+
+$nav-normal-ver-item-active-color: $color-b1-6 !default;
+
+
+$nav-normal-ver-item-active-line: $line-2-width !default;
+
+
+$nav-normal-ver-text-color: $color-n2-4 !default;
+
+
+$nav-normal-ver-border-color: $color-n1-5 !default;
+
+
+$nav-normal-ver-border-line: $line-1-width !default;
+
+
+$nav-normal-ver-height: $s12 !default;
+
+
+$nav-normal-ver-item-opened-bg-color: $color-n1-1 !default;
+
+
+$nav-normal-ver-item-opened-text-color: $color-b1-6 !default;
+
+
+$nav-normal-ver-icon-down-size: $icon-xs !default;
+
+
+$nav-normal-ver-icon-self-size: $icon-xs !default;
+
+
+
+$nav-normal-ver-icon-down-margin: $s1 !default;
+
+
+$nav-normal-ver-icon-self-margin: $s1 !default;
+
+
+
+
+$nav-line-hoz-bg-color: $color-transparent !default;
+
+
+$nav-line-hoz-item-hover-bg-color: $color-transparent !default;
+
+
+$nav-line-hoz-item-hover-text-color: $color-b1-6 !default;
+
+
+$nav-line-hoz-item-select-bg-color: $color-transparent !default;
+
+
+$nav-line-hoz-item-select-text-color: $color-b1-6 !default;
+
+
+$nav-line-hoz-item-active-color: $color-b1-6 !default;
+
+
+$nav-line-hoz-item-active-line: $line-2-width !default;
+
+
+$nav-line-hoz-text-color: $color-n2-4 !default;
+
+
+$nav-line-hoz-border-color: $color-n1-6 !default;
+
+
+$nav-line-hoz-border-line: $line-1-width !default;
+
+
+$nav-line-hoz-height: $s11 !default;
+
+
+$nav-line-hoz-item-opened-bg-color: $color-transparent !default;
+
+
+$nav-line-hoz-item-opened-text-color: $color-b1-6 !default;
+
+
+
+$nav-line-hoz-item-padding-lr: $s5 !default;
+
+
+$nav-line-hoz-icon-down-size: $icon-xs !default;
+
+
+$nav-line-hoz-icon-self-size: $icon-xs !default;
+
+
+
+$nav-line-hoz-icon-down-margin: $s1 !default;
+
+
+$nav-line-hoz-icon-self-margin: $s1 !default;
+
+
+
+
+$nav-line-ver-bg-color: $color-transparent !default;
+
+
+$nav-line-ver-item-hover-bg-color: $color-transparent !default;
+
+
+$nav-line-ver-item-hover-text-color: $color-b1-6 !default;
+
+
+$nav-line-ver-item-select-bg-color: $color-transparent !default;
+
+
+$nav-line-ver-item-select-text-color: $color-b1-6 !default;
+
+
+$nav-line-ver-item-active-color: $color-b1-6 !default;
+
+
+$nav-line-ver-item-active-line: $line-2-width !default;
+
+
+$nav-line-ver-text-color: $color-n2-4 !default;
+
+
+$nav-line-ver-border-color: $color-n1-6 !default;
+
+
+$nav-line-ver-border-line: $line-1-width !default;
+
+
+$nav-line-ver-height: $s12 !default;
+
+
+$nav-line-ver-item-opened-bg-color: $color-transparent !default;
+
+
+$nav-line-ver-item-opened-text-color: $color-b1-6 !default;
+
+
+$nav-line-ver-icon-down-size: $icon-xs !default;
+
+
+$nav-line-ver-icon-self-size: $icon-xs !default;
+
+
+
+$nav-line-ver-icon-down-margin: $s1 !default;
+
+
+$nav-line-ver-icon-self-margin: $s1 !default;
+
+
+
+
+$nav-text-hoz-bg-color: $color-transparent !default;
+
+
+$nav-text-hoz-text-color: $color-n2-4 !default;
+
+
+$nav-text-hoz-height: $s11 !default;
+
+
+$nav-text-hoz-item-hover-bg-color: $color-transparent !default;
+
+
+$nav-text-hoz-item-hover-text-color: $color-b1-6 !default;
+
+
+$nav-text-hoz-item-select-bg-color: $color-transparent !default;
+
+
+$nav-text-hoz-item-select-text-color: $color-b1-6 !default;
+
+
+$nav-text-hoz-item-opened-bg-color: $color-transparent !default;
+
+
+$nav-text-hoz-item-opened-text-color: $color-b1-6 !default;
+
+
+$nav-text-hoz-item-padding-lr: $s5 !default;
+
+
+$nav-text-hoz-icon-down-size: $icon-xs !default;
+
+
+$nav-text-hoz-icon-self-size: $icon-xs !default;
+
+
+$nav-text-hoz-icon-down-margin: $s1 !default;
+
+
+$nav-text-hoz-icon-self-margin: $s1 !default;
+
+
+
+
+
+$nav-text-hoz-item-active-color: $color-b1-6 !default;
+;
+
+
+
+
+
+$nav-text-ver-bg-color: $color-transparent !default;
+
+
+$nav-text-ver-item-hover-bg-color: $color-transparent !default;
+
+
+$nav-text-ver-item-hover-text-color: $color-b1-6 !default;
+
+
+$nav-text-ver-item-select-bg-color: $color-transparent !default;
+
+
+$nav-text-ver-item-select-text-color: $color-b1-6 !default;
+
+
+$nav-text-ver-text-color: $color-n2-4 !default;
+
+
+$nav-text-ver-height: $s12 !default;
+
+
+$nav-text-ver-item-opened-bg-color: $color-transparent !default;
+
+
+$nav-text-ver-item-opened-text-color: $color-b1-6 !default;
+
+
+$nav-text-ver-icon-down-size: $icon-xs !default;
+
+
+$nav-text-ver-icon-self-size: $icon-xs !default;
+
+
+$nav-text-ver-icon-down-margin: $s1 !default;
+
+
+$nav-text-ver-icon-self-margin: $s1 !default;
+
+
+
+
+
+$nav-text-ver-item-active-color: $color-b1-6 !default;
+;
+
+
+
+
+
+$nav-icononly-min-width: $s15 !default;
+
+
+$nav-primary-icononly-item-hover-bg-color: $color-n1-9 !default;
+
+
+$nav-primary-icononly-item-hover-text-color: $color-n1-1 !default;
+
+
+$nav-primary-icononly-item-select-bg-color: $color-n1-9 !default;
+
+
+$nav-primary-icononly-item-select-text-color: $color-n1-1 !default;
+
+
+$nav-secondary-icononly-item-hover-bg-color: $color-b1-9 !default;
+
+
+$nav-secondary-icononly-item-hover-text-color: $color-n1-1 !default;
+
+
+$nav-secondary-icononly-item-select-bg-color: $color-b1-9 !default;
+
+
+$nav-secondary-icononly-item-select-text-color: $color-n1-1 !default;
+
+
+$nav-normal-icononly-item-hover-bg-color: $color-n1-3 !default;
+
+
+$nav-normal-icononly-item-hover-text-color: $color-n2-4 !default;
+
+
+$nav-normal-icononly-item-select-bg-color: $color-b1-6 !default;
+
+
+$nav-normal-icononly-item-select-text-color: $color-n1-1 !default;
+
+
+$nav-text-icononly-item-hover-bg-color: $color-transparent !default;
+
+
+$nav-text-icononly-item-hover-text-color: $color-b1-6 !default;
+
+
+$nav-text-icononly-item-select-bg-color: $color-transparent !default;
+
+
+$nav-text-icononly-item-select-text-color: $color-b1-6 !default;
+
+
+
+$nav-group-height: $s10 !default;
+
+
+$nav-group-font-size: $font-size-base-subhead !default;

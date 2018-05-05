@@ -1,0 +1,124 @@
+
+
+
+
+
+
+
+
+
+$time-picker-prefix: '.' + $css-prefix + 'time-picker';
+
+$time-picker-icon-prefix: '.' + $css-prefix + 'icon';
+
+$time-picker-input-prefix: '.' + $css-prefix + 'input';
+
+
+
+
+
+
+$time-picker-icon-right: $s3 !default;
+
+
+
+$time-picker-input-s-height: $s5 !default;
+
+
+
+$time-picker-input-s-font: $font-size-base-caption !default;
+
+
+
+$time-picker-icon-s-size: $icon-xs !default;
+
+
+
+$time-picker-input-m-height: $s7 !default;
+
+
+
+$time-picker-input-m-font: $font-size-base-body1 !default;
+
+
+
+$time-picker-icon-m-size: $icon-s !default;
+
+
+
+$time-picker-input-l-height: $s10 !default;
+
+
+
+$time-picker-input-l-font: $font-size-base-subhead !default;
+
+
+
+$time-picker-icon-l-size: $icon-m !default;
+
+
+
+$time-picker-icon-color: $color-n2-2 !default;
+
+
+
+
+
+
+$time-picker-panel-border-color: $color-n1-7 !default;
+
+
+
+$time-picker-panel-background: $color-n1-1 !default;
+
+
+
+$time-picker-panel-clear-btn-color: $color-n2-1 !default;
+
+
+
+$time-picker-panel-clear-btn-hover-color: $color-n2-3 !default;
+
+
+
+$time-picker-cell-font-size: $font-size-base-body1 !default;
+
+
+
+$time-picker-cell-width: $s21 !default;
+
+
+
+$time-picker-cell-height: $s7 !default;
+
+
+
+$time-picker-cell-color: $color-n2-3 !default;
+
+
+
+$time-picker-cell-bg: $color-n1-1 !default;
+
+
+
+$time-picker-cell-hover-color: $color-b1-6 !default;
+
+
+
+$time-picker-cell-hover-bg: $color-b1-1 !default;
+
+
+
+$time-picker-cell-selected-color: $color-n2-3 !default;
+
+
+
+$time-picker-cell-selected-bg: $color-n1-3 !default;
+
+
+
+$time-picker-cell-disabled-color: $color-n2-1 !default;
+
+
+
+$time-picker-cell-disabled-bg: $color-n1-1 !default;

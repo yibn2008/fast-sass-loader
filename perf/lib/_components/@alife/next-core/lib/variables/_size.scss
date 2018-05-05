@@ -1,0 +1,283 @@
+
+
+
+
+
+
+
+
+
+/**
+ * 尺寸 基础尺寸
+ * 命名能在语义的前提下简单就尽量简单, 这里可以是 size-2x, space-2x, size-base ...
+ * 不过可以在语义的前提下做的更精简一些, 于是用了s2, s1等
+ * 可用变量: `$s1 - $s8`
+ * @example scss - 使用
+ *   .element {
+ *     padding: $s1 !default;
+ *   }
+ *
+ * @example css - CSS 输出
+ *   .element {
+ *     padding: 4px !default;
+ *   }
+ */
+
+
+
+$size-base: 4px !default;
+
+
+
+
+$s0: 0;
+
+
+
+
+$s1: $size-base * 1;
+
+
+
+
+$s2: $size-base * 2;
+
+
+
+
+$s3: $size-base * 3;
+
+
+
+
+$s4: $size-base * 4;
+
+
+
+
+$s5: $size-base * 5;
+
+
+
+
+$s6: $size-base * 6;
+
+
+
+
+$s7: $size-base * 7;
+
+
+
+
+$s8: $size-base * 8;
+
+
+
+
+$s9: $size-base * 9;
+
+
+
+
+$s10: $size-base * 10;
+
+
+
+
+$s11: $size-base * 11;
+
+
+
+
+$s12: $size-base * 12;
+
+
+
+
+$s13: $size-base * 13;
+
+
+
+
+$s14: $size-base * 14;
+
+
+
+
+$s15: $size-base * 15;
+
+
+
+
+$s16: $size-base * 16;
+
+
+
+
+$s17: $size-base * 17;
+
+
+
+
+$s18: $size-base * 18;
+
+
+
+
+$s19: $size-base * 19;
+
+
+
+
+$s20: $size-base * 20;
+
+
+
+
+$s21: $size-base * 21;
+
+
+
+
+$s22: $size-base * 22;
+
+
+
+
+$s23: $size-base * 23;
+
+
+
+
+$s24: $size-base * 24;
+
+
+
+
+$s25: $size-base * 25;
+
+
+
+
+$s26: $size-base * 26;
+
+
+
+
+$s27: $size-base * 27;
+
+
+
+
+$s28: $size-base * 28;
+
+
+
+
+$s29: $size-base * 29;
+
+
+
+
+$s30: $size-base * 30;
+
+
+
+
+$s31: $size-base * 31;
+
+
+
+
+$s32: $size-base * 32;
+
+
+
+
+$s33: $size-base * 33;
+
+
+
+
+$s34: $size-base * 34;
+
+
+
+
+$s35: $size-base * 35;
+
+
+
+
+$s36: $size-base * 36;
+
+
+
+
+$s37: $size-base * 37;
+
+
+
+
+$s38: $size-base * 38;
+
+
+
+
+$s39: $size-base * 39;
+
+
+
+
+$s40: $size-base * 40;
+
+
+
+
+$s41: $size-base * 41;
+
+
+
+
+$s42: $size-base * 42;
+
+
+
+
+$s43: $size-base * 43;
+
+
+
+
+$s44: $size-base * 44;
+
+
+
+
+$s45: $size-base * 45;
+
+
+
+
+$s46: $size-base * 46;
+
+
+
+
+$s47: $size-base * 47;
+
+
+
+
+$s48: $size-base * 48;
+
+
+
+
+$s49: $size-base * 49;
+
+
+
+
+$s50: $size-base * 50;

@@ -1,0 +1,376 @@
+@import "../../next-core/lib/next.scss";
+@import "../../next-menu/lib/index.scss";
+@import "./scss/mixin.scss";
+@import "./scss/variable.scss";
+
+
+
+.#{$css-prefix} {
+    &nav {
+        @include box-sizing;
+
+        #{$nav-prefixCls}-menu, #{$menu-prefixCls} {
+            box-shadow: none;
+            padding: 0;
+        }
+
+        &.active {
+            #{$nav-prefixCls}-item:before {
+                content: '';
+                position: absolute;
+            }
+
+            &.hoz {
+                &.top #{$nav-prefixCls}-item:before {
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                }
+                &.bottom #{$nav-prefixCls}-item:before {
+                    width: 100%;
+                    right: 0;
+                    bottom: 0;
+                }
+            }
+            &.ver {
+                &.left #{$nav-prefixCls}-item:before {
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                }
+                &.right #{$nav-prefixCls}-item:before {
+                    height: 100%;
+                    right: 0;
+                    bottom: 0;
+                }
+                
+                #{$nav-prefixCls}-popup-item, #{$nav-prefixCls}-subnav {
+                    &:before {
+                        height: 0 !important;
+                    }
+                }
+            }
+        }
+
+        &-primary {
+            &.hoz {
+                @include navTypeColor(
+                    $nav-primary-hoz-bg-color,
+                    $nav-primary-hoz-item-hover-bg-color,
+                    $nav-primary-hoz-item-hover-text-color,
+                    $nav-primary-hoz-item-select-bg-color,
+                    $nav-primary-hoz-item-select-text-color,
+                    $nav-primary-hoz-item-active-color,
+                    $nav-primary-hoz-text-color,
+                    $nav-primary-hoz-item-opened-bg-color,
+                    $nav-primary-hoz-item-opened-text-color
+                );
+                @include navTypeSize($nav-primary-hoz-height, 'hoz',
+                    $nav-primary-hoz-icon-down-size,
+                    $nav-primary-hoz-icon-self-size,
+                    $nav-primary-hoz-icon-down-margin,
+                    $nav-primary-hoz-icon-self-margin,
+                    $nav-primary-hoz-item-padding-lr);
+
+                &.active {
+                    @include navActive($nav-primary-hoz-item-active-line, 'hoz');
+                }
+            }
+            &.ver {
+                @include navTypeColor(
+                    $nav-primary-ver-bg-color,
+                    $nav-primary-ver-item-hover-bg-color,
+                    $nav-primary-ver-item-hover-text-color,
+                    $nav-primary-ver-item-select-bg-color,
+                    $nav-primary-ver-item-select-text-color,
+                    $nav-primary-ver-item-active-color,
+                    $nav-primary-ver-text-color,
+                    $nav-primary-ver-item-opened-bg-color,
+                    $nav-primary-ver-item-opened-text-color
+                );
+                @include navTypeSize($nav-primary-ver-height, 'ver',
+                    $nav-primary-ver-icon-down-size,
+                    $nav-primary-ver-icon-self-size,
+                    $nav-primary-ver-icon-down-margin,
+                    $nav-primary-ver-icon-self-margin
+                );
+
+                &.active {
+                    @include navActive($nav-primary-ver-item-active-line, 'ver');
+                }
+            }
+            &.icononly {
+                @include navIconOnlyColor(
+                    $nav-primary-icononly-item-hover-bg-color,
+                    $nav-primary-icononly-item-hover-text-color,
+                    $nav-primary-icononly-item-select-bg-color,
+                    $nav-primary-icononly-item-select-text-color
+                );
+            }
+        }
+        &-secondary {
+            &.hoz {
+                @include navTypeColor(
+                    $nav-secondary-hoz-bg-color,
+                    $nav-secondary-hoz-item-hover-bg-color,
+                    $nav-secondary-hoz-item-hover-text-color,
+                    $nav-secondary-hoz-item-select-bg-color,
+                    $nav-secondary-hoz-item-select-text-color,
+                    $nav-secondary-hoz-item-active-color,
+                    $nav-secondary-hoz-text-color,
+                    $nav-secondary-hoz-item-opened-bg-color,
+                    $nav-secondary-hoz-item-opened-text-color
+                );
+                @include navTypeSize($nav-secondary-hoz-height, 'hoz',
+                    $nav-secondary-hoz-icon-down-size,
+                    $nav-secondary-hoz-icon-self-size,
+                    $nav-secondary-hoz-icon-down-margin,
+                    $nav-secondary-hoz-icon-self-margin,
+                    $nav-secondary-hoz-item-padding-lr);
+
+                &.active {
+                    @include navActive($nav-secondary-hoz-item-active-line, 'hoz');
+                }
+            }
+            &.ver {
+                @include navTypeColor(
+                    $nav-secondary-ver-bg-color,
+                    $nav-secondary-ver-item-hover-bg-color,
+                    $nav-secondary-ver-item-hover-text-color,
+                    $nav-secondary-ver-item-select-bg-color,
+                    $nav-secondary-ver-item-select-text-color,
+                    $nav-secondary-ver-item-active-color,
+                    $nav-secondary-ver-text-color,
+                    $nav-secondary-ver-item-opened-bg-color,
+                    $nav-secondary-ver-item-opened-text-color
+                );
+                @include navTypeSize($nav-secondary-ver-height, 'ver',
+                    $nav-secondary-ver-icon-down-size,
+                    $nav-secondary-ver-icon-self-size,
+                    $nav-secondary-ver-icon-down-margin,
+                    $nav-secondary-ver-icon-self-margin
+                );
+                &.active {
+                    @include navActive($nav-secondary-ver-item-active-line, 'ver');
+                }
+            }
+            &.icononly {
+                @include navIconOnlyColor(
+                    $nav-secondary-icononly-item-hover-bg-color,
+                    $nav-secondary-icononly-item-hover-text-color,
+                    $nav-secondary-icononly-item-select-bg-color,
+                    $nav-secondary-icononly-item-select-text-color
+                );
+            }
+        }
+        &-normal {
+            &.hoz {
+                @include navTypeColor(
+                    $nav-normal-hoz-bg-color,
+                    $nav-normal-hoz-item-hover-bg-color,
+                    $nav-normal-hoz-item-hover-text-color,
+                    $nav-normal-hoz-item-select-bg-color,
+                    $nav-normal-hoz-item-select-text-color,
+                    $nav-normal-hoz-item-active-color,
+                    $nav-normal-hoz-text-color,
+                    $nav-normal-hoz-item-opened-bg-color,
+                    $nav-normal-hoz-item-opened-text-color
+                );
+                @include navTypeSize($nav-normal-hoz-height, 'hoz',
+                    $nav-normal-hoz-icon-down-size,
+                    $nav-normal-hoz-icon-self-size,
+                    $nav-normal-hoz-icon-down-margin,
+                    $nav-normal-hoz-icon-self-margin,
+                    $nav-normal-hoz-item-padding-lr);
+
+                #{$nav-prefixCls}-menu {
+                    border: $nav-normal-hoz-border-line solid $nav-normal-hoz-border-color;
+                }
+
+                &.active {
+                    @include navActive($nav-normal-hoz-item-active-line, 'hoz');
+                    @include navActiveBorder($nav-normal-hoz-border-line, 'hoz');
+                }
+            }
+            &.ver {
+                @include navTypeColor(
+                    $nav-normal-ver-bg-color,
+                    $nav-normal-ver-item-hover-bg-color,
+                    $nav-normal-ver-item-hover-text-color,
+                    $nav-normal-ver-item-select-bg-color,
+                    $nav-normal-ver-item-select-text-color,
+                    $nav-normal-ver-item-active-color,
+                    $nav-normal-ver-text-color,
+                    $nav-normal-ver-item-opened-bg-color,
+                    $nav-normal-ver-item-opened-text-color
+                );
+                @include navTypeSize($nav-normal-ver-height, 'ver',
+                    $nav-normal-ver-icon-down-size,
+                    $nav-normal-ver-icon-self-size,
+                    $nav-normal-ver-icon-down-margin,
+                    $nav-normal-ver-icon-self-margin
+                );
+
+                #{$nav-prefixCls}-menu {
+                    border: $nav-normal-ver-border-line solid $nav-normal-ver-border-color;
+                }
+
+                &.active {
+                    @include navActive($nav-normal-ver-item-active-line, 'ver');
+                    @include navActiveBorder($nav-normal-ver-border-line, 'ver');
+                }
+            }
+            &.icononly {
+                @include navIconOnlyColor(
+                    $nav-normal-icononly-item-hover-bg-color,
+                    $nav-normal-icononly-item-hover-text-color,
+                    $nav-normal-icononly-item-select-bg-color,
+                    $nav-normal-icononly-item-select-text-color
+                );
+            }
+        }
+        &-line {
+            &.hoz {
+                @include navTypeColor(
+                    $nav-line-hoz-bg-color,
+                    $nav-line-hoz-item-hover-bg-color,
+                    $nav-line-hoz-item-hover-text-color,
+                    $nav-line-hoz-item-select-bg-color,
+                    $nav-line-hoz-item-select-text-color,
+                    $nav-line-hoz-item-active-color,
+                    $nav-line-hoz-text-color,
+                    $nav-line-hoz-item-opened-bg-color,
+                    $nav-line-hoz-item-opened-text-color
+                );
+                @include navTypeSize($nav-line-hoz-height, 'hoz',
+                    $nav-line-hoz-icon-down-size,
+                    $nav-line-hoz-icon-self-size,
+                    $nav-line-hoz-icon-down-margin,
+                    $nav-line-hoz-icon-self-margin,
+                    $nav-line-hoz-item-padding-lr);
+
+                #{$nav-prefixCls}-menu {
+                    border-bottom: $nav-line-hoz-border-line solid $nav-line-hoz-border-color;
+                }
+                &.active {
+                    @include navActive($nav-line-hoz-item-active-line, 'hoz');
+                    @include navActiveBorder($nav-line-hoz-border-line, 'hoz');
+                }
+            }
+            &.ver {
+                @include navTypeColor(
+                    $nav-line-ver-bg-color,
+                    $nav-line-ver-item-hover-bg-color,
+                    $nav-line-ver-item-hover-text-color,
+                    $nav-line-ver-item-select-bg-color,
+                    $nav-line-ver-item-select-text-color,
+                    $nav-line-ver-item-active-color,
+                    $nav-line-ver-text-color,
+                    $nav-line-ver-item-opened-bg-color,
+                    $nav-line-ver-item-opened-text-color
+                );
+                @include navTypeSize($nav-line-ver-height, 'ver',
+                    $nav-line-ver-icon-down-size,
+                    $nav-line-ver-icon-self-size,
+                    $nav-line-ver-icon-down-margin,
+                    $nav-line-ver-icon-self-margin
+                );
+
+                #{$nav-prefixCls}-menu {
+                    border-right: $nav-line-ver-border-line solid $nav-line-ver-border-color;
+                }
+                &.active {
+                    @include navActive($nav-line-ver-item-active-line, 'ver');
+                    @include navActiveBorder($nav-line-ver-border-line, 'ver');
+                }
+            }
+        }
+
+        &-text {
+            &.hoz {
+                @include navTypeColor(
+                    $nav-text-hoz-bg-color,
+                    $nav-text-hoz-item-hover-bg-color,
+                    $nav-text-hoz-item-hover-text-color,
+                    $nav-text-hoz-item-select-bg-color,
+                    $nav-text-hoz-item-select-text-color,
+                    $nav-text-hoz-item-active-color,
+                    $nav-text-hoz-text-color,
+                    $nav-text-hoz-item-opened-bg-color,
+                    $nav-text-hoz-item-opened-text-color
+                );
+                @include navTypeSize($nav-text-hoz-height, 'hoz',
+                    $nav-text-hoz-icon-down-size,
+                    $nav-text-hoz-icon-self-size,
+                    $nav-text-hoz-icon-down-margin,
+                    $nav-text-hoz-icon-self-margin,
+                    $nav-text-hoz-item-padding-lr);
+
+            }
+            &.ver {
+                @include navTypeColor(
+                    $nav-text-ver-bg-color,
+                    $nav-text-ver-item-hover-bg-color,
+                    $nav-text-ver-item-hover-text-color,
+                    $nav-text-ver-item-select-bg-color,
+                    $nav-text-ver-item-select-text-color,
+                    $nav-text-ver-item-active-color,
+                    $nav-text-ver-text-color,
+                    $nav-text-ver-item-opened-bg-color,
+                    $nav-text-ver-item-opened-text-color
+                );
+                @include navTypeSize($nav-text-ver-height, 'ver',
+                    $nav-text-ver-icon-down-size,
+                    $nav-text-ver-icon-self-size,
+                    $nav-text-ver-icon-down-margin,
+                    $nav-text-ver-icon-self-margin
+                );
+            }
+            &.icononly {
+                @include navIconOnlyColor(
+                    $nav-text-icononly-item-hover-bg-color,
+                    $nav-text-icononly-item-hover-text-color,
+                    $nav-text-icononly-item-select-bg-color,
+                    $nav-text-icononly-item-select-text-color
+                );
+            }
+        }
+        &.icononly {
+            #{$menu-prefixCls} {
+                min-width: $nav-icononly-min-width;
+                text-align: center;
+                #{$menu-prefixCls}-submenu-title > .#{$css-prefix}icon {
+                    position: relative;
+                    right: auto;
+                }
+                
+                
+                
+            }
+        }
+
+        &.hoz {
+            #{$menu-prefixCls} {
+                #{$menu-prefixCls}-header {
+                    float: left;
+                }
+                #{$menu-prefixCls}-content {
+                    display: inline-block;
+                }
+                #{$menu-prefixCls}-footer {
+                    float: right;
+                    
+                }
+            }
+        }
+        &.ver {
+            #{$nav-prefixCls}-group {
+                #{$menu-prefixCls}-group-title {
+                    height: $nav-group-height;
+                    line-height: $nav-group-height;
+                    font-size: $nav-group-font-size;
+                }
+            }
+        }
+    }
+}
