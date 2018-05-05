@@ -1,4 +1,11 @@
 
+1.4.4 / 2018-05-05
+==================
+
+  * chore: bump to 1.4.4
+  * test: add benchmark test
+  * fix: fix cachable
+
 1.4.3 / 2018-04-28
 ==================
 
