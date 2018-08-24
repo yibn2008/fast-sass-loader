@@ -1,4 +1,10 @@
 
+1.4.6 / 2018-08-24
+==================
+
+  * chore: bump to 1.4.6
+  * fix: fix [#42](http://github.com/yibn2008/fast-sass-loader/issues/42)
+
 1.4.5 / 2018-05-05
 ==================
 
