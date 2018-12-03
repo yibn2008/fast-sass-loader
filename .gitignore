@@ -7,6 +7,7 @@
 !.gitattributes
 !.build
 !.*.yml
+!/test/fixtures/*/node_modules
 
 /node_modules
 /coverage

@@ -138,4 +138,12 @@ describe('test sass-loader', function () {
   it('should be able to skip import in comment', function(done) {
     runSimpleTest(done, 'comment-import')
   })
+
+  it('should be able to resolve @import paths (#39)', function (done) {
+    runSimpleTest(done, 'data-import-issue')
+  })
+
+  it('should be able to resolve @import "bulma" (#40)', function (done) {
+    runSimpleTest(done, 'bulma-issue')
+  })
 })
