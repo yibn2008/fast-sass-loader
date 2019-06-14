@@ -143,7 +143,12 @@ describe('test sass-loader', function () {
     runSimpleTest(done, 'data-import-issue')
   })
 
+  it('should pass options to sass.render (#53)', function (done) {
+    runSimpleTest(done, 'pass-output-style')
+  })
+
   it('should be able to resolve @import "bulma" (#40)', function (done) {
     runSimpleTest(done, 'bulma-issue')
   })
+
 })
