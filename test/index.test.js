@@ -151,4 +151,33 @@ describe('test sass-loader', function () {
     runSimpleTest(done, 'bulma-issue')
   })
 
+  it('should load normal sass file without url resolving', function (done) {
+    const config = require('./fixtures/normal-no-url-resolve/webpack.config.js')
+    const compiler = webpack(config)
+
+    compiler.run((err, stats) => {
+      if (!handleError(err, stats, done)) {
+        return
+      }
+
+      try {
+        assert.equal(stats.errors, undefined)
+
+        let css = fs.readFileSync(path.join(__dirname, 'runtime/normal-no-url-resolve/index.css'), 'utf8')
+        let expect = fs.readFileSync(path.join(__dirname, 'fixtures/normal-no-url-resolve/expect.css'), 'utf8')
+
+        assert.equal(clearCRLF(css), clearCRLF(expect))
+
+        let css2 = fs.readFileSync(path.join(__dirname, 'runtime/normal-no-url-resolve/index2.css'), 'utf8')
+        let expect2 = fs.readFileSync(path.join(__dirname, 'fixtures/normal-no-url-resolve/expect2.css'), 'utf8')
+
+        assert.equal(clearCRLF(css2), clearCRLF(expect2))
+        done()
+      } catch (err) {
+        done(err)
+      }
+    })
+  })
+
+
 })
