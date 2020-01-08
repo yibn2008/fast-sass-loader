@@ -64,6 +64,7 @@
     "nyc": "*",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.6.1",
+    "sass": "^1.24.3",
     "sass-loader": "^6.0.3",
     "standard": "*",
     "webpack": "3.x"

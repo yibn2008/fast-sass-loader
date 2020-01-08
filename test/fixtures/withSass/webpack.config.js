@@ -11,7 +11,7 @@ module.exports = {
     index: './index.scss'
   },
   output: {
-    path: path.join(__dirname, '../../runtime/pass-output-style'),
+    path: path.join(__dirname, '../../runtime/withSass'),
     filename: '[name].js'
   },
   module: {
@@ -24,13 +24,11 @@ module.exports = {
             {
               loader: loader,
               options: {
-                sassOptions: {
-                  outputStyle: 'compressed'
-                }
+                sass: require('sass')
               }
             }
           ]
-        }),
+        })
       },
       {
         test: /\.png$/,

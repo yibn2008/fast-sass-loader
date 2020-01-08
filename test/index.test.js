@@ -179,5 +179,7 @@ describe('test sass-loader', function () {
     })
   })
 
-
+  it('should accept a different sass implementation', function (done) {
+    runSimpleTest(done, 'withSass')
+  })
 })
