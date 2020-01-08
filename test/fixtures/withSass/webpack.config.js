@@ -24,7 +24,7 @@ module.exports = {
             {
               loader: loader,
               options: {
-                sass: require('sass')
+                implementation: require('sass')
               }
             }
           ]
