@@ -60,6 +60,7 @@
     "mocha": "^3.2.0",
     "npm-ensure": "^1.1.0",
     "nyc": "*",
+    "prettier": "^1.19.1",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.6.1",
     "sass": "^1.24.3",
