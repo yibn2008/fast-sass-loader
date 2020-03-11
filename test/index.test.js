@@ -152,10 +152,6 @@ describe('test sass-loader', function() {
     runSimpleTest(done, 'pass-output-style')
   })
 
-  it('should be able to resolve @import "bulma" (#40)', function(done) {
-    runSimpleTest(done, 'bulma-issue')
-  })
-
   it('should load normal sass file without url resolving', function(done) {
     const config = require('./fixtures/normal-no-url-resolve/webpack.config.js')
     const compiler = webpack(config)

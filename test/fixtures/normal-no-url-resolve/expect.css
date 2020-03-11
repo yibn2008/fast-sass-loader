@@ -1,24 +1,31 @@
 header {
   color: #111;
-  background-image: url("../test.png"); }
+  background-image: url("../test.png");
+}
 
 footer {
-  background-image: url("./logo.png"); }
+  background-image: url("./logo.png");
+}
 
 section {
-  color: #222; }
+  color: #222;
+}
 
 body {
-  color: #000; }
+  color: #000;
+}
 
 /*
   @import "~not-exists-module2/index.scss";  // this should be skiped
 */
 .foobar {
-  color: #FFF; }
+  color: #FFF;
+}
 
 .include-test {
-  color: #FFF; }
+  color: #FFF;
+}
 
 .web_foobaz {
-  content: "web_foobaz"; }
+  content: "web_foobaz";
+}
