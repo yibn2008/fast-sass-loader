@@ -1,4 +1,18 @@
 
+2.0.0 / 2021-02-23
+==================
+
+  * feat: 2.0 for dart-sass
+  * test: fix failing tests
+  * chore: use eslint for linting
+  * style: format code using prettier
+  * feat: switch to  dart-sass as the default implementation
+  * chore: switch to yarn
+  * chore: release as awesome-fast-loader
+  * style: switch from sass → implementation
+  * chore: add a lock file
+  * feat: support other sass implementations
+
 1.5.0 / 2019-06-17
 ==================
 
