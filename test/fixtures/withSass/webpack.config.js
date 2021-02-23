@@ -8,10 +8,10 @@ const cssLoader = require.resolve('css-loader')
 module.exports = {
   context: path.join(__dirname),
   entry: {
-    index: './index.sass'
+    index: './index.scss'
   },
   output: {
-    path: path.join(__dirname, '../../runtime/bulma-issue'),
+    path: path.join(__dirname, '../../runtime/withSass'),
     filename: '[name].js'
   },
   module: {
@@ -21,7 +21,12 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           use: [
             cssLoader,
-            loader
+            {
+              loader: loader,
+              options: {
+                implementation: require('sass')
+              }
+            }
           ]
         })
       },

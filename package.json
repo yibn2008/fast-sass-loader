@@ -1,11 +1,11 @@
 {
-  "name": "fast-sass-loader",
-  "description": "fast sass loader for webpack",
+  "name": "awesome-sass-loader",
+  "description": "Awesome SASS loader for Webpack",
   "version": "1.5.0",
   "main": "lib/index.js",
   "scripts": {
-    "lint": "standard --fix && npm-ensure -t deps",
-    "test": "npm run lint && npm run test-local",
+    "lint": "eslint {lib,test}/**/*.js",
+    "test": "mocha test/**/*.test.js",
     "perf": "node perf/index.js",
     "test-local": "mocha test/**/*.test.js",
     "test-cov": "nyc npm run test-local",
@@ -48,24 +48,25 @@
     "loader-utils": "^1.1.0"
   },
   "peerDependencies": {
-    "node-sass": "4.x || 3.x",
     "webpack": "1.x || 2.x || 3.x || 4.x"
   },
   "devDependencies": {
     "coveralls": "^2.12.0",
     "css-loader": "^0.23.1",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "fast-css-loader": "^1.0.2",
     "file-loader": "^0.9.0",
     "husky": "*",
     "mocha": "^3.2.0",
-    "node-sass": "^4.0.0",
     "npm-ensure": "^1.1.0",
     "nyc": "*",
+    "prettier": "^1.19.1",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.6.1",
+    "sass": "^1.24.3",
     "sass-loader": "^6.0.3",
-    "standard": "*",
     "webpack": "3.x"
   },
   "repository": {

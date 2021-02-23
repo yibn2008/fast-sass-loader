@@ -24,7 +24,9 @@ module.exports = {
             {
               loader: loader,
               options: {
-                outputStyle: 'compressed'
+                sassOptions: {
+                  outputStyle: 'compressed'
+                }
               }
             }
           ]
