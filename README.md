@@ -15,6 +15,10 @@ Features:
 
 fast sass loader for webpack. 5~10 times faster than **sass-loader**, and support url resolve.
 
+## version 2.x notes
+
+Since libsass has beed deprecated, fast-sass-loader will use sass instead of node-sass, you can use `options.implement` to specify any compatible sass compiler.
+
 ## vs `sass-loader`
 
 | Features      | fast-sass-loader | sass-loader                             |
@@ -93,6 +97,19 @@ and you need install **node-sass** and **webpack** as peer dependencies.
 ```
 
 ## Options
+
+### implementation
+
+since version 2.x, fast-sass-loader use dart-sass (npm `sass`) instead of original node-sass, if you want use node-sass please use this options to modify.
+
+```js
+{
+  loader: 'fast-sass-loader',
+  options: {
+    implementation: require('node-sass')
+  }
+}
+```
 
 ### includePaths:
 

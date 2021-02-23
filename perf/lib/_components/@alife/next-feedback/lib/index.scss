@@ -127,7 +127,7 @@
                 $contentMarginTop: $feedback-size-m-content-margin-top,
                 $contentFontSize: $feedback-size-m-content-font,
                 $iconSize: $feedback-size-m-icon
-            )
+            );
             &.#{$css-prefix}feedback-title-content {
                 @include verticalAlignMiddle(
                     $feedback-size-m-title-font,
