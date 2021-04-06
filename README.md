@@ -17,7 +17,7 @@ fast sass loader for webpack. 5~10 times faster than **sass-loader**, and suppor
 
 ## version 2.x notes
 
-Since libsass has beed deprecated, fast-sass-loader will use sass instead of node-sass, you can use `options.implement` to specify any compatible sass compiler.
+Since libsass has been deprecated, fast-sass-loader will use sass instead of node-sass, you can use `options.implement` to specify any compatible sass compiler.
 
 ## vs `sass-loader`
 
