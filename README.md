@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/yibn2008/fast-sass-loader.svg?branch=master)](https://travis-ci.org/yibn2008/fast-sass-loader)
 [![Coverage Status](https://coveralls.io/repos/github/yibn2008/fast-sass-loader/badge.svg)](https://coveralls.io/github/yibn2008/fast-sass-loader)
 
-Blazingly fast sass loader for webpack.
+Blazingly fast sass loader for webpack. Version with use hoisting.
 
 *Tips: using with [fast-css-loader](https://github.com/yibn2008/fast-css-loader) you will get more than 10 times css build performance*
 
