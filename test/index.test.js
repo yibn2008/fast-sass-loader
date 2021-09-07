@@ -148,6 +148,11 @@ describe('test sass-loader', function() {
     runSimpleTest(done, 'data-import-issue')
   })
 
+
+  it('should be able to hoist @use rule usage in merged content', function(done) {
+    runSimpleTest(done, 'use-rule')
+  })
+
   it('should pass options to sass.render (#53)', function(done) {
     runSimpleTest(done, 'pass-output-style')
   })

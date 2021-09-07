@@ -1,0 +1,5 @@
+@use "sass:math";
+
+header {
+  height: math.div(6px, 6);
+}
