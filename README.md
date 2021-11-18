@@ -1,7 +1,6 @@
 # fast-sass-loader
 
-[![Build Status](https://travis-ci.org/yibn2008/fast-sass-loader.svg?branch=master)](https://travis-ci.org/yibn2008/fast-sass-loader)
-[![Coverage Status](https://coveralls.io/repos/github/yibn2008/fast-sass-loader/badge.svg)](https://coveralls.io/github/yibn2008/fast-sass-loader)
+[![Node.js CI](https://github.com/yibn2008/fast-sass-loader/actions/workflows/node.js.yml/badge.svg)](https://github.com/yibn2008/fast-sass-loader/actions/workflows/node.js.yml)
 
 Blazingly fast sass loader for webpack.
 
