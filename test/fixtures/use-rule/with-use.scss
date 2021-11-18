@@ -1,0 +1,5 @@
+@use "sass:math";
+
+header {
+  width: math.div(5px, 5);
+}
