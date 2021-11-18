@@ -9,8 +9,7 @@
     "perf": "node perf/index.js",
     "test-local": "mocha test/**/*.test.js",
     "test-cov": "nyc npm run test-local",
-    "test-report": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
-    "ci": "npm run lint && npm run test-cov && npm run test-report",
+    "ci": "npm run lint && npm run test-cov",
     "release": "npm test && npm-ensure -t changelog && git release $npm_package_version && npm publish",
     "precommit": "standard && npm-ensure -t deps"
   },
